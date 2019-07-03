@@ -1,10 +1,10 @@
 baseURL = "/"
-languageCode = "es-ES"
-defaultContentLanguage = "es"
+languageCode = "en-US"
+defaultContentLanguage = "en"
 
 title = "Hugo Learn Documentation"
 theme = "hugo-theme-learn"
-themesdir = "./themes"
+themesdir = "../.."
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
@@ -21,7 +21,7 @@ home = [ "HTML", "RSS", "JSON"]
 
 [Languages]
 [Languages.en]
-title = "Documentation for Profesor-P"
+title = "Documentation for Hugo Learn Theme"
 weight = 1
 languageName = "English"
 
@@ -47,30 +47,29 @@ name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
 url = "/credits"
 weight = 30
 
-
-[Languages.es]
-title = "Documentacion en español"
+[Languages.fr]
+title = "Documentation du thème Hugo Learn"
 weight = 2
-languageName = "Español"
+languageName = "Français"
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-phone'></i>Contacto"
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Repo GitHub"
 identifier = "ds"
-url = "/contacto"
+url = "https://github.com/matcornic/hugo-theme-learn"
 weight = 10
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-camera'></i>Acerca de"
-url = "/acerca"
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Vitrine"
+url = "/showcase"
 weight = 11
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bookmark'></i>Experiencia Laboral"
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Documentation Hugo"
 identifier = "hugodoc"
-url = "/experiencia_laboral"
+url = "https://gohugo.io/"
 weight = 20
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Anjelica"
-url = "/anjelica"
+[[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
+url = "/credits"
 weight = 30
