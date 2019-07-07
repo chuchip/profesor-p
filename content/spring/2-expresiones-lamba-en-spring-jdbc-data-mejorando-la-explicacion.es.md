@@ -1,6 +1,7 @@
 ---
 title: 'Lambdas en JDBC Data'
 author: El Profe
+weight: 1
 type: post
 date: 2018-09-04T11:04:46+00:00
 url: /2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/
