@@ -15,7 +15,8 @@ defaultContentLanguageInSubdir= true
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
-
+  disableLanguageSwitchingButton=true
+  
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
