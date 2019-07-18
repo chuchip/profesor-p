@@ -2,6 +2,7 @@
 title: Perfiles en Spring Boot
 author: El Profe
 type: post
+weight: 2
 date: 2019-02-28T11:52:51+00:00
 url: /2019/02/28/perfiles-en-spring-boot/
 categories:
