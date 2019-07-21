@@ -1,6 +1,7 @@
 <nav id="sidebar" class="{{if $.Site.Params.showVisitedLinks }}showVisitedLinks{{end}}">
 
 {{ $currentNode := . }}
+{{ $activo := 0 }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
   <div id="header-wrapper">
     <div id="header">
@@ -16,11 +17,13 @@
 
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{range .Site.Home.Sections.ByTitle}}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+		  {{ $activo = 2 }}
+          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" 0}}
           {{end}}
         {{else}}
           {{range .Site.Home.Sections.ByWeight}}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
+		  {{ $activo = 2 }}
+          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" 0}}
           {{end}}
         {{end}} 
     </ul>
@@ -93,15 +96,24 @@
 <!-- templates -->
 {{ define "section-tree-nav" }}
 {{ $showvisitedlinks := .showvisitedlinks }}
+{{ $activo := .activo }}
+{{ $raiz := (add .raiz 1)}}
 {{ $currentNode := .currentnode }}
+<!-- Padre activo {{ $activo }} -->
  {{with .sect}}
   {{if .IsSection}}
+  	{{if eq .UniqueID $currentNode.UniqueID}} 
+		{{ $activo = 1 }} 
+	{{else}}
+		{{ $activo = 0 }} 
+	{{end}}
+
     {{safeHTML .Params.head}}
     <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}
+        {{if  eq $activo 1 }}active {{end}}
         {{if .Params.alwaysopen}}parent{{end}}
-        ">
+        ">		
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
@@ -121,14 +133,14 @@
           {{ range $pages.ByTitle }}
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "raiz" $raiz}}
             {{end}}
           {{ end }}
         {{else}}
           {{ range $pages.ByWeight }}
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks }}
+            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" $raiz}}
             {{end}}
           {{ end }}
         {{end}}
@@ -137,6 +149,7 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
+	{{ if (or ( le $raiz 2 ) (and (ge $activo 1) (.IsDescendant  $currentNode ))) }}
       <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
@@ -144,6 +157,7 @@
         </a>
     </li>
      {{ end }}
+	 {{ end }}
   {{end}}
  {{ end }}
 {{ end }}

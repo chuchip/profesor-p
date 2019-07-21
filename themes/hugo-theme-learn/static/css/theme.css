@@ -125,6 +125,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     background: #764890;
     border-radius: 4px;
 }
+
 .searchbox label {
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -383,6 +384,15 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     display: table;
     text-align: center;
 }
+#fecha
+{
+	vertical-align: middle;
+    font-size: 16px;	
+	line-height: 20px;
+	 text-align: center;
+	 border: 1px dashed;
+	 font-weight: bold;
+}	
 #body .nav > i {
     display: table-cell;
     vertical-align: middle;
@@ -436,7 +446,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
 }
 #footer {

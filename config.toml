@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "es-ES"
 defaultContentLanguage = "es"
-
+enableEmoji = true
 title = "Hugo Learn Documentation"
 theme = "hugo-theme-learn"
 themesdir = "./themes"
@@ -13,7 +13,7 @@ defaultContentLanguageInSubdir= true
   description = "Documentation for Hugo Learn Theme"
   author = "Mathieu Cornic"
   showVisitedLinks = true
-  disableBreadcrumb = false
+  disableBreadcrumb = true
   disableNextPrev = false
   disableLanguageSwitchingButton=true
   
@@ -27,12 +27,6 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentacion en español"
 weight = 2
 languageName = "Español"
-
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-phone'></i>Contacto"
-identifier = "ds"
-url = "/contacto"
-weight = 10
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-camera'></i>Acerca de"

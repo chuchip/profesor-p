@@ -48,12 +48,6 @@
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
-                  <div id="top-github-link">
-                    <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-                      <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
-                    </a>
-                  </div>
                   {{ end }}
                 {{ end }}
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
@@ -76,7 +70,8 @@
                   </span>
                 </div>
                 {{ if $toc }}
-                    {{ partial "toc.html" . }}
+                    {{ partial "toc.html" . }} 					
+										
                 {{ end }}
               </div>
             </div>
@@ -85,7 +80,7 @@
         {{ partial "tags.html" . }}
         </div>
         {{ if .Params.chapter }}
-          <div id="chapter">
+          <div id="chapter"> 
         {{ end }}
         <div id="body-inner">
           {{if and (not .IsHome) (not .Params.chapter) }}
@@ -93,13 +88,18 @@
               {{ if eq .Kind "taxonomy" }}
                 {{.Kind}} ::
               {{ end }}
-              {{.Title}}
+              {{.Title}} 
+			  {{ if .Params.Date }} 
+				<class id ="fecha">
+				{{ .Date.Format "January 02, 2006 "  }}</div>
+			  {{ end }}
             </h1>
+			
           {{end}}
-
         {{define "breadcrumb"}}
           {{$parent := .page.Parent }}
           {{ if $parent }}
+
             {{ $value := (printf "<a href='%s'>%s</a> > %s" $parent.URL $parent.Title .value) }}
             {{ template "breadcrumb" dict "page" $parent "value" $value }} 
           {{else}}
