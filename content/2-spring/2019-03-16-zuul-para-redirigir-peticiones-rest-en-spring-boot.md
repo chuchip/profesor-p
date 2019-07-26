@@ -1,5 +1,6 @@
 ---
-title: Zuul para redirigir peticiones REST en Spring Boot
+title: Usando Zuul para redirigir peticiones REST
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2019-03-16T07:19:41+00:00
@@ -30,7 +31,7 @@ Con **Zuul** esto es muy fácil de implementar ya que esta perfectamente integra
 
 Como siempre [en mi página de GitHub][3] podéis ver los fuentes sobre los que esta basado este articulo.
 
-  * ## Creando el proyecto.
+### Creando el proyecto.
 
 Si tenemos instalado _Eclipse_ con el [plugin de _Spring Boot_][4] (lo cual recomiendo), el crear el proyecto seria tan fácil como añadir un nuevo proyecto del tipo _Spring Boot_ incluyendo el _starter_ **Zuul**. Para poder hacer algunas pruebas también incluiremos el _starter_ **Web**, como se ve en la imagen:
 
@@ -40,7 +41,7 @@ Tambien tenemos la opción de crear un proyecto Maven desde la página web <a cl
 
 ![Crear proyecto Maven desde start.spring.io][6]
 
-  * ## Empezando
+### Empezando
 
 Partiendo que nuestro programa esta escuchando en <a class="url" href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080/</a> , vamos a a suponer que queremos que todo lo que vaya a la _URL_, <a class="url" href="http://localhost:8080/google" target="_blank" rel="noopener noreferrer">http://localhost:8080/google</a> sea redirigida a <a class="url" href="https://www.google.com" target="_blank" rel="noopener noreferrer">https://www.google.com</a>.
 
@@ -61,7 +62,8 @@ Con ellas especificaremos que todo lo que vaya a la ruta **/google/** y algo má
 
 Para que el programa funcione solo será necesario añadir la anotación `@EnableZuulProxy`en la clase de inicio, en este caso en: **ZuulSpringTestApplication**
 
-<pre><code class="language-java" lang="java">import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+```
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringBootApplication
 @EnableZuulProxy
 public class ZuulSpringTestApplication {
@@ -69,11 +71,12 @@ public class ZuulSpringTestApplication {
 		SpringApplication.run(ZuulSpringTestApplication.class, args);
 	}
 }
-</code></pre>
+```
 
 Para poder demostrar las diversas funcionalidades de ZUUL, en <a class="url" href="http://localhost:8080/api" target="_blank" rel="noopener noreferrer">http://localhost:8080/api</a> estará escuchando un servicio REST que esta implementada en la clase **TestController** de este proyecto. Esta clase simplemente devuelve en el cuerpo, los datos de la petición recibida.
 
-<pre><code class="language-java" lang="java">@RestController
+```
+@RestController
 public class TestController {
 	final  static String SALTOLINEA="\n";
 	
@@ -132,10 +135,9 @@ public class TestController {
 				strLog.toString();
 	}
 }
+```
 
-</code></pre>
-
-  * ## Filtrando: Dejando logs
+### Filtrando: Dejando logs
 
 En esta parte vamos a ver como crear un filtro de tal manera que se deje un registro de las peticiones realizadas.
 
@@ -238,7 +240,8 @@ En la clase `PreRewriteFilter`he implementando otro filtro tipo **pre** que trat
 
 Ahora en la función **run** incluimos el siguiente código
 
-<pre><code class="language-java" lang="java">Logger log = LoggerFactory.getLogger(PreRewriteFilter.class); 
+```
+    Logger log = LoggerFactory.getLogger(PreRewriteFilter.class); 
 	@Override
 	public Object run() {		
 		 RequestContext ctx = RequestContext.getCurrentContext();	    
@@ -272,7 +275,7 @@ Ahora en la función **run** incluimos el siguiente código
 	     log.info(strLog.toString());
 	     return null;
 	}
-</code></pre>
+```
 
 Esta función busca en las cabeceras de la petición (_headers_) si  existe la cabecera **usuario**, en caso de no encontrarla no hace nada con lo cual redireccionara a `http://www.profesor-p.com` como se indica en el filtro. En el caso de que exista la cabecera **usuario** con el valor `profesorp`y que la variable **clave** tenga el valor `profe`, se redirigirá a `http://localhost:8080/api`. En caso contrario devolverá un código HTTP **FORBIDEN** devolviendo la cadena `"Usuario y/o contraseña invalidos"` en el cuerpo de la respuesta HTTP. Ademas se cancela el flujo de la petición debido a que se llama a **ctx.setSendZuulResponse(false)**
 
@@ -280,15 +283,17 @@ Debido a la linea **sensitiveHeaders** del fichero **application.yml** que he me
 
 Es muy importante que este filtro se ejecute despues del filtro de PRE_DECORATION, pues en caso contrario la llamada a <code class="language-java" lang="java">ctx.setRouteHost()</code> no tendra efecto. Por ello en la función filterOrder tenemos este código:
 
-<pre>@Override
+```
+@Override
 public int filterOrder() {
 	return FilterConstants.PRE_DECORATION_FILTER_ORDER+1; 
-}</pre>
+}
+```
 
 Así una llamada pasando el usuario y la constraseña correctas, nos redirigira a http://localhost:8080/api
 
-<pre>&gt; curl -s -H "usuario: profesorp" -H "clave: profe" localhost:8080/privado
-
+```
+> curl -s -H "usuario: profesorp" -H "clave: profe" localhost:8080/privado
 
 ---------- Prueba de ZUUL ------------
 ................ RECIBIDA PETICION EN /api ......
@@ -309,14 +314,17 @@ Clave:accept-encoding Valor: gzip
 Clave:host Valor: localhost:8080
 Clave:connection Valor: Keep-Alive
 
------ BODY ----</pre>
+----- BODY ----
+```
 
 Si se pone mal la contraseña la salida seria esta:
 
-<pre>&gt; curl -s -H "usuario: profesorp" -H "clave: ERROR" localhost:8080/privado
-Usuario y/o contraseña invalidos</pre>
+```
+> curl -s -H "usuario: profesorp" -H "clave: ERROR" localhost:8080/privado
+Usuario y/o contraseña invalidos
+```
 
-  * ## Filtrando. Filtrado dinámico
+###Filtrando. Filtrado dinámico
 
 Para terminar incluiremos dos nuevas redirecciones en el fichero `applicaction.yml`
 
@@ -333,11 +341,12 @@ En la primera cuando vayamos a la URL `http://localhost:8080/local/LO_QUE_SEA` s
 En la segunda cuando vayamos a la URL `http://localhost:8080/url/LO_QUE_SEA` seremos redirigidos a `http://localhost:8080/api/LO_QUE_SEA`
 
 La clase **RouteURLFilter** sera la encargada de realizar tratar el filtro URL. Recordar que para que **Zuul** utilize los filtros debemos crear su correspondiente _bean._
-
-<pre>@Bean
+```
+@Bean
  public RouteURLFilter routerFilter() {
         return new RouteURLFilter();
- }</pre>
+ }
+```
 
 En la función **shouldFilter** de **RouteURLFilter** tendremos este código para que trate solo las peticiones a **/url.** 
 

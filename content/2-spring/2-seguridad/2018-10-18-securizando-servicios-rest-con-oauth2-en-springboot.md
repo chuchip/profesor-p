@@ -1,5 +1,6 @@
 ---
 title: Securizando servicios REST con Oauth2 en SpringBoot
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-10-18T13:20:43+00:00
@@ -22,7 +23,7 @@ tags:
 ---
 Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la [entrada de seguridad WEB anterior][1], así que el código fuente lo tenéis en: <a href="https://github.com/chuchip/OAuthServer" target="_blank" rel="noopener">https://github.com/chuchip/OAuthServer</a>.
 
-### <span style="text-decoration: underline;">&#8211; Explicando la tecnologia Oauth2</span>
+### Explicando la tecnologia Oauth2
 
 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 
@@ -36,27 +37,25 @@ Voy a poner una escena cotidiana: El pago con una tarjeta de crédito en un come
 
 Como comentario, decir, por si no os habéis dado cuenta, que se utilizan servidores de autentificación habitualmente. Cuando vais a una pagina web y os pide registraros, pero como opción os deja hacerlo a través de Facebook o Google, estáis utilizando esta tecnología. Google o Facebook se convierte en el &#8216;banco&#8217; que emite esa &#8216;tarjeta&#8217;, la pagina web que os pide registraros, la usara para comprobar que tenéis &#8216;credito&#8217; y dejaros entrar. Espero que se entienda el ejemplo ;-).
 
-<img class="wp-image-413 alignleft" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-17.png" alt="" width="646" height="318" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-17.png 940w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-17-300x148.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-17-768x378.png 768w" sizes="(max-width: 646px) 100vw, 646px" />
+![](/img/2018/10/Captura-17.png") 
 
-&nbsp;
+
 
 Aquí podéis ver la pagina web de el periódico &#8220;El Pais&#8217;, creando una cuenta. Si utilizamos Google o Facebook, el periódico (la tienda) confiara en lo que les digan esos proveedores de autentificaciones. En este caso lo único que necesita la pagina web es que tengáis una tarjeta de crédito, sin importar el saldo 😉
 
-###  
 
-###  
-
-### &#8211; <a id="servidor_autorizaciones"></a>Creando un Servidor de Autorizaciones (AuthServer)
+### Creando un Servidor de Autorizaciones (AuthServer)
 
 ¿ Entendido ?. OK, pues vamos a ver como crear un banco, la tienda y toda la parafernalia 😉
 
 Lo primero, en nuestro proyecto,  necesitamos tener las dependencias adecuadas, necesitaremos los inicializadores (starters en ingles) : **Cloud OAuth2, Security y Web**
 
-<img class="imagen_con_borde aligncenter wp-image-402 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-13.png" alt="" width="714" height="354" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-13.png 714w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-13-300x149.png 300w" sizes="(max-width: 714px) 100vw, 714px" />
+![](/img/2018/10/Captura-13.png)
 
 Bien, empecemos por definir el banco, esto lo hacemos en la clase: **AuthorizacionServerConfiguration**
 
-<pre>@Configuration
+```
+@Configuration
 @EnableAuthorizationServer
 public class AuthorizacionServerConfiguration  extends AuthorizationServerConfigurerAdapter  {
 
@@ -93,7 +92,8 @@ public class AuthorizacionServerConfiguration  extends AuthorizationServerConfig
 	  public TokenStore tokenStore() {
 	      return new InMemoryTokenStore();
 	  }	
-}</pre>
+}
+```
 
 Empezamos la clase anotandola como de configuración con la etiqueta @**Configuration** y después usamos la etiqueta **@EnableAuthorizationServer** para decirle a Spring que active el servidor de autorizaciones. Para definir las propiedades del servidor especificamos que nuestra clase extiende de **AuthorizationServerConfigurerAdapter** , la cual implementa el interface **AuthorizationServerConfigurerAdapter**, por lo cual, Spring usara esta clase para parametrizar el servidor.
 
@@ -117,7 +117,7 @@ Y por último tenemos la función **configure(AuthorizationServerEndpointsConfig
 
 De acuerdo, ya tenemos nuestro servidor de autentificaciones creado pero aun nos falta la manera de que este sepa quienes somos y nos ponga en diferentes grupos, según las credenciales introducidas. Bien, para hacer esto usaremos la misma clase que en utilizamos para proteger una pagina web. Si habéis leído el articulo anterior: <a href="http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/" target="_blank" rel="noopener">http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/ </a>recordareis que creábamos una clase que heredaba de **WebSecurityConfigurerAdapter** , donde sobrescribiamos la función **UserDetailsService userDetailsService().**
 
-<pre>@EnableWebSecurity
+```@EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
  ....
     @Bean
@@ -131,7 +131,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
         return new InMemoryUserDetailsManager(user,userAdmin);
     }
 ....
-}</pre>
+}
+```
 
 Pues los usuarios con sus roles o grupos se definen de la misma manera. Deberemos tener una clase que extienda **WebSecurityConfigurerAdapter ** y definir nuestros usuarios.
 
@@ -141,19 +142,19 @@ Para hablar con el &#8216;banco&#8217; para solicitar nuestras credenciales, y c
 
 Usaremos una petición HTTP tipo POST, indicando que queremos usar validación básica, pondremos el usuario y contraseña, que serán los del &#8220;banco&#8221;, en nuestro ejemplo: &#8216;cliente&#8217; y &#8216;password&#8217; respectivamente.
 
-<img class="imagen_con_borde aligncenter wp-image-408 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-14.png" alt="" width="848" height="328" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-14.png 848w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-14-300x116.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-14-768x297.png 768w" sizes="(max-width: 848px) 100vw, 848px" />
+![](/img/2018/10/Captura-14.png)
 
 En el cuerpo de la petición, en formato form-url-encoded introduciremos el servicio a solicitar, nuestro usuario y nuestra contraseña.
 
-<img class="imagen_con_borde aligncenter wp-image-409 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-15.png" alt="" width="800" height="349" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-15.png 800w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-15-300x131.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-15-768x335.png 768w" sizes="(max-width: 800px) 100vw, 800px" />
+![](/img/2018/10/Captura-15.png)
 
 y lanzamos la petición, la cual nos deberá sacar una salida como esta:
 
-<img class="imagen_con_borde aligncenter wp-image-410 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-16.png" alt="" width="650" height="230" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-16.png 650w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-16-300x106.png 300w" sizes="(max-width: 650px) 100vw, 650px" />
+![](/img/2018/10/Captura-16.png)
 
 Ese &#8216;access_token&#8217; &#8220;**8279b6f2-013d-464a-b7da-33fe37ca9afb**&#8221; es nuestra tarjeta de crédito y es la que deberemos presentar a nuestro servidor de recursos (la tienda) para poder ver paginas (recursos) que no sean públicos.
 
-### &#8211; <a id="servidor_recursos"></a>Creando un Servidor de Recursos (ResourceServer)
+### Creando un Servidor de Recursos (ResourceServer)
 
 Ahora que ya tenemos nuestra tarjeta de crédito vamos a crear la tienda que acepte esa tarjeta 😉
 
@@ -161,12 +162,14 @@ En nuestro ejemplo vamos a crear el servidor de recursos y de autentificación e
 
 La única clase del servidor de recursos es **ResourceServerConfiguration**
 
-<pre>@EnableResourceServer
+```
+@EnableResourceServer
 @RestController
 public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 {
 .....
-}</pre>
+}
+```
 
 Observar la anotación  @**EnableResourceServer** que hara que Spring active el servidor de recursos.  La etiqueta **@RestController** es porque en esta misma clase nosotros tendremos los recursos, pero podrían estar perfectamente en otra clase.
 
@@ -174,7 +177,8 @@ Por ultimo fijaros que la clase extiende de **ResourceServerConfigurerAdapter** 
 
 Como he dicho antes al estar el servidor de autentificación y de recursos en el mismo programa no tenemos mas que configurar la seguridad de nuestro servidor de recursos. Esto se hace en la función:
 
-<pre>@Override
+```
+@Override
 public void configure(HttpSecurity http) throws Exception {
 	http
 	.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize**", "/publica").permitAll();  
@@ -186,22 +190,24 @@ public void configure(HttpSecurity http) throws Exception {
 	.and().requestMatchers().antMatchers("/admin") // Denegamos el acceso a "/admin"
 	.and().authorizeRequests()
 	.antMatchers("/admin").access("hasRole('ADMIN')");
-}</pre>
+}
+```
 
 En la entrada anterior cuando definíamos la seguridad en la web, explicaba una función llamada **configure(HttpSecurity http)**, ¿ a que se parece mucho a esta ?. Pues si básicamente es la misma, y de hecho recibe un objeto HttpSecurity que debemos configurar.
 
 Explico linea a linea las sentencias:
 
-  * `<strong>http.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize**", "/publica").permitAll() </strong>`Permitimos todas las peticiones a  &#8220;/oauth/token&#8221;, &#8220;/oauth/authorize**&#8221;, &#8220;/publica&#8221; sin ningún tipo de validación.
-  * `<strong>anyRequest().authenticated()</strong>` Esta linea esta comentada, si no lo estuviera todos los recursos serian accesibles solo si se el usuario ha sido validado.
-  * `<strong>requestMatchers().antMatchers("/privada")</strong>` Denegamos el acceso a la url &#8220;/privada&#8221;
-  * `<strong>authorizeRequests().antMatchers("/privada").access("hasRole('USER')")</strong>` Permitimos el acceso a &#8220;/privada&#8221; si el usuario validado tiene el role &#8216;USER&#8217;
-  * `<strong>requestMatchers().antMatchers("/admin")</strong>` Denegamos el acceso a la url &#8220;/admin&#8221;
-  * `<strong>authorizeRequests().antMatchers("/admin").access("hasRole('ADMIN')")</strong>` Permitimos el acceso a &#8220;/admin&#8221; si el usuario validado tiene el role &#8216;ADMIN&#8217;
+  * **http.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize", "/publica").permitAll()** Permitimos todas las peticiones a  &#8220;/oauth/token&#8221;, &#8220;/oauth/authorize**&#8221;, &#8220;/publica&#8221; sin ningún tipo de validación.
+  * **anyRequest().authenticated()** Esta linea esta comentada, si no lo estuviera todos los recursos serian accesibles solo si se el usuario ha sido validado.
+  * **requestMatchers().antMatchers("/privada")** Denegamos el acceso a la url &#8220;/privada&#8221;
+  * **authorizeRequests().antMatchers("/privada").access("hasRole('USER')")**  Permitimos el acceso a &#8220;/privada&#8221; si el usuario validado tiene el role &#8216;USER&#8217;
+  * **requestMatchers().antMatchers("/admin")**  Denegamos el acceso a la url &#8220;/admin&#8221;
+  * **authorizeRequests().antMatchers("/admin").access("hasRole('ADMIN')")**  Permitimos el acceso a &#8220;/admin&#8221; si el usuario validado tiene el role &#8216;ADMIN&#8217;
 
 Una vez que tenemos nuestra servidor de recursos creado solo debemos crear los servicios lo cual se hace con estas lineas:
 
-<pre>@RequestMapping("/publica")
+```
+  @RequestMapping("/publica")
   public String publico() {
 	   return "Pagina Publica";
   }
@@ -212,31 +218,31 @@ Una vez que tenemos nuestra servidor de recursos creado solo debemos crear los s
   @RequestMapping("/admin")
   public String admin() {
 	    return "Pagina Administrador";
-  }</pre>
-
+  }
+```
 Como veis son 3 funciones basicas que solo devuelven sus correspondientes Strings.
 
 Veamos ahora como funciona la validación.
 
 Primero comprobamos que podemos acceder a &#8220;/publica&#8221; sin ningún tipo de validación:
 
-<img class="imagen_con_borde wp-image-415 size-full aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-18.png" alt="" width="772" height="445" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-18.png 772w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-18-300x173.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-18-768x443.png 768w" sizes="(max-width: 772px) 100vw, 772px" />
+![](/img/2018/10/Captura-18.png)
 
 Correcto. ¡¡ Esto funciona!!
 
 Si intento acceder a la pagina &#8220;/privada&#8221; recibo un error &#8220;401 unauthorized&#8221;, lo cual nos indica que no tenemos permiso para ver esa pagina, así que vamos a usar  el token emitido por nuestro servidor de autorizaciones, para el usuario &#8216;user&#8217;, a ver que pasa 😉
 
-<img class="imagen_con_borde wp-image-417 size-full aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-19.png" alt="" width="840" height="477" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-19.png 840w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-19-300x170.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-19-768x436.png 768w" sizes="(max-width: 840px) 100vw, 840px" />
+![](/img/2018/10/Captura-19.png)
 
 Anda, si podemos ver nuestra pagina privada. Probemos con la pagina del administrador&#8230;
 
-<img class="imagen_con_borde aligncenter wp-image-418 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-20.png" alt="" width="846" height="489" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-20.png 846w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-20-300x173.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-20-768x444.png 768w" sizes="(max-width: 846px) 100vw, 846px" />
+![](/img/2018/10/Captura-20.png)
 
 Correcto, no podemos verla. Asi que vamos a solicitar un nuevo token al administrador de credenciales, pero identificandonos con el usuario &#8216;admin&#8217;.
 
 El token devuelto es: &#8221; &#8220;ab205ca7-bb54-4d84-a24d-cad4b7aeab57&#8221;. Lo usamos a ver que pasa:
 
-<img class="imagen_con_borde aligncenter wp-image-419 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-21.png" alt="" width="869" height="529" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-21.png 869w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-21-300x183.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-21-768x468.png 768w" sizes="(max-width: 869px) 100vw, 869px" />
+![](/img/2018/10/Captura-21.png)
 
 Bueno, pues ya esta, ya podemos ir de compras con seguridad!!. Ahora ya solo falta montar la tienda y tener los productos 😉
 

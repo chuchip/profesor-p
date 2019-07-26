@@ -1,5 +1,6 @@
 ---
 title: Seguridad WEB en Spring Boot
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-10-17T10:19:34+00:00
@@ -32,7 +33,7 @@ Realmente usando Spring Boot, es muy sencillo, pues haremos uso de lo que Spring
 
 Aquí tenéis un pantallazo de Eclipse seleccionando los paquetes necesarios.
 
-<img class="imagen_con_borde aligncenter wp-image-383 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-10.png" alt="" width="623" height="408" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-10.png 623w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-10-300x196.png 300w" sizes="(max-width: 623px) 100vw, 623px" />
+![captura-10](/img/2018/10/Captura-10.png")
 
 De todos modos,  ya sabéis que en el fichero pom.xml podéis ver las dependencias más detalladamente.
 
@@ -47,11 +48,12 @@ Como queremos poder ver en nuestra página web el nombre del usuario con el que 
 
 Y aquí podéis ver como quedara la estructura de nuestro programa
 
-<img class="imagen_con_borde aligncenter wp-image-389 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-11.png" alt="" width="343" height="375" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-11.png 343w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-11-274x300.png 274w" sizes="(max-width: 343px) 100vw, 343px" />
+![](/img/2018/10/Captura-11.png)
 
 Ahora empecemos a declarar nuestra primera clase, a la que he llamado **WebSecurityConfiguration.java**
 
-<pre>@SpringBootApplication
+```
+@SpringBootApplication
 @EnableWebSecurity
 public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
@@ -97,7 +99,8 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .logout() // Metodo get pues he desabilitado CSRF
                 .permitAll();
     }
-}</pre>
+}
+```
 
 Lo primero es poner las etiquetas **@SpringBootApplication** y **@EnableWebSecurity**. La primera etiqueta es obvia, ya que nuestra aplicación queremos que funcione con Spring Boot ;-). Vamos, que o la ponéis o no seria una aplicación Spring Boot y ya nos podemos ir a casa :-D. La segunda es para especificar que queremos que se active la seguridad Web, realmente esta etiqueta no es obligatorio ponerla porque Spring Boot que es muy listo, en cuanto ve que tenemos el paquete **security **(en el pom.xml, recordad) en nuestro proyecto la incluye, pero no es mala cosa ponerla por claridad, aunque sea redundante.
 
@@ -157,7 +160,8 @@ Especificamos que a la pagina de desconexión (logout) pude acceder a todo el mu
 
 Perfecto, ya tenemos definida la seguridad de nuestras paginas web, ahora solo queda definir los puntos de entrada a las páginas. Eso se hace en la clase **WebController.java**
 
-<pre>@Controller
+```
+@Controller
 public class WebController {
 	
 	 @RequestMapping({"/","index"})
@@ -181,7 +185,8 @@ public class WebController {
 	  public String login() {
 	    return "login";
 	  }
-}</pre>
+}
+```
 
 La clase como se ve no tiene muchos misterios,simplemente especificamos con la etiqueta** @Controller **que sera una clase donde vamos a definir puntos de entrada para las peticiones web.
 
@@ -210,33 +215,29 @@ La cadena devuelta sera la plantilla **Thymeleaf** devuelta, de tal manera que l
 
 ¿A que casi parece HTML puro?. Es una de las ventajas de **Thymeleaf  **que usa  etiquetas HTML estándar. No voy a explicar este lenguaje, pero os explicare un poco las etiquetas usadas:
 
-**<a th:href=&#8221;@{/webpublico}&#8221;>** . Crea un enlace a la URL &#8220;/webpublico&#8221;. Seria como poner la etiqueta &#8220;<A href=&#8221;/webpublico&#8221;>
+`<a th:href=”@{/webpublico}”>`
 
-**<div sec:authorize=&#8221;isAuthenticated()&#8221;> **Solo se renderizara el código en el DIV si el usuario esta autentificado. En otras palabras si el usuario no esta logueado no se mostrara en la página web lo que hay entre las etiquetas  DIV (de hecho no se mostrara ni el DIV).
+ Crea un enlace a la URL "/webpublico";. Seria como poner la etiqueta &#8220;
 
-**<span sec:authentication=&#8221;name&#8221;>someone</span> **Si el usuario esta autentificado mostrara el nombre del usuario, en caso contrario mostrara lo que haya entre las etiquetas **span. **En este caso mostraría **someone**.
+`<div sec:authorize=”isAuthenticated()”>`
+
+Solo se renderizara el código en el DIV si el usuario esta autentificado. En otras palabras si el usuario no esta logueado no se mostrara en la página web lo que hay entre las etiquetas  DIV (de hecho no se mostrara ni el DIV).
+
+`<span sec:authentication=”name”>someone</span>`
+Si el usuario esta autentificado mostrara el nombre del usuario, en caso contrario mostrara lo que haya entre las etiquetas **span. **En este caso mostraría **someone**.
 
 Y con esto ya tenemos una aplicación securizada. !Sí!, con solo dos clases java y sus correspondientes ficheros HTML.
 
 Para terminar esta entrada, os dejo unos capturas de pantalla de la aplicación:
 
-<figure id="attachment_393" aria-describedby="caption-attachment-393" style="width: 610px" class="wp-caption aligncenter"><img class="imagen_con_borde wp-image-393 size-full" title="Pagina de inicio sin loguear" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-12.png" alt="Pagina de inicio sin loguear" width="620" height="267" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-12.png 620w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-12-300x129.png 300w" sizes="(max-width: 620px) 100vw, 620px" /><figcaption id="caption-attachment-393" class="wp-caption-text"><span style="background-color: #00ffff;"><strong>Pagina de inicio sin haberse registrado</strong></span></figcaption></figure>
+![](/img/2018/10/Captura-12.png")
 
-<figure id="attachment_394" aria-describedby="caption-attachment-394" style="width: 394px" class="wp-caption aligncenter"><img class="imagen_con_borde wp-image-394 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1-1.png" alt="" width="404" height="134" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1-1.png 404w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1-1-300x100.png 300w" sizes="(max-width: 404px) 100vw, 404px" /><figcaption id="caption-attachment-394" class="wp-caption-text"><span style="background-color: #00ffff;"><strong>Pagina publica</strong></span></figcaption></figure>
+![](/img/2018/10/Captura1-1.png)
 
-<figure id="attachment_398" aria-describedby="caption-attachment-398" style="width: 567px" class="wp-caption aligncenter"><img class="imagen_con_borde wp-image-398 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura5.png" alt="" width="577" height="292" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura5.png 577w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura5-300x152.png 300w" sizes="(max-width: 577px) 100vw, 577px" /><figcaption id="caption-attachment-398" class="wp-caption-text"><span style="background-color: #00ffff;">Pagina inicio una vez identificado el usuario &#8216;user&#8217;</span></figcaption></figure>
+![](/img/2018/10/Captura5.png)
 
-<figure id="attachment_395" aria-describedby="caption-attachment-395" style="width: 390px" class="wp-caption aligncenter"><img class="size-full wp-image-395" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura2.png" alt="" width="400" height="160" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura2.png 400w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura2-300x120.png 300w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-395" class="wp-caption-text"><span style="background-color: #00ffff;">Identificandose con el usuario &#8220;user&#8221;</span></figcaption></figure>
+![](/img/2018/10/Captura2.png)
 
-<div>
-</div>
+![](/img/2018/10/Captura4.png)
 
-<div>
-  <p>
-    <figure id="attachment_397" aria-describedby="caption-attachment-397" style="width: 580px" class="wp-caption aligncenter"><img class="imagen_con_borde wp-image-397 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura4.png" alt="" width="590" height="252" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura4.png 590w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura4-300x128.png 300w" sizes="(max-width: 590px) 100vw, 590px" /><figcaption id="caption-attachment-397" class="wp-caption-text"><span style="background-color: #00ffff;">Error al acceder a pagina web &#8220;/admin&#8221; estando registrado con usuario &#8216;user&#8217; que no tiene permisos para esa pagina web</span>.</figcaption></figure>
-  </p>
-  
-  <p>
-    ¡¡ Hasta otra !!
-  </p>
-</div>
+**¡¡ Hasta otra !!**

@@ -1,6 +1,8 @@
 ---
 title: Testeando las aplicaciones
+pre: "<b>o </b>"
 author: airec69
+weight: 10
 type: post
 date: 2018-08-27T08:24:45+00:00
 url: /2018/08/27/testeando-las-aplicaciones/

@@ -1,5 +1,6 @@
 ---
 title: Cacheando resultados con Spring Boot
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2019-05-12T07:57:07+00:00
@@ -26,13 +27,14 @@ La cache se aplica sobre funciones, donde para un mismo valor de entrada esperam
 
 Un ejemplo típico seria este:
 
-<pre><code class="language-java" lang="java"> @Cacheable(cacheNames="headers")
+```
+@Cacheable(cacheNames="headers")
  public int funcionCacheada(int valor)
  {
   ... calculos muy complejos y costosos ....
   return N;
  }
-</code></pre>
+```
 
 Y ahora supongamos que tenemos el siguiente código donde llamamos a esa función:
 
@@ -55,55 +57,51 @@ El proyecto de ejemplo sobre el que esta basado este articulo esta en: <https://
 
 Lo primero que se necesita es incluir la siguiente dependencia en nuestro proyecto:
 
-<pre><code class="language-maven" lang="maven">&lt;dependency&gt;
-	&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-	&lt;artifactId&gt;spring-boot-starter-cache&lt;/artifactId&gt;
-&lt;/dependency&gt;
-</code></pre>
+```
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-cache</artifactId>
+</dependency>
+```
 
 Ahora ya podremos utilizar las etiquetas que nos permitirán usar **Cache** en nuestra aplicación.
 
 La primera etiqueta a poner es **@EnableCaching**. Con esta etiqueta le indicamos a Spring que prepare el soporte para usar cache. Si no se la ponemos simplemente no la usara, independientemente de si indicamos posteriormente que cachee los resultados de unas funciones.
 
-<pre><code class="language-java" lang="java">@SpringBootApplication
+```
+@SpringBootApplication
 @EnableCaching
 public class CacheExampleApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CacheExampleApplication.class, args);
 	}
 }
-</code></pre>
+```
 
 En este ejemplo se leerán unos datos de una base de datos a través de unas peticiones REST.
 
 Los datos como tal se leen en la clase `CacheDataImpl.java` que esta en el paquete `com.profesorp.cacheexample.impl`
 
 La función que lee los datos es la siguiente:
-
-<pre><code class="language-java" lang="java"> @Cacheable(cacheNames="headers", condition="#id &gt; 1")
+```
+@Cacheable(cacheNames="headers", condition="#id > 1")
  public DtoResponse getDataCache(int id) {	
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
 		}		
 		DtoResponse requestResponse=new DtoResponse();		
-		Optional&lt;Invoiceheader&gt; invoice=invoiceHeaderRepository.findById(id);
+		Optional<Invoiceheader> invoice=invoiceHeaderRepository.findById(id);
 		..... MAS CODIGO NO IMPORTANTE ...
 	}
-</code></pre>
+```
 
 Como se puede ver tenemos la etiqueta **@Cacheable(cacheNames=&#8221;headers&#8221;, condition=&#8221;#id > 1&#8243;)**
 
 Con ella, le estamos indicando a Spring dos cosas.
 
-<ol start="">
-  <li>
-    Que deseamos que cachee el resultado de esta función.
-  </li>
-  <li>
-    Le ponemos como condición, que solo cachee los resultados si el valor de entrada es superior a 1.
-  </li>
-</ol>
+- Que deseamos que cachee el resultado de esta función.
+- Le ponemos como condición, que solo cachee los resultados si el valor de entrada es superior a 1.
 
 Más adelante, en la función `flushCache`, le ponemos la etiqueta @**CacheEvict** la cual limpia la cache indicada. En este caso, además, le indicamos que borre todas las entradas que tengan cacheadas.
 
@@ -142,9 +140,10 @@ El campo `interval` el tiempo en milisegundos que le ha costado realizar la cons
 
 Ahora ejecutamos de nuevo la llamada:
 
-<pre><code class="language-curl" lang="curl">&gt; curl -s http://localhost:8080/2
+```
+curl -s http://localhost:8080/2
 {"interval":1,"httpStatus":"OK","invoiceHeader":{"id":2,"activo":"N","yearFiscal":2019,"numberInvoice":2,"customerId":2}}
-</code></pre>
+```
 
 Ahora el tiempo que ha tomado la llamada es _1_ , porque realmente **Spring** **NO** ha ejecutado el código de la función y simplemente ha devuelto el valor que tenia cacheado.
 
@@ -170,8 +169,8 @@ Si llamamos a la función `flushcache` limpiaremos la cache y por lo tanto la pr
 
 Por ultimo veremos como si cambiamos el valor del campo `activo` a `N` , como la función que realiza el cambio esta marcada con `@CacheEvict` nos actualizara el valor de la cache, pero en la próxima llamada a la función `getDataCache` se seguirá sin ejecutar el código, devolviendo, sin embargo, el objeto actualizado.
 
-<pre><code class="language-curl" lang="curl">&gt;  curl -X PUT   http://localhost:8080/   -H "Content-Type: application/json"   -d "{\"id\": 2, \"active\": \"N\"}"
-&gt;curl -s http://localhost:8080/2
+<pre><code class="language-curl" lang="curl">>  curl -X PUT   http://localhost:8080/   -H "Content-Type: application/json"   -d "{\"id\": 2, \"active\": \"N\"}"
+>curl -s http://localhost:8080/2
 {"interval":0,"httpStatus":"OK","invoiceHeader":{"id":2,"activo":"N","yearFiscal":2019,"numberInvoice":2,"customerId":2}}
 </code></pre>
 
@@ -185,20 +184,6 @@ Como veis, todo un mundo para explorar.
 
 ¡¡Nos vemos en la proxima entrada!!
 
- 
 
-<div id="simple-translate">
-  <div>
-    <div class="simple-translate-button ">
-       
-    </div>
-    
-    <div class="simple-translate-panel ">
-      <div class="simple-translate-result-wrapper">
-         
-      </div>
-    </div>
-  </div>
-</div>
 
  [1]: https://www.ehcache.org/

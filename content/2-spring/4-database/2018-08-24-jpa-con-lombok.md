@@ -1,5 +1,6 @@
 ---
 title: JPA con Lombok, simplificando.
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-24T10:53:55+00:00
@@ -14,7 +15,8 @@ Recordar que el código fuente de de este ejemplo esta en: <a href="https://gith
 
 Anteriormente teniamos definido nuestro objeto de esta manera:
 
-<pre>@Entity
+```
+@Entity
 @Table(name = "usuario",
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"login"})})
@@ -50,20 +52,23 @@ public class Usuario implements Serializable {
         this.login = login;
         this.nombre = nombre;
     }
-}</pre>
+}```
 
 Ahora amos a hacer la clase mas facil, gracias a la Lombok. Para ello, a mi proyecto Maven (en el fichero pom.xml) añado la siguiente dependencia:
 
-<pre>    &lt;dependency&gt;
-            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-            &lt;version&gt;1.18.2&lt;/version&gt;
-            &lt;scope&gt;provided&lt;/scope&gt;
-        &lt;/dependency&gt;</pre>
+```
+    <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <scope>provided</scope>
+        </dependency>
+```		
 
 Teneis documentación de este proyecto en <a href="https://projectlombok.org/" target="_blank" rel="noopener">su pagina web</a>. De momento baste decir que gracias a la anotacion @Data nuestra clase **usuario** se queda así.
 
-<pre>import lombok.Data;
+```
+import lombok.Data;
 
 
 @Data
@@ -83,7 +88,8 @@ public class Usuario implements Serializable {
         this.login = login;
         this.nombre = nombre;
     }
-}</pre>
+}
+```
 
 Mucho mas limpia, ¿ a que si ?. Lombok se encargara de crear el constructor vacio, los setters y getters gracias la anotacion @Data.
 

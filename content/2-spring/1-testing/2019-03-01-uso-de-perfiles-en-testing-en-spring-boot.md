@@ -1,7 +1,9 @@
 ---
-title: Uso de perfiles para testing en Spring Boot
+title:  Uso de perfiles para testear en Spring Boot
+pre: "<b>o </b>"
 author: El Profe
 type: post
+weight: 20
 date: 2019-03-01T13:50:57+00:00
 url: /2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/
 categories:
@@ -21,7 +23,34 @@ Uno de los casos mas habituales del uso de perfiles es para testear la aplicaci�
 
 Mirando el código de la clase ProfilesTestsTest.java
 
-<pre>@Profile("test")<br />@SpringBootTest(webEnvironment= WebEnvironment.RANDOM_PORT)<br />@ActiveProfiles("test")<br />@RunWith(SpringRunner.class)<br />public class ProfilesTestsTest {<br />	<br />	@Value("${app.ID}")<br />	int id;<br />	<br />	@Autowired <br />	IRead read;<br />	<br />	@Autowired<br />	Environment env;<br />	<br />	@Test<br />	public void inicio() {<br />		String name=read.readRegistry(id);<br />		assertEquals(name,"test");<br />		String principal=env.getProperty("app.principal","NULL");<br />		assertNotEquals(principal,"profe"); <br />		String test=env.getProperty("app.test","NULL");<br />		assertEquals(test,"test");<br />	}<br /><br />}</pre>
+```
+@Profile("test")
+@SpringBootTest(webEnvironment= WebEnvironment.RANDOM_PORT)
+@ActiveProfiles("test")
+@RunWith(SpringRunner.class)
+public class ProfilesTestsTest {
+	
+	@Value("${app.ID}")
+	int id;
+	
+	@Autowired 
+	IRead read;
+	
+	@Autowired
+	Environment env;
+	
+	@Test
+	public void inicio() {
+		String name=read.readRegistry(id);
+		assertEquals(name,"test");
+		String principal=env.getProperty("app.principal","NULL");
+		assertNotEquals(principal,"profe"); 
+		String test=env.getProperty("app.test","NULL");
+		assertEquals(test,"test");
+	}
+
+}
+```
 
 nos debemos de fijar en la etiqueta **@ActiveProfiles(&#8220;test&#8221;)** con ella indicamos a **Spring** que active el perfil **test** con lo cual ahora solo se procesaran las clases que tengan la etiqueta **@Profile(&#8220;test&#8221;)** o no tengan ninguna etiqueta **@Profile.**
 
@@ -35,7 +64,8 @@ Para demostrarlo en el fichero &#8220;_/profilestest/src/**main**/resources/appl
 
 Y en &#8220;_/profilestest/src/**test**/resources/application.properties&#8221;_ están las siguientes lineas
 
-<pre>app.ID=3<br />app.test=test</pre>
+<pre>app.ID=3
+app.test=test</pre>
 
 En el test podemos ver como no encuentra la variable de entorno **app.principal** pero si que encuentra la variable **app.test**
 

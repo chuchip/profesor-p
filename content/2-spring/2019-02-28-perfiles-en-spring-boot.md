@@ -1,5 +1,6 @@
 ---
 title: Perfiles en Spring Boot
+pre: "<b>o </b>"
 author: El Profe
 type: post
 weight: 100
@@ -78,7 +79,7 @@ Empezando por la clase principal veremos como definir diferentes **beans** depen
 			if (environment.getActiveProfiles()==null)
 				return "default";
 			String[] profiles=environment.getActiveProfiles();
-			return profiles.length&gt;0?profiles[0]:"default"; 
+			return profiles.length>0?profiles[0]:"default"; 
 		}
 	}
 
@@ -168,7 +169,7 @@ Esta es la clase **ReadDefImpl**
 		public String readRegistry(int id)
 		{
 			out.writeLog("entry in ReadImpl" );
-			Optional&lt;ProfileEntity&gt; registroOpc=customerRepository.findById(id);
+			Optional<ProfileEntity> registroOpc=customerRepository.findById(id);
 			if (!registroOpc.isPresent())
 			{
 				System.out.println("Customer "+id+" NOT found");
@@ -251,8 +252,8 @@ Se puede ver como el valor de la variable **id** es 1 y como lee en la base de d
 
 En la salida estándar veremos el siguiente texto:
 
-	Profile: ..default.. default -&gt; entry in ReadImpl
-	Profile: ..default.. default -&gt; Name customer 1 is: default
+	Profile: ..default.. default -> entry in ReadImpl
+	Profile: ..default.. default -> Name customer 1 is: default
 
 Si llamamos a <a class="url" href="http://localhost:8081/hello?name=profesor" target="_blank" rel="noopener noreferrer">http://localhost:8081/hello?name=profesor</a>, veremos la siguiente salida en el navegador:
 
@@ -260,8 +261,8 @@ Si llamamos a <a class="url" href="http://localhost:8081/hello?name=profesor" ta
 
 En la salida estándar veremos el siguiente texto:
 
-<pre>Profile: ..other.. other -&gt; entry in ReadImpl
-Profile: ..other.. other -&gt; Name customer 2 is: other</pre>
+<pre>Profile: ..other.. other -> entry in ReadImpl
+Profile: ..other.. other -> Name customer 2 is: other</pre>
 
 En el [articulo siguiente][1] podéis ver el uso de los perfiles para testear la aplicación con **JUnit**
 

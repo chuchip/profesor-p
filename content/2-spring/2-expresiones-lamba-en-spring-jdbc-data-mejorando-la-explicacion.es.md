@@ -1,5 +1,6 @@
 ---
-title: 'Lambdas en JDBC Data'
+title: Lambdas en JDBC Data
+pre: "<b>o </b>"
 author: El Profe
 weight: 100
 type: post

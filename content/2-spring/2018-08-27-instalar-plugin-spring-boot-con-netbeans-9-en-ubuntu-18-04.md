@@ -1,5 +1,6 @@
 ---
-title: Instalar plugin Spring Boot con NetBeans 9 en Ubuntu 18.04
+title: Instalar plugin Spring Boot en NetBeans
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-27
@@ -53,7 +54,7 @@ Ok. Ya podemos ejecutar Netbeans, con el comando **/nb/bin/netbeans.sh**
 
 La primera vez que ejecutamos NetBeans 9, nos solicita que instalemos la librería nbjavac, para mejorar el editor de textos y la funcionalidad en general. Le hacemos caso y la instalamos.
 
-<img class="alignnone size-large wp-image-126" src="http://www.profesor-p.com/wp-content/uploads/2018/08/Captura-1024x680.png" alt="" width="1024" height="680" srcset="http://www.profesor-p.com/wp-content/uploads/2018/08/Captura-1024x680.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/08/Captura-300x199.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/08/Captura-768x510.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/08/Captura.png 1245w" sizes="(max-width: 1024px) 100vw, 1024px" />
+![](/img/2018/08/Captura-1024x680.png]
 
 Una vez instalada, nos pedirá que reiniciemos el IDE. Somos buenos chicos y lo reiniciamos.
 

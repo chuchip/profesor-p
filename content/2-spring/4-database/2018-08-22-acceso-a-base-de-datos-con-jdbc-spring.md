@@ -1,5 +1,6 @@
----
-title: 'Acceso a Base de Datos con  Spring Data JDBC'
+﻿---
+title: Acceso a Base de Datos con  Spring Data JDBC
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-22T15:39:57+00:00
@@ -8,7 +9,7 @@ featured_image: /wp-content/uploads/2018/08/springsource.jpg
 categories:
   - java
   - jdbc
-  - Sin categoría
+  - Sin categoria
   - spring
 tags:
   - java
@@ -16,19 +17,19 @@ tags:
   - spring
 
 ---
-[En el anterior articulo][1] explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de [Spring Data JDBC][2]
+[En el anterior articulo](http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/) explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
 
-El código fuente de este ejemplo esta en: <a href="https://github.com/chuchip/jdbc_jpa_tomcat" target="_blank" rel="noopener">https://github.com/chuchip/jdbc_jpa_tomcat</a>
+El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 
-## 5.2 Creando nuestro POJO y Repositorio {.western}
-
+### Creando nuestro POJO y Repositorio
 Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )
 
 Lo primero definimos nuestro POJO. Ya sabeis Plain Object Java Object, es decir Objeto Plano de Java, o en otras palabras ‘Clase Tonta donde almacenar y que no tiene nada o muy poco de lógica),
 
-Este POJO que hará referencia a la tabla _usuari__o,_ sera tal que así:
+Este POJO que hará referencia a la tabla usuario, sera tal que así:
 
-<pre>@Entity
+```
+@Entity
 @Table(name = "usuario",
         uniqueConstraints = {
             @UniqueConstraint(columnNames = {"login"})})
@@ -64,19 +65,20 @@ public class Usuario implements Serializable {
         this.login = login;
         this.nombre = nombre;
     }
-}</pre>
-
+}
+``` 
 Creo que esto no hará falta explicarlo mucho. Si no entendéis lo que es una @Entitty y tal os recomiendo que leáis los siguientes manuales:
 
-<https://www.arquitecturajava.com/ejemplo-de-jpa/>
+https://www.arquitecturajava.com/ejemplo-de-jpa/
 
-<https://www.oscarblancarteblog.com/2016/10/27/declarar-entidades-entity/>
+https://www.oscarblancarteblog.com/2016/10/27/declarar-entidades-entity/
 
 Una vez que ya tenemos una clase (una @Entity) donde almacenar los registros de nuestra tabla usuario, vamos a ver como trabajar usando el paquete JDBC de Spring. Para ser mas exactos, utilizando JDBC Templates de Spring.
 
 En la clase JdbcEjemplo tenemos lo siguiente:
 
-<pre>@Repository
+```
+@Repository
 public class JdbcEjemplo {
 
     @Autowired
@@ -94,12 +96,12 @@ public class JdbcEjemplo {
                 username);
     }
     
-    public List&lt;Usuario&gt; findAllUsernames() {
+    public List<Usuario> findAllUsernames() {
         return jdbc.queryForObject(
                 "select login,nombre from usuario ",
                 new usuarioListaRowMapper() );
     }
-    private class usuarioRowMapper implements RowMapper&lt;Usuario&gt; {
+    private class usuarioRowMapper implements RowMapper<Usuario> {
 
         @Override
         public Usuario mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -108,11 +110,11 @@ public class JdbcEjemplo {
                     rs.getString("nombre"));
         }
     }
-   private  class usuarioListaRowMapper implements RowMapper&lt;List&lt;Usuario&gt;&gt; {
+   private  class usuarioListaRowMapper implements RowMapper<List<Usuario>> {
 
         @Override
-        public List&lt;Usuario&gt; mapRow(ResultSet rs, int rowNum) throws SQLException {
-            ArrayList&lt;Usuario&gt; listaUsuarios = new ArrayList();
+        public List<Usuario> mapRow(ResultSet rs, int rowNum) throws SQLException {
+            ArrayList<Usuario> listaUsuarios = new ArrayList();
             do
             {
                 listaUsuarios.add(new Usuario(rs.getString("login"),
@@ -122,29 +124,24 @@ public class JdbcEjemplo {
             return listaUsuarios;
         }
     }
-}</pre>
+}
+```
+Explico la clase, poco a poco. Lo primero es marcarla como repositorio, eso se hace con la anotación @Repository. Con esto conseguiremos que Spring cargue la clase y este disponible para otras clases a través del sistema de inyección de dependencias (realmente para nuestro ejemplo nos habría valido con marcarla como @Component)
 
-Explico la clase, poco a poco. Lo primero es marcarla como repositorio, eso se hace con la anotación **_@Repository_**. Con esto conseguiremos que Spring cargue la clase y este disponible para otras clases a través del sistema de inyección de dependencias (realmente para nuestro ejemplo nos habría valido con marcarla como **@Component**)
+Creamos la función jdbcTemplate(DataSource dataSource) , la cual nos devolverá un nuevo JdbcTemplate con el datasource que Spring ya tiene definido en su contexto. Como se puede ver, la función esta marcada con @Bean, para que la variable jdbc, que tenemos al principio de la clase, la llame y pueda asignarle un valor. JdbcOperations es el interface que usan las clases del paquete JDBC de Spring. La clase JdbcTemplate, por supuesto, lo implementa.
 
-Creamos la función _jdbcTemplate(DataSource dataSource)_ , la cual nos devolverá un nuevo _JdbcTemplate_ con el datasource que Spring ya tiene definido en su contexto. Como se puede ver, la función esta marcada con @Bean, para que la variable _jdbc_, que tenemos al principio de la clase, la llame y pueda asignarle un valor. _JdbcOperations_ es el interface que usan las clases del paquete JDBC de Spring. La clase JdbcTemplate, por supuesto, lo implementa.
+Nosotros usaremos la función findByUserName , para buscar el nombre del usuario (como nos gusta el ingles, madre mía 😉 ). Y esta función lo único que hará sera usando la variable global jdbc, invocando el método queryForObject. Este método usa los siguientes parámetros:
 
-Nosotros usaremos la función _findByUserName ,_ para buscar el nombre del usuario (como nos gusta el ingles, madre mía 😉 ). Y esta función lo único que hará sera usando la variable global _jdbc_, invocando el método  _queryForObject._ Este método usa los siguientes parámetros:
+* La sentencia SQL a ejecutar, teniendo en cuenta que los parámetros a sustituir deben ser puestas con un ? , como si fuera un PreparedStatement, vamos.
 
-&#8211; La sentencia SQL a ejecutar, teniendo en cuenta que los parámetros a sustituir deben ser puestas con un **?** , como si fuera un PreparedStatement, vamos.
+* El objeto donde se van a guardar los resultados. Este objeto debe implementar el interface RowMapper. En nuestro ejemplo creamos la clase usuarioRowMapper donde definimos la función mapRow(ResultSet rs, int rowNum) la cual sera llamada por la función queryForObject, de tal manera que devuelva un objeto Usuario.
 
-&#8211; El objeto donde se van a guardar los resultados. Este objeto debe implementar el interface **_RowMapper_**. En nuestro ejemplo creamos la clase **_usuarioRowMapper_** donde definimos la función _mapRow(ResultSet rs, int rowNum)_ la cual sera llamada por la función _queryForObject,_ de tal manera que devuelva un objeto Usuario.
+* Las variables a sustituir en la sentencia SQL. Tendra que haber tantas variables como ?  hemos puesto en nuestra sentencia SQL.
 
-&#8211; Las variables a sustituir en la sentencia SQL. Tendra que haber tantas variables como **_? _** hemos puesto en nuestra sentencia SQL.
+El caso es que cuando llamemos la función findByUserName nos devolverá una clase tipo Usuario o null si no encuentra nada.
 
-El caso es que cuando llamemos la función **_findByUserName_** nos devolverá una clase tipo **Usuario** o null si no encuentra nada.
-
-En la siguiente función, llamada **findAllUsernames** buscaremos todos los usuarios que haya en la base de datos, por lo cual necesesitamos que devolver una lista de usuarios, es decir una List<Usuarios>.  Como se ve la llamada es casi igual que la de **_findByUserName_** , con la diferencia de que el **_RowMapper_** a devolver es **usuarioListaRowMapper **que como se ve en su función mapRow devuelve un objeto _List_ que contiene _Usuarios,_ es decir **List<Usuarios>**.
+En la siguiente función, llamada findAllUsernames buscaremos todos los usuarios que haya en la base de datos, por lo cual necesesitamos que devolver una lista de usuarios, es decir una List<Usuarios>.  Como se ve la llamada es casi igual que la de findByUserName , con la diferencia de que el RowMapper a devolver es usuarioListaRowMapper que como se ve en su función mapRow devuelve un objeto List que contiene Usuarios, es decir List<Usuarios>.
 
 Obsérvese lo cómodo que es usar Templates JDBC. No tenemos que abrir Conexiones ni crear Statements ni nada, Spring lo hace todo por debajo. Simplemente ponemos la sentencia SQL y recibimos un objeto que contiene los resultados.
 
 En el proximo articulo explicare como realizar busquedas en la base de datos a traves de JPA e Hibernate.
-
-&nbsp;
-
- [1]: http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/
- [2]: https://projects.spring.io/spring-data-jdbc/

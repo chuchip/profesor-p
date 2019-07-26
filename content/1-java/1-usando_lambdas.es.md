@@ -27,7 +27,8 @@ Yo, lo que os voy a dar un ejemplo de como usar lambda, para mejorar el uso de S
 
 En nuestra clase anterior teníamos el siguiente código:
 
-<pre>public class JdbcEjemplo {
+```
+public class JdbcEjemplo {
 .....
        
     public List&lt;Usuario&gt; findAllUsernames() {
@@ -50,22 +51,30 @@ En nuestra clase anterior teníamos el siguiente código:
             return listaUsuarios;
         }
     }
-}</pre>
+}
+```
+
 
 Ahora vamos a ver como usar una expresion lambda de tal manera que no tengamos que crear la clase **usuarioListaRowMapper** y, ademas nuestro código quede mucho mas limpio.
 
-<pre>public List&lt;Usuario&gt; findAllUsernames() {
+```
+public List&lt;Usuario&gt; findAllUsernames() {
          return  jdbc.query(
                 "select login,nombre from usuario ",
                 (rs, rowNum) -&gt; new Usuario(rs.getString("login"),rs.getString("nombre"))
         );
-}</pre>
+}
+```
+
 
 ¿ Sorprendido ?. Sí, gracias al uso de expresiones lambda hemos dejado nuestro código anterior en solo esas lineas. Y por supuesto no es necesario tener la clase **usuarioListaRowMapper **
 
 Lo que hemos hecho es cambiar la llamada a la función **queryForObject** por la llamada a la función **query** que esta definida de tal manera
 
-<pre>&lt;T&gt; List&lt;T&gt; query(String sql, RowMapper&lt;T&gt; rowMapper) throws DataAccessException;</pre>
+```
+<T> List<T> query(String sql, RowMapper<T> rowMapper) throws DataAccessException;
+```
+
 
 Es decir espera una sentencia SQL y un clase que implemente la interfaz funcional **RowMapper** (que es una interfaz funcional esta explicado en la página anteriormente referenciada)
 

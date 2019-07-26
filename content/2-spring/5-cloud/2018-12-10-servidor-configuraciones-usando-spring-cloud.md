@@ -1,5 +1,6 @@
 ---
 title: Servidor configuraciones usando Spring Cloud
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-12-10T14:56:56+00:00

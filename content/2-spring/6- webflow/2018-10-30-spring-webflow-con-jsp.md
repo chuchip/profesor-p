@@ -1,5 +1,7 @@
 ---
 title: Spring WebFlow con JSP
+pre: "<b>o </b>"
+weight: 20
 author: El Profe
 type: post
 date: 2018-10-30T17:12:49+00:00
@@ -48,23 +50,11 @@ En todas las peticiones tipo POST debemos incluir la variable **_csrf.parameterN
 
 Esta es la pantalla de entrada , solicitando las credenciales.
 
-<figure id="attachment_466" aria-describedby="caption-attachment-466" style="width: 290px" class="wp-caption alignnone">[<img class="imagen_con_borde wp-image-466 size-medium" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-300x212.png" alt="" width="300" height="212" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-300x212.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-768x542.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-1024x723.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23.png 1119w" sizes="(max-width: 300px) 100vw, 300px" />][1]<figcaption id="caption-attachment-466" class="wp-caption-text">_Pulse sobre la imagen para agrandarla_</figcaption></figure>
+![](/img/2018/10/Captura-23.png")
 
 Y está, la pantalla de entrada , una vez el usuario esta registrado.
 
-<figure id="attachment_473" aria-describedby="caption-attachment-473" style="width: 290px" class="wp-caption alignleft">[<img class="imagen_con_borde wp-image-473 size-medium" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24-300x171.png" alt="" width="300" height="171" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24-300x171.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24-768x437.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24-1024x582.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24.png 1199w" sizes="(max-width: 300px) 100vw, 300px" />][2]<figcaption id="caption-attachment-473" class="wp-caption-text">_Pulse sobre la imagen para agrandarla_</figcaption></figure>
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
+![](/img/2018/10/Captura-24.png)
 
 Si pulsamos el enlace &#8220;_Transferencia_&#8221; iremos al recurso &#8220;**traspaso**&#8221; que estará ubicado en la URL **http://localhost:8080/webflow/traspaso**. Este recurso es tratado por Spring Webflow, por lo cual se cargara el fichero  **WEB-INF/flows/traspaso/traspaso.xml** pues así lo definimos en la clase **WebFlowConfig** anteriormente vista.
 
@@ -143,9 +133,8 @@ La vista, que detallo a continuación, es un formulario bastante simple donde se
 
 Así se ve la vista en el navegador
 
-<img class="imagen_con_borde aligncenter wp-image-484 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-25.png" alt="" width="750" height="258" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-25.png 750w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-25-300x103.png 300w" sizes="(max-width: 750px) 100vw, 750px" />
+![](/img/2018/10/Captura-25.png(
 
-&nbsp;
 
 Lo primero es ver como la URL a llamar por el formulario es el resultado de la variable **${flowExecutionUrl}**. Esta variable es puesta automáticamente por _Spring WebFlow_ y apuntara  a la dirección donde continuara el flujo actual.
 
@@ -230,7 +219,7 @@ Resaltar que como la variable **periodico** esta en un campo **checkbox** solo s
 
 Una imagen de como se muestra la vista en el navegador.
 
-<img class="imagen_con_borde aligncenter wp-image-485 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-26.png" alt="" width="832" height="380" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-26.png 832w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-26-300x137.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-26-768x351.png 768w" sizes="(max-width: 832px) 100vw, 832px" />
+![](/img//2018/10/Captura-26.png)
 
 El id **comprobarImporte** se define a continuación,
 
@@ -281,7 +270,7 @@ Lo primero que declaramos es que debemos recibir un objeto **traspasoBean** . Si
 
 Es decir el flujo lo podríamos llamar con la URL: **http://localhost:8080/webflow/traspaso_time** pero si lo hacemos al no recibir el objeto  **traspasoBean ** fallara.
 
-<img class="imagen_con_borde aligncenter wp-image-486 size-large" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-27-1024x261.png" alt="" width="1024" height="261" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-27-1024x261.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-27-300x76.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-27-768x196.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-27.png 1114w" sizes="(max-width: 1024px) 100vw, 1024px" />
+![](/img//2018/10/Captura-27-1024x261.png)
 
 En el flujo mostramos la vista **tiempo** y si el _<span style="text-decoration: underline;">event_id</span>_ es **salir **se saltara al ID **salir.**
 
@@ -295,7 +284,7 @@ Si el _event_id_ es **cancelar** también volverá al flujo anterior, pero  a t
 
 La vista **tiempo** se muestra así en el navegador.
 
-<img class="imagen_con_borde aligncenter wp-image-488 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-28.png" alt="" width="705" height="508" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-28.png 705w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-28-300x216.png 300w" sizes="(max-width: 705px) 100vw, 705px" />
+![](/img//2018/10/Captura-28.png)
 
 Por último la vista **confirmar,** muestra todos los datos introducidos y solicita la confirmación. En caso de darla se ira al ID **salir** con lo cual saldremos del flujo redirigiendonos al recurso **index** pasando la variable **transferencia ** con el valor &#8220;1&#8221;. En caso de que en algún momento hayamos cancelado la transferencia se saldrá del flujo dirigiéndonos a **index** pero la variable **transferencia** tendrá el valor &#8220;0&#8221;
 
@@ -316,5 +305,4 @@ Como siempre, espero vuestros comentarios y mejoras, con la esperanza de haberme
 
 ¡¡ Hasta otra, alumnos!!
 
- [1]: http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23.png
- [2]: http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-24.png
+ 

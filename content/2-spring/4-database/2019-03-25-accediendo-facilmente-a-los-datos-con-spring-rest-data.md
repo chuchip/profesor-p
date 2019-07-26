@@ -1,5 +1,6 @@
 ---
 title: Accediendo facilmente a los datos con Spring Rest Data
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2019-03-25T16:02:14+00:00
@@ -31,7 +32,7 @@ Como siempre, podremos ir a la pagina <a class="url" href="https://start.spring.
 
 **Spring Data Rest**, **H2**, **JPA**, **Lombok** como se ve en la siguiente captura de pantalla
 
-<img class="alignright size-large wp-image-628" src="http://www.profesor-p.com/wp-content/uploads/2019/03/starters-1024x953.png" alt="" width="1024" height="953" srcset="http://www.profesor-p.com/wp-content/uploads/2019/03/starters-1024x953.png 1024w, http://www.profesor-p.com/wp-content/uploads/2019/03/starters-300x279.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/03/starters-768x715.png 768w, http://www.profesor-p.com/wp-content/uploads/2019/03/starters.png 1067w" sizes="(max-width: 1024px) 100vw, 1024px" />
+![](/img/2019/03/starters-1024x953.png")
 
 Una vez tengamos hayamos importado el proyecto en nuestro IDE preferido, deberemos modificar el fichero **application.properties** para definir ciertos parámetros:
 
@@ -58,13 +59,14 @@ Las demás líneas configuran la base de datos H2 que usaremos, así como cierta
 
 Nuestro proyecto final tendrá la siguiente estructura:
 
-![Estructura del proyecto][5]<img class="size-full wp-image-627 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2019/03/estructura.png" alt="" width="330" height="415" srcset="http://www.profesor-p.com/wp-content/uploads/2019/03/estructura.png 330w, http://www.profesor-p.com/wp-content/uploads/2019/03/estructura-239x300.png 239w" sizes="(max-width: 330px) 100vw, 330px" />
+![Estructura del proyecto](/img/2019/03/estructura.png)
 
 Como se puede ver, definiremos dos tablas (entities) , que son: **City** y **Customer**. También definimos los correspondientes repositorios **CustomerRepository** y **CityRepository**
 
 La clase **CityEntity.java** es la siguiente:
 
-<pre><code class="language-java" lang="java">@Entity
+```
+@Entity
 @Data
 @RestResource(rel="customers", path="customer")
 public class CustomerEntity {	
@@ -81,8 +83,7 @@ public class CustomerEntity {
 	@OneToOne
 	CityEntity city;    
 }
-
-</code></pre>
+```
 
 Las particularidades de esta clase son las siguientes:
 
@@ -93,10 +94,11 @@ Si no pusiéramos la etiqueta **@RestResource** Spring presentaría el recurso p
 
 El repositorio de esta entidad esta en **CustomerRepository** y contiene solo estas líneas:
 
-<pre><code class="language-java" lang="java">public interface CustomerRepository  extends CrudRepository&lt;CustomerEntity, Long&gt;  {	
+```
+public interface CustomerRepository  extends CrudRepository&lt;CustomerEntity, Long&gt;  {	
 	public List&lt;CustomerEntity&gt; findByNameIgnoreCaseContaining(@Param("name") String name);
 }
-</code></pre>
+```
 
 La función **findByNameIgnoreCaseContaining** que he definido permitirá buscar los clientes, ignorando mayúsculas y minúsculas, cuyo nombre contengan la cadena mandada. Más adelante explicare como poder realizar una consulta a través de esta llamada con **Spring Data Rest**
 
@@ -104,7 +106,8 @@ Tenéis más documentación sobre como crear consultas personalizadas en Spring 
 
 La clase **CityEntity.java** contiene las siguientes líneas:
 
-<pre><code class="language-java" lang="java">@Entity
+```
+@Entity
 @Data
 @RestResource(exported=false)
 public class CityEntity {		
@@ -115,7 +118,7 @@ public class CityEntity {
 	@Column
 	String province;
 }
-</code></pre>
+```
 
 En este caso la etiqueta **@RestResource** tiene indicada la propiedad **exported** igual a _false_ para que esta entidad no sea tratada por  **Data Rest** y no sera accesible a traves de ninguna API.
 
@@ -161,7 +164,7 @@ Primero añadamos un registro. Esto lo realizaremos realizando una petición tip
 
 Podemos comprobar que ha realizado la inserción gracias a la consola de H2. Para ello iremos a la URL <a class="url" href="http://localhost:8080/h2/" target="_blank" rel="noopener noreferrer">http://localhost:8080/h2/</a> y pulsaremos el botón **Connect**. Una vez conectados, si realizamos una _query_ sobre la tabla CUSTOMER_ENTITY veremos la siguiente salida:
 
-![Consultando datos en tabla customer_entity][8]<img class="alignright size-full wp-image-626" src="http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-query.png" alt="" width="870" height="398" srcset="http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-query.png 870w, http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-query-300x137.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-query-768x351.png 768w" sizes="(max-width: 870px) 100vw, 870px" />
+![Consultando datos en tabla customer_entity](/img/2019/03/consola-h2-query.png)
 
 Observar que aunque hemos añadido el valor para el campo &#8220;**secret**&#8221; en la anterior petición **POST,** este no se ha guardado en la base de datos.
 
@@ -171,9 +174,8 @@ Como no podemos acceder a la tabla **city_entity** a través de nuestra API pues
 update customer_entity set city_id=1;
 </code></pre>
 
-<img class="alignright size-full wp-image-629" src="http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2.png" alt="" width="975" height="354" srcset="http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2.png 975w, http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-300x109.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/03/consola-h2-768x279.png 768w" sizes="(max-width: 975px) 100vw, 975px" />
 
-![Consultando datos en tabla customer_entity][9]
+![Consultando datos en tabla customer_entity][/img/2019/03/consola-h2.png]
 
 Ahora si realizamos una petición **GET** obtendremos la siguiente salida:
 
@@ -283,12 +285,9 @@ Estas son algunas de las otras muchas características que implementa:
 
 Y esto es todo, esperando que el articulo haya resultado interesante me despido hasta el siguiente. Como siempre se agradecerá cualquier _feedback_.
 
- [1]: https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html
- [2]: file:///C:/Users/usuario.DESKTOP-HF5D20U/Documents/eclipse-learning/testspringdatarest/%20http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/
+ [1]: https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html 
  [3]: https://spring.io/projects/spring-hateoas
- [4]: https://docs.spring.io/spring-data/rest/docs/current/reference/html/
- [5]: file:///C:/Users/usuario.DESKTOP-HF5D20U/Documents/eclipse-learning/testspringdatarest/estructura.png
+ [4]: https://docs.spring.io/spring-data/rest/docs/current/reference/html/ 
  [6]: http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/
  [7]: https://tools.ietf.org/html/rfc6906
- [8]: file:///C:/Users/usuario.DESKTOP-HF5D20U/Documents/eclipse-learning/testspringdatarest/consola-h2-query.png
- [9]: file:///C:/Users/usuario.DESKTOP-HF5D20U/Documents/eclipse-learning/testspringdatarest/consola-h2.png
+ 

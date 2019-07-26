@@ -2,6 +2,7 @@
 title: Kotlin vs Java
 author: airec69
 type: post
+weight: 1
 date: 2018-08-23T19:37:38+00:00
 url: /2018/08/23/kotlin-vs-java/
 categories:
@@ -45,11 +46,13 @@ Kotlin, sobre todo programando en Android, tiene ciertas extensiones, por ejempl
 Bueno, por no extenderme demasiado, Kotlin es un gran lenguaje y tiene cosas muy chulas, como por ejemplo, el hecho de definir en las funciones valores por defecto, de tal manera que en una funcion puede estar definida algo asi como esto:
 
 <pre>fun multi(x:Int =0,y:Int=0)</pre>
-
 De tal manera que a esta funcion la podremos llamar con un parametro, con dos o con ninguno, con lo cual te evitas el  crear 3 funciones como tendrias que crear en Java, y que una llame a otra (es decir, es un ahorro de código sin mas).
 
-Mi opinión: Si vais a programar en Android, aprender Kotlin, la curva de aprendizaje es muy rapida y esta claro que Google le va  a dar mucho soporte y añadirle más cosas que ayudaran.Es obvio que Android no quiere depender de Java (entre otras cosas por los problemas de licencias que esta teniendo con Oracle) y por eso, al final, Kotlin sera el lenguaje que mandara en Android.
+Mi opinión: Si vais a programar en Android, aprender Kotlin, la curva de aprendizaje es muy rapida y esta claro que Google le va  a dar mucho soporte y añadirle más cosas que ayudaran.
+Es obvio que Android no quiere depender de Java (entre otras cosas por los problemas de licencias que esta teniendo con Oracle) y por eso, al final, Kotlin sera el lenguaje que mandara en Android.
 
-Si usais Java, pero programando, por ejemplo, servicios Web, yo no me molestaria demasiado en aprender Kotlin: las mejoras que te ofrece no son tan grandes y las que valen la pena, las tienes en las ultimas versiones de Java. Pero claro, esto es solo mi opinión 😉
+Si usais Java, pero programando, por ejemplo, servicios Web, yo no me molestaria demasiado en aprender Kotlin: las mejoras que te ofrece no son tan grandes y las que valen la pena, 
+las tienes en las ultimas versiones de Java. 
+Pero claro, esto es solo mi opinión 😉
 
 &nbsp;

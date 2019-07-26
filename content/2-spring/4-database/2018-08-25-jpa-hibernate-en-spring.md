@@ -1,5 +1,6 @@
 ---
 title: JPA + Hibernate en Spring
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-25T18:14:42+00:00
@@ -27,7 +28,8 @@ Lo primero vamos a crear el objeto que representa la tabla de nuestra base de da
 
 Definamos entonces nuestro objeto (usando la librería <a href="https://projectlombok.org/" target="_blank" rel="noopener">Lombok</a>, de la que ya hablaba [en otra entrada][2])
 
-<pre>@Data
+```
+@Data
 @Entity
 @Table(name = "usuario",   uniqueConstraints = {   @UniqueConstraint(columnNames = {"login"})}) // Esto no es necesario en este ejemplo
 public class Usuario implements Serializable {
@@ -42,7 +44,8 @@ public class Usuario implements Serializable {
         this.login = login;
         this.nombre = nombre;
     }
-}</pre>
+}
+```
 
 Como se ve fácilmente, es una simple clase POJO, que implementa el interface Serializable. Solo tiene dos campos y unas cuantas anotaciones, que ahora explicare.
 
@@ -58,7 +61,7 @@ Bien, una vez tenemos nuestra entidad vamos a trabajar con ella. Por hacerlo sim
 
 Si, aunque parezca increíble, con solo crear esta interface ya podremos acceder a nuestra base de datos.
 
-<pre>public interface UsuarioRepositorio extends CrudRepository&lt;Usuario, String&gt; { }</pre>
+<pre>public interface UsuarioRepositorio extends CrudRepository<Usuario, String> { }</pre>
 
 Veis que he creado un interface, al que he llamado **UsuarioRepositorio** que extiende del interface **CrudRepository** y le he añadido el nombre de la clase **U****suario**, que es mi @Entity, y el tipo de campo (String) que es el indice único.
 
@@ -66,7 +69,8 @@ Veis que he creado un interface, al que he llamado **UsuarioRepositorio** que ex
 
 Creamos esta clase en nuestro proyecto.
 
-<pre>public class buscaUsuario
+```
+public class buscaUsuario
 {
 
    @Autowired
@@ -78,7 +82,8 @@ Creamos esta clase en nuestro proyecto.
 
         String usuario = (usu.isPresent() ? usu.get().getNombre() : "Usuario "+loginUsuario+" No encontrado");  }
   }
-}</pre>
+}
+```
 
 Teniendo inyectada  una referencia, con la  anotación @Autowired,  a nuestro interface  UsuarioRepositorio (Spring hace la magia), en la función getNombreUsuario, invocamos a **findById ,** la cual nos devuelve una clase tipo <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" target="_blank" rel="noopener">Optional</a>. Este tipo de objeto es para poder encapsular un posible valor null de tal manera que siempre se devuelva algo, aun en el caso de que no se encuentre ningún valor.  Para saber si se ha encontrado algo usaremos **isPresent** el cual nos devolverá **true** si ha encontrado algún registro.
 
@@ -94,8 +99,10 @@ La respuesta a la segunda pregunta es la anotación @Query. Gracias a ella en nu
 
 Así si ponemos la siguiente función en nuestra clase **UsuarioRepositorio**
 
-<pre>@Query("select u from Usuario u where u.nombre like :nombre order by u.nombre")
-List&lt;Usuario&gt; buscaPorNombre(@Param("nombre") String nombre);</pre>
+```
+@Query("select u from Usuario u where u.nombre like :nombre order by u.nombre")
+List<Usuario> buscaPorNombre(@Param("nombre") String nombre);
+```
 
 Podremos buscar todos los usuarios cuyo nombre contenga el String pasado a la función **buscaPorNombre.**
 
@@ -107,19 +114,21 @@ Así, en el ejemplo anterior, si a nuestra función le llamamos findIsLikeNombre
 
 Así nuestra clase quedaría así:
 
-<pre>public interface UsuarioRepositorio extends CrudRepository&lt;Usuario, String&gt; {
+```
+public interface UsuarioRepositorio extends CrudRepository<Usuario, String> {
     
   
     @Query("select u from Usuario u where u.nombre like :nombre order by u.nombre")
-    List&lt;Usuario&gt; buscaPorNombre(@Param("nombre") String nombre);
+    List<Usuario>buscaPorNombre(@Param("nombre") String nombre);
     
     /**
      * Esta funcion hace exactamente lo mismo que la funcion buscaPorNombre pero utilizando DSL (Domain Specificic Lenguage) de Spring
      * @param nombre Nombre de usuario a buscar (sin wildcards, ya lo pone JPL)
      * @return Lista de Usuarios a buscar
      */
-    List&lt;Usuario&gt; findIsLikeNombreOrderByNombre(String nombre);
-}</pre>
+    List<Usuario> findIsLikeNombreOrderByNombre(String nombre);
+}
+```
 
 Esto se hace gracias a la Spring y su Domain Specificic Lenguage (DSL). Tenéis una referencia de como formar Querys usando esta nomenclatura en <a href="https://docs.spring.io/spring-data/data-jpa/docs/1.0.0.M1/reference/html/#jpa.query-methods.query-creation" target="_blank" rel="noopener">esta página de Spring</a>
 

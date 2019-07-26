@@ -1,5 +1,6 @@
 ---
 title: Microservicios distribuidos con Eureka
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2019-01-03T08:52:59+00:00
@@ -52,16 +53,22 @@ Es decir especificamos el nombre del programa con la línea **spring.application
 
 Ahora en nuestra clase principal, por donde entra **Spring Boot** deberemos poner las anotación **EnableEurekaServer**: 
 
-<pre class="wp-block-preformatted">@SpringBootApplication<br />@EnableEurekaServer<br />public class NetflixEurekaNamingServerApplication {<br />​<br />    public static void main(String[] args) {<br />        SpringApplication.run(NetflixEurekaNamingServerApplication.class, args);<br />    }<br />}</pre>
+```
+@SpringBootApplication
+@EnableEurekaServer
+public class NetflixEurekaNamingServerApplication {
+​
+    public static void main(String[] args) {
+        SpringApplication.run(NetflixEurekaNamingServerApplication.class, args);
+    }
+}
+```
 
 ¡Y ya esta listo!. Nuestro servidor Eureka esta creado. Para ver su estado podemos usar nuestro navegador preferido y navegar a: <http://localhost:8761/> para ver las aplicaciones que se han registrado. Como se ve en la captura de pantalla todavía no hay ninguna.<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura2-1-1024x504.png" alt="" class="wp-image-536" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura2-1-1024x504.png 1024w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura2-1-300x148.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura2-1-768x378.png 768w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura2-1.png 1175w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
-
+![](/img/2019/01/captura2-1-1024x504.png)
 En la misma pantalla se muestra el estado del servidor.<figure class="wp-block-image">
-
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-1024x427.png" alt="" class="wp-image-539" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-1024x427.png 1024w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-300x125.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-768x320.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
-
+![](/img/2019/01/captura5-1024x427.png)
 Observar que lo normal es que tengamos varios servidores Eureka levantados. En nuestro ejemplo solo levantaremos uno, aunque eso nos será lo normal en producción.
 
 ### **2. Microservicio &#8216;countries-service&#8217;** 
@@ -84,11 +91,11 @@ Como se puede ver, con el paramero **eureka.client.service-url.default-zone** es
 
 Para poder lanzar con **Eclipse** la segunda instancia de la aplicación **paises-service** en el puerto 8001, deberemos ir a la opción `Run Configurations` en el menú `Run`y copiar la que Eclipse habra creado de **countries-service** una vez hayamos ejecutado la aplicación por primera vez. En la pestaña `Arguments` deberemos añadir el parámetro `--server.port=8001`<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura4.png" alt="" class="wp-image-538" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura4.png 801w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura4-300x206.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura4-768x526.png 768w" sizes="(max-width: 801px) 100vw, 801px" /></figure> 
+![](/img/2019/01/captura4.png)
 
 En la siguiente captura de pantalla se puede ver como si lanzamos dos instancias de este programa, una en el puerto 8000 y otra en el puerto 8001, en **Eureka Server** podemos ver como se han registrado las diferentes instancias. El nombre que se han registrado y por el que el se podrán buscar es el nombre de la aplicación como se ha declarado en la variable `spring.application.name` del fichero `application.properties`<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-1024x427.png" alt="" class="wp-image-539" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-1024x427.png 1024w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-300x125.png 300w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura5-768x320.png 768w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
+![](/img/2019/01/captura5-1024x427.png")
 
 Así vemos que la aplicación `COUNTRIES-SERVICE`tiene dos instancias, levantadas ambas en el host `port-chuchi`una en el puerto 8000 y otra en el puerto 8001.
 
@@ -103,7 +110,7 @@ En la clase `CapitalsServiceController`se definen los siguientes puntos de entra
   * **Recibe**: Código de Pais. (&#8216;es&#8217;,&#8217;eu&#8217;,&#8217;en&#8217;&#8230;.)
   * **Devolverá** un objeto `CapitalsBean`<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura3-1.png" alt="" class="wp-image-537" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura3-1.png 616w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura3-1-300x149.png 300w" sizes="(max-width: 616px) 100vw, 616px" /></figure> 
+![](/img/2019/01/captura3-1.png")
 
   1. Petición GET. **/time/{time}**
 
@@ -132,7 +139,19 @@ Es decir, definimos el nombre de la aplicación, después especificamos donde es
 
 Para realizar una petición RESTFUL a `countries-service` la forma más simple seria usar la clase `RestTemplate`del paquete `org.springframework.web.client`. 
 
-<pre class="wp-block-preformatted">@GetMapping("/template/{country}")<br />public CapitalsBean getCountryUsingRestTemplate(@PathVariable String country) { <br />    Map&lt;String, String&gt; uriVariables = new HashMap&lt;&gt;();<br />    uriVariables.put("country", country);               <br />    ResponseEntity&lt;CapitalsBean&gt; responseEntity = new RestTemplate().getForEntity(<br />            "http://localhost:8000/{country}", <br />            CapitalsBean.class, <br />            uriVariables );     <br />    CapitalsBean response = responseEntity.getBody();       <br />    return response;<br />}</pre>
+```
+@GetMapping("/template/{country}")
+public CapitalsBean getCountryUsingRestTemplate(@PathVariable String country) { 
+    Map<String, String> uriVariables = new HashMap<>();
+    uriVariables.put("country", country);               
+    ResponseEntity<CapitalsBean> responseEntity = new RestTemplate().getForEntity(
+            "http://localhost:8000/{country}", 
+            CapitalsBean.class, 
+            uriVariables );     
+    CapitalsBean response = responseEntity.getBody();       
+    return response;
+}
+```
 
 Como se ve, simplemente, metemos en un `hashmap` las variables que vamos a pasar en la petición, que en este caso es solo el parámetro `pais`, para después realizar crear un objeto `ResponseEntity` llamando a la función estática`RestTemplate.getForEntity()` pasando como parámetros, la URL que deseamos llamar, la clase donde debe dejar la respuesta de la petición REST y las variables pasadas en la petición. 
 
@@ -146,21 +165,41 @@ Una manera más elegante de hacer esa llamada seria utilizando [Feign][3]. **Fei
 
 Para utilizar **Feign** debemos incluir la etiqueta **@EnableFeignClients** en nuestra clase principal. En nuestro ejemplo la ponemos en la clase `CapitalsServiceApplication`
 
-<pre class="wp-block-preformatted">@SpringBootApplication<br />@EnableFeignClients("com.profesorp.capitalsservice")<br />public class CapitalsServiceApplication {<br />    public static void main(String[] args) {<br />        SpringApplication.run(CapitalsServiceApplication.class, args);<br />    }<br />}</pre>
+```
+@SpringBootApplication
+@EnableFeignClients("com.profesorp.capitalsservice")
+public class CapitalsServiceApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(CapitalsServiceApplication.class, args);
+    }
+}
+```
 
 Si no pasamos ningún parámetro a la etiqueta **@EnableFeignClients** buscara clientes **Feign** en nuestro paquete principal, si le ponemos un valor solo buscara clientes en el paquete mandado. Así en el ejemplo solo buscaría en el paquete `com.profesorp.capitalsservice`
 
 Ahora definimos el cliente _Feing_ con el _interface_ `CapitalsServiceProxy`
 
-<pre class="wp-block-preformatted">@FeignClient(name="simpleFeign",url="http://localhost:8000/")<br />public interface CapitalsServiceProxySimple {   <br />    @GetMapping("/{country}")<br />    public CapitalsBean getCountry(@PathVariable("country") String country);<br />}</pre>
+```
+@FeignClient(name="simpleFeign",url="http://localhost:8000/")
+public interface CapitalsServiceProxySimple {   
+    @GetMapping("/{country}")
+    public CapitalsBean getCountry(@PathVariable("country") String country);
+}
+```
 
 Lo primero es etiquetar la clase con **@FeignClient** especificando la URL donde esta el servidor REST que queremos llamar. Prestar atención al hecho de que ponemos la dirección base, en este caso solo el nombre del host y su puerto `localhost:8000`. El parámetro `name`debe ser puesto pero no es importante su contenido.
 
 Después definiremos las diferentes entradas que queremos tener disponibles. En nuestro caso solo hay una definida, pero podríamos incluir la llamada a **/time/{time}** .
 
-Para usar este cliente simplemente pondríamos este código en nuestro programa
-
-<pre class="wp-block-preformatted">@Autowired<br />private CapitalsServiceProxySimple simpleProxy;<br />@GetMapping("/feign/{country}")<br />public CapitalsBean getCountryUsingFeign(@PathVariable String country) {<br />    CapitalsBean response = simpleProxy.getCountry(country);        <br />    return response;<br />}</pre>
+```
+@Autowired
+private CapitalsServiceProxySimple simpleProxy;
+@GetMapping("/feign/{country}")
+public CapitalsBean getCountryUsingFeign(@PathVariable String country) {
+    CapitalsBean response = simpleProxy.getCountry(country);        
+    return response;
+}
+```
 
 Usamos el inyector de dependencias de **Spring** para crear un objeto **CapitalsServiceProxySimple** y después simplemente llamamos a la función `getCountry()`del interface.
 
@@ -174,13 +213,19 @@ Para resolver el problema en vez de poner la dirección del servidor, pondremos 
 
 Para ello crearíamos un interface **Feign** de esta manera
 
-<pre class="wp-block-preformatted">@FeignClient(name="countries-service")<br />public interface CapitalsServiceProxy {<br />    @GetMapping("/{country}")<br />    public CapitalsBean getCountry(@PathVariable("country") String country);<br />}</pre>
+```
+@FeignClient(name="countries-service")
+public interface CapitalsServiceProxy {
+    @GetMapping("/{country}")
+    public CapitalsBean getCountry(@PathVariable("country") String country);
+}
+``` 
 
 Como se puede ver aquí no especificamos la dirección del servicio, simplemente ponemos el nombre. En este caso `countries-service` que es como esta registrada la aplicación en el servidor Eureka.
 
 Ahora cada petición que se haga ira balanceándose de una instancia a otra. De tal manera que la primera petición ira a la del puerto 8000 y la siguiente a la del puerto 8001.<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura6.png" alt="" class="wp-image-540" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura6.png 539w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura6-300x126.png 300w" sizes="(max-width: 539px) 100vw, 539px" /></figure> <figure class="wp-block-image"><img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura7.png" alt="" class="wp-image-541" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura7.png 582w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura7-300x142.png 300w" sizes="(max-width: 582px) 100vw, 582px" /></figure> 
+![](/img/2019/01/captura6.png")
 
 De esta manera nuestra aplicación ya utilizara todas las instancias del servicio automáticamente.
 
@@ -198,7 +243,23 @@ Ahora, para especificar que queremos usar esta clase para configurar **Ribbon** 
 
 `@RibbonClient(name="countries-service", configuration = RibbonConfiguration.class)`en nuestra clase `CapitalsServiceApplication`
 
-<pre class="wp-block-preformatted">@SpringBootApplication<br />@EnableFeignClients <br />@RibbonClient(name="countries-service", configuration = RibbonConfiguration.class)<br />public class CapitalsServiceApplication {<br />....<br />}</pre>
+```
+import org.springframework.context.annotation.Bean;
+import com.netflix.loadbalancer.IPing;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.NoOpPing;
+import com.netflix.loadbalancer.WeightedResponseTimeRule;
+public class RibbonConfiguration {
+     @Bean
+     public IPing ribbonPing() {
+            return new NoOpPing();
+     }   
+     @Bean  
+     public IRule ribbonRule() {
+            return new WeightedResponseTimeRule();
+     }
+}
+```
 
 Para comprobar como funciona el balanceo por peso, estableceremos una pausa de 10 milisegundos al servidor del puerto 8001 y una de 300 al servidor del puerto 8000, usando la llamada a **/time/{time}** del servicio `countries-service`
 
@@ -210,7 +271,7 @@ Suponiendo que estamos trabajando en **Linux**, usando **Bash** haremos 100 peti
 
 Al cabo de un tiempo podremos ver las peticiones que se han realizado a cada puerto llamando a <http://localhost:8100/puertos><figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura8.png" alt="" class="wp-image-542" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura8.png 457w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura8-300x81.png 300w" sizes="(max-width: 457px) 100vw, 457px" /></figure> 
+![](/img//2019/01/captura8.png")
 
 Como se puede ver hay muchas más peticiones al puerto 8001 que al puerto 8000, lo cual es normal teniendo en cuenta que el puerto 8000 tiene un retraso de 300 milisegundos, mientras que el 8001 solo de 10.
 

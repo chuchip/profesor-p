@@ -1,5 +1,7 @@
 ---
 title: Spring WebFlow con JSP – Configuración
+pre: "<b>o </b>"
+weight: 10
 author: El Profe
 type: post
 date: 2018-10-29T08:49:12+00:00
@@ -38,13 +40,13 @@ El programa simulara que entras a la página de un banco donde puedes realizar u
 
 El programa esta realizado para que funcione bajo Tomcat, en el contexto: webflow. Por lo que deberemos ir a la dirección http://localhost:8080/webflow  para probar nuestra aplicación:
 
-<img class="imagen_con_borde aligncenter wp-image-466 size-large" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-1024x723.png" alt="" width="1024" height="723" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-1024x723.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-300x212.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23-768x542.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-23.png 1119w" sizes="(max-width: 1024px) 100vw, 1024px" />
-
-&nbsp;
+![](/img/2018/10/Captura-23-1024x723.png")
 
 En esta imagen se puede ver la definición del flujo de trabajo.
 
-<figure id="attachment_460" aria-describedby="caption-attachment-460" style="width: 202px" class="wp-caption aligncenter">[<img class="imagen_con_borde wp-image-460 size-medium" src="http://www.profesor-p.com/wp-content/uploads/2018/10/diagrama_flujo-212x300.gif" alt="Flujo de la aplicacion" width="212" height="300" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/diagrama_flujo-212x300.gif 212w, http://www.profesor-p.com/wp-content/uploads/2018/10/diagrama_flujo-768x1086.gif 768w, http://www.profesor-p.com/wp-content/uploads/2018/10/diagrama_flujo-724x1024.gif 724w" sizes="(max-width: 212px) 100vw, 212px" />][1]<figcaption id="caption-attachment-460" class="wp-caption-text"><span style="background-color: #ccffcc;">Click para ampliar</span></figcaption></figure>
+![Flujo de trabajo](/img/2018/10/diagrama_flujo.gif)
+
+
 
 <a href="https://projects.spring.io/spring-webflow/" target="_blank" rel="noopener">Spring WebFlow</a> es un paquete con el cual podemos definir el flujo de nuestra aplicación. Es decir, definimos las acciones a realizar cuando se pulse un enlace, se cumpla cierta condición, etc. Estos flujos son definidos en ficheros XML, de tal manera que ahí es donde definimos que de la PAGINA\_X, al pulsar el BOTON1, vaya a la PAGINA\_XY, siempre y cuando  la CONDICION_Z se cumpla. Esto nos permite separar la lógica del programa de las vistas (los ficheros JSP), ademas de ser más fácil el reutilizar código.
 
@@ -52,7 +54,7 @@ En esta imagen se puede ver la definición del flujo de trabajo.
 
 La estructura del programa es la que se ve en la  imagen siguiente:
 
-<img class="imagen_con_borde alignnone wp-image-457 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-22.png" alt="" width="303" height="543" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-22.png 303w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-22-167x300.png 167w" sizes="(max-width: 303px) 100vw, 303px" />
+![](/img/2018/10/Captura-22.png)
 
 Dentro del directorio **WEB-INF** esta la carpeta **flows,** que a su vez tiene la carpeta **traspaso** y **time** donde definimos los dos flujos de trabajo que se usan en la aplicación. Observar que los ficheros **xml** con la definición del flujo de trabajo también se aloja en las mismas carpetas donde estan los **JSP** de su flujo. Es decir el flujo de trabajo &#8220;**traspaso**&#8221; se define en el fichero &#8220;traspaso.xml&#8221; y utiliza los ficheros: cuentaOrigen.jsp, importe.jsp, confirmar.jsp, \_include.jsp y \_navegador.jsp.
 

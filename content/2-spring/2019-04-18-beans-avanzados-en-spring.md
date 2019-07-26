@@ -1,5 +1,6 @@
 ---
-title: Beans avanzados en Spring
+title: Beans avanzados
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2019-04-18T21:26:57+00:00
@@ -23,15 +24,17 @@ Esto que parece bastante confuso explicado así es realmente muy fácil de reali
 
 En el ejemplo que tenéis en <https://github.com/chuchip/springboot-servicelocatorfactorybean> esta la interfaz **AdapterService**, cuyo código como veis a continuación es muy simple:
 
-<pre><code class="language-java" lang="java">public interface AdapterService
+```
+public interface AdapterService
 {
 	public String process();
 }
-</code></pre>
+```
 
 Se crean 4 clases que implementan ese interface **BikeService**, **BusService**, **TruckService** y **CarService**. A continuación tenéis el código de **CarService**
 
-<pre><code class="language-java" lang="java">@Service("Car")
+```
+@Service("Car")
 public class CarService implements AdapterService {
 	int numberExecution=1;
 	
@@ -40,7 +43,7 @@ public class CarService implements AdapterService {
 		return "inside car service -  number of executions: "+(numberExecution++);
 	}
 }
-</code></pre>
+```
 
 Lo importante de esta clase es la etiqueta `@Service("car")` pues especificamos el nombre con el que deberemos cargar la clase.
 
@@ -48,16 +51,18 @@ En las demás clases existen las etiquetas: `@Service("Bike")`, `@Service("Bus")
 
 Ahora se debe crear el interface que pasaremos a la clase **ServiceLocatorFactoryBean** en este ejemplo es la clase **ServiceRegistry**
 
-<pre><code class="language-java" lang="java">public interface ServiceRegistry {
+```
+public interface ServiceRegistry {
 	public AdapterService getService(String serviceName);
 }
-</code></pre>
+```
 
 En esta clase deberemos definir la función `getService` que es la que **ServiceLocatorFactoryBean** invocara. Esta función debe recibir un parámetro que será el nombre del _bean_ (el definido con las etiquetas `@service`), además devolverá un objeto que implemente el interfaz adecuado (en este caso **AdapterService)**.
 
 En la clase **VehicleConfig** definimos la función que nos devolverá el **FactoryBean**
 
-<pre><code class="language-java" lang="java">@Configuration
+```
+@Configuration
 public class VehicleConfig {
 	@Bean
 	public FactoryBean&lt;?&gt; factoryBean() {
@@ -66,7 +71,7 @@ public class VehicleConfig {
 		return bean;
 	}
 }
-</code></pre>
+```
 
 En ella, instanciamos una clase tipo **ServiceLocatorFactoryBean**, especificando el interface que debe devolver y luego retornamos ese objeto **ServiceLocatorFactoryBean** que por supuesto implementa el interfaz **FactoryBean**
 

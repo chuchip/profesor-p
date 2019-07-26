@@ -1,5 +1,6 @@
 ---
 title: Optimizando relaciones entre entidades en Hibernate
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2019-04-05T10:54:22+00:00

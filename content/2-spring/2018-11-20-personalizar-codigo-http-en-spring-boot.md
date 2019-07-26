@@ -1,5 +1,6 @@
 ---
 title: Personalizar salidas de códigos HTTP en Spring Boot
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-11-20T17:46:55+00:00
@@ -58,7 +59,9 @@ Si intentamos acceder a un elemento superior al 3 nos devolverá un error pues s
 
 Aquí pong la clase _ErrorResource_ que procesa las peticiones al recurso &#8220;**/get**&#8220;
 
-<pre><code class="language-@RestController">public class ErrorResource {
+
+```
+public class ErrorResource {
 
   @Autowired
   MiBeanService service;
@@ -76,7 +79,8 @@ Aquí pong la clase _ErrorResource_ que procesa las peticiones al recurso &#8220
     return bean;
   }
 }
-</code></pre>
+```
+
 
 Como se ve en **getBean()** se llama a la función **_getBean(int id)_** de la clase **MiBeanService**, la cual pego a continuación
 
@@ -120,7 +124,7 @@ Una simple clase que extiende **RuntimeException** y que esta anotada con al eti
 
 Si dejáramos así el proyecto al pedir un código superior a 3, seria esta:
 
- <img class="alignnone size-full wp-image-499" src="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura1.png" alt="" width="457" height="407" srcset="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura1.png 457w, http://www.profesor-p.com/wp-content/uploads/2018/11/Captura1-300x267.png 300w" sizes="(max-width: 457px) 100vw, 457px" /><img class="alignnone size-full wp-image-500" src="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2.png" alt="" width="444" height="390" srcset="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2.png 444w, http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2-300x264.png 300w" sizes="(max-width: 444px) 100vw, 444px" />
+![captura-1](/img/2018/11/Captura1.png")
 
 pero como hemos dicho queremos que el mensaje de error sea personalizado.
 
@@ -190,7 +194,7 @@ Es importante observar que también definimos el código HTTP devuelto. En este 
 
 Y así tendremos una salida personalizada como se ve en la siguiente imagen:
 
-<img class="alignnone size-full wp-image-500" src="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2.png" alt="" width="444" height="390" srcset="http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2.png 444w, http://www.profesor-p.com/wp-content/uploads/2018/11/Captura2-300x264.png 300w" sizes="(max-width: 444px) 100vw, 444px" />
+![Captura-2](/img/2018/11/Captura2.png")
 
 Y esto es todo por hoy. ¡¡ Nos vemos en la próxima clase !!
 
