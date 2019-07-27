@@ -12,8 +12,7 @@ install:
     - rm -rf docs 2> /dev/null
 
 script:
-    - hugo -F
-    - mkdir docs
+    - hugo -F    
     - echo 'ww2.profesor-p.com' > docs/CNAME
 
 deploy:
