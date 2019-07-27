@@ -14,7 +14,7 @@ install:
 script:
     - hugo -F
     - mkdir docs
-    - echo 'www.profesor-p.com' > docs/CNAME
+    - echo 'ww2.profesor-p.com' > docs/CNAME
 
 deploy:
   provider: pages

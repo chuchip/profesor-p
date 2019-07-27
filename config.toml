@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "ww2.profesor-p.com"
 languageCode = "es-ES"
 defaultContentLanguage = "es"
 enableEmoji = true
@@ -7,6 +7,7 @@ theme = "hugo-theme-learn"
 themesdir = "./themes"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
+publishDir = "docs"
 
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
