@@ -1,4 +1,4 @@
-baseURL = "ww2.profesor-p.com"
+baseURL = "http://ww2.profesor-p.com/"
 languageCode = "es-ES"
 defaultContentLanguage = "es"
 enableEmoji = true
