@@ -13,7 +13,7 @@ install:
 
 script:
     - hugo -F
-    - echo 'www.profesor-p.es' > docs/CNAME
+    - echo 'www.profesor-p.com' > docs/CNAME
 
 deploy:
   provider: pages
