@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lambda on Documentacion en español</title>
-    <link>ww2.profesor-p.com/categories/lambda/</link>
+    <link>http://ww2.profesor-p.com/categories/lambda/</link>
     <description>Recent content in Lambda on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Tue, 04 Sep 2018 11:04:46 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/categories/lambda/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/categories/lambda/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Lambdas en JDBC Data</title>
-      <link>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>Expresiones Lamba en Spring JDBC Data. Mejorando la explicación. En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
 Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular – 4ª Parte</title>
-      <link>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
       <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
     <item>
       <title>Usando Lambdas</title>
-      <link>ww2.profesor-p.com/2018/08/23/usando-lambdas/</link>
+      <link>http://ww2.profesor-p.com/2018/08/23/usando-lambdas/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/23/usando-lambdas/</guid>
-      <description>&lt;p&gt;En esta breve entrada explicare como mejorar el &lt;a href=&#34;ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/&#34;&gt;ejemplo anterior&lt;/a&gt;, con el uso de lambdas.&lt;/p&gt;</description>
+      <guid>http://ww2.profesor-p.com/2018/08/23/usando-lambdas/</guid>
+      <description>&lt;p&gt;En esta breve entrada explicare como mejorar el &lt;a href=&#34;http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/&#34;&gt;ejemplo anterior&lt;/a&gt;, con el uso de lambdas.&lt;/p&gt;</description>
     </item>
     
   </channel>

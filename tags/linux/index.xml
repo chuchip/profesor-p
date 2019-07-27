@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/linux/</link>
+    <link>http://ww2.profesor-p.com/tags/linux/</link>
     <description>Recent content in Linux on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 27 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Instalar plugin Spring Boot en NetBeans</title>
-      <link>ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</link>
+      <link>http://ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</link>
       <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
       <description>En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.
 Ademas haremos todo esto en un Linux Ubuntu 18.04
 Si no sabéis lo que es Spring Boot, ya estáis tardando en aprender al menos los conceptos básicos.

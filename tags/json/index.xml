@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Json on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/json/</link>
+    <link>http://ww2.profesor-p.com/tags/json/</link>
     <description>Recent content in Json on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Sat, 06 Oct 2018 21:54:13 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicación CRUD usando REST en JavaEE</title>
-      <link>ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</link>
+      <link>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</link>
       <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
       <description>Buenas, chicos, en esta ocasión voy a explicar como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
 Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificaciones, la realidad es que es muy fácil el realizar una aplicación totalmente funcional y muy fácilmente con la libreria JACKSON.</description>
     </item>
     
     <item>
       <title>Accediendo facilmente a los datos con Spring Rest Data</title>
-      <link>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <link>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
       <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <guid>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
       <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
 Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
     </item>
     
     <item>
       <title>Aplicación CRUD en Angular</title>
-      <link>ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
       <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
       <description>Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 Por supuesto el protocolo para las comunicaciones es JSON.
 El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
@@ -45,20 +45,20 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
     
     <item>
       <title>Aplicación en Spring REST y Angular – 4ª Parte</title>
-      <link>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
       <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular – 2 Parte</title>
-      <link>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
       <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
       <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
 Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
     </item>

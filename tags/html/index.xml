@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Html on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/html/</link>
+    <link>http://ww2.profesor-p.com/tags/html/</link>
     <description>Recent content in Html on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Wed, 05 Dec 2018 10:32:08 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Crear pagina web gratuita en GitHub</title>
-      <link>ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
+      <link>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
       <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
+      <guid>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
       <description>Buenas. Alumnos,
 En esta entrada explicare como crear una página web gratuita en GitHub
 Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉</description>
@@ -24,10 +24,10 @@ Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda,
     
     <item>
       <title>Aplicación en Angular – Inicializando aplicación</title>
-      <link>ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
+      <link>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
       <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
       <description>Continuando con la entrada donde instalaba Angular, seguimos desarrollando la aplicación que detallo en esta página.
 Una vez tenemos creado el esqueleto de nuestro programa, con el comando &amp;#8220;ng new&amp;#8221; ,  entraremos al directorio src. En este directorio es donde realmente vamos a trabajar.
 Los demás directorios son donde están las librerías y utilidades que nuestra aplicación usara pero que son propias de Angular y nosotros no las tocaremos (al menos en este ejemplo).</description>

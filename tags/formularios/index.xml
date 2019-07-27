@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Formularios on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/formularios/</link>
+    <link>http://ww2.profesor-p.com/tags/formularios/</link>
     <description>Recent content in Formularios on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Wed, 19 Sep 2018 08:29:58 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/formularios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/formularios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Curso Angular 6 – Formularios (1)</title>
-      <link>ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</link>
+      <link>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</link>
       <pubDate>Wed, 19 Sep 2018 08:29:58 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</guid>
       <description>En la aplicación que estamos desarrollando, de la cual, os recuerdo tenéis el código fuente en https://github.com/chuchip/yagesclient-angular, tenemos que poder solicitar al usuario el ejercicio sobre el que vamos a realizar la consulta.
 Para introducir ese dato, vamos a utilizar un formulario muy simple, pero que nos servirá para entender algunos conceptos básicos de Angular.
 Trabajando con el componente AppComponent, definido en el fichero src/app/app.component.ts nos centramos primero en el código HTML el cual, es el siguiente:</description>

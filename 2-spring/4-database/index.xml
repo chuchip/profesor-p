@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on Documentacion en español</title>
-    <link>ww2.profesor-p.com/2-spring/4-database/</link>
+    <link>http://ww2.profesor-p.com/2-spring/4-database/</link>
     <description>Recent content in Database on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 05 Apr 2019 10:54:22 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/2-spring/4-database/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/2-spring/4-database/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Optimizando relaciones entre entidades en Hibernate</title>
-      <link>ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</link>
+      <link>http://ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</link>
       <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</guid>
+      <guid>http://ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</guid>
       <description>En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA.
 Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.
 EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.</description>
@@ -24,29 +24,29 @@ EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando co
     
     <item>
       <title>Accediendo facilmente a los datos con Spring Rest Data</title>
-      <link>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <link>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
       <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <guid>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
       <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
 Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
     </item>
     
     <item>
       <title>Querys avanzadas con JPA en Spring Boot</title>
-      <link>ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</link>
+      <link>http://ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</link>
       <pubDate>Thu, 14 Feb 2019 15:37:15 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</guid>
+      <guid>http://ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</guid>
       <description>Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .</description>
     </item>
     
     <item>
       <title>JPA &#43; Hibernate en Spring</title>
-      <link>ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
+      <link>http://ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
       <pubDate>Sat, 25 Aug 2018 18:14:42 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
       <description>En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA.
 Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior.
@@ -55,10 +55,10 @@ Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java 
     
     <item>
       <title>JPA con Lombok, simplificando.</title>
-      <link>ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
+      <link>http://ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
       <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
       <description>En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok.
 Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Anteriormente teniamos definido nuestro objeto de esta manera:
@@ -67,10 +67,10 @@ Anteriormente teniamos definido nuestro objeto de esta manera:
     
     <item>
       <title>Acceso a Base de Datos con  Spring Data JDBC</title>
-      <link>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
 El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>

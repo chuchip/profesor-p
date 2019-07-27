@@ -2,111 +2,111 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Spring on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/spring/</link>
+    <link>http://ww2.profesor-p.com/tags/spring/</link>
     <description>Recent content in Spring on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 29 Oct 2018 08:49:12 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring WebFlow con JSP – Configuración</title>
-      <link>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
+      <link>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
       <description>Buenas, estudiantes. En este articulo intentare explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
     </item>
     
     <item>
       <title>Spring WebFlow con JSP</title>
-      <link>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
+      <link>http://ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
       <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
       <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
 La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos &amp;#8220;/&amp;#8221; e &amp;#8220;index&amp;#8221;</description>
     </item>
     
     <item>
       <title>Estableciendo filtros en Spring</title>
-      <link>ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
+      <link>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
       <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
       <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
 Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
     </item>
     
     <item>
       <title>Beans avanzados</title>
-      <link>ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</link>
+      <link>http://ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</link>
       <pubDate>Thu, 18 Apr 2019 21:26:57 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</guid>
       <description>En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles).
 Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.</description>
     </item>
     
     <item>
       <title>Mensajería con Kafka y Spring Boot</title>
-      <link>ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</link>
+      <link>http://ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</link>
       <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</guid>
+      <guid>http://ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</guid>
       <description>Kafka es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o consumidores se subscriben a un tipo de noticia o topic y cuando un emisor o broker manda un mensaje sobre ese topic Kafka lo distribuye a los consumidores suscritos.
 Para probar este programa deberemos tener un servidor funcionando con los topics ya definidos . En la página https://kafka.apache.org/quickstart hay un manual rápido y muy claro de como levantar uno en apenas 10 minutos.</description>
     </item>
     
     <item>
       <title>Seguridad WEB en Spring Boot</title>
-      <link>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
+      <link>http://ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
       <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
       <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
 Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular – 4ª Parte</title>
-      <link>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
       <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular – 3ª Parte</title>
-      <link>ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
       <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
       <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
 Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular – 2 Parte</title>
-      <link>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
       <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
       <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
 Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
     </item>
     
     <item>
       <title>Aplicación en Spring REST y Angular</title>
-      <link>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
+      <link>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
       <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
       <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
 La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
 Para ello se realizaran los siguientes pasos:
@@ -115,10 +115,10 @@ Para ello se realizaran los siguientes pasos:
     
     <item>
       <title>Acceso a Base de Datos con  Spring Data JDBC</title>
-      <link>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
 El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>
@@ -126,10 +126,10 @@ Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base
     
     <item>
       <title>Conectando a una base de datos usando JNDI y Spring en Tomcat</title>
-      <link>ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</link>
+      <link>http://ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</link>
       <pubDate>Tue, 21 Aug 2018 13:34:56 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</guid>
       <description>1. Introducción En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.
 El código fuente lo teneis en: https://github.com/chuchip/jdbc_jpa_tomcat
 En este enlace teneis este mismo documento (todas las partes) pero en PDF.</description>

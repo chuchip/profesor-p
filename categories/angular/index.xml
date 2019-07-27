@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angular on Documentacion en español</title>
-    <link>ww2.profesor-p.com/categories/angular/</link>
+    <link>http://ww2.profesor-p.com/categories/angular/</link>
     <description>Recent content in Angular on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 08 Oct 2018 20:23:38 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/categories/angular/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/categories/angular/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicación CRUD en Angular</title>
-      <link>ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
       <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
       <description>Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 Por supuesto el protocolo para las comunicaciones es JSON.
 El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
@@ -25,19 +25,19 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
     
     <item>
       <title>Angular – Hablando español</title>
-      <link>ww2.profesor-p.com/2018/09/24/hablando-espanol/</link>
+      <link>http://ww2.profesor-p.com/2018/09/24/hablando-espanol/</link>
       <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/24/hablando-espanol/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/24/hablando-espanol/</guid>
       <description>Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.   El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</description>
     </item>
     
     <item>
       <title>Curso Angular 6 – Reactivo!</title>
-      <link>ww2.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</link>
+      <link>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</link>
       <pubDate>Wed, 19 Sep 2018 10:43:09 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</guid>
       <description>Antes de continuar con el curso quiero dejar claro que Angular es reactivo.
 ¿ Que significa eso ?.
 Pues básicamente que cualquier cambio que se haga en el modelo sera transmitido a la vista y viceversa. El modelo, entiéndase que son nuestros _Componentes. _Es decir, nuestras clases definidas en los ficheros TypeScript. La vista es el código HTML que se visualizara en nuestro navegador.
@@ -46,10 +46,10 @@ Así, si cambiamos el valor de un campo INPUT del HTML, que este unido con la 
     
     <item>
       <title>Curso Angular 6 – Formularios (1)</title>
-      <link>ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</link>
+      <link>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</link>
       <pubDate>Wed, 19 Sep 2018 08:29:58 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</guid>
       <description>En la aplicación que estamos desarrollando, de la cual, os recuerdo tenéis el código fuente en https://github.com/chuchip/yagesclient-angular, tenemos que poder solicitar al usuario el ejercicio sobre el que vamos a realizar la consulta.
 Para introducir ese dato, vamos a utilizar un formulario muy simple, pero que nos servirá para entender algunos conceptos básicos de Angular.
 Trabajando con el componente AppComponent, definido en el fichero src/app/app.component.ts nos centramos primero en el código HTML el cual, es el siguiente:</description>
@@ -57,19 +57,19 @@ Trabajando con el componente AppComponent, definido en el fichero src/app/app.co
     
     <item>
       <title>Aplicación en Angular – Rutas</title>
-      <link>ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</link>
+      <link>http://ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</link>
       <pubDate>Sun, 16 Sep 2018 14:42:39 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</guid>
       <description>Una vez he explicado en la anterior entrada como inicializa Angular la aplicación, voy a explicar como hacer para que esta pueda aceptar parámetros a través de la URL introducida en el navegador. Básicamente, lo que deseo hacer es que, suponiendo que nuestra aplicación este corriendo en http://localhost:4200/ (es la dirección por defecto en la que escucha Node.js cuando lo lanzamos con el comando ng serve ), si vamos a la dirección http://localhost:4200/2018  nos muestre las ventas del ejercicio 2018.</description>
     </item>
     
     <item>
       <title>Aplicación en Angular – Inicializando aplicación</title>
-      <link>ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
+      <link>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
       <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
       <description>Continuando con la entrada donde instalaba Angular, seguimos desarrollando la aplicación que detallo en esta página.
 Una vez tenemos creado el esqueleto de nuestro programa, con el comando &amp;#8220;ng new&amp;#8221; ,  entraremos al directorio src. En este directorio es donde realmente vamos a trabajar.
 Los demás directorios son donde están las librerías y utilidades que nuestra aplicación usara pero que son propias de Angular y nosotros no las tocaremos (al menos en este ejemplo).</description>
@@ -77,10 +77,10 @@ Los demás directorios son donde están las librerías y utilidades que nuestra 
     
     <item>
       <title>Aplicación en Angular – Instalación y configuración básica</title>
-      <link>ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
+      <link>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
       <pubDate>Thu, 13 Sep 2018 07:51:25 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
+      <guid>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
       <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
 El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
 Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
@@ -88,10 +88,10 @@ Lo primero sera instalar Angular, para ello tenemos un excelente manual de com
     
     <item>
       <title>Aplicación en Spring REST y Angular</title>
-      <link>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
+      <link>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
       <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
       <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
 La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
 Para ello se realizaran los siguientes pasos:

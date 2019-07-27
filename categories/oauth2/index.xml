@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oauth2 on Documentacion en español</title>
-    <link>ww2.profesor-p.com/categories/oauth2/</link>
+    <link>http://ww2.profesor-p.com/categories/oauth2/</link>
     <description>Recent content in Oauth2 on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Thu, 18 Oct 2018 13:20:43 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/categories/oauth2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/categories/oauth2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Securizando servicios REST con Oauth2 en SpringBoot</title>
-      <link>ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
+      <link>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
       <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
       <description>Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
 Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>

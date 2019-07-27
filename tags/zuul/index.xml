@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zuul on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/zuul/</link>
+    <link>http://ww2.profesor-p.com/tags/zuul/</link>
     <description>Recent content in Zuul on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Sat, 16 Mar 2019 07:19:41 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/zuul/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/zuul/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Usando Zuul para redirigir peticiones REST</title>
-      <link>ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
+      <link>http://ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
       <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
+      <guid>http://ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
       <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
 Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
 En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>

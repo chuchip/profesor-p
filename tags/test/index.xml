@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Test on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/test/</link>
+    <link>http://ww2.profesor-p.com/tags/test/</link>
     <description>Recent content in Test on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 27 Aug 2018 08:24:45 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Testeando las aplicaciones</title>
-      <link>ww2.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</link>
+      <link>http://ww2.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</link>
       <pubDate>Mon, 27 Aug 2018 08:24:45 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</guid>
       <description>&lt;p&gt;En una próxima entrada hablare sobre como testear las aplicaciones con pruebas unitarias. Bueno, mostrare como lo hago en mi código.&lt;/p&gt;
 
 &lt;p&gt;De momento, viendo que alguien ya la ha hecho antes (y seguramente mejor) dejo este enlace como aperitivo.&lt;/p&gt;</description>

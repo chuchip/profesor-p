@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webflow on Documentacion en español</title>
-    <link>ww2.profesor-p.com/tags/webflow/</link>
+    <link>http://ww2.profesor-p.com/tags/webflow/</link>
     <description>Recent content in Webflow on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 29 Oct 2018 08:49:12 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/tags/webflow/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/tags/webflow/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring WebFlow con JSP – Configuración</title>
-      <link>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
+      <link>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
       <description>Buenas, estudiantes. En este articulo intentare explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
     </item>
     
     <item>
       <title>Spring WebFlow con JSP</title>
-      <link>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
+      <link>http://ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
       <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
+      <guid>http://ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
       <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
 La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos &amp;#8220;/&amp;#8221; e &amp;#8220;index&amp;#8221;</description>
     </item>

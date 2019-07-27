@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Documentacion en español</title>
-    <link>ww2.profesor-p.com/2-spring/5-cloud/</link>
+    <link>http://ww2.profesor-p.com/2-spring/5-cloud/</link>
     <description>Recent content in Cloud on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Thu, 03 Jan 2019 08:52:59 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/2-spring/5-cloud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/2-spring/5-cloud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Microservicios distribuidos con Eureka</title>
-      <link>ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
+      <link>http://ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
       <pubDate>Thu, 03 Jan 2019 08:52:59 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
+      <guid>http://ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
       <description>En esta clase hablare de como crear microservicios distribuidos en Spring Boot utilizando las facilidades que nos da el paquete Spring Cloud NetFlix.
 Cualquier microservicio debe poder localizar las diferentes instancias de otro servicio del que dependa sin tener sus direcciones definidas en el código.
 En el caso de que un microservicio deba acceder a otro lo ideal seria que de alguna manera pudiera saber en que direcciones esta las instancias de ese otro microservicio funcionando, pues lo más común es que se levanten diferentes instancias dependiendo de la carga.</description>
@@ -24,10 +24,10 @@ En el caso de que un microservicio deba acceder a otro lo ideal seria que de alg
     
     <item>
       <title>Servidor configuraciones usando Spring Cloud</title>
-      <link>ww2.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</link>
+      <link>http://ww2.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</link>
       <pubDate>Mon, 10 Dec 2018 14:56:56 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</guid>
+      <guid>http://ww2.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</guid>
       <description>En esta ocasión vamos a usar el paquete Spring Cloud Config para poder tener configuraciones remotas para nuestras aplicaciones.
 La idea es que nuestro programa o programas puedan ir a buscar sus parámetros de configuración a un lugar externo, de tal manera que nuestra aplicación sea fácilmente parametrizable e incluso se puedan cambiar sus configuraciones en caliente.
 Esto se utiliza ampliamente en microservicios pues una mismo servicio o aplicación puede estar lanzada muchas veces en diferentes contenedores y es interesante tener un lugar central desde donde se puedan aplicar las configuraciones a estos servicios.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sin Categoria on Documentacion en español</title>
-    <link>ww2.profesor-p.com/categories/sin-categoria/</link>
+    <link>http://ww2.profesor-p.com/categories/sin-categoria/</link>
     <description>Recent content in Sin Categoria on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Wed, 22 Aug 2018 15:39:57 +0000</lastBuildDate>
     
-	<atom:link href="ww2.profesor-p.com/categories/sin-categoria/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://ww2.profesor-p.com/categories/sin-categoria/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Acceso a Base de Datos con  Spring Data JDBC</title>
-      <link>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
       
-      <guid>ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
 El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>
