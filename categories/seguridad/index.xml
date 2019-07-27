@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Seguridad on Documentacion en español</title>
+    <link>ww2.profesor-p.com/categories/seguridad/</link>
+    <description>Recent content in Seguridad on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Mon, 29 Oct 2018 08:49:12 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/categories/seguridad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring WebFlow con JSP – Configuración</title>
+      <link>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
+      <description>Buenas, estudiantes. En este articulo intentare explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
+El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
+    </item>
+    
+    <item>
+      <title>Spring WebFlow con JSP</title>
+      <link>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
+      <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
+La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos &amp;#8220;/&amp;#8221; e &amp;#8220;index&amp;#8221;</description>
+    </item>
+    
+    <item>
+      <title>Usando Zuul para redirigir peticiones REST</title>
+      <link>ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
+      <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
+Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
+En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>
+    </item>
+    
+    <item>
+      <title>Securizando servicios REST con Oauth2 en SpringBoot</title>
+      <link>ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
+      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
+      <description>Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
+OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
+    </item>
+    
+    <item>
+      <title>Seguridad WEB en Spring Boot</title>
+      <link>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
+      <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
+      <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Thymeleaf on Documentacion en español</title>
+    <link>ww2.profesor-p.com/categories/thymeleaf/</link>
+    <description>Recent content in Thymeleaf on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 17 Oct 2018 10:19:34 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/categories/thymeleaf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Seguridad WEB en Spring Boot</title>
+      <link>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
+      <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
+      <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

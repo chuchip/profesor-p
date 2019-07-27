@@ -1,0 +1,3347 @@
+<!DOCTYPE html>
+<html lang="es" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="Documentation for Hugo Learn Theme">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="/ww2.profesor-p.com/images/favicon.png" type="image/png">
+
+    <title>Optimizando relaciones entre entidades en Hibernate :: Documentacion en español</title>
+
+    
+    <link href="/ww2.profesor-p.com/css/nucleus.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/fontawesome-all.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hybrid.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/featherlight.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/perfect-scrollbar.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/auto-complete.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/atom-one-dark-reasonable.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/theme.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hugo-theme.css?1564210987" rel="stylesheet">
+    
+
+    <script src="/ww2.profesor-p.com/js/jquery-3.3.1.min.js?1564210987"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Buscar...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/ww2.profesor-p.com/js/lunr.min.js?1564210987"></script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/auto-complete.js?1564210987"></script>
+<script type="text/javascript">
+    
+        var baseurl = "ww2.profesor-p.com";
+    
+</script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/search.js?1564210987"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/" title="Java" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/">
+          <b>1. </b>Java
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/kotlin/" title="Kotlin" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/kotlin/">
+          Kotlin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/23/usando-lambdas/" title="Usando Lambdas" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/23/usando-lambdas/">
+        Usando Lambdas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/" title="Spring" class="dd-item 
+        parent
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/">
+          <b>2. </b>Spring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/1-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/1-testing/">
+          <b>- </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/2-seguridad/" title="Seguridad" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/2-seguridad/">
+          <b>- </b>Seguridad
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/3-mvc/" title="MVC" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/3-mvc/">
+          <b>- </b>MVC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/4-database/" title="Database" class="dd-item 
+        parent
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/4-database/">
+          <b>- </b>Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/5-cloud/" title="Cloud" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/5-cloud/">
+          <b>- </b>Cloud
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/6-webflow/" title="Webflow" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/6-webflow/">
+          <b>- </b>Webflow
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/" title="Perfiles en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/">
+        <b>o </b>Perfiles en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/" title="Lambdas en JDBC Data" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/">
+        <b>o </b>Lambdas en JDBC Data
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/">
+        <b>o </b>Estableciendo filtros en Spring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/" title="Cacheando resultados con Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/">
+        <b>o </b>Cacheando resultados con Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/" title="Beans avanzados" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/">
+        <b>o </b>Beans avanzados
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/" title="Usando Zuul para redirigir peticiones REST" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/">
+        <b>o </b>Usando Zuul para redirigir peticiones REST
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/" title="Mensajería con Kafka y Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/">
+        <b>o </b>Mensajería con Kafka y Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/" title="Personalizar salidas de códigos HTTP en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/">
+        <b>o </b>Personalizar salidas de códigos HTTP en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/" title="Instalar plugin Spring Boot en NetBeans" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/">
+        <b>o </b>Instalar plugin Spring Boot en NetBeans
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/3-hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/3-hugo/">
+          <b>3. </b>Hugo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/" title="Crear pagina web gratuita en GitHub" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/">
+        Crear pagina web gratuita en GitHub
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/" title="Generar paginas Web estaticas dinamicamente" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/">
+        Generar paginas Web estaticas dinamicamente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/" title="Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/">
+          <b>4. </b>Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/curso/" title="Curso de Angular 6" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/curso/">
+          <b>- </b>Curso de Angular 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/aplicacion/" title="Aplicación usando Java y Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/aplicacion/">
+          <b>- </b>Aplicación usando Java y Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/24/hablando-espanol/" title="Angular – Hablando español" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/24/hablando-espanol/">
+        Angular – Hablando español
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/" title="Angular 6 – Añadir Bootstrap 4 con JQuery" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/">
+        Angular 6 – Añadir Bootstrap 4 con JQuery
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/5-dba/" title="DBA" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/5-dba/">
+          <b>6. </b>DBA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/" title="Conectando a una base de datos usando JNDI y Spring en Tomcat" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/">
+        Conectando a una base de datos usando JNDI y Spring en Tomcat
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/6-javaee/" title="J2EE" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/6-javaee/">
+          <b>6. </b>J2EE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/" title="Aplicación CRUD usando REST en JavaEE" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/">
+        Aplicación CRUD usando REST en JavaEE
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/" title="Aplicación CRUD usando REST en JavaEE  (2ª Parte)" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/">
+        Aplicación CRUD usando REST en JavaEE  (2ª Parte)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/" title="Desarrollando aplicaciones Java EE en NetBeans 9" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/">
+        Desarrollando aplicaciones Java EE en NetBeans 9
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/contacto/" title="Contacto" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/contacto/">
+          <b> > </b>Contacto
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_basesdatos/" title="Bases de Datos" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_basesdatos/">
+        Bases de Datos
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_laboral/" title="Experiencia Laboral" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_laboral/">
+        Experiencia Laboral
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/" title="Lenguajes  de programación" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/">
+        Lenguajes  de programación
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_sistemas/" title="Sistemas" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_sistemas/">
+        Sistemas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Más</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/acerca"><i class='fas fa-fw fa-camera'></i>Acerca de</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/experiencia_laboral"><i class='fas fa-fw fa-bookmark'></i>Experiencia Laboral</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/anjelica"><i class='fas fa-fw fa-bullhorn'></i> Anjelica</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Borrar Historial</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Optimizando relaciones entre entidades en Hibernate 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#realizando-una-8216-select-join-8216-entre-la-tabla-cabeceras-de-factura-invoiceheader-y-clientes-customer">Realizando una &#8216;<em>select join</em>&#8216; entre la tabla cabeceras de factura (invoiceHeader) y clientes (customer)</a></li>
+</ul></li>
+<li><a href="#uniendo-tabla-cabeceras-facturas-y-líneas-de-facturas">Uniendo tabla cabeceras facturas y líneas de facturas.</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+ 					
+										
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/h2">h2</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/hibernate">hibernate</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/java">java</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/jpa">jpa</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/spring-boot">spring boot</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+			  
+				Optimizando relaciones entre entidades en Hibernate 
+			  
+			   
+				<class id ="fecha">
+				April 05, 2019 </div>
+			  
+            </h1>
+			
+          
+        
+
+
+
+
+
+<p>En esta entrada, siguiendo el proyecto de ejemplo que teneis en <a href="https://github.com/chuchip/jpajoins" target="_blank" rel="noopener noreferrer"><a href="https://github.com/chuchip/jpajoins">https://github.com/chuchip/jpajoins</a></a> explicando como optimizar  las consultas a la base de datos usando JPA.</p>
+
+<p>Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (<strong>lazy</strong>) o agresivo (<strong>eager</strong>). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.</p>
+
+<p>EL proyecto de ejemplo esta desarrollado en <strong>Spring Boot</strong> con <strong>Hibernate</strong>, usando como base de datos H2.</p>
+
+<p>Las tablas están definidas en el fichero <code>schema.sql</code> y se cargan datos para pruebas en el fichero <code>data.sql</code></p>
+
+<p>Este es el esquema de la base de datos:</p>
+
+<p><img class="size-full wp-image-639 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema.png" alt="" width="455" height="521" srcset="http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema.png 455w, http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema-262x300.png 262w" sizes="(max-width: 455px) 100vw, 455px" /></p>
+
+<p>En esa ocasión no voy a explicar el código pues es muy parecido al de otros programas que he explicado detalladamente en otras entradas. Me centrare en como realizar las diferentes consultas realizadas en el programa.</p>
+
+<blockquote>
+<p><span style="color: #ff0000;"><strong>Nota aclaratoria</strong>:</span></p>
+
+<p>Si el nombre de la entidad o de la columna en las clases <strong>Java</strong> tiene una mayúscula en medio, JPA interpretara que su hay un guion en medio y ese será la tabla o columna que buscara en la base de datos. De esta manera si a la clase <code>Invoiceheader.java</code> le renombráramos a <code>InvoiceHeader.java</code> <em>Hibernate</em>, buscaría la tabla <strong>invoice_header</strong> en la base de datos y fallaría pues no la encontraría.</p>
+
+<p>Como ejemplo se puede ver el campo <strong>line_details</strong> de la tabla <strong>invoiceDetails</strong>, que en la clase <strong>Invoicedetails.java</strong> (obsérvese que la D es minúscula) es llamada con la variable <strong>lineDetails</strong>.</p>
+</blockquote>
+
+<h4 id="realizando-una-8216-select-join-8216-entre-la-tabla-cabeceras-de-factura-invoiceheader-y-clientes-customer">Realizando una &#8216;<em>select join</em>&#8216; entre la tabla cabeceras de factura (invoiceHeader) y clientes (customer)</h4>
+
+<ul>
+<li><strong>Enlace <em>perezoso</em></strong></li>
+</ul>
+
+<pre><code class="language-java" lang="java">@ManyToOne(fetch=FetchType.LAZY)
+@JoinColumn(name="customerid",referencedColumnName="id")    
+Customer customer;
+</code></pre>
+
+<p>Al realizar la búsqueda la consulta resultante sera:</p>
+
+<pre><code>select
+        invoicehea0_.id as id1_3_0_,
+        invoicehea0_.customerid as customer2_3_0_,
+        invoicehea0_.fiscalyear as fiscalye3_3_0_,
+        invoicehea0_.numberinvoice as numberin4_3_0_ 
+    from
+        invoiceheader invoicehea0_ 
+    where
+        invoicehea0_.id=?
+</code></pre>
+
+<p>y cuando se realice un consulta sobre la columna <strong>customer</strong> ejecutara la sentencia <em>select</em> necesaria para buscar los datos del cliente:</p>
+
+<pre><code> select
+        customer0_.id as id1_1_0_,
+        customer0_.active as active2_1_0_,
+        customer0_.address as address3_1_0_,
+        customer0_.name as name4_1_0_ 
+    from
+        customer customer0_ 
+    where
+        customer0_.id=?
+</code></pre>
+
+<ul>
+<li><p><strong>Enlace <em>duro</em></strong></p>
+
+<p>@ManyToOne(fetch=FetchType.EDGER)
+@JoinColumn(name=&ldquo;customerid&rdquo;,referencedColumnName=&ldquo;id&rdquo;)<br />
+Customer customer;</p></li>
+</ul>
+
+<p>Al estar el tipo de búsqueda establecido a <code>FetchType.EDGER</code> realizara una única <em>select</em> con su correspondiente <em>left outer join</em></p>
+
+<pre><code> select
+        invoicehea0_.id as id1_3_0_,
+        invoicehea0_.customerid as customer2_3_0_,
+        invoicehea0_.fiscalyear as fiscalye3_3_0_,
+        invoicehea0_.numberinvoice as numberin4_3_0_,
+        customer1_.id as id1_1_1_,
+        customer1_.active as active2_1_1_,
+        customer1_.address as address3_1_1_,
+        customer1_.name as name4_1_1_ 
+    from
+        invoiceheader invoicehea0_ 
+    left outer join
+        customer customer1_ 
+            on invoicehea0_.customerid=customer1_.id 
+    where
+        invoicehea0_.id=?
+</code></pre>
+
+<ul>
+<li><strong>Rizando el rizo.Añadiendo valores fijos</strong></li>
+</ul>
+
+<p>Pero, ¿y si queremos que nos enlace las dos tablas por una columna y además con un valor fijo en otra?</p>
+
+<p>En la tabla <code>customer</code> se definió la columna <em>active</em> y queremos que solo nos muestre los datos de la factura cuando el valor de esa columna sea <code>1</code> Para ello necesitaremos la ayuda de la etiqueta <strong>@JoinColumnsOrFormulas</strong> que nos permite realizar uniones tanto entre dos columnas como estableciendo valores a la columna de la tabla destino (en este caso <em>customer</em>)</p>
+
+<pre><code>@ManyToOne(fetch=FetchType.EDGER)
+    @JoinColumnsOrFormulas({
+         @JoinColumnOrFormula(column=@JoinColumn(name=&quot;customerid&quot;, referencedColumnName =&quot;id&quot;) ),
+         @JoinColumnOrFormula(formula = @JoinFormula(value=&quot;1&quot;,referencedColumnName = &quot;active&quot;))
+    })  
+    Customer customer;
+</code></pre>
+
+<p>La <em>select</em> ejecutada será:</p>
+
+<pre><code>select
+        invoicehea0_.id as id1_3_0_,
+        invoicehea0_.customerid as customer2_3_0_,
+        invoicehea0_.fiscalyear as fiscalye3_3_0_,
+        invoicehea0_.numberinvoice as numberin4_3_0_,
+        1 as formula1_0_,
+        customer1_.id as id1_1_1_,
+        customer1_.active as active2_1_1_,
+        customer1_.address as address3_1_1_,
+        customer1_.name as name4_1_1_ 
+    from
+        invoiceheader invoicehea0_ 
+    left outer join
+        customer customer1_ 
+            on invoicehea0_.customerid=customer1_.id 
+            and 1=customer1_.active 
+    where
+        invoicehea0_.id=?
+</code></pre>
+
+<p>En el caso de que no encuentre ningún registro, la variable <strong>customer</strong> tendrá un valor nulo.</p>
+
+<p>Si el tipo de enlace fuera <em>lazy</em> como en el caso anterior se haría primero una <em>query</em> sobre la tabla <strong>invoiceheader</strong> y cuando se pidiera el valor de la variable <strong>customer</strong> se realizaría sobre su correspondiente tabla.</p>
+
+<h3 id="uniendo-tabla-cabeceras-facturas-y-líneas-de-facturas">Uniendo tabla cabeceras facturas y líneas de facturas.</h3>
+
+<p>Para unir las dos tablas pondremos el siguiente código en la clase <code>Invoicedetails.java</code></p>
+
+<pre><code class="language-java" lang="java">@OneToMany
+@JoinColumns(
+    {
+        @JoinColumn(name="fiscalyear",referencedColumnName="fiscalyear"),
+        @JoinColumn(name="numberinvoice",referencedColumnName="numberinvoice")
+    }           
+)
+@OrderBy("linea desc")
+List&lt;Invoicedetails&gt; details; 
+</code></pre>
+
+<p>Como se ve, al ser dos campos los que unen ambas tablas haremos uso de la etiqueta <strong>@JoinColumns</strong> con sus correspondientes <strong>@JoinColumn</strong> dentro.</p>
+
+<p>Como no hemos especificado nada, la unión se hará del tipo <strong>EAGER</strong> por lo cual la consulta realizada a la base de datos será la siguiente:</p>
+
+<pre><code>  select
+        invoicehea0_.id as id1_3_0_,
+        invoicehea0_.customerid as customer2_3_0_,
+        invoicehea0_.fiscalyear as fiscalye3_3_0_,
+        invoicehea0_.numberinvoice as numberin4_3_0_,
+        1 as formula1_0_,
+        details1_.fiscalyear as fiscalye2_2_1_,
+        details1_.numberinvoice as numberin5_2_1_,
+        details1_.id as id1_2_1_,
+        details1_.id as id1_2_2_,
+        details1_.articleid as articlei6_2_2_,
+        details1_.fiscalyear as fiscalye2_2_2_,
+        details1_.linea_details as linea_de3_2_2_,
+        details1_.numberarticles as numberar4_2_2_,
+        details1_.numberinvoice as numberin5_2_2_,
+        article2_.id as id1_0_3_,
+        article2_.description as descript2_0_3_,
+        article2_.price as price3_0_3_ 
+    from
+        invoiceheader invoicehea0_ 
+    left outer join
+        invoicedetails details1_ 
+            on invoicehea0_.fiscalyear=details1_.fiscalyear 
+            and invoicehea0_.numberinvoice=details1_.numberinvoice 
+    left outer join
+        article article2_ 
+            on details1_.articleid=article2_.id 
+    where
+        invoicehea0_.id=?
+</code></pre>
+
+<p>El ultimo <em>&#8220;left outer join&#8221;</em> haciendo referencia a la tabla <strong>article</strong> lo pone <em>Hibernate</em> porque en la clase <strong>Invoicedetails.java</strong> tenemos el código:</p>
+
+<pre><code>@ManyToOne(fetch=FetchType.EAGER)
+@JoinColumns({
+    @JoinColumn(name=&quot;articleid&quot;,referencedColumnName=&quot;id&quot;)     
+})
+Article articles;   
+</code></pre>
+
+<p>para que nos muestre los datos del articulo por cada línea del articulo, y como esta marcada la unión a tipo <strong>EAGER</strong>, <em>Hibernate</em> es lo suficientemente listo para hacer una sola consulta a la base de datos.</p>
+
+<p>Si realizamos un llamada a <a class="url" href="http://localhost:8080/1" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/1">http://localhost:8080/1</a></a> observaremos la siguiente salida que devuelve la clase <strong>Invoiceheader.java</strong> veremos lo siguiente:</p>
+
+<pre><code>{
+    &quot;id&quot;: 1,
+    &quot;yearFiscal&quot;: 2019,
+    &quot;numberInvoice&quot;: 1,
+    &quot;customerId&quot;: 1,
+    &quot;customer&quot;: {
+        &quot;id&quot;: 1,
+        &quot;name&quot;: &quot;customer 1 name&quot;,
+        &quot;address&quot;: &quot;customer 1 address&quot;,
+        &quot;active&quot;: 1
+    },
+    &quot;details&quot;: [
+        {
+            &quot;id&quot;: 2,
+            &quot;year&quot;: 2019,
+            &quot;invoice&quot;: 1,
+            &quot;linea&quot;: 2,
+            &quot;numberarticles&quot;: 3,
+            &quot;articles&quot;: {
+                &quot;id&quot;: 2,
+                &quot;description&quot;: &quot;article 2 description&quot;,
+                &quot;price&quot;: 12.3
+            }
+        },
+        {
+            &quot;id&quot;: 1,
+            &quot;year&quot;: 2019,
+            &quot;invoice&quot;: 1,
+            &quot;linea&quot;: 1,
+            &quot;numberarticles&quot;: 5,
+            &quot;articles&quot;: {
+                &quot;id&quot;: 1,
+                &quot;description&quot;: &quot;article 1 description&quot;,
+                &quot;price&quot;: 10.1
+            }
+        }
+    ]
+}
+</code></pre>
+
+<p>¿ No veis algo raro ?. ¡Efectivamente!. Las lineas las saca ordenadas de mayor a menor (primero la linea 2, luego la 1). Evidentemente eso es debido a la etiqueta <code class="language-java" lang="java">@OrderBy(&ldquo;linea desc&rdquo;)</code> , de la cual hay que destacar dos cosas:</p>
+
+<ul>
+<li>El campo al que hacemos referencia es como es nombrado en la entidad. Así aunque en la base de datos se llama <strong>lineaDetails</strong> se referencia por la etiqueta <strong>linea</strong> que es como se nombra la variable</li>
+</ul>
+
+<pre>@Column (name="lineaDetails")
+int linea; // La 'D' esta en mayuscualas adrede para que mapee el campo linea_details</pre>
+
+<ul>
+<li>En la consulta que hace a la base de datos no introduce la clausula &#8216;order by&#8217; . Es decir es el propio hibernate el que encarga de ordenar los resultados. Tenerlo en cuenta cuando haya miles de registros devueltos.</li>
+</ul>
+
+<p>Y así queda demostrado la importancia de establecer el tipo de unión pues si imaginamos una factura que tenga miles de líneas (improbable lo sé), si establecemos el método de unión a <strong>lazy</strong> en vez de hacer una sola consulta a la base de datos, haría 1000 lo cual, por supuesto ralentizaría muchísimo nuestra consulta, aparte de sobrecargar innecesariamente el servidor de la base de datos</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="ww2.profesor-p.com/2-spring/4-database/" title="Database"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/" title="Accediendo facilmente a los datos con Spring Rest Data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/ww2.profesor-p.com/js/clipboard.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.jquery.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/jquery.sticky.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/featherlight.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/html5shiv-printshiv.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/highlight.pack.js?1564210987"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/ww2.profesor-p.com/js/modernizr.custom-3.6.0.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/learn.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/hugo-learn.js?1564210987"></script>
+
+    <link href="/ww2.profesor-p.com/mermaid/mermaid.css?1564210987" rel="stylesheet" />
+    <script src="/ww2.profesor-p.com/mermaid/mermaid.js?1564210987"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+

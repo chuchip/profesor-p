@@ -1,0 +1,3309 @@
+<!DOCTYPE html>
+<html lang="es" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="Documentation for Hugo Learn Theme">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="/ww2.profesor-p.com/images/favicon.png" type="image/png">
+
+    <title>Conectando a una base de datos usando JNDI y Spring en Tomcat :: Documentacion en español</title>
+
+    
+    <link href="/ww2.profesor-p.com/css/nucleus.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/fontawesome-all.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hybrid.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/featherlight.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/perfect-scrollbar.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/auto-complete.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/atom-one-dark-reasonable.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/theme.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hugo-theme.css?1564210987" rel="stylesheet">
+    
+
+    <script src="/ww2.profesor-p.com/js/jquery-3.3.1.min.js?1564210987"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Buscar...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/ww2.profesor-p.com/js/lunr.min.js?1564210987"></script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/auto-complete.js?1564210987"></script>
+<script type="text/javascript">
+    
+        var baseurl = "ww2.profesor-p.com";
+    
+</script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/search.js?1564210987"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/" title="Java" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/">
+          <b>1. </b>Java
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/kotlin/" title="Kotlin" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/kotlin/">
+          Kotlin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/23/usando-lambdas/" title="Usando Lambdas" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/23/usando-lambdas/">
+        Usando Lambdas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/" title="Spring" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/">
+          <b>2. </b>Spring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/1-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/1-testing/">
+          <b>- </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/2-seguridad/" title="Seguridad" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/2-seguridad/">
+          <b>- </b>Seguridad
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/3-mvc/" title="MVC" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/3-mvc/">
+          <b>- </b>MVC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/4-database/" title="Database" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/4-database/">
+          <b>- </b>Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/5-cloud/" title="Cloud" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/5-cloud/">
+          <b>- </b>Cloud
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/6-webflow/" title="Webflow" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/6-webflow/">
+          <b>- </b>Webflow
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/" title="Perfiles en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/">
+        <b>o </b>Perfiles en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/" title="Lambdas en JDBC Data" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/">
+        <b>o </b>Lambdas en JDBC Data
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/">
+        <b>o </b>Estableciendo filtros en Spring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/" title="Cacheando resultados con Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/">
+        <b>o </b>Cacheando resultados con Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/" title="Beans avanzados" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/">
+        <b>o </b>Beans avanzados
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/" title="Usando Zuul para redirigir peticiones REST" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/">
+        <b>o </b>Usando Zuul para redirigir peticiones REST
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/" title="Mensajería con Kafka y Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/">
+        <b>o </b>Mensajería con Kafka y Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/" title="Personalizar salidas de códigos HTTP en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/">
+        <b>o </b>Personalizar salidas de códigos HTTP en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/" title="Instalar plugin Spring Boot en NetBeans" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/">
+        <b>o </b>Instalar plugin Spring Boot en NetBeans
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/3-hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/3-hugo/">
+          <b>3. </b>Hugo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/" title="Crear pagina web gratuita en GitHub" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/">
+        Crear pagina web gratuita en GitHub
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/" title="Generar paginas Web estaticas dinamicamente" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/">
+        Generar paginas Web estaticas dinamicamente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/" title="Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/">
+          <b>4. </b>Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/curso/" title="Curso de Angular 6" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/curso/">
+          <b>- </b>Curso de Angular 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/aplicacion/" title="Aplicación usando Java y Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/aplicacion/">
+          <b>- </b>Aplicación usando Java y Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/24/hablando-espanol/" title="Angular – Hablando español" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/24/hablando-espanol/">
+        Angular – Hablando español
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/" title="Angular 6 – Añadir Bootstrap 4 con JQuery" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/">
+        Angular 6 – Añadir Bootstrap 4 con JQuery
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/5-dba/" title="DBA" class="dd-item 
+        parent
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/5-dba/">
+          <b>6. </b>DBA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/" title="Conectando a una base de datos usando JNDI y Spring en Tomcat" class="dd-item active">
+        <a href="ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/">
+        Conectando a una base de datos usando JNDI y Spring en Tomcat
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/6-javaee/" title="J2EE" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/6-javaee/">
+          <b>6. </b>J2EE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/" title="Aplicación CRUD usando REST en JavaEE" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/">
+        Aplicación CRUD usando REST en JavaEE
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/" title="Aplicación CRUD usando REST en JavaEE  (2ª Parte)" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/">
+        Aplicación CRUD usando REST en JavaEE  (2ª Parte)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/" title="Desarrollando aplicaciones Java EE en NetBeans 9" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/">
+        Desarrollando aplicaciones Java EE en NetBeans 9
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/contacto/" title="Contacto" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/contacto/">
+          <b> > </b>Contacto
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_basesdatos/" title="Bases de Datos" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_basesdatos/">
+        Bases de Datos
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_laboral/" title="Experiencia Laboral" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_laboral/">
+        Experiencia Laboral
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/" title="Lenguajes  de programación" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/">
+        Lenguajes  de programación
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_sistemas/" title="Sistemas" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_sistemas/">
+        Sistemas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Más</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/acerca"><i class='fas fa-fw fa-camera'></i>Acerca de</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/experiencia_laboral"><i class='fas fa-fw fa-bookmark'></i>Experiencia Laboral</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/anjelica"><i class='fas fa-fw fa-bullhorn'></i> Anjelica</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Borrar Historial</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Conectando a una base de datos usando JNDI y Spring en Tomcat 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#1-introducción">1. Introducción</a></li>
+<li><a href="#2-configuración-de-postgresql-western">2. Configuración de Postgresql {.western}</a></li>
+<li><a href="#3-configuración-de-tomcat">3. Configuración de Tomcat</a></li>
+<li><a href="#4-configuración-de-la-aplicación-western">4. Configuración de la aplicación. {.western}</a>
+<ul>
+<li><a href="#4-1-web-xml-western">4.1 web.xml {.western}</a></li>
+<li><a href="#4-2dispatcher-servlet-xml-western">4.2dispatcher-servlet.xml {.western}</a></li>
+<li><a href="#4-3applicationcontext-xml-western">4.3applicationContext.xml {.western}</a></li>
+</ul></li>
+<li><a href="#5-la-aplicación-western">5. La aplicación {.western}</a>
+<ul>
+<li><a href="#5-1-configuracion-jpa-y-jdbc-western">5.1 Configuracion JPA y JDBC {.western}</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+ 					
+										
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/hibernate">hibernate</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/java">java</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/jndi">jndi</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/jpa">jpa</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/spring">spring</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/tomcat">tomcat</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+			  
+				Conectando a una base de datos usando JNDI y Spring en Tomcat 
+			  
+			   
+				<class id ="fecha">
+				August 21, 2018 </div>
+			  
+            </h1>
+			
+          
+        
+
+
+
+
+
+<h1 id="1-introducción">1. Introducción</h1>
+
+<p>En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.</p>
+
+<p>El código fuente lo teneis en: <a href="https://github.com/chuchip/jdbc_jpa_tomcat" target="_blank" rel="noopener"><a href="https://github.com/chuchip/jdbc_jpa_tomcat">https://github.com/chuchip/jdbc_jpa_tomcat</a></a></p>
+
+<p>En <a href="http://www.profesor-p.com/wp-content/uploads/2018/08/ejemplo-jpa-y-jdbc-con-spring.pdf" target="_blank" rel="noopener">este enlace</a> teneis este mismo documento (todas las partes) pero en PDF.</p>
+
+<p>El ejemplo usa Maven y explicare como deberá estar configurado Tomcat para que la aplicación funcione correctamente.</p>
+
+<h1 id="2-configuración-de-postgresql-western">2. Configuración de Postgresql {.western}</h1>
+
+<p>Esta sera la única tabla a la que accederemos a través de Postgresql:</p>
+
+<pre>create table usuario
+(
+    login varchar(15) not null,
+    nombre varchar(100) not null,
+    constraint ix_usuario primary  key (login)
+);
+insert into  usuario values('cpuente','El profe');
+insert into  usuario values('chuchi','El nombre del profe');
+</pre>
+
+<h1 id="3-configuración-de-tomcat">3. Configuración de Tomcat</h1>
+
+<p>La configuración de Tomcat deberá tener las siguientes características:</p>
+
+<p>En server.xml (estara en $TOMCAT_HOME/conf) deberemos añadir dentro de <strong><GlobalNamingResources></strong> las siguientes lineas:</p>
+
+<pre>&lt;GlobalNamingResources&gt;
+…..
+&lt;Resource name="jdbc/anjelica" auth="Container"
+type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+url="jdbc:postgresql://localhost:5432/MIBASEDATOS"
+username="USUARIO" password="CONTRASEÑA" maxTotal="20" maxIdle="10" maxWaitMillis="-1"/&gt;
+…..
+&lt;/GlobalNamingResources&gt;</pre>
+
+<p>Esto se utilizara para configurar nuestra fuente JNDI que permitirá conectarnos con la base de datos. Para probar esta aplicación cambiar los valores de <em>url</em> para que apunten a vuestra base de datos, asi como el <em>username</em> y la <em>password.</em></p>
+
+<p>También sera necesario añadir las siguientes lineas al fichero <em>context.xml dentro de</em> <em><strong><context></strong></em> __de tomcat, que también estará en $TOMCAT_HOME/conf</p>
+
+<pre>&lt;Context&gt;
+….
+&lt;ResourceLink name="jdbc/anjelica"
+global="jdbc/anjelica"
+type="javax.sql.DataSource"/&gt; 
+….
+&lt;/Context&gt;</pre>
+
+<p>Con estos dos ficheros ya tendremos nuestro tomcat configurado para que use su propio pool de conexiones al que hemos llamado “jdbc/anjelica”.</p>
+
+<p>Ahora debemos añadir a Tomcat la libreríapara conectarnos a postgresql, en este caso usamos la versión 42.2.2</p>
+
+<p>&#8211; postgresql-42.2.2.jar</p>
+
+<h1 id="4-configuración-de-la-aplicación-western">4. Configuración de la aplicación. {.western}</h1>
+
+<p>&nbsp;</p>
+
+<p>En esta aplicación usaremos tanto ficheros xml como configuración en Java.</p>
+
+<p>Lo primero es configurar nuestro ficheros xml para que Tomcat use Spring, para ello en el directorio <strong>src\main\webapp\WEB-INF</strong> de nuestra aplicación tenderemos estos ficheros.</p>
+
+<ul>
+<li>applicationContext.xml</li>
+<li>dispatcher-servlet.xml</li>
+<li>web.xml</li>
+</ul>
+
+<h2 id="4-1-web-xml-western">4.1 web.xml {.western}</h2>
+
+<p>El único fichero que usa Tomcat es web.xml, y este, a su vez, usa los dos anteriores, de tal manera que básicamente en web.xml , lo primero que hacemos es especificar que use el servlet de Spring y le decimos donde tendrá la configuración para ese servlet. Esto se hace con estas lineas:</p>
+
+<pre>&lt;servlet&gt;
+        &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;
+            org.springframework.web.servlet.DispatcherServlet
+        &lt;/servlet-class&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;/WEB-INF/dispatcher-servlet.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
+        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;</pre>
+
+<p>A continuación configuramos el contexto con las siguientes lineas:</p>
+
+<pre>&lt;context-param&gt;
+        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+        &lt;param-value&gt;/WEB-INF/applicationContext.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+&lt;listener&gt;
+    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;</pre>
+
+<h2 id="4-2dispatcher-servlet-xml-western">4.2dispatcher-servlet.xml {.western}</h2>
+
+<p>Para configurar la parte Web de nuestra aplicación (el servlet realmente) pondremos las siguientes lineas en el fichero dispatcher-servlet.xml</p>
+
+<pre>&lt;annotation-driven /&gt;
+  &lt;context:component-scan base-package="chu.jdbc" /&gt;
+  
+  &lt;beans:bean
+    class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;
+    &lt;beans:property name="prefix" value="/WEB-INF/views/" /&gt;
+    &lt;beans:property name="suffix" value=".jsp" /&gt;
+  &lt;/beans:bean&gt;</pre>
+
+<p>Con <strong><annotation-driven /></strong> permitiremos que en nuestra aplicación haya anotaciones @Controller y <em>@RequestMapping</em></p>
+
+<p><em>Con</em> <em><strong><context:component-scan base-package=&#8221;chu.jdbc&#8221; /></strong></em> <em>especificaremos que paquete deberá escanear Spring para buscar anotaciones en los ficheros java. En este caso especificamos que busque en el paquete “chu.jdbc” y sus hijos.</em></p>
+
+<p><em>Las ultimas lineas indican que usaremos JSP y especifica donde tendremos nuestros ficheros jsp.</em></p>
+
+<p>Tenéis un excelente documento explicando como hacer esta misma configuración usando anotaciones java en la siguiente página: <a href="https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration">https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration</a></p>
+
+<h2 id="4-3applicationcontext-xml-western">4.3applicationContext.xml {.western}</h2>
+
+<p>En este fichero crearemos nuestro DataSource que utilizaremos para conectarnos con el pool de conexiones anteriormente configurado en Tomcat.</p>
+
+<p>Esto se hace añadiendo la siguiente linea:</p>
+
+<pre>&lt;jee:jndi-lookup id="dataSource" jndi-name="jdbc/anjelica" resource-ref="true"/&gt;</pre>
+
+<p>Tenéis más documentación de lo que hace esta linea en <a href="http://www.jtech.ua.es/j2ee/publico/spring-2012-13/sesion01-apuntes.html">http://www.jtech.ua.es/j2ee/publico/spring-2012-13/sesion01-apuntes.html</a></p>
+
+<p>De todos modos básicamente lo que hace es injectar en nuestra aplicación una clase DataSource que luego podremos usar con sentencias como esta:</p>
+
+<pre>@Autowired
+ <span style="font-size: small;">DataSource ds;</span></pre>
+
+<h1 id="5-la-aplicación-western">5. La aplicación {.western}</h1>
+
+<h2 id="5-1-configuracion-jpa-y-jdbc-western">5.1 Configuracion JPA y JDBC {.western}</h2>
+
+<p>En la clase JpaConfig es donde se hace toda la configuración que necesitamos para conectarnos a la base de datos.</p>
+
+<p>Para ello, lo primero especificamos las siguientes configuraciones java</p>
+
+<pre>@Configuration
+@EnableLoadTimeWeaving
+@EnableJpaRepositories("chu.jdbc")</pre>
+
+<p>Explico las directivas, una a una.</p>
+
+<ul>
+<li><p>@Configuration Especifica que es una clase de configuración, con ello haremos que Spring la cargue y ejecute.</p></li>
+
+<li><p>@EnableLoadTimeWeaving Con esto permitimos a tomcat usar AOP. Si no la ponemos simplemente Tomcat no podrá hacer uso de Programación Orienta a a Aspectos (AOP) y la aplicación no funcionara. Mas documentación en: <a href="https://docs.spring.io/spring/docs/5.0.8.RELEASE/spring-framework-reference/core.html#aop-aj-ltw-environment-tomcat">https://docs.spring.io/spring/docs/5.0.8.RELEASE/spring-framework-reference/core.html#aop-aj-ltw-environment-tomcat</a></p></li>
+
+<li><p>@EnableJpaRepositories(&#8220;chu.jdbc&#8221;) especificamos que busque repositorios (clases marcadas con la directiva @Repository) en el paquete <em>chu.jdbc</em></p></li>
+</ul>
+
+<p>Ahora inyectamos el Datasource que ya tendremos disponible por la configuración aplicada anteriormente en nuestro fichero <em>applicationContext.xml</em></p>
+
+<pre>@Autowired
+DataSource ds;</pre>
+
+<p>Lo siguiente es crear nuestro fabrica de controladores de entidades (bueno, en ingles, nuestro EntityManagerFactoryBean), para ello y como usamos una versión de Hibernate superior a la 4 (con versiones anteriores utilizaríamos otra clase), ponemos el siguiente código:</p>
+
+<pre>@Bean
+   public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+      LocalContainerEntityManagerFactoryBean em  = new LocalContainerEntityManagerFactoryBean();
+      em.setDataSource(ds);
+      em.setPackagesToScan(new String[] { "chu.jdbc" });
+ 
+      JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+      em.setJpaVendorAdapter(vendorAdapter);   
+ 
+      return em;
+   }</pre>
+
+<p>Como se puede ver simplemente creamos nuestro <em>LocalContainerEntityManagerFactoryBean</em> , le añadimos nuestro DataSource y el adaptador de Hibernate. También le decimos los paquetes que deberá escanear para buscar “Entity Classes” (clases que sean entidades, vamos).</p>
+
+<p>Por ultimo creamos nuestro controlador de transaciones con el siguiente código:</p>
+
+<pre>@Bean
+   public PlatformTransactionManager transactionManager( EntityManagerFactory emf){
+       JpaTransactionManager transactionManager = new JpaTransactionManager();
+       transactionManager.setEntityManagerFactory(emf); 
+       return transactionManager;
+   }</pre>
+
+<p>Ahora ya solo falta crear nuestro ficherito hibernate.cfg.xml en nuestro directorio de <em>resources,</em> pero en el solamente tenemos lo siguiente:</p>
+
+<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd"&gt;
+&lt;hibernate-configuration&gt;
+    &lt;session-factory&gt;
+        &lt;property name="hibernate.dialect"&gt;org.hibernate.dialect.PostgreSQLDialect&lt;/property&gt;      
+    &lt;/session-factory&gt;
+&lt;/hibernate-configuration&gt;</pre>
+
+<p>Es decir, simplemente definimos que vamos a usar una base de datos Postgresql. Este fichero <strong>debe</strong> existir. Cosas de Hibernate que hay que complacer.</p>
+
+<p>Y <em>voila</em> nuestro entorno para JPA + Hibernate ya esta configurado y listo para funcionar.</p>
+
+<p>En la siguiente parte explicare como crear un respositorio y la magia que hay detras.</p>
+
+<p>¡¡ Hasta la proxima, chabales!!</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="ww2.profesor-p.com/5-dba/" title="DBA"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="ww2.profesor-p.com/6-javaee/" title="J2EE" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/ww2.profesor-p.com/js/clipboard.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.jquery.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/jquery.sticky.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/featherlight.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/html5shiv-printshiv.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/highlight.pack.js?1564210987"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/ww2.profesor-p.com/js/modernizr.custom-3.6.0.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/learn.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/hugo-learn.js?1564210987"></script>
+
+    <link href="/ww2.profesor-p.com/mermaid/mermaid.css?1564210987" rel="stylesheet" />
+    <script src="/ww2.profesor-p.com/mermaid/mermaid.js?1564210987"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+

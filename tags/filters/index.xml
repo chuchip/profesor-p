@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filters on Documentacion en español</title>
+    <link>ww2.profesor-p.com/tags/filters/</link>
+    <description>Recent content in Filters on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Thu, 13 Jun 2019 16:11:53 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/tags/filters/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estableciendo filtros en Spring</title>
+      <link>ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
+      <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
+Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
+    </item>
+    
+  </channel>
+</rss>

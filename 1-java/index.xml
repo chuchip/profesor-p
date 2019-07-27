@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Documentacion en español</title>
+    <link>ww2.profesor-p.com/1-java/</link>
+    <description>Recent content in Java on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/1-java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Usando Lambdas</title>
+      <link>ww2.profesor-p.com/2018/08/23/usando-lambdas/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/08/23/usando-lambdas/</guid>
+      <description>&lt;p&gt;En esta breve entrada explicare como mejorar el &lt;a href=&#34;ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/&#34;&gt;ejemplo anterior&lt;/a&gt;, con el uso de lambdas.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

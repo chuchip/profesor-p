@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jpa on Documentacion en español</title>
+    <link>ww2.profesor-p.com/categories/jpa/</link>
+    <description>Recent content in Jpa on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 07 Oct 2018 05:49:37 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/categories/jpa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aplicación CRUD usando REST en JavaEE  (2ª Parte)</title>
+      <link>ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
+      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
+      <description>Buenas otra vez.
+En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
+Recordar que tenéis el código fuente en https://github.com/chuchip/crudJavaEE
+En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/ habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.
+ Funcion create  @POST @Consumes(MediaType.APPLICATION_JSON) public Response create(Locales locale) { if ( localeController.exists(locale.getCodigo())) { return Response.status(Response.Status.CONFLICT).build(); } localeController.create(locale); URI location = UriBuilder.</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
+      <link>ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <description>Buenas chavales,
+En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
+Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
+Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Perfiles en Spring Boot</title>
+      <link>ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
+      <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
+      <description>Introducción Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.
+Estableciendo perfiles en la aplicación Spring provee una manera sencilla de gestionar esta situación haciendo uso de los perfiles.</description>
+    </item>
+    
+    <item>
+      <title>Optimizando relaciones entre entidades en Hibernate</title>
+      <link>ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</link>
+      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</guid>
+      <description>En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA.
+Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.
+EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.</description>
+    </item>
+    
+    <item>
+      <title>Accediendo facilmente a los datos con Spring Rest Data</title>
+      <link>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
+Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
+    </item>
+    
+    <item>
+      <title>Querys avanzadas con JPA en Spring Boot</title>
+      <link>ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</link>
+      <pubDate>Thu, 14 Feb 2019 15:37:15 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</guid>
+      <description>Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)</title>
+      <link>ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
+      <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
+      <description>Hola de nuevo, chicos.
+Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
+Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
+La clase en cuestión es ApiController.</description>
+    </item>
+    
+    <item>
+      <title>Aplicación en Spring REST y Angular – 5ª Parte</title>
+      <link>ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
+      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
+Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
+Empezare describiendo la clase
+@Component public class YagesBussines { @Autowired CalendarioRepositorioService calendarioRepositorio; @Autowired HistVentasRepository histVentasRepository; @Autowired DataSource dataSource; @Autowired private JdbcOperations jdbc; @Bean public JdbcTemplate jdbcTemplate() { return new JdbcTemplate(dataSource); } .</description>
+    </item>
+    
+    <item>
+      <title>Aplicación en Spring REST y Angular – 2 Parte</title>
+      <link>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Aplicación en Spring REST y Angular</title>
+      <link>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
+      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
+      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
+La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
+Para ello se realizaran los siguientes pasos:
+  Crear tablas y cargar datos de prueba en la base de datos.</description>
+    </item>
+    
+    <item>
+      <title>JPA &#43; Hibernate en Spring</title>
+      <link>ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
+      <pubDate>Sat, 25 Aug 2018 18:14:42 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
+      <description>En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA.
+Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior.
+Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java Persistence API. Es decir la API de persistencia en Java.</description>
+    </item>
+    
+  </channel>
+</rss>

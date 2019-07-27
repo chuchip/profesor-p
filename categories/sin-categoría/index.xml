@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sin Categoría on Documentacion en español</title>
+    <link>ww2.profesor-p.com/categories/sin-categor%C3%ADa/</link>
+    <description>Recent content in Sin Categoría on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Fri, 24 Aug 2018 10:53:55 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JPA con Lombok, simplificando.</title>
+      <link>ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
+      <description>En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok.
+Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Anteriormente teniamos definido nuestro objeto de esta manera:
+@Entity @Table(name = &amp;quot;usuario&amp;quot;, uniqueConstraints = { @UniqueConstraint(columnNames = {&amp;quot;login&amp;quot;})}) public class Usuario implements Serializable { @Id String login; @Column String nombre; public Usuario() { } public String getLogin() { return login; } public void setLogin(String login) { this.</description>
+    </item>
+    
+  </channel>
+</rss>

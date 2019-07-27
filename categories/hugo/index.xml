@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Documentacion en español</title>
+    <link>ww2.profesor-p.com/categories/hugo/</link>
+    <description>Recent content in Hugo on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 28 Nov 2018 12:32:50 +0000</lastBuildDate>
+    
+	<atom:link href="ww2.profesor-p.com/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generar paginas Web estaticas dinamicamente</title>
+      <link>ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</link>
+      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
+      
+      <guid>ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</guid>
+      <description>&lt;p&gt;Buenas alumnos/as,&lt;/p&gt;
+
+&lt;p&gt;En esta entrada hablare de &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.&lt;/p&gt;
+
+&lt;p&gt;Hugo usa &lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;markdown&lt;/a&gt; para añadir los contenidos pero también podremos usar HTML, CSS y JavaScript si fuera necesario.&lt;/p&gt;
+
+&lt;p&gt;Para crear una pagina web lo primero que tenemos que hacer es bajarnos el programa, lo cual podemos hacer desde &lt;a class=&#34;url&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/a&gt; Una vez tengamos instalado &lt;strong&gt;hugo&lt;/strong&gt; en nuestro ordenador, podremos empezar a crear nuestra propia pagina web.&lt;/p&gt;
+
+&lt;p&gt;Como primer paso abriremos un terminal y ejecutaremos la siguiente sentencia:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; &amp;gt; hugo new site mipagina
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Con esto &lt;strong&gt;hugo&lt;/strong&gt; creara un directorio llamado &amp;#8216;mipagina&amp;#8217; debajo del actual. Nos moveremos a el directorio para poder instalar el tema con el que queremos que funcione nuestra página web.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; cd mipagina
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En &lt;a class=&#34;url&#34; href=&#34;https://themes.gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;https://themes.gohugo.io/&lt;/a&gt;&lt;/a&gt; tenemos todas los temas (o plantillas) sobre las que basar nuestra página web. Estos temas están en su mayoría alojados en GitHub por lo cual lo más fácil para descargarlos es usar el comando &lt;strong&gt;git&lt;/strong&gt; . De todos modos, siempre tenemos la opción de descargar un fichero &lt;em&gt;zip&lt;/em&gt; que después descomprimiremos en el directorio &lt;strong&gt;themes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Supongamos que queremos usar el tema &lt;strong&gt;initio&lt;/strong&gt; que es el que usamos en la página de &lt;a href=&#34;http://lariojatech.org/&#34;&gt;RiojaTech Alliance&lt;/a&gt; . Para ello iremos a su URL &lt;a class=&#34;url&#34; href=&#34;https://themes.gohugo.io/hugo-initio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://themes.gohugo.io/hugo-initio/&#34;&gt;https://themes.gohugo.io/hugo-initio/&lt;/a&gt;&lt;/a&gt; y pulsaremos sobre el botón &amp;#8216;&lt;strong&gt;Download&lt;/strong&gt;&amp;#8216;, lo cual nos llevara a &lt;strong&gt;GitHub&lt;/strong&gt;, a la dirección &lt;a class=&#34;url&#34; href=&#34;https://github.com/miguelsimoni/hugo-initio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://github.com/miguelsimoni/hugo-initio&#34;&gt;https://github.com/miguelsimoni/hugo-initio&lt;/a&gt;&lt;/a&gt;. Allí descargaremos el fichero &lt;strong&gt;ZIP&lt;/strong&gt;, dándole a l botón &lt;strong&gt;Download ZIP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;size-large wp-image-510 aligncenter&#34; src=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png&#34; alt=&#34;&#34; width=&#34;1024&#34; height=&#34;254&#34; srcset=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-300x74.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-768x190.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/11/github.png 1057w&#34; sizes=&#34;(max-width: 1024px) 100vw, 1024px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;Después descomprimiremos el fichero ZIP dentro del directorio &lt;strong&gt;themes&lt;/strong&gt; , de tal manera que la estructura de nuestros directorios será como la siguiente:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;size-full wp-image-509 aligncenter&#34; src=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png&#34; alt=&#34;&#34; width=&#34;245&#34; height=&#34;387&#34; srcset=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png 245w, http://www.profesor-p.com/wp-content/uploads/2018/11/directorios-190x300.png 190w&#34; sizes=&#34;(max-width: 245px) 100vw, 245px&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Suele ser una buena idea copiar el contenido del directorio &lt;code&gt;example-site&lt;/code&gt; dentro de nuestro directorio principal para tener una plantilla sobre la que empezar a trabajar.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Probando nuestra pagina web&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ahora, para ver como va quedando nuestra página web, ejecutaremos este comando:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; hugo -F serve
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;De está manera se lanzara un pequeño servidor web el cual escuchara en el puerto 1313 .&lt;/p&gt;
+
+&lt;p&gt;Este servidor monitorizara los cambios en los ficheros de tal manera que si modificamos cualquier fichero, nuestra pagina web será recargada automáticamente.&lt;/p&gt;
+
+&lt;p&gt;En la dirección &lt;a class=&#34;url&#34; href=&#34;http://localhost:1313/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;&lt;/a&gt; con nuestro navegador favorito podremos ver el resultado.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Añadiendo contenido&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Si queremos añadir una entrada en la pagina web usaremos este comando:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34; lang=&#34;shell&#34;&gt;&amp;gt; hugo new post/post0.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Esto nos generara el fichero &amp;#8216;post0.md&amp;#8217; en el directorio &lt;strong&gt;content/post/&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Este fichero tendrá el siguiente contenido.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;post0&amp;quot; # Nombre del post
+date: 2018-11-01T11:21:58+01:00 ## fecha actual.
+draft: true # Poner a false para que aparezca el evento
+---
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Debajo deberemos poner el contenido de nuestro articulo. Recordar que se puede usar el lenguaje &lt;strong&gt;markdown&lt;/strong&gt; y también &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Si ponemos la etiqueta `&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

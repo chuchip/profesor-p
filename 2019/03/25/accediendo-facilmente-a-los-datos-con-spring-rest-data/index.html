@@ -1,0 +1,3362 @@
+<!DOCTYPE html>
+<html lang="es" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="Documentation for Hugo Learn Theme">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="/ww2.profesor-p.com/images/favicon.png" type="image/png">
+
+    <title>Accediendo facilmente a los datos con Spring Rest Data :: Documentacion en español</title>
+
+    
+    <link href="/ww2.profesor-p.com/css/nucleus.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/fontawesome-all.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hybrid.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/featherlight.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/perfect-scrollbar.min.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/auto-complete.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/atom-one-dark-reasonable.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/theme.css?1564210987" rel="stylesheet">
+    <link href="/ww2.profesor-p.com/css/hugo-theme.css?1564210987" rel="stylesheet">
+    
+
+    <script src="/ww2.profesor-p.com/js/jquery-3.3.1.min.js?1564210987"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Buscar...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/ww2.profesor-p.com/js/lunr.min.js?1564210987"></script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/auto-complete.js?1564210987"></script>
+<script type="text/javascript">
+    
+        var baseurl = "ww2.profesor-p.com";
+    
+</script>
+<script type="text/javascript" src="/ww2.profesor-p.com/js/search.js?1564210987"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/" title="Java" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/">
+          <b>1. </b>Java
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/1-java/kotlin/" title="Kotlin" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/1-java/kotlin/">
+          Kotlin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/23/usando-lambdas/" title="Usando Lambdas" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/23/usando-lambdas/">
+        Usando Lambdas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/" title="Spring" class="dd-item 
+        parent
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/">
+          <b>2. </b>Spring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/1-testing/" title="Testing" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/1-testing/">
+          <b>- </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/2-seguridad/" title="Seguridad" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/2-seguridad/">
+          <b>- </b>Seguridad
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/3-mvc/" title="MVC" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/3-mvc/">
+          <b>- </b>MVC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/4-database/" title="Database" class="dd-item 
+        parent
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/4-database/">
+          <b>- </b>Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/5-cloud/" title="Cloud" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/5-cloud/">
+          <b>- </b>Cloud
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/2-spring/6-webflow/" title="Webflow" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/2-spring/6-webflow/">
+          <b>- </b>Webflow
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/" title="Perfiles en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/">
+        <b>o </b>Perfiles en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/" title="Lambdas en JDBC Data" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/">
+        <b>o </b>Lambdas en JDBC Data
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/">
+        <b>o </b>Estableciendo filtros en Spring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/" title="Cacheando resultados con Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/">
+        <b>o </b>Cacheando resultados con Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/" title="Beans avanzados" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/04/18/beans-avanzados-en-spring/">
+        <b>o </b>Beans avanzados
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/" title="Usando Zuul para redirigir peticiones REST" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/">
+        <b>o </b>Usando Zuul para redirigir peticiones REST
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/" title="Mensajería con Kafka y Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/">
+        <b>o </b>Mensajería con Kafka y Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/" title="Personalizar salidas de códigos HTTP en Spring Boot" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/">
+        <b>o </b>Personalizar salidas de códigos HTTP en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/" title="Instalar plugin Spring Boot en NetBeans" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/">
+        <b>o </b>Instalar plugin Spring Boot en NetBeans
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/3-hugo/" title="Hugo" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/3-hugo/">
+          <b>3. </b>Hugo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/" title="Crear pagina web gratuita en GitHub" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/">
+        Crear pagina web gratuita en GitHub
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/" title="Generar paginas Web estaticas dinamicamente" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/">
+        Generar paginas Web estaticas dinamicamente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/" title="Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/">
+          <b>4. </b>Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/curso/" title="Curso de Angular 6" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/curso/">
+          <b>- </b>Curso de Angular 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/4-angular/aplicacion/" title="Aplicación usando Java y Angular" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/4-angular/aplicacion/">
+          <b>- </b>Aplicación usando Java y Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/24/hablando-espanol/" title="Angular – Hablando español" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/24/hablando-espanol/">
+        Angular – Hablando español
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/" title="Angular 6 – Añadir Bootstrap 4 con JQuery" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/">
+        Angular 6 – Añadir Bootstrap 4 con JQuery
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/5-dba/" title="DBA" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/5-dba/">
+          <b>6. </b>DBA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/" title="Conectando a una base de datos usando JNDI y Spring en Tomcat" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/">
+        Conectando a una base de datos usando JNDI y Spring en Tomcat
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/6-javaee/" title="J2EE" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/6-javaee/">
+          <b>6. </b>J2EE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/" title="Aplicación CRUD usando REST en JavaEE" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/">
+        Aplicación CRUD usando REST en JavaEE
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/" title="Aplicación CRUD usando REST en JavaEE  (2ª Parte)" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/">
+        Aplicación CRUD usando REST en JavaEE  (2ª Parte)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/" title="Desarrollando aplicaciones Java EE en NetBeans 9" class="dd-item ">
+        <a href="ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/">
+        Desarrollando aplicaciones Java EE en NetBeans 9
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+		  
+          
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="ww2.profesor-p.com/contacto/" title="Contacto" class="dd-item 
+        
+        
+        
+        ">		
+      <a href="ww2.profesor-p.com/contacto/">
+          <b> > </b>Contacto
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_basesdatos/" title="Bases de Datos" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_basesdatos/">
+        Bases de Datos
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_laboral/" title="Experiencia Laboral" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_laboral/">
+        Experiencia Laboral
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/" title="Lenguajes  de programación" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_lenguajesprogramacion/">
+        Lenguajes  de programación
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="ww2.profesor-p.com/contacto/experiencia_sistemas/" title="Sistemas" class="dd-item ">
+        <a href="ww2.profesor-p.com/contacto/experiencia_sistemas/">
+        Sistemas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Más</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/acerca"><i class='fas fa-fw fa-camera'></i>Acerca de</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/experiencia_laboral"><i class='fas fa-fw fa-bookmark'></i>Experiencia Laboral</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="ww2.profesor-p.com/ww2.profesor-p.com/anjelica"><i class='fas fa-fw fa-bullhorn'></i> Anjelica</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Borrar Historial</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/matcornic/hugo-theme-learn/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                   Accediendo facilmente a los datos con Spring Rest Data 
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#creando-el-proyecto">Creando el proyecto</a></li>
+<li><a href="#accediendo-al-api-de-data-rest">Accediendo al API de Data Rest</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+ 					
+										
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/java">java</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/jpa">jpa</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/json">json</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/rest">rest</a>
+
+  <a class="tag-link" href="/ww2.profesor-p.com/tags/spring-boot">spring boot</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+			  
+				Accediendo facilmente a los datos con Spring Rest Data 
+			  
+			   
+				<class id ="fecha">
+				March 25, 2019 </div>
+			  
+            </h1>
+			
+          
+        
+
+
+
+
+
+<p><strong>Spring Boot</strong> ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/Repository.html">Repository</a>. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [<a href="http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2">http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2</a>] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.</p>
+
+<p>Pero si queremos implementar <a href="https://spring.io/projects/spring-hateoas">HATEOAS</a> en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código. Para solucionar este problema <strong>Spring Boot</strong> provee el paquete <a href="https://docs.spring.io/spring-data/rest/docs/current/reference/html/">Spring Data Rest</a> con el cual con apenas código podremos crear una API para acceder a las tablas de nuestra base de datos.</p>
+
+<p>En el ejemplo que tenéis disponible en <a href="https://github.com/chuchip/springrestdata" target="_blank" rel="noopener noreferrer">mi página de GITHUB</a> veremos como poder realizar el mantenimiento de una tabla de clientes (customers) sin escribir ni una sola línea para definir las diferentes APIS REST.</p>
+
+<h3 id="creando-el-proyecto">Creando el proyecto</h3>
+
+<p>Como siempre, podremos ir a la pagina <a class="url" href="https://start.spring.io" target="_blank" rel="noopener noreferrer"><a href="https://start.spring.io">https://start.spring.io</a></a> para crear nuestro proyecto <strong>maven</strong>. Para el proyecto de ejemplo que vamos a crear, deberemos incluir las siguientes dependencias:</p>
+
+<p><strong>Spring Data Rest</strong>, <strong>H2</strong>, <strong>JPA</strong>, <strong>Lombok</strong> como se ve en la siguiente captura de pantalla</p>
+
+<p><img src="/img/2019/03/starters-1024x953.png" alt="" /></p>
+
+<p>Una vez tengamos hayamos importado el proyecto en nuestro IDE preferido, deberemos modificar el fichero <strong>application.properties</strong> para definir ciertos parámetros:</p>
+
+<pre><code>#H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2
+#JPA
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+# Datasource
+spring.datasource.url=jdbc:h2:file:~/test
+spring.datasource.username=sa
+spring.datasource.password=
+spring.datasource.driver-class-name=org.h2.Driver
+# Data Rest
+spring.data.rest.base-path: /api
+</code></pre>
+
+<p>De este fichero la única entrada relativa a la librería <strong>Data Rest</strong> es la última. En ella especificamos la dirección donde se deben implementar las llamadas <strong>REST</strong> para acceder a las diferentes tablas que implemente nuestra aplicación. Es decir, en nuestro caso, se accederá a través de la URL: <a class="url" href="http://localhost:8080/api" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api">http://localhost:8080/api</a></a></p>
+
+<p>Las demás líneas configuran la base de datos H2 que usaremos, así como ciertas propiedades de JPA. Por supuesto dejaremos a <strong>JPA</strong> que cree la estructura de la base de datos a través de las entidades definidas, gracias a la sentencia: <code>spring.jpa.hibernate.ddl-auto=create-drop</code></p>
+
+<ul>
+<li>### Estructura del proyecto</li>
+</ul>
+
+<p>Nuestro proyecto final tendrá la siguiente estructura:</p>
+
+<p><img src="/img/2019/03/estructura.png" alt="Estructura del proyecto" /></p>
+
+<p>Como se puede ver, definiremos dos tablas (entities) , que son: <strong>City</strong> y <strong>Customer</strong>. También definimos los correspondientes repositorios <strong>CustomerRepository</strong> y <strong>CityRepository</strong></p>
+
+<p>La clase <strong>CityEntity.java</strong> es la siguiente:</p>
+
+<pre><code>@Entity
+@Data
+@RestResource(rel=&quot;customers&quot;, path=&quot;customer&quot;)
+public class CustomerEntity {	
+	@Id
+	long id;	
+	@Column
+	String name;	
+	@Column
+	String address;	
+	@Column
+	String telephone;	
+        @Column @JsonIgnore
+	String secret;
+	@OneToOne
+	CityEntity city;    
+}
+</code></pre>
+
+<p>Las particularidades de esta clase son las siguientes:</p>
+
+<ul>
+<li>la línea <strong>@RestResource</strong> donde con el parámetro <strong>rel</strong> especificamos como debe llamarse el objeto en la salida JSON. Con el parámetro <strong>path</strong> se indica donde se debe realizar la petición HTTP.</li>
+<li>La anotación <strong>@JsonIgnore</strong> aplicada a la columna <em>secret</em>. Con esta etiqueta ese campo será ignorado, de tal manera que ni se mostrara en las salidas, ni se actualizara, aunque se incluya, en las peticiones.</li>
+</ul>
+
+<p>Si no pusiéramos la etiqueta <strong>@RestResource</strong> Spring presentaría el recurso para acceder a la entidad en <a class="url" href="http://localhost:8080/api/customerEntities" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api/customerEntities">http://localhost:8080/api/customerEntities</a></a> es decir usaría el nombre de la clase, poniéndolo en plural , por lo cual le añade &#8216;<em>es&#8217;</em>.</p>
+
+<p>El repositorio de esta entidad esta en <strong>CustomerRepository</strong> y contiene solo estas líneas:</p>
+
+<pre><code>public interface CustomerRepository  extends CrudRepository&amp;lt;CustomerEntity, Long&amp;gt;  {	
+	public List&amp;lt;CustomerEntity&amp;gt; findByNameIgnoreCaseContaining(@Param(&quot;name&quot;) String name);
+}
+</code></pre>
+
+<p>La función <strong>findByNameIgnoreCaseContaining</strong> que he definido permitirá buscar los clientes, ignorando mayúsculas y minúsculas, cuyo nombre contengan la cadena mandada. Más adelante explicare como poder realizar una consulta a través de esta llamada con <strong>Spring Data Rest</strong></p>
+
+<p>Tenéis más documentación sobre como crear consultas personalizadas en Spring en <a href="http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/">esta otra entrada mía</a>.</p>
+
+<p>La clase <strong>CityEntity.java</strong> contiene las siguientes líneas:</p>
+
+<pre><code>@Entity
+@Data
+@RestResource(exported=false)
+public class CityEntity {		
+	@Id 
+	int id;
+	@Column
+	String name;
+	@Column
+	String province;
+}
+</code></pre>
+
+<p>En este caso la etiqueta <strong>@RestResource</strong> tiene indicada la propiedad <strong>exported</strong> igual a <em>false</em> para que esta entidad no sea tratada por  <strong>Data Rest</strong> y no sera accesible a traves de ninguna API.</p>
+
+<h3 id="accediendo-al-api-de-data-rest">Accediendo al API de Data Rest</h3>
+
+<p>Los recursos que están publicados estarán disponibles en la URL: <a class="url" href="http://localhost:8080/api" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api">http://localhost:8080/api</a></a>, como hemos definido en el fichero <strong>application.properties</strong>. Esta será la salida en este proyecto:</p>
+
+<pre><code>&gt; curl -s http://localhost:8080/api/
+{
+  &quot;_links&quot; : {
+    &quot;customers&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer&quot;
+    },
+    &quot;profile&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/profile&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>El <em>profile</em> se refiere a lo definido en el <a href="https://tools.ietf.org/html/rfc6906">RFC 6906</a>, donde se incluye detalles de la aplicación, pero no tratare de ello en esta entrada.</p>
+
+<p>Para acceder al único recurso disponible en nuestro proyecto, al que hemos llamado <strong>customer</strong>,  navegaremos a: <a class="url" href="http://localhost:8080/api/customer" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api/customer">http://localhost:8080/api/customer</a></a> .</p>
+
+<p>Primero añadamos un registro. Esto lo realizaremos realizando una petición tipo <strong>POST</strong> como la siguiente:</p>
+
+<pre><code>&gt; curl -s --request POST localhost:8080/api/customer -d '{&quot;id&quot;: 1, &quot;name&quot;:&quot;nombre cliente 1&quot;,&quot;address&quot;:&quot;direccion cliente 1&quot;,&quot;telephone&quot;:&quot;telefono cliente 1&quot;, &quot;secret&quot;: &quot;no guardar&quot;}' -H &quot;Content-Type: application/json&quot;
+{
+  &quot;name&quot; : &quot;nombre cliente 1&quot;,
+  &quot;address&quot; : &quot;direccion cliente 1&quot;,
+  &quot;telephone&quot; : &quot;telefono cliente 1&quot;,
+  &quot;city&quot; : null,
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+    },
+    &quot;customerEntity&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+    }
+  }
+</code></pre>
+
+<p>Podemos comprobar que ha realizado la inserción gracias a la consola de H2. Para ello iremos a la URL <a class="url" href="http://localhost:8080/h2/" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/h2/">http://localhost:8080/h2/</a></a> y pulsaremos el botón <strong>Connect</strong>. Una vez conectados, si realizamos una <em>query</em> sobre la tabla CUSTOMER_ENTITY veremos la siguiente salida:</p>
+
+<p><img src="/img/2019/03/consola-h2-query.png" alt="Consultando datos en tabla customer_entity" /></p>
+
+<p>Observar que aunque hemos añadido el valor para el campo &#8220;<strong>secret</strong>&#8221; en la anterior petición <strong>POST,</strong> este no se ha guardado en la base de datos.</p>
+
+<p>Como no podemos acceder a la tabla <strong>city_entity</strong> a través de nuestra API pues así lo hemos especificado, Vamos a aprovechar que estamos en la consola y añadir un registro en la tabla, el cual asignaremos al cliente insertado.</p>
+
+<pre><code class="language-sql" lang="sql">insert into city_entity values(1,'Logroño','La Rioja');
+update customer_entity set city_id=1;
+</code></pre>
+
+<p>![Consultando datos en tabla customer_entity][/img/2019/03/consola-h2.png]</p>
+
+<p>Ahora si realizamos una petición <strong>GET</strong> obtendremos la siguiente salida:</p>
+
+<pre><code>&gt; curl -s localhost:8080/api/customer
+{
+  &quot;_embedded&quot; : {
+    &quot;customers&quot; : [ {
+      &quot;name&quot; : &quot;nombre cliente 1&quot;,
+      &quot;address&quot; : &quot;direccion cliente 1&quot;,
+      &quot;telephone&quot; : &quot;telefono cliente 1&quot;,
+      &quot;city&quot; : {
+        &quot;name&quot; : &quot;Logroño&quot;,
+        &quot;province&quot; : &quot;La Rioja&quot;
+      },
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+        },
+        &quot;customerEntity&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+        }
+      }
+    } ]
+  },
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer&quot;
+    },
+    &quot;profile&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/profile/customer&quot;
+    },
+    &quot;search&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/search&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>Observar como HATEOAS muestra los diferentes enlaces disponibles <em>automagicamente</em></p>
+
+<p>Por ejemplo podríamos consultar directamente el cliente con el código 1 navegando a <a class="url" href="http://localhost:8080/api/customer/1" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api/customer/1">http://localhost:8080/api/customer/1</a></a></p>
+
+<pre><code>&gt; curl -s localhost:8080/api/customer/1
+{
+  &quot;name&quot; : &quot;nombre cliente 1&quot;,
+  &quot;address&quot; : &quot;direccion cliente 1&quot;,
+  &quot;telephone&quot; : &quot;telefono cliente 1&quot;,
+  &quot;city&quot; : {
+    &quot;name&quot; : &quot;Logroño&quot;,
+    &quot;province&quot; : &quot;La Rioja&quot;
+  },
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+    },
+    &quot;customerEntity&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>Como he explicado antes, en el repositorio de <strong>Customer</strong> he definido la función <strong>findByNameIgnoreCaseContaining.</strong> Para realizar una consulta usando esa función usaremos los enlaces tipo <em>search</em></p>
+
+<p><a class="url" href="http://localhost:8080/api/customer/search/findByNameIgnoreCaseContaining" target="_blank" rel="noopener noreferrer"><a href="http://localhost:8080/api/customer/search/findByNameIgnoreCaseContaining">http://localhost:8080/api/customer/search/findByNameIgnoreCaseContaining</a></a>{?name}</p>
+
+<pre><code>&gt; curl -s http://localhost:8080/api/customer/search/findByNameIgnoreCaseContaining?name=Clien
+{
+  &quot;_embedded&quot; : {
+    &quot;customers&quot; : [ {
+      &quot;name&quot; : &quot;nombre cliente 1&quot;,
+      &quot;address&quot; : &quot;direccion cliente 1&quot;,
+      &quot;telephone&quot; : &quot;telefono cliente 1&quot;,
+      &quot;city&quot; : {
+        &quot;name&quot; : &quot;Logroño&quot;,
+        &quot;province&quot; : &quot;La Rioja&quot;
+      },
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+        },
+        &quot;customerEntity&quot; : {
+          &quot;href&quot; : &quot;http://localhost:8080/api/customer/1&quot;
+        }
+      }
+    } ]
+  },
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/api/customer/search/findByNameIgnoreCaseContaining?name=Clien&quot;
+    }
+  }
+}
+</code></pre>
+
+<p>Por no hacer más larga la entrada no explicare como actualizar un registro, con peticiones HTTP tipo <strong>PUT</strong>, borrar registros con peticiones HTTP tipo <strong>DELETE</strong> o actualizar parte de un registro con <strong>PATCH</strong>, pues creo que es obvio y lo dejo como ejercicio para el lector.</p>
+
+<p>Comentar que lo mostrado en este articulo es solo un esbozo de la potencia de <strong>Spring Data Rest</strong>.</p>
+
+<p>Estas son algunas de las otras muchas características que implementa:</p>
+
+<ul>
+<li>Permite añadir eventos de tal manera que cuando se inserte, modifique, borre o incluso consulte un registro ese evento sea disparado y se puedan ejecutar el código deseado, el cual incluso puede modificar o anular la petición realizada. Por supuesto soporta navegación</li>
+<li>Soporta navegación entre los registros consultados.</li>
+<li>Validación de los datos insertados</li>
+<li>Los Links pueden ser totalmente personalizados.</li>
+</ul>
+
+<p>Y esto es todo, esperando que el articulo haya resultado interesante me despido hasta el siguiente. Como siempre se agradecerá cualquier <em>feedback</em>.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/2019/04/05/optimizando-consultas-con-hibernate/" title="Optimizando relaciones entre entidades en Hibernate"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/" title="Querys avanzadas con JPA en Spring Boot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/ww2.profesor-p.com/js/clipboard.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/perfect-scrollbar.jquery.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/jquery.sticky.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/featherlight.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/html5shiv-printshiv.min.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/highlight.pack.js?1564210987"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/ww2.profesor-p.com/js/modernizr.custom-3.6.0.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/learn.js?1564210987"></script>
+    <script src="/ww2.profesor-p.com/js/hugo-learn.js?1564210987"></script>
+
+    <link href="/ww2.profesor-p.com/mermaid/mermaid.css?1564210987" rel="stylesheet" />
+    <script src="/ww2.profesor-p.com/mermaid/mermaid.js?1564210987"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-105947713-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
+
