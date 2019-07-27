@@ -2,6 +2,7 @@
 
 {{ $currentNode := . }}
 {{ $activo := 0 }}
+{{ $currentSectionTitle := .CurrentSection.Title }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
   <div id="header-wrapper">
     <div id="header">
@@ -11,6 +12,10 @@
         {{ partial "search.html" . }}
     {{end}}
   </div>
+  
+{{ $padreNodo := .FirstSection }}
+{{ $padre := .FirstSection }}
+<!-- {{ printf "CT %#v " $currentSectionTitle }}  -->
 
     <div class="highlightable">
     <ul class="topics">
@@ -18,12 +23,12 @@
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{range .Site.Home.Sections.ByTitle}}
 		  {{ $activo = 2 }}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" 0}}
+          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
           {{end}}
         {{else}}
           {{range .Site.Home.Sections.ByWeight}}
 		  {{ $activo = 2 }}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" 0}}
+          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "bucleSectionTitle" .Title "currentSectionTitle" $currentSectionTitle  }}
           {{end}}
         {{end}} 
     </ul>
@@ -97,8 +102,9 @@
 {{ define "section-tree-nav" }}
 {{ $showvisitedlinks := .showvisitedlinks }}
 {{ $activo := .activo }}
-{{ $raiz := (add .raiz 1)}}
 {{ $currentNode := .currentnode }}
+{{ $currentSectionTitle := .currentSectionTitle  }}
+{{ $bucleSectionTitle := .bucleSectionTitle }}
 <!-- Padre activo {{ $activo }} -->
  {{with .sect}}
   {{if .IsSection}}
@@ -133,14 +139,17 @@
           {{ range $pages.ByTitle }}
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "raiz" $raiz}}
+				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
             {{end}}
           {{ end }}
         {{else}}
+		  {{ $bucleSectionTitle  = .Title }}
           {{ range $pages.ByWeight }}
+			
+<!--			{{ printf "B %#v " $bucleSectionTitle }}  -->
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-            {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "raiz" $raiz}}
+				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle "currentSectionTitle" $currentSectionTitle  }}
             {{end}}
           {{ end }}
         {{end}}
@@ -149,7 +158,7 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
-	{{ if (or ( le $raiz 2 ) (and (ge $activo 1) (.IsDescendant  $currentNode ))) }}
+	{{ if (or  ( eq $currentSectionTitle  $bucleSectionTitle  ) (and (ge $activo 1) (.IsDescendant  $currentNode ))) }}
       <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
         <a href="{{ .RelPermalink}}">
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
@@ -161,4 +170,3 @@
   {{end}}
  {{ end }}
 {{ end }}
-
