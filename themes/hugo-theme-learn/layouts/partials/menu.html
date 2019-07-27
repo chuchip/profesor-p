@@ -2,7 +2,12 @@
 
 {{ $currentNode := . }}
 {{ $activo := 0 }}
-{{ $currentSectionTitle := .CurrentSection.Title }}
+{{ $currentSectionTitle := 1 }}
+{{ if not .CurrentSection }}
+	{{ $currentSectionTitle =  0}}
+{{ else }}
+	{{ $currentSectionTitle = .CurrentSection.Title}}
+{{ end }}
 {{ $showvisitedlinks := .Site.Params.showVisitedLinks }}
   <div id="header-wrapper">
     <div id="header">
@@ -22,13 +27,17 @@
 
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{range .Site.Home.Sections.ByTitle}}
-		  {{ $activo = 2 }}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
+			{{ $activo = 2 }}	
+			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
           {{end}}
         {{else}}
           {{range .Site.Home.Sections.ByWeight}}
-		  {{ $activo = 2 }}
-          {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "bucleSectionTitle" .Title "currentSectionTitle" $currentSectionTitle  }}
+			{{ $activo = 2 }}		
+		    {{ if eq $currentSectionTitle 0 }}
+				{{ $currentSectionTitle = .Title }}
+				{{ printf "CT %#v " $currentSectionTitle }}
+			{{ end }}			
+			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "bucleSectionTitle" .Title "currentSectionTitle" $currentSectionTitle  }}
           {{end}}
         {{end}} 
     </ul>
@@ -136,10 +145,11 @@
           {{ $pages := ($currentNode.Scratch.Get "pages") }}
           
         {{if eq .Site.Params.ordersectionsby "title"}}  
+		 {{ $bucleSectionTitle  = .Title }}
           {{ range $pages.ByTitle }}
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
+				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle  "currentSectionTitle" $currentSectionTitle  }}
             {{end}}
           {{ end }}
         {{else}}
