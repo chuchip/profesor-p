@@ -22,12 +22,24 @@ En esta aplicación actualizaremos y consultaremos una pequeña tabla a través 
     </item>
     
     <item>
-      <title>Aplicación CRUD usando REST en JavaEE  (2ª Parte)</title>
+      <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
       <link>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
       <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aplicación CRUD en Angular</title>
+      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+Por supuesto el protocolo para las comunicaciones es JSON.
+El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
+Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
     </item>
     
     <item>
@@ -40,6 +52,47 @@ En esta aplicación actualizaremos y consultaremos una pequeña tabla a través 
 En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
 Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
 Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Frontend en Angular</title>
+      <link>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
+      <pubDate>Thu, 13 Sep 2018 07:51:25 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
+      <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
+El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
+Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
+    </item>
+    
+    <item>
+      <title>Backend (II)</title>
+      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Backend  (III)</title>
+      <link>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
+      <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
+      <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
+Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
+    </item>
+    
+    <item>
+      <title>Backend (IV)</title>
+      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
+En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
     <item>
@@ -113,59 +166,6 @@ Es el caso típico de que realizamos una petición RESTful para solicitar un reg
       <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
 Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación CRUD en Angular</title>
-      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
-      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
-      <description>Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
-Por supuesto el protocolo para las comunicaciones es JSON.
-El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
-Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Angular – Instalación y configuración básica</title>
-      <link>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
-      <pubDate>Thu, 13 Sep 2018 07:51:25 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
-      <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
-El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
-Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 4ª Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
-      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
-      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
-En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 3ª Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
-      <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
-      <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
-Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 2 Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
-      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
-      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
-Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
     </item>
     
   </channel>

@@ -6,10 +6,22 @@
     <description>Recent content in Angular on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 24 Sep 2018 10:45:43 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Oct 2018 20:23:38 +0000</lastBuildDate>
     
 	<atom:link href="http://ww2.profesor-p.com/4-angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Aplicación CRUD en Angular</title>
+      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+Por supuesto el protocolo para las comunicaciones es JSON.
+El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
+Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
+    </item>
     
     <item>
       <title>Angular – Hablando español</title>
@@ -17,7 +29,8 @@
       <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/09/24/hablando-espanol/</guid>
-      <description>Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.   El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</description>
+      <description>Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.
+El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</description>
     </item>
     
     <item>

@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Aplicación CRUD usando REST en JavaEE  (2ª Parte)</title>
+      <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
       <link>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
@@ -80,9 +80,7 @@ La clase en cuestión es ApiController.</description>
       <pubDate>Tue, 21 Aug 2018 13:34:56 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</guid>
-      <description>1. Introducción En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.
-El código fuente lo teneis en: https://github.com/chuchip/jdbc_jpa_tomcat
-En este enlace teneis este mismo documento (todas las partes) pero en PDF.</description>
+      <description>&lt;p&gt;En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.&lt;/p&gt;</description>
     </item>
     
   </channel>

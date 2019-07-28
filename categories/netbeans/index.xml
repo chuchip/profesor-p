@@ -12,22 +12,22 @@
     
     
     <item>
-      <title>Desarrollando aplicaciones Java EE en NetBeans 9</title>
-      <link>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</link>
-      <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</guid>
-      <description>&lt;p&gt;El recién salido &lt;a href=&#34;https://netbeans.apache.org/download/nb90/nb90.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NetBeans 9&lt;/a&gt;, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 2 Parte</title>
+      <title>Backend (II)</title>
       <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
       <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
       <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
 Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Desarrollando aplicaciones Java EE en NetBeans 9</title>
+      <link>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</link>
+      <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</guid>
+      <description>&lt;p&gt;El recién salido &lt;a href=&#34;https://netbeans.apache.org/download/nb90/nb90.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NetBeans 9&lt;/a&gt;, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.&lt;/p&gt;</description>
     </item>
     
     <item>

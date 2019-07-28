@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>http://ww2.profesor-p.com/4-angular/aplicacion/backend/</loc>
+    <lastmod>2018-09-05T14:11:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ww2.profesor-p.com/2018/08/23/kotlin-vs-java/</loc>
     <lastmod>2018-08-23T19:37:38+00:00</lastmod>
   </url>
@@ -63,8 +68,18 @@
   </url>
   
   <url>
+    <loc>http://ww2.profesor-p.com/4-angular/aplicacion/frontend/</loc>
+    <lastmod>2018-09-05T14:11:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ww2.profesor-p.com/3-hugo/</loc>
     <lastmod>2018-12-05T10:32:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</loc>
+    <lastmod>2018-10-08T20:23:38+00:00</lastmod>
   </url>
   
   <url>
@@ -79,7 +94,7 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/4-angular/</loc>
-    <lastmod>2018-09-24T10:45:43+00:00</lastmod>
+    <lastmod>2018-10-08T20:23:38+00:00</lastmod>
   </url>
   
   <url>
@@ -113,8 +128,22 @@
   </url>
   
   <url>
+    <loc>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</loc>
+    <lastmod>2018-09-13T07:51:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</loc>
+    <lastmod>2018-08-31T05:53:48+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ww2.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</loc>
     <lastmod>2018-08-27T08:24:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/contacto/experiencia_laboral/</loc>
   </url>
   
   <url>
@@ -125,6 +154,41 @@
   <url>
     <loc>http://ww2.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</loc>
+    <lastmod>2018-09-14T14:53:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</loc>
+    <lastmod>2018-09-03T16:22:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</loc>
+    <lastmod>2018-09-16T14:42:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</loc>
+    <lastmod>2018-09-05T15:05:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</loc>
+    <lastmod>2018-09-04T05:44:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</loc>
+    <lastmod>2018-09-05T10:16:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</loc>
+    <lastmod>2018-09-06T06:08:12+00:00</lastmod>
   </url>
   
   <url>
@@ -625,11 +689,6 @@
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</loc>
-    <lastmod>2018-10-08T20:23:38+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/categories/angular/</loc>
     <lastmod>2018-10-08T20:23:38+00:00</lastmod>
     <priority>0</priority>
@@ -751,11 +810,6 @@
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</loc>
-    <lastmod>2018-09-16T14:42:39+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/tags/curso/</loc>
     <lastmod>2018-09-16T14:42:39+00:00</lastmod>
     <priority>0</priority>
@@ -768,35 +822,15 @@
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</loc>
-    <lastmod>2018-09-14T14:53:10+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/tags/angular-6/</loc>
     <lastmod>2018-09-14T14:53:10+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</loc>
-    <lastmod>2018-09-13T07:51:25+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</loc>
-    <lastmod>2018-09-06T06:08:12+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/categories/jndi/</loc>
     <lastmod>2018-09-06T06:08:12+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</loc>
-    <lastmod>2018-09-05T15:05:08+00:00</lastmod>
   </url>
   
   <url>
@@ -818,35 +852,15 @@
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</loc>
-    <lastmod>2018-09-05T10:16:08+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/categories/lambda/</loc>
     <lastmod>2018-09-05T10:16:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</loc>
-    <lastmod>2018-09-04T05:44:12+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</loc>
-    <lastmod>2018-09-03T16:22:55+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/tags/jndi/</loc>
     <lastmod>2018-09-03T16:22:55+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</loc>
-    <lastmod>2018-08-31T05:53:48+00:00</lastmod>
   </url>
   
   <url>
@@ -933,10 +947,6 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/contacto/experiencia_basesdatos/</loc>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/contacto/experiencia_laboral/</loc>
   </url>
   
   <url>

@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Aplicación CRUD usando REST en JavaEE  (2ª Parte)</title>
+      <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
       <link>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
@@ -30,6 +30,40 @@
 En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
 Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
 Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Backend I</title>
+      <link>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
+      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
+      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
+La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
+Para ello se realizaran los siguientes pasos:
+  Crear tablas y cargar datos de prueba en la base de datos.</description>
+    </item>
+    
+    <item>
+      <title>Backend (II)</title>
+      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Backend (V)</title>
+      <link>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
+      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
+Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
+Empezare describiendo la clase
+@Component public class YagesBussines { @Autowired CalendarioRepositorioService calendarioRepositorio; @Autowired HistVentasRepository histVentasRepository; @Autowired DataSource dataSource; @Autowired private JdbcOperations jdbc; @Bean public JdbcTemplate jdbcTemplate() { return new JdbcTemplate(dataSource); } .</description>
     </item>
     
     <item>
@@ -81,40 +115,6 @@ Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criteri
 Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
 Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
 La clase en cuestión es ApiController.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 5ª Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
-      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
-      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
-Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
-Empezare describiendo la clase
-@Component public class YagesBussines { @Autowired CalendarioRepositorioService calendarioRepositorio; @Autowired HistVentasRepository histVentasRepository; @Autowired DataSource dataSource; @Autowired private JdbcOperations jdbc; @Bean public JdbcTemplate jdbcTemplate() { return new JdbcTemplate(dataSource); } .</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 2 Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
-      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
-      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
-Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular</title>
-      <link>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
-      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
-      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
-La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
-Para ello se realizaran los siguientes pasos:
-  Crear tablas y cargar datos de prueba en la base de datos.</description>
     </item>
     
     <item>

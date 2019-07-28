@@ -17,14 +17,14 @@
       <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
-      <description>Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+      <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 Por supuesto el protocolo para las comunicaciones es JSON.
 El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
 Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
     </item>
     
     <item>
-      <title>Aplicación en Angular – Inicializando aplicación</title>
+      <title>Angular - Inicializando</title>
       <link>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
       <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
       

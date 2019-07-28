@@ -22,6 +22,28 @@ En esta aplicación actualizaremos y consultaremos una pequeña tabla a través 
     </item>
     
     <item>
+      <title>Aplicación CRUD en Angular</title>
+      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+Por supuesto el protocolo para las comunicaciones es JSON.
+El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
+Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
+    </item>
+    
+    <item>
+      <title>Backend (IV)</title>
+      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
+En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    
+    <item>
       <title>Accediendo facilmente a los datos con Spring Rest Data</title>
       <link>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
       <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
@@ -40,28 +62,6 @@ Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criteri
       <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
 Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
 En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación CRUD en Angular</title>
-      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
-      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
-      <description>Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
-Por supuesto el protocolo para las comunicaciones es JSON.
-El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
-Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 4ª Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
-      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
-      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
-En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
   </channel>

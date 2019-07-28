@@ -33,6 +33,16 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
     </item>
     
     <item>
+      <title>Backend (II)</title>
+      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
       <title>Perfiles en Spring Boot</title>
       <link>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
       <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
@@ -165,16 +175,6 @@ Como siempre, comienzo diciendo que el código fuente de lo que explico lo tené
 Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
 Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
 La clase en cuestión es ApiController.</description>
-    </item>
-    
-    <item>
-      <title>Aplicación en Spring REST y Angular – 2 Parte</title>
-      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
-      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
-      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
-Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
     </item>
     
     <item>
