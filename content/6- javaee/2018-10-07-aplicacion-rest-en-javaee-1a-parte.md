@@ -18,8 +18,9 @@ tags:
   - rest
 
 ---
-Buenas, chicos, en esta ocasión voy a explicar como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
-
+Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. 
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
+<!--more-->
 Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificaciones, la realidad es que es muy fácil el realizar una aplicación totalmente funcional y muy fácilmente con la libreria JACKSON.
 
 Lo primero, aclarar que en  <a href="https://github.com/chuchip/crudJavaEE" target="_blank" rel="noopener">https://github.com/chuchip/crudJavaEE</a> teneis código fuente del que hablo en esta entrada. Y ahora, pongámonos manos a la obra.

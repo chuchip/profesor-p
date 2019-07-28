@@ -34,7 +34,7 @@ tags:
   - webflow
 
 ---
- Buenas, estudiantes. En este articulo intentare explicar como funciona <a href="https://projects.spring.io/spring-webflow/" target="_blank" rel="noopener">Spring WebFlow</a> y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de  <a href="https://github.com/chuchip/webflowExample" target="_blank" rel="noopener">https://github.com/chuchip/webflowExample</a>
+Voy a intentar explicar como funciona <a href="https://projects.spring.io/spring-webflow/" target="_blank" rel="noopener">Spring WebFlow</a> y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de  <a href="https://github.com/chuchip/webflowExample" target="_blank" rel="noopener">https://github.com/chuchip/webflowExample</a>
 
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido. Para realizar todo esto utilizo H2 como base de datos y la autentificación se realiza con el <a href="https://spring.io/projects/spring-security" target="_blank" rel="noopener">paquete de seguridad de Spring</a>, utilizando JDBC . Por hacer la página mas funcional utilizo Bootstrap y JQuery.
 

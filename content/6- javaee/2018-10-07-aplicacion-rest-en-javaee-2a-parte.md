@@ -19,10 +19,8 @@ tags:
   - rest
 
 ---
-Buenas otra vez.
-
-En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
-
+En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
+<!--more-->
 Recordar que tenéis el código fuente en <a href="https://github.com/chuchip/crudJavaEE" target="_blank" rel="noopener">https://github.com/chuchip/crudJavaEE</a>
 
 En la anterior entrada, que podéis ver en  en <http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/> habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.

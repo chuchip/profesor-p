@@ -1,23 +1,26 @@
 ---
 title: "Bienvenido a mi página"
+chapter: true
 ---
 
-#### ¡¡El profe os da la bienvenida!!
+# ¡¡El profe os da la bienvenida!!
 
-En este blog intentare ir poniendo cositas interesantes sobre las cosas que voy viendo en internet, a poder ser, que sean didácticas como ejemplos de como hacer una cosa e incluso dos. :smile:
+En este blog intentaré ir poniendo artículos sobre temas que voy viendo en internet, a poder ser, que sean didácticos 
+como ejemplos de cómo hacer una cosa e incluso dos. :smile:
 
-Pondre artículos sobre informática, incidiendo sobre todo en el mundo **Java**  y especificamente en **Spring**.
+Pondré artículos sobre informática, incidiendo sobre todo en el mundo **Java**  y específicamente en **Spring**.
 
-Tambien encontraras articulos sobre **JPA**, **Hibernate**, **Spring boot**, **Hugo** (con lo cual
- esta hecha esta herramienta), **Kafka** y otros temas.
+También encontrarás artículos sobre **JPA**, **Hibernate**, **Spring boot**, **Hugo** (programa con el cual
+ está hecha ésta página web), **Kafka** y otros temas.
 
-En el menú lateral ire poniendo los enlaces intentando agruparlos por tematica de tal manera que se cree una especie de libro.
+En el menú lateral iré poniendo los enlaces intentando agruparlos por temática de tal manera que se cree una especie de libro.
 
-Por supuesto siempre puedes utilizar el buscador de la izquierda y usar el buscador por temática.
-por ejemplo si quieres buscar articulos sobre Java, podrias ir a [www.profesor-p/es/tags/java/](/tags/java/)
+Por supuesto siempre puedes utilizar el buscador de la izquierda para encontrar articulos que contengan una palabra especifica.
+ 
+Ademas podras localizar artículos por temas, por ejemplo si quieres buscar artículos sobre Java, podrías ir a [www.profesor-p/es/tags/java/](/tags/java/)
 
-Espero que encontreis utiles las entradas y por supuesto cualquier comentario sera bienvenido.
+Espero que encontréis útiles las entradas y por supuesto cualquier comentario sera bienvenido.
 
-Aquí teneis los últimos articulos escritos:
+Aquí teneis los últimos artículos escritos:
 
-{{% children  page="xxx" description="true"  %}}
+{{% children description="true"  %}}

@@ -23,7 +23,7 @@ tags:
   - thymeleaf
 
 ---
-Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar  como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+ En esta entrada voy a explicar  como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
 
 Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en <a href="https://github.com/chuchip/OAuthServer" target="_blank" rel="noopener noreferrer">https://github.com/chuchip/OAuthServer</a>. El programa esta realizado en Java, usando Spring Boot.
 

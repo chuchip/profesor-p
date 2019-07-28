@@ -15,7 +15,8 @@ tags:
   - tomcat
 
 ---
-El recien salido <a href="https://netbeans.apache.org/download/nb90/nb90.html" target="_blank" rel="noopener">NetBeans 9</a>, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.
+El recién salido <a href="https://netbeans.apache.org/download/nb90/nb90.html" target="_blank" rel="noopener">NetBeans 9</a>, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.
+<!--more-->
 
 Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versión 8.2, incluso a nivel de plugins. Así que podemos añadir las fuentes de la versión anterior y podremos crear aplicaciones Java EE.
 

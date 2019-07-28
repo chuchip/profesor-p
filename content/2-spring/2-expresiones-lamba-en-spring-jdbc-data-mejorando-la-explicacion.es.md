@@ -12,9 +12,6 @@ categories:
   - lambda
 
 ---
-
-## Expresiones Lamba en  Spring JDBC Data. Mejorando la explicación.
-
 <a href="/2018/08/23/usando-lambdas/" rel="noopener">En una entrada anterior</a>, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
 
 Una cosa  muy común en Java es  tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra  aplicación.
@@ -54,17 +51,21 @@ Y nos queda por definir el objeto del tipo **ResultSetExtractor**, donde intera
 
 Ese tipo de objeto esta definido en el interface [ResultSetExtractor][1] el cual solo tiene una función, que detallo a continuación:
 
-```T mapRow(java.sql.ResultSet rs,  int rowNum)            throws java.sql.SQLException```
+```
+T mapRow(java.sql.ResultSet rs,  int rowNum)            throws java.sql.SQLException
+```
 
 Antes de Java 1.8, deberíamos crear una clase que implemente el interfaz [ResultSetExtractor][1]. Esa clase seria algo así como:
 
-<pre>class miResultSetExtractor implements <a title="interface in org.springframework.jdbc.core" href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/ResultSetExtractor.html">ResultSetExtractor</a>
+```
+class miResultSetExtractor implements ResultSetExtractor
 {
    @Override
    public T mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException { 
           System.out.println("El nombre del Usuario es: "+rs.getString("nombre")); // <strong>CODIGO A EJECUTAR</strong>
     }
-}</pre>
+}
+```
 
 Y ejecutaríamos la llamada a la función **query** de esta manera:
 

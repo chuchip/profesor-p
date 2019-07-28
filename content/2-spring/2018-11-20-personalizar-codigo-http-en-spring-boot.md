@@ -15,8 +15,6 @@ tags:
   - spring boot
 
 ---
-_Buenas, Alumnos/as_.
-
 En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado **httpErrorPersonalizado.** Teneis el código fuente de este proyecto en mi página de  <a href="https://github.com/chuchip/httpErrorPersonalizado" target="_blank" rel="noopener">GitHub</a>
 
 Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.

@@ -4,8 +4,7 @@ weight: 6
 pre: "<b>- </b>"
 chapter: true
 ---
-<h1>Webflow</h1>
-Entradas relaciondas con el desarrollo de aplicaciones Spring en la nube.
+Entradas sobre el paquete **WebFlow** de **Spring**. Actualmente esta en un poco en desuso pero ha sido ampliamente utilizado en entornos empresariales.
 <!--more-->
 
-{{% children  description="true"  %}}⁠⁠⁠18082188w
+{{% children  description="true"  %}}⁠⁠⁠

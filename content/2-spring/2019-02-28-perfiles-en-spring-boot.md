@@ -18,10 +18,9 @@ tags:
   - spring boot
 
 ---
-### Introducción
-
 Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.
 
+<!--more-->
 ### Estableciendo perfiles en la aplicación
 
 **Spring** provee una manera sencilla de gestionar esta situación haciendo uso de los **perfiles**.

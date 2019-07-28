@@ -21,7 +21,7 @@ tags:
   - spring boot
 
 ---
-Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la [entrada de seguridad WEB anterior][1], así que el código fuente lo tenéis en: <a href="https://github.com/chuchip/OAuthServer" target="_blank" rel="noopener">https://github.com/chuchip/OAuthServer</a>.
+En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la [entrada de seguridad WEB anterior][1], así que el código fuente lo tenéis en: <a href="https://github.com/chuchip/OAuthServer" target="_blank" rel="noopener">https://github.com/chuchip/OAuthServer</a>.
 
 ### Explicando la tecnologia Oauth2
 

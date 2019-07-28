@@ -15,8 +15,6 @@ tags:
   - spring boot
 
 ---
-### Usando cache en Spring Boot
-
 Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable. ¿Qué pasaría?. Pues que tendríamos una aplicación lenta por el hecho de leer continuamente unos datos que sabemos que apenas cambian.
 
 Para solucionar ese problema podríamos utilizar una **Cache**, pero ¿ como implementarlo ?. En este articulo explicare como usar una cache básica en **Spring Boot**.
