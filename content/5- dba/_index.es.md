@@ -6,4 +6,4 @@ pre: "<b>6. </b>"
 ---
 Enlaces disponibles: 
 <!--more-->
-{{% children description="true" style="h2" %}}
+{{% children description="true"  %}}

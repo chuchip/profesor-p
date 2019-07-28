@@ -1,6 +1,8 @@
 ---
-title: Aplicación en Angular – Inicializando aplicación
+title:  Angular - Inicializando
+weight: 20
 author: El Profe
+pre: "<b>o </b>"
 type: post
 date: 2018-09-14T14:53:10+00:00
 url: /2018/09/14/aplicacion-en-angular-inicializando/

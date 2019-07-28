@@ -4,6 +4,6 @@ weight: 4
 chapter: true
 pre: "<b>4. </b>"
 ---
-Articulos diversos sobre Angular
+Artículos diversos sobre el framework Angular
 <!--more-->
-{{% children description="true" style="h2" %}}
+{{% children description="true" %}}

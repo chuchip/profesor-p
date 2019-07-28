@@ -1,5 +1,5 @@
 ---
-title: Generar paginas Web estaticas dinamicamente
+title: Generar paginas Web estáticas dinámicamente
 author: El Profe
 pre: "<b>o </b> "
 weight: 1
@@ -14,10 +14,10 @@ tags:
   - web
 
 ---
-Buenas alumnos/as,
 
-En esta entrada hablare de [Hugo][1]. Este un software  permite crear sitios web estáticos pero trabajando _casi_ como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.
-<!-- more -->
+
+Vamos a  hablar de [Hugo][1]. Este un software  permite crear sitios web estáticos pero trabajando _casi_ como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.
+<!--more-->
 Hugo usa [markdown][2] para añadir los contenidos pero también podremos usar HTML, CSS y JavaScript si fuera necesario.
 
 Para crear una pagina web lo primero que tenemos que hacer es bajarnos el programa, lo cual podemos hacer desde <a class="url" href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener">https://github.com/gohugoio/hugo/releases</a> Una vez tengamos instalado **hugo** en nuestro ordenador, podremos empezar a crear nuestra propia pagina web.

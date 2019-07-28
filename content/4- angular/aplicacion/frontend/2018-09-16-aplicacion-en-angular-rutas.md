@@ -1,6 +1,8 @@
 ---
-title: Aplicación en Angular – Rutas
+title: Angular – Rutas
 author: El Profe
+weight: 30
+pre: "<b>o </b>"
 type: post
 date: 2018-09-16T14:42:39+00:00
 url: /2018/09/16/aplicacion-en-angular-rutas/

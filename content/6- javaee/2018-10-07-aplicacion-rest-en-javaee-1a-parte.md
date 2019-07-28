@@ -1,7 +1,9 @@
 ---
 title: Aplicación CRUD usando REST en JavaEE
+weight: 10
+pre: "<b>o </b>"
 author: El Profe
-type: post
+type: page
 date: 2018-10-06T21:54:13+00:00
 weight: 1
 url: /2018/10/06/aplicacion-rest-en-javaee/
@@ -123,7 +125,7 @@ Dentro de la función ponemos usamos la clase **javax.ws.rs.core.Response** que 
 
 Como se puede ver en el pantallazo, usando el excelente programa postman, podemos ver el resultado de la llamada a esta función:
 
-<img class="size-full wp-image-342 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura.png" alt="" width="545" height="688" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura.png 545w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-238x300.png 238w" sizes="(max-width: 545px) 100vw, 545px" />
+![Captura](/img/2018/10/Captura.png)
 
   *  Función **findLocale**
 

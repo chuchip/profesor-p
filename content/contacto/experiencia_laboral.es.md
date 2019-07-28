@@ -1,5 +1,6 @@
 +++
 author = "Profesor P"
+weight= 10
 categories = ["experiencia"]
 tags = ["experiencia"]
 description = "Experiencia laboral"
@@ -50,6 +51,6 @@ Este es un  resumen de mi curriculum en orden cronológico:
   * <span style="font-size: 12pt;"><strong>2016 &#8211; 2018</strong></span> Analista/ Programador, en Java. Realización de un ERP completo, enfocado a la trazabilidad.  Administrador de sistemas.
   * **2018 &#8211; Actual** Analista / Programador de Java en GFI España.
 
- [1]: /es/experiencia_lenguajesprogramacion
- [2]: /es/experiencia_sistemas
- [3]: /es/experiencia_basesdatos
+ [1]: /contacto/experiencia_lenguajesprogramacion
+ [2]: /contacto/experiencia_sistemas
+ [3]: /contacto/experiencia_basesdatos

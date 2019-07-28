@@ -1,5 +1,7 @@
 ---
-title: Aplicación en Spring REST y Angular
+title: Backend I
+weight: 10
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-31T05:53:48+00:00

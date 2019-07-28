@@ -1,5 +1,7 @@
 ---
 title: Aplicación CRUD en Angular
+pre: "<b>o </b>"
+weight: 3
 author: El Profe
 type: post
 date: 2018-10-08T20:23:38+00:00
@@ -15,7 +17,7 @@ tags:
   - rest
 
 ---
-Buenas chavales. En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra  y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra  y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 
 Por supuesto el protocolo para las comunicaciones es JSON.
 
@@ -27,9 +29,11 @@ Es decir, este programa realizara sera el cliente  que correrá en el navegador
 
 Esto es un pantallazo de como queda en modo consulta.
 
-<img class="imagen_con_borde aligncenter wp-image-357 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-4.png" alt="" width="700" height="809" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-4.png 700w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-4-260x300.png 260w" sizes="(max-width: 700px) 100vw, 700px" />Y este otro, un pantallazo del alta:
+![](/img/2018/10/Captura-4.png)
 
-<img class="imagen_con_borde aligncenter wp-image-363 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1.png" alt="" width="540" height="431" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1.png 540w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura1-300x239.png 300w" sizes="(max-width: 540px) 100vw, 540px" />
+Y este otro, un pantallazo del alta:
+
+![](/img/2018/10/Captura1.png)
 
 Os invito a que echéis un vistazo al programa, sobre todo al fichero **datosserver.service.ts** que es donde se se hacen las diferentes peticiones GET, POST, PUT y DELETE para interactuar con el servidor .
 

@@ -1,6 +1,8 @@
 ---
-title: Aplicación en Spring REST y Angular – 3ª Parte
+title: Backend  (III)
 author: El Profe
+weight: 30
+pre: "<b>o </b>"
 type: post
 date: 2018-09-04T05:44:12+00:00
 url: /2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/
@@ -58,12 +60,11 @@ Para el resto del articulo vamos a suponer que nuestra aplicación esta respondi
 
 Y como un ejemplo, vale más que mil palabras, aquí vemos un ejemplo de la una petición REST, haciendo uso de la función **getAno()** de la clase **YagesController.**
 
-<img class="size-full wp-image-169 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/09/yages2.png" alt="" width="715" height="545" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/yages2.png 715w, http://www.profesor-p.com/wp-content/uploads/2018/09/yages2-300x229.png 300w" sizes="(max-width: 715px) 100vw, 715px" />
+![](/img/2018/09/yages2.png)
 
-&nbsp;
 
 Y como esta entrada me esta quedando un poco larga, continuare con ella en un próximo articulo.
 
 ¡¡ A seguir estudiando !!
 
- [1]: http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/
+ [1]: /2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/

@@ -1,6 +1,8 @@
 ---
-title: Aplicación en Spring REST y Angular – 2 Parte
+title: Backend (II)
 author: airec69
+weight: 20
+pre: "<b>o </b>"
 type: post
 date: 2018-09-03T16:22:55+00:00
 url: /2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/
@@ -30,7 +32,7 @@ Esta el código fuente en: <a href="https://github.com/chuchip/yagesserver" targ
 
 Estos serán los archivos usados en mi aplicación:
 
-<img class="size-full wp-image-163 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/09/yages.png" alt="" width="310" height="644" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/yages.png 310w, http://www.profesor-p.com/wp-content/uploads/2018/09/yages-144x300.png 144w" sizes="(max-width: 310px) 100vw, 310px" />
+![](/img/2018/09/yages.png)
 
 Las dependencias, aparte de las básicas de Spring, son tener las siguientes librerías , de H2 Database e Hibernate.
 

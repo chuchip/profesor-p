@@ -1,5 +1,7 @@
----
-title: Aplicación en Angular – Instalación y configuración básica
+--- 
+title: Frontend en Angular
+weight: 10
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-09-13T07:51:25+00:00

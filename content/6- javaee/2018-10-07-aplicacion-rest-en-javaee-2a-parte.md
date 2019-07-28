@@ -1,5 +1,7 @@
 ---
-title: 'Aplicación CRUD usando REST en JavaEE  (2ª Parte)'
+title: 'Aplicación CRUD usando REST en JavaEE  (II)'
+pre: "<b>o </b>"
+weight: 20
 author: El Profe
 type: post
 weight: 2
@@ -50,7 +52,7 @@ En caso contrario, insertamos en la base de datos con la función `create` de la
 
 Y como siempre, una imagen mejor que cien palabras 😉
 
-<img class="alignnone size-full wp-image-353" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-2.png" alt="" width="886" height="626" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-2.png 886w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-2-300x212.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-2-768x543.png 768w" sizes="(max-width: 886px) 100vw, 886px" />
+![](/img/2018/10/Captura-2.png))
 
 En este pantallazo podéis ver como se hace la petición POST, mandando en el cuerpo el objeto JSON, donde se especifica el código y el nombre. La aplicación devuelve un 201 como estado y  Location vemos que tenemos &#8220;**http://localhost:8080/restExample/api/locale/es-BO&#8221;** que seria donde podemos consultar el registro recién creado.
 

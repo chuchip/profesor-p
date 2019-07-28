@@ -2,6 +2,7 @@
 title: Curso Angular 6 – Formularios (1)
 author: El Profe
 type: post
+pre: "<b>o </b>"
 date: 2018-09-19T08:29:58+00:00
 url: /2018/09/19/curso-angular-6-formularios-1/
 categories:
@@ -81,5 +82,3 @@ Entiéndase que _navegar _es a todos efectos como si el usuario pusiera en la 
 Resumiendo, cuando se pulse el botón **Consultar**, si el usuario introduce un número valido en el formulario, navegaremos al ejercicio tecleado. En caso contrario aparecerá el mensaje **Ejercicio no ES valido.**
 
 ¡¡ Nos vemos en la próxima clase 😉 !!
-
-&nbsp;

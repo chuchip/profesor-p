@@ -1,5 +1,8 @@
 ---
 title: Desarrollando aplicaciones Java EE en NetBeans 9
+weight: 30
+pre: "<b>o </b>"
+chapter: false
 author: El Profe
 type: post
 date: 2018-09-05T15:05:08+00:00
@@ -22,7 +25,7 @@ Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versi
 
 Eso es tan simple como ir al menú **Tools** y elegir la opción **Plugins**.  En la ventana de plugins, iremos a la pestaña **settings** y pulsaremos el botón **Add.** El cual nos mostrara la siguiente ventana:
 
-<img class="size-full wp-image-212 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-2.png" alt="" width="870" height="432" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-2.png 870w, http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-2-300x149.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-2-768x381.png 768w" sizes="(max-width: 870px) 100vw, 870px" />
+![captura de netbeans9 -2](/img/2018/09/netbeans9-2.png)
 
 Ahí pondremos rellenaremos los 2 campos, de esta manera:
 
@@ -38,7 +41,7 @@ Después, volveremos de darle al botón OK, volveremos a añadir una nueva entra
 
 La pagina debe quedar como la siguiente.
 
-<img class="size-large wp-image-213 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-1.png" alt="" width="883" height="424" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-1.png 883w, http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-1-300x144.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/netbeans9-1-768x369.png 768w" sizes="(max-width: 883px) 100vw, 883px" />
+![](/img/2018/09/netbeans9-1.png)
 
 A partir de ahí, ya veremos que nos aparecen como disponibles muchos más plugins, entre los que veremos Java EE Base. Una vez instalado este plugin ya podremos realizar nuestras aplicaciones Java EE.
 

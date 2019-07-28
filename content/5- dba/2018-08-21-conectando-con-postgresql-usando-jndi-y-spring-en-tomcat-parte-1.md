@@ -1,6 +1,7 @@
 ---
 title: Conectando a una base de datos usando JNDI y Spring en Tomcat
 author: airec69
+pre: "<b>o </b>"
 type: post
 date: 2018-08-21T13:34:56+00:00
 url: /2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/
@@ -21,9 +22,8 @@ tags:
   - tomcat
 
 ---
-# 1. Introducción
-
 En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.
+<!--more-->
 
 El código fuente lo teneis en: <a href="https://github.com/chuchip/jdbc_jpa_tomcat" target="_blank" rel="noopener">https://github.com/chuchip/jdbc_jpa_tomcat</a>
 
@@ -31,7 +31,7 @@ En <a href="http://www.profesor-p.com/wp-content/uploads/2018/08/ejemplo-jpa-y-j
 
 El ejemplo usa Maven y explicare como deberá estar configurado Tomcat para que la aplicación funcione correctamente.
 
-# 2. Configuración de Postgresql {.western}
+## 2. Configuración de Postgresql 
 
 Esta sera la única tabla a la que accederemos a través de Postgresql:
 
@@ -45,7 +45,7 @@ insert into  usuario values('cpuente','El profe');
 insert into  usuario values('chuchi','El nombre del profe');
 </pre>
 
-# 3. Configuración de Tomcat
+## 3. Configuración de Tomcat
 
 La configuración de Tomcat deberá tener las siguientes características:
 
@@ -78,9 +78,7 @@ Ahora debemos añadir a Tomcat la libreríapara conectarnos a postgresql, en est
 
 &#8211; postgresql-42.2.2.jar
 
-# 4. Configuración de la aplicación. {.western}
-
-&nbsp;
+## 4. Configuración de la aplicación. 
 
 En esta aplicación usaremos tanto ficheros xml como configuración en Java.
 
@@ -90,7 +88,7 @@ Lo primero es configurar nuestro ficheros xml para que Tomcat use Spring, para e
   * dispatcher-servlet.xml
   * web.xml
 
-## 4.1 web.xml {.western}
+### 4.1 web.xml
 
 El único fichero que usa Tomcat es web.xml, y este, a su vez, usa los dos anteriores, de tal manera que básicamente en web.xml , lo primero que hacemos es especificar que use el servlet de Spring y le decimos donde tendrá la configuración para ese servlet. Esto se hace con estas lineas:
 
@@ -116,7 +114,7 @@ A continuación configuramos el contexto con las siguientes lineas:
 	&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
 &lt;/listener&gt;</pre>
 
-## 4.2dispatcher-servlet.xml {.western}
+### 4.2 dispatcher-servlet.xml 
 
 Para configurar la parte Web de nuestra aplicación (el servlet realmente) pondremos las siguientes lineas en el fichero dispatcher-servlet.xml
 
@@ -137,7 +135,7 @@ _Las ultimas lineas indican que usaremos JSP y especifica donde tendremos nuestr
 
 Tenéis un excelente documento explicando como hacer esta misma configuración usando anotaciones java en la siguiente página: <https://www.baeldung.com/bootstraping-a-web-application-with-spring-and-java-based-configuration>
 
-## 4.3applicationContext.xml {.western}
+### 4.3applicationContext.xml 
 
 En este fichero crearemos nuestro DataSource que utilizaremos para conectarnos con el pool de conexiones anteriormente configurado en Tomcat.
 
@@ -152,9 +150,9 @@ De todos modos básicamente lo que hace es injectar en nuestra aplicación una c
 <pre>@Autowired
  <span style="font-size: small;">DataSource ds;</span></pre>
 
-# 5. La aplicación {.western}
+## 5. La aplicación 
 
-## 5.1 Configuracion JPA y JDBC {.western}
+### 5.1 Configuracion JPA y JDBC
 
 En la clase JpaConfig es donde se hace toda la configuración que necesitamos para conectarnos a la base de datos.
 

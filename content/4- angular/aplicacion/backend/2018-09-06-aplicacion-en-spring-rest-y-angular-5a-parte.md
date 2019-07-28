@@ -1,5 +1,7 @@
 ---
-title: Aplicación en Spring REST y Angular – 5ª Parte
+title: Backend (V)
+weight: 50
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-09-06T06:08:12+00:00

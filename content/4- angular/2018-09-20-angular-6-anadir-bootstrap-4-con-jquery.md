@@ -1,6 +1,7 @@
 ---
 title: Angular 6 – Añadir Bootstrap 4 con JQuery
 author: El Profe
+pre: "<b>o </b>"
 type: post
 date: 2018-09-20T09:16:12+00:00
 url: /2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/
@@ -15,7 +16,8 @@ tags:
   - pooper
 
 ---
-Recordar lo primero que para utilizar toda la potencia de <a href="http://getbootstrap.com/" target="_blank" rel="noopener noreferrer">BootStrap</a>, necesitamos tener instaladas las librerias de <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">JQuery</a> y <a href="https://popper.js.org/index.html" target="_blank" rel="noopener noreferrer">Popper</a> <img class="alignright wp-image-326 size-medium" src="http://www.profesor-p.com/wp-content/uploads/2018/09/bootstrap-stack-300x252.png" alt="" width="300" height="252" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/bootstrap-stack-300x252.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/bootstrap-stack-768x645.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/09/bootstrap-stack.png 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+Recordar lo primero que para utilizar toda la potencia de <a href="http://getbootstrap.com/" target="_blank" rel="noopener noreferrer">BootStrap</a>, necesitamos tener instaladas las librerias de <a href="https://jquery.com/" target="_blank" rel="noopener noreferrer">JQuery</a> y <a href="https://popper.js.org/index.html" target="_blank" rel="noopener noreferrer">Popper</a> 
+![](/img/2018/09/bootstrap-stack-300x252.png")
 
 Hay varias maneras de  instalar estas librerías.
 

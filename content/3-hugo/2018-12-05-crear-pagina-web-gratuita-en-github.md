@@ -14,20 +14,18 @@ tags:
   - web
 
 ---
-Buenas. Alumnos,
-
 En esta entrada explicare como crear una página  web gratuita  en [GitHub][1]
 
-Estas  páginas deben ser estaticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉
-<!-- more -->
+Estas  páginas deben ser estáticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meterán publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉
+<!--more-->
 
-Además podeis usar [Hugo][2] como explicaba en [una anterior entrada][3] para hacer vuestro sitio web estático, más dinamico.
+Además podéis usar [Hugo][2] como explicaba en [una anterior entrada][3] para hacer vuestro sitio web estático, más dinámico.
 
-Eso sí, para usar GitHub debeis tener al menos ciertas nociones basicas de [Git][4] pues se utilizara esta herramienta para subir los ficheros que formaran la pagina web.
+Eso sí, para usar GitHub debéis tener al menos ciertas nociones basicas de [Git][4] pues se utilizara esta herramienta para subir los ficheros que formaran la pagina web.
 
 Lo primero es crear nuestro proyecto en [GitHub][1], para lo cual deberemos estar registrados.
 
-Teneis muchos videos y manuales que explican como trabajar con GitHub, uno donde se explica incluso como crear una  página web lo teneis en [devCode.la][5]
+Tenéis muchos videos y manuales que explican como trabajar con GitHub, uno donde se explica incluso como crear una  página web lo podreis ver en [devCode.la][5]
 
 Por si os sirve de ayuda he creado un proyecto en <https://github.com/chuchip/web> que genera la pagina web <https://chuchip.github.io/web/>
 
@@ -41,13 +39,15 @@ y bajaremos hasta que veamos la sección: **GitHub Pages**
 
 ![Settings en GithHub][7]
 
-Ahora eligiremos el branch (es decir, la rama) donde estara nuestra pagina web. Para empezar simplemente usar el valor que aparece por defecto: **master branch**. El tema de _&#8216;ramas&#8217;_ es ampliamente utilizado en GIT pero si solo queremos hacer una pagina web no necesitamos crear ninguna, por lo cual deberemos elegir la rama &#8216;**master&#8217;** (que sera la única que exista)
+Ahora eligiéremos el **branch** (es decir, la rama) donde estará nuestra pagina web. 
+Para empezar simplemente usar el valor que aparece por defecto: **master branch**.
+El tema de _&#8216;ramas&#8217;_ es ampliamente utilizado en GIT pero si solo queremos hacer una pagina web no necesitamos crear ninguna, por lo cual tendremos la rama &#8216;**master&#8217;** (que sera la única que exista)
 
 Ahora deberemos elegir que _tema_ vamos a utilizar para nuestra pagina web. Aunque tenemos la opción de no utilizarlo como explico más adelante, es **obligatorio** elegir un _tema_.
 
-Tenemos la opción de tener un dominio propio tipo **<a class="url" href="http://www.midominio.com" target="_blank" rel="noopener">www.midominio.com</a>**, el cual, logicamente, deberemos tener registrado previamente. Si no tenemos un dominio propio nuestra pagina web sera visible bajo el dominio: <a class="url" href="http://USUARIO.github.com/PROYECTO" target="_blank" rel="noopener">http://USUARIO.github.com/PROYECTO</a>
+Tambien tenemos la opción de tener un dominio propio tipo **<a class="url" href="http://www.midominio.com" target="_blank" rel="noopener">www.midominio.com</a>**, el cual, logicamente, deberemos tener registrado previamente. Si no tenemos un dominio propio nuestra pagina web sera visible bajo el dominio: <a class="url" href="http://USUARIO.github.com/PROYECTO" target="_blank" rel="noopener">http://USUARIO.github.com/PROYECTO</a>
 
-Tenemos dos formas de crear nuestra pagina web
+Elegimos una de las  formas de crear nuestra pagina web
 
   * Utilizando un _tema_
   * Sin _tema_ para lo cual usaremos un fichero **index.html**.
