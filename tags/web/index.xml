@@ -6,21 +6,10 @@
     <description>Recent content in Web on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Wed, 05 Dec 2018 10:32:08 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 12:32:50 +0000</lastBuildDate>
     
 	<atom:link href="http://ww2.profesor-p.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Crear pagina web gratuita en GitHub</title>
-      <link>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
-      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
-      <description>Buenas. Alumnos,
-En esta entrada explicare como crear una página web gratuita en GitHub
-Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉</description>
-    </item>
     
     <item>
       <title>Generar paginas Web estaticas dinamicamente</title>
@@ -50,13 +39,11 @@ Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda,
 
 &lt;p&gt;Supongamos que queremos usar el tema &lt;strong&gt;initio&lt;/strong&gt; que es el que usamos en la página de &lt;a href=&#34;http://lariojatech.org/&#34;&gt;RiojaTech Alliance&lt;/a&gt; . Para ello iremos a su URL &lt;a class=&#34;url&#34; href=&#34;https://themes.gohugo.io/hugo-initio/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://themes.gohugo.io/hugo-initio/&#34;&gt;https://themes.gohugo.io/hugo-initio/&lt;/a&gt;&lt;/a&gt; y pulsaremos sobre el botón &amp;#8216;&lt;strong&gt;Download&lt;/strong&gt;&amp;#8216;, lo cual nos llevara a &lt;strong&gt;GitHub&lt;/strong&gt;, a la dirección &lt;a class=&#34;url&#34; href=&#34;https://github.com/miguelsimoni/hugo-initio&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://github.com/miguelsimoni/hugo-initio&#34;&gt;https://github.com/miguelsimoni/hugo-initio&lt;/a&gt;&lt;/a&gt;. Allí descargaremos el fichero &lt;strong&gt;ZIP&lt;/strong&gt;, dándole a l botón &lt;strong&gt;Download ZIP&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&#34;size-large wp-image-510 aligncenter&#34; src=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png&#34; alt=&#34;&#34; width=&#34;1024&#34; height=&#34;254&#34; srcset=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-300x74.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-768x190.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/11/github.png 1057w&#34; sizes=&#34;(max-width: 1024px) 100vw, 1024px&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ww2.profesor-p.com/img/2018/11/github-1024x254.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Después descomprimiremos el fichero ZIP dentro del directorio &lt;strong&gt;themes&lt;/strong&gt; , de tal manera que la estructura de nuestros directorios será como la siguiente:&lt;/p&gt;
 
-&lt;p&gt;&lt;img class=&#34;size-full wp-image-509 aligncenter&#34; src=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png&#34; alt=&#34;&#34; width=&#34;245&#34; height=&#34;387&#34; srcset=&#34;http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png 245w, http://www.profesor-p.com/wp-content/uploads/2018/11/directorios-190x300.png 190w&#34; sizes=&#34;(max-width: 245px) 100vw, 245px&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://ww2.profesor-p.com/img/2018/11/directorios.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Suele ser una buena idea copiar el contenido del directorio &lt;code&gt;example-site&lt;/code&gt; dentro de nuestro directorio principal para tener una plantilla sobre la que empezar a trabajar.&lt;/p&gt;
 
@@ -98,6 +85,17 @@ draft: true # Poner a false para que aparezca el evento
 &lt;p&gt;Debajo deberemos poner el contenido de nuestro articulo. Recordar que se puede usar el lenguaje &lt;strong&gt;markdown&lt;/strong&gt; y también &lt;strong&gt;HTML&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Si ponemos la etiqueta `&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Crear pagina web gratuita en GitHub</title>
+      <link>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
+      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
+      <description>Buenas. Alumnos,
+En esta entrada explicare como crear una página web gratuita en GitHub
+Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉</description>
     </item>
     
   </channel>

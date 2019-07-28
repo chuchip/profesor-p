@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>http://ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</loc>
+    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</loc>
     <lastmod>2018-10-06T21:54:13+00:00</lastmod>
   </url>
@@ -38,6 +43,11 @@
   </url>
   
   <url>
+    <loc>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</loc>
+    <lastmod>2018-12-05T10:32:08+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</loc>
     <lastmod>2018-10-07T05:49:37+00:00</lastmod>
   </url>
@@ -54,7 +64,7 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/3-hugo/</loc>
-    <lastmod>2018-12-05T10:32:08+00:00</lastmod>
+    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
   </url>
   
   <url>
@@ -179,16 +189,6 @@
   <url>
     <loc>http://ww2.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</loc>
     <lastmod>2018-12-10T14:56:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</loc>
-    <lastmod>2018-12-05T10:32:08+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</loc>
-    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
   </url>
   
   <url>
@@ -362,7 +362,7 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/</loc>
-    <lastmod>2018-10-06T21:54:13+00:00</lastmod>
+    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
   </url>
   
   <url>
@@ -923,13 +923,13 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/tags/web/</loc>
-    <lastmod>2018-12-05T10:32:08+00:00</lastmod>
+    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://ww2.profesor-p.com/categories/web/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
+    <lastmod>2018-11-28T12:32:50+00:00</lastmod>
     <priority>0</priority>
   </url>
   

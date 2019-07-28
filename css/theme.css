@@ -1,4 +1,4 @@
-@charset "UTF-8";
+3@charset "UTF-8";
 
 /* Tags */
 @import "tags.css";
@@ -11,6 +11,7 @@
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
 }
 .button, .button-secondary {
     display: inline-block;
@@ -283,7 +284,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     padding-left: 1rem;
     padding-right: 1rem;
 }
-#sidebar ul li.active > a {
+#sidebar ul li.activeMenu > a {
     background: #fff;
     color: #777 !important;
     margin-left: -1rem;
@@ -308,7 +309,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     display: block;
 }
 #sidebar ul li > a {
+    padding: 4px 0;	
+}
+#sidebar ul li.lineaMenu > a  {
     padding: 4px 0;
+	color: #fcf3cf !important;
 }
 #sidebar ul li.visited > a .read-icon {
     color: #9c6fb6;
