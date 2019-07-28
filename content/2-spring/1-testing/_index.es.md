@@ -6,9 +6,8 @@ alwaysopen: false
 pre: "<b>- </b>"
 chapter: true
 ---
-
-# Testeando aplicaciones
+<h1> Testeando aplicaciones</h1>
 
 Estos son los Articulos disponibles:
-
+<!--more-->
 {{% children  description="true"  %}}

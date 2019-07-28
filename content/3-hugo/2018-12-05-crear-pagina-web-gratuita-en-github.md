@@ -19,6 +19,7 @@ Buenas. Alumnos,
 En esta entrada explicare como crear una página  web gratuita  en [GitHub][1]
 
 Estas  páginas deben ser estaticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉
+<!-- more -->
 
 Además podeis usar [Hugo][2] como explicaba en [una anterior entrada][3] para hacer vuestro sitio web estático, más dinamico.
 

@@ -4,7 +4,7 @@ weight: 4
 pre: "<b>- </b>"
 chapter: true
 ---
-# Database
+<h1>Database</h1>
 Entradas sobre acceso a base de datos, con JPA y JDBC
 <!--more-->
 

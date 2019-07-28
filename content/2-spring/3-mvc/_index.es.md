@@ -1,11 +1,10 @@
 ---
 title: "MVC"
 weight: 3
-alwaysopen: false
 pre: "<b>- </b>"
 chapter: true
 ---
-# MVC
+<h1> MVC</h1>
 Aunque ya no se utiliza tanto aqui tienes un articulo sobre Spring MVC.
 <!--more-->
 
