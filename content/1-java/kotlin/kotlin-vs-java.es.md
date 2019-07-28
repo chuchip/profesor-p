@@ -1,5 +1,6 @@
 ---
 title: Kotlin vs Java
+pre: "<b>o </b>"
 author: airec69
 type: post
 weight: 1

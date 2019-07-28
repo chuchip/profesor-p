@@ -1,6 +1,8 @@
 ---
 title: Generar paginas Web estaticas dinamicamente
 author: El Profe
+pre: "<b>o </b> "
+weight: 1
 type: post
 date: 2018-11-28T12:32:50+00:00
 url: /2018/11/28/generar-paginas-web-estaticas-dinamicamente/
@@ -34,13 +36,12 @@ En <a class="url" href="https://themes.gohugo.io/" target="_blank" rel="noopener
 
 Supongamos que queremos usar el tema **initio** que es el que usamos en la página de [RiojaTech Alliance][3] . Para ello iremos a su URL <a class="url" href="https://themes.gohugo.io/hugo-initio/" target="_blank" rel="noopener">https://themes.gohugo.io/hugo-initio/</a> y pulsaremos sobre el botón &#8216;**Download**&#8216;, lo cual nos llevara a **GitHub**, a la dirección <a class="url" href="https://github.com/miguelsimoni/hugo-initio" target="_blank" rel="noopener">https://github.com/miguelsimoni/hugo-initio</a>. Allí descargaremos el fichero **ZIP**, dándole a l botón **Download ZIP**.
 
-<img class="size-large wp-image-510 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png" alt="" width="1024" height="254" srcset="http://www.profesor-p.com/wp-content/uploads/2018/11/github-1024x254.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-300x74.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/11/github-768x190.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/11/github.png 1057w" sizes="(max-width: 1024px) 100vw, 1024px" />
+![](/img/2018/11/github-1024x254.png)
 
-&nbsp;
 
 Después descomprimiremos el fichero ZIP dentro del directorio **themes** , de tal manera que la estructura de nuestros directorios será como la siguiente:
 
-<img class="size-full wp-image-509 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png" alt="" width="245" height="387" srcset="http://www.profesor-p.com/wp-content/uploads/2018/11/directorios.png 245w, http://www.profesor-p.com/wp-content/uploads/2018/11/directorios-190x300.png 190w" sizes="(max-width: 245px) 100vw, 245px" />
+![](/img/2018/11/directorios.png)
 
 Suele ser una buena idea copiar el contenido del directorio `example-site` dentro de nuestro directorio principal para tener una plantilla sobre la que empezar a trabajar.
 

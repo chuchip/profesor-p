@@ -1,5 +1,6 @@
 ---
 title: Usando Lambdas
+pre: "<b>o </b>"
 author: airec69
 type: post
 date: 2018-08-23

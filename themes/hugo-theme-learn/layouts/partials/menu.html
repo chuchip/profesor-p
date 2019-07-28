@@ -28,7 +28,7 @@
         {{if eq .Site.Params.ordersectionsby "title"}}  
           {{range .Site.Home.Sections.ByTitle}}
 			{{ $activo = 2 }}	
-			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle  }}
+			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" .Title  "currentSectionTitle" $currentSectionTitle   "raiz" 0 }}
           {{end}}
         {{else}}
           {{range .Site.Home.Sections.ByWeight}}
@@ -37,7 +37,7 @@
 				{{ $currentSectionTitle = .Title }}
 				{{ printf "CT %#v " $currentSectionTitle }}
 			{{ end }}			
-			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "bucleSectionTitle" .Title "currentSectionTitle" $currentSectionTitle  }}
+			{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo  "bucleSectionTitle" .Title "currentSectionTitle" $currentSectionTitle  "raiz" 0 }}
           {{end}}
         {{end}} 
     </ul>
@@ -111,6 +111,7 @@
 {{ define "section-tree-nav" }}
 {{ $showvisitedlinks := .showvisitedlinks }}
 {{ $activo := .activo }}
+{{ $raiz := (add .raiz 1)}}
 {{ $currentNode := .currentnode }}
 {{ $currentSectionTitle := .currentSectionTitle  }}
 {{ $bucleSectionTitle := .bucleSectionTitle }}
@@ -124,11 +125,11 @@
 	{{end}}
 
     {{safeHTML .Params.head}}
-    <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item 
+    <li data-nav-id="{{.URL}}" title="{{.Title}}"  class="dd-item 
         {{if .IsAncestor $currentNode }}parent{{end}}
-        {{if  eq $activo 1 }}active {{end}}
-        {{if .Params.alwaysopen}}parent{{end}}
-        ">		
+        {{if  eq $activo 1 }}activeMenu {{else}}lineaMenu {{end}}
+        {{if .Params.alwaysopen}}parent{{end}}		"
+       >		
       <a href="{{.RelPermalink}}">
           {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
           {{ if $showvisitedlinks}}
@@ -149,7 +150,7 @@
           {{ range $pages.ByTitle }}
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle  "currentSectionTitle" $currentSectionTitle  }}
+				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle  "currentSectionTitle" $currentSectionTitle  "raiz" $raiz}}
             {{end}}
           {{ end }}
         {{else}}
@@ -159,7 +160,7 @@
 <!--			{{ printf "B %#v " $bucleSectionTitle }}  -->
             {{ if and .Params.hidden (not $.showhidden) }} 
             {{else}}
-				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle "currentSectionTitle" $currentSectionTitle  }}
+				{{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks "activo" $activo "bucleSectionTitle" $bucleSectionTitle "currentSectionTitle" $currentSectionTitle  "raiz" $raiz}}
             {{end}}
           {{ end }}
         {{end}}
@@ -168,8 +169,8 @@
     </li>
   {{else}}
     {{ if not .Params.Hidden }}
-	{{ if (or  ( eq $currentSectionTitle  $bucleSectionTitle  ) (and (ge $activo 1) (.IsDescendant  $currentNode ))) }}
-      <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}active{{end}}">
+	{{ if (or  ( le $raiz 2 ) ( eq $currentSectionTitle  $bucleSectionTitle  ) (and (ge $activo 1) (.IsDescendant  $currentNode ))) }}
+      <li data-nav-id="{{.URL}}" title="{{.Title}}" class="dd-item {{if eq .UniqueID $currentNode.UniqueID}}activeMenu {{end}}">
         <a href="{{ .RelPermalink}}">
         {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
         {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}

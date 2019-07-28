@@ -1,5 +1,6 @@
 ---
 title: Aplicacion CRUD con REST en Kotlin y SpringBoot
+pre: "<b>o </b>"
 author: El Profe
 type: post
 date: 2018-10-11T06:01:11+00:00

@@ -1,5 +1,6 @@
 ---
 title: Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)
+pre: "<b>o </b>"
 author: El Profe
 type: post
 weigth: 11

@@ -1,6 +1,8 @@
 ---
 title: Crear pagina web gratuita en GitHub
 author: El Profe
+pre: "<b>o </b> "
+weight: 2
 type: post
 date: 2018-12-05T10:32:08+00:00
 url: /2018/12/05/crear-pagina-web-gratuita-en-github/
