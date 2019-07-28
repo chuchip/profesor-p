@@ -6,31 +6,49 @@
     <description>Recent content in Categories on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 08 Oct 2018 20:23:38 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 16:11:53 +0000</lastBuildDate>
     
 	<atom:link href="http://ww2.profesor-p.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Angular</title>
-      <link>http://ww2.profesor-p.com/categories/angular/</link>
-      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
+      <title>java</title>
+      <link>http://ww2.profesor-p.com/categories/java/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/angular/</guid>
+      <guid>http://ww2.profesor-p.com/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bootstrap</title>
-      <link>http://ww2.profesor-p.com/categories/bootstrap/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>rest</title>
+      <link>http://ww2.profesor-p.com/categories/rest/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/bootstrap/</guid>
+      <guid>http://ww2.profesor-p.com/categories/rest/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Cache</title>
+      <title>spring</title>
+      <link>http://ww2.profesor-p.com/categories/spring/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>http://ww2.profesor-p.com/categories/web/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cache</title>
       <link>http://ww2.profesor-p.com/categories/cache/</link>
       <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
       
@@ -39,52 +57,16 @@
     </item>
     
     <item>
-      <title>Cloud</title>
-      <link>http://ww2.profesor-p.com/categories/cloud/</link>
-      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      <title>spring boot</title>
+      <link>http://ww2.profesor-p.com/categories/spring-boot/</link>
+      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/cloud/</guid>
+      <guid>http://ww2.profesor-p.com/categories/spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Crud</title>
-      <link>http://ww2.profesor-p.com/categories/crud/</link>
-      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/crud/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>http://ww2.profesor-p.com/categories/docker/</link>
-      <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Experiencia</title>
-      <link>http://ww2.profesor-p.com/categories/experiencia/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/experiencia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Glassfish</title>
-      <link>http://ww2.profesor-p.com/categories/glassfish/</link>
-      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/glassfish/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>H2</title>
+      <title>h2</title>
       <link>http://ww2.profesor-p.com/categories/h2/</link>
       <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
       
@@ -93,7 +75,7 @@
     </item>
     
     <item>
-      <title>Hibernate</title>
+      <title>hibernate</title>
       <link>http://ww2.profesor-p.com/categories/hibernate/</link>
       <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
       
@@ -102,187 +84,61 @@
     </item>
     
     <item>
-      <title>Html</title>
-      <link>http://ww2.profesor-p.com/categories/html/</link>
-      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/html/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>http://ww2.profesor-p.com/categories/hugo/</link>
-      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>I18n</title>
-      <link>http://ww2.profesor-p.com/categories/i18n/</link>
-      <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/i18n/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>http://ww2.profesor-p.com/categories/java/</link>
-      <pubDate>Thu, 23 Aug 2018 19:37:38 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Javaee</title>
-      <link>http://ww2.profesor-p.com/categories/javaee/</link>
-      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/javaee/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jdbc</title>
-      <link>http://ww2.profesor-p.com/categories/jdbc/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/jdbc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jndi</title>
-      <link>http://ww2.profesor-p.com/categories/jndi/</link>
-      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/jndi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Jpa</title>
+      <title>jpa</title>
       <link>http://ww2.profesor-p.com/categories/jpa/</link>
-      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
+      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/categories/jpa/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Jquery</title>
-      <link>http://ww2.profesor-p.com/categories/jquery/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>CRUD</title>
+      <link>http://ww2.profesor-p.com/categories/crud/</link>
+      <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/jquery/</guid>
+      <guid>http://ww2.profesor-p.com/categories/crud/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Json</title>
+      <title>json</title>
       <link>http://ww2.profesor-p.com/categories/json/</link>
-      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
+      <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/categories/json/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Jsp</title>
-      <link>http://ww2.profesor-p.com/categories/jsp/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>cloud</title>
+      <link>http://ww2.profesor-p.com/categories/cloud/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/jsp/</guid>
+      <guid>http://ww2.profesor-p.com/categories/cloud/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Jstl</title>
-      <link>http://ww2.profesor-p.com/categories/jstl/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>seguridad</title>
+      <link>http://ww2.profesor-p.com/categories/seguridad/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/jstl/</guid>
+      <guid>http://ww2.profesor-p.com/categories/seguridad/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Junit</title>
-      <link>http://ww2.profesor-p.com/categories/junit/</link>
-      <pubDate>Mon, 27 Aug 2018 08:24:45 +0000</pubDate>
+      <title>zuul</title>
+      <link>http://ww2.profesor-p.com/categories/zuul/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/junit/</guid>
+      <guid>http://ww2.profesor-p.com/categories/zuul/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kafka</title>
-      <link>http://ww2.profesor-p.com/categories/kafka/</link>
-      <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/kafka/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kotlin</title>
-      <link>http://ww2.profesor-p.com/categories/kotlin/</link>
-      <pubDate>Thu, 23 Aug 2018 19:37:38 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/kotlin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lambda</title>
-      <link>http://ww2.profesor-p.com/categories/lambda/</link>
-      <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mvc</title>
-      <link>http://ww2.profesor-p.com/categories/mvc/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/mvc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Netbeans</title>
-      <link>http://ww2.profesor-p.com/categories/netbeans/</link>
-      <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/netbeans/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Oauth2</title>
-      <link>http://ww2.profesor-p.com/categories/oauth2/</link>
-      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/oauth2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pooper</title>
-      <link>http://ww2.profesor-p.com/categories/pooper/</link>
-      <pubDate>Thu, 20 Sep 2018 09:16:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/pooper/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Profiles</title>
+      <title>profiles</title>
       <link>http://ww2.profesor-p.com/categories/profiles/</link>
       <pubDate>Fri, 01 Mar 2019 13:50:57 +0000</pubDate>
       
@@ -291,16 +147,115 @@
     </item>
     
     <item>
-      <title>Rest</title>
-      <link>http://ww2.profesor-p.com/categories/rest/</link>
-      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
+      <title>docker</title>
+      <link>http://ww2.profesor-p.com/categories/docker/</link>
+      <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/rest/</guid>
+      <guid>http://ww2.profesor-p.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Security</title>
+      <title>kafka</title>
+      <link>http://ww2.profesor-p.com/categories/kafka/</link>
+      <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/kafka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>http://ww2.profesor-p.com/categories/html/</link>
+      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://ww2.profesor-p.com/categories/hugo/</link>
+      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootstrap</title>
+      <link>http://ww2.profesor-p.com/categories/bootstrap/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mvc</title>
+      <link>http://ww2.profesor-p.com/categories/mvc/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tomcat</title>
+      <link>http://ww2.profesor-p.com/categories/tomcat/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/tomcat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webflow</title>
+      <link>http://ww2.profesor-p.com/categories/webflow/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/webflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jdbc</title>
+      <link>http://ww2.profesor-p.com/categories/jdbc/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/jdbc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>http://ww2.profesor-p.com/categories/jquery/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jsp</title>
+      <link>http://ww2.profesor-p.com/categories/jsp/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/jsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jstl</title>
+      <link>http://ww2.profesor-p.com/categories/jstl/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/jstl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
       <link>http://ww2.profesor-p.com/categories/security/</link>
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
@@ -309,52 +264,16 @@
     </item>
     
     <item>
-      <title>Seguridad</title>
-      <link>http://ww2.profesor-p.com/categories/seguridad/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>oauth2</title>
+      <link>http://ww2.profesor-p.com/categories/oauth2/</link>
+      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/seguridad/</guid>
+      <guid>http://ww2.profesor-p.com/categories/oauth2/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Sin Categoria</title>
-      <link>http://ww2.profesor-p.com/categories/sin-categoria/</link>
-      <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/sin-categoria/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sin Categoría</title>
-      <link>http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/</link>
-      <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring</title>
-      <link>http://ww2.profesor-p.com/categories/spring/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Spring Boot</title>
-      <link>http://ww2.profesor-p.com/categories/spring-boot/</link>
-      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
-      
-      <guid>http://ww2.profesor-p.com/categories/spring-boot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thymeleaf</title>
+      <title>thymeleaf</title>
       <link>http://ww2.profesor-p.com/categories/thymeleaf/</link>
       <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
       
@@ -363,38 +282,119 @@
     </item>
     
     <item>
-      <title>Tomcat</title>
-      <link>http://ww2.profesor-p.com/categories/tomcat/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>kotlin</title>
+      <link>http://ww2.profesor-p.com/categories/kotlin/</link>
+      <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/tomcat/</guid>
+      <guid>http://ww2.profesor-p.com/categories/kotlin/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Web</title>
-      <link>http://ww2.profesor-p.com/categories/web/</link>
-      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
+      <title>angular</title>
+      <link>http://ww2.profesor-p.com/categories/angular/</link>
+      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/web/</guid>
+      <guid>http://ww2.profesor-p.com/categories/angular/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Webflow</title>
-      <link>http://ww2.profesor-p.com/categories/webflow/</link>
-      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <title>glassfish</title>
+      <link>http://ww2.profesor-p.com/categories/glassfish/</link>
+      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/webflow/</guid>
+      <guid>http://ww2.profesor-p.com/categories/glassfish/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Zuul</title>
-      <link>http://ww2.profesor-p.com/categories/zuul/</link>
-      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      <title>javaee</title>
+      <link>http://ww2.profesor-p.com/categories/javaee/</link>
+      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/categories/zuul/</guid>
+      <guid>http://ww2.profesor-p.com/categories/javaee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i18n</title>
+      <link>http://ww2.profesor-p.com/categories/i18n/</link>
+      <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pooper</title>
+      <link>http://ww2.profesor-p.com/categories/pooper/</link>
+      <pubDate>Thu, 20 Sep 2018 09:16:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/pooper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jndi</title>
+      <link>http://ww2.profesor-p.com/categories/jndi/</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/jndi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netbeans</title>
+      <link>http://ww2.profesor-p.com/categories/netbeans/</link>
+      <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/netbeans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lambda</title>
+      <link>http://ww2.profesor-p.com/categories/lambda/</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/lambda/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>junit</title>
+      <link>http://ww2.profesor-p.com/categories/junit/</link>
+      <pubDate>Mon, 27 Aug 2018 08:24:45 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/junit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sin categoría</title>
+      <link>http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sin categoria</title>
+      <link>http://ww2.profesor-p.com/categories/sin-categoria/</link>
+      <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/sin-categoria/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experiencia</title>
+      <link>http://ww2.profesor-p.com/categories/experiencia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/categories/experiencia/</guid>
       <description></description>
     </item>
     

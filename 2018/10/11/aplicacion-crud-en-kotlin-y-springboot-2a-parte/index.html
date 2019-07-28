@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.51" />
+    <meta name="generator" content="Hugo 0.56.0" />
     <meta name="description" content="Documentation for Hugo Learn Theme">
 <meta name="author" content="Mathieu Cornic">
 
@@ -12,18 +12,18 @@
     <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte) :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1564291166" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1564291166" rel="stylesheet">
-    <link href="/css/hybrid.css?1564291166" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1564291166" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1564291166" rel="stylesheet">
-    <link href="/css/auto-complete.css?1564291166" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1564291166" rel="stylesheet">
-    <link href="/css/theme.css?1564291166" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1564291166" rel="stylesheet">
+    <link href="/css/nucleus.css?1564303989" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1564303989" rel="stylesheet">
+    <link href="/css/hybrid.css?1564303989" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1564303989" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1564303989" rel="stylesheet">
+    <link href="/css/auto-complete.css?1564303989" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1564303989" rel="stylesheet">
+    <link href="/css/theme.css?1564303989" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1564303989" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1564291166"></script>
+    <script src="/js/jquery-3.3.1.min.js?1564303989"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1564291166"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1564291166"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1564303989"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1564303989"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/ww2.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1564291166"></script>
+<script type="text/javascript" src="/js/search.js?1564303989"></script>
 
     
   </div>
@@ -2266,26 +2266,25 @@ class ApiController {
 <p><img src="/img/2018/10/Captura-6.png" alt="Captura6" /></p>
 
 <ul>
-<li>Función <strong>getByQuery</strong></li>
-</ul>
+<li><p>Función <strong>getByQuery</strong></p>
 
 <pre><code>@CrossOrigin(&quot;http://localhost:4200&quot;)
 @GetMapping(&quot;/{codigo}/{nombre}&quot;)
 fun getByQuery(@PathVariable codigo:String,@PathVariable nombre:String): Iterable&amp;lt;Any&amp;gt;
 {
-    return localeRepository.findLike(&quot;%&quot;+codigo+&quot;%&quot;,&quot;%&quot;+nombre.toUpperCase()+&quot;%&quot;); 
+return localeRepository.findLike(&quot;%&quot;+codigo+&quot;%&quot;,&quot;%&quot;+nombre.toUpperCase()+&quot;%&quot;); 
 }
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Aquí vemos de nuevo la etiqueta @CrossOrign y la etiqueta <strong>@GetMapping(&#8220;/{codigo}/{nombre}&#8221;)</strong> con lo cual especificamos que esta función tratara las llamadas a la URL: <strong><a href="http://localhost:8080/api/XX/YY  ">http://localhost:8080/api/XX/YY  </a></strong>. Observar las etiquetas <strong>@PathVariable </strong>en los parámetros de la función para especificar que debe pasar las diferentes partes de la ruta a las variables de la función.</p>
 
 <p>Llamamos a la función <strong>findLike</strong> de nuestro clase repositorio la cual nos devolverá todos los objetos Locales que cumplan los criterios de la búsqueda.</p>
 
 <ul>
-<li>Función <strong>insertar</strong></li>
-</ul>
+<li><p>Función <strong>insertar</strong></p>
 
-<pre><code>    @CrossOrigin(&quot;http://localhost:4200&quot;)
+<pre><code>@CrossOrigin(&quot;http://localhost:4200&quot;)
 	@PostMapping(&quot;/&quot;)	
 	fun insertar(@RequestBody locales:Locales): ResponseEntity&amp;lt;Any&amp;gt;
 	{
@@ -2297,7 +2296,8 @@ fun getByQuery(@PathVariable codigo:String,@PathVariable nombre:String): Iterabl
 		return ResponseEntity
 			.created( URI(&quot;/api/&quot;+locales.codigo)).body(&quot;&quot;);
 	}
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Esta función sera invocada cuando la petición HTTP sea de tipo POST, a la ruta &#8220;/&#8221;, como así se indica con la etiqueta <strong>@PostMapping(&#8220;/&#8221;). </strong>En la función incluimos la etiqueta <strong>@RequestBody </strong>para indicarle a Spring que en el cuerpo de la petición HTTP ira un objeto tipo Locales. en formato  JSON, al no especificar lo contrario.</p>
 
@@ -2310,8 +2310,7 @@ fun getByQuery(@PathVariable codigo:String,@PathVariable nombre:String): Iterabl
 <p><img src="/img/2018/10/Captura-7.png" alt="captura-7" /></p>
 
 <ul>
-<li>Función <strong>deleteByCodigo</strong></li>
-</ul>
+<li><p>Función <strong>deleteByCodigo</strong></p>
 
 <pre><code>@CrossOrigin(&quot;http://localhost:4200&quot;)
 	@DeleteMapping (&quot;/{codigo}&quot;)
@@ -2322,7 +2321,8 @@ fun getByQuery(@PathVariable codigo:String,@PathVariable nombre:String): Iterabl
 		localeRepository.deleteById(codigo);
 		return ResponseEntity( HttpStatus.OK)
 	}
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Esta función sera llamada cuando recibamos una petición HTTP tipo DELETE, a la ruta /XX. Es decir responderá con una petición DELETE como la del pantallazo que adjunto:</p>
 
@@ -2344,10 +2344,9 @@ class NotFoundException: RuntimeException {
 <p><img src="/img/2018/10/Captura-9.png" alt="imagen-9" /></p>
 
 <ul>
-<li>Función <strong>update</strong></li>
-</ul>
+<li><p>Función <strong>update</strong></p>
 
-<pre><code>    @CrossOrigin(&quot;http://localhost:4200&quot;)
+<pre><code>@CrossOrigin(&quot;http://localhost:4200&quot;)
 	@PutMapping (&quot;/{codigo}&quot;)
 	fun update(@PathVariable codigo:String,@RequestBody locales:Locales):ResponseEntity&amp;lt;Any&amp;gt;
 	{
@@ -2359,7 +2358,8 @@ class NotFoundException: RuntimeException {
 		localeRepository.save(locales);
 		return ResponseEntity( HttpStatus.OK)
 	}
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>Esta función actualizara el nombre de un país mandado. Observar que recibe en la ruta el código del país a modificar y en el cuerpo de la petición (Body) un objeto Locales.</p>
 
@@ -3519,20 +3519,20 @@ class NotFoundException: RuntimeException {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1564291166"></script>
-    <script src="/js/perfect-scrollbar.min.js?1564291166"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1564291166"></script>
-    <script src="/js/jquery.sticky.js?1564291166"></script>
-    <script src="/js/featherlight.min.js?1564291166"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1564291166"></script>
-    <script src="/js/highlight.pack.js?1564291166"></script>
+    <script src="/js/clipboard.min.js?1564303989"></script>
+    <script src="/js/perfect-scrollbar.min.js?1564303989"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1564303989"></script>
+    <script src="/js/jquery.sticky.js?1564303989"></script>
+    <script src="/js/featherlight.min.js?1564303989"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1564303989"></script>
+    <script src="/js/highlight.pack.js?1564303989"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1564291166"></script>
-    <script src="/js/learn.js?1564291166"></script>
-    <script src="/js/hugo-learn.js?1564291166"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1564303989"></script>
+    <script src="/js/learn.js?1564303989"></script>
+    <script src="/js/hugo-learn.js?1564303989"></script>
 
-    <link href="/mermaid/mermaid.css?1564291166" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1564291166"></script>
+    <link href="/mermaid/mermaid.css?1564303989" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1564303989"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
