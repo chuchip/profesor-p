@@ -19,9 +19,9 @@
       <guid>http://ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</guid>
       <description>&lt;p&gt;Buenas alumnos/as,&lt;/p&gt;
 
-&lt;p&gt;En esta entrada hablare de &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.&lt;/p&gt;
-
-&lt;p&gt;Hugo usa &lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;markdown&lt;/a&gt; para añadir los contenidos pero también podremos usar HTML, CSS y JavaScript si fuera necesario.&lt;/p&gt;
+&lt;p&gt;En esta entrada hablare de &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.
+&lt;!-- more --&gt;
+Hugo usa &lt;a href=&#34;https://es.wikipedia.org/wiki/Markdown&#34;&gt;markdown&lt;/a&gt; para añadir los contenidos pero también podremos usar HTML, CSS y JavaScript si fuera necesario.&lt;/p&gt;
 
 &lt;p&gt;Para crear una pagina web lo primero que tenemos que hacer es bajarnos el programa, lo cual podemos hacer desde &lt;a class=&#34;url&#34; href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;https://github.com/gohugoio/hugo/releases&lt;/a&gt;&lt;/a&gt; Una vez tengamos instalado &lt;strong&gt;hugo&lt;/strong&gt; en nuestro ordenador, podremos empezar a crear nuestra propia pagina web.&lt;/p&gt;
 
@@ -95,7 +95,7 @@ draft: true # Poner a false para que aparezca el evento
       <guid>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
       <description>Buenas. Alumnos,
 En esta entrada explicare como crear una página web gratuita en GitHub
-Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉</description>
+Estas páginas deben ser estaticas pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meteran publicidad en vuestra pagina web. Ademas, utilizara https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉 Además podeis usar Hugo como explicaba en una anterior entrada para hacer vuestro sitio web estático, más dinamico.</description>
     </item>
     
     <item>
