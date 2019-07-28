@@ -17,8 +17,7 @@
       <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</guid>
-      <description>El recien salido NetBeans 9, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.
-Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versión 8.2, incluso a nivel de plugins.</description>
+      <description>&lt;p&gt;El recién salido &lt;a href=&#34;https://netbeans.apache.org/download/nb90/nb90.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NetBeans 9&lt;/a&gt;, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.&lt;/p&gt;</description>
     </item>
     
   </channel>

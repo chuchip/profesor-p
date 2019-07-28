@@ -12,18 +12,18 @@
     <title>J2EE :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1564303988" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1564303988" rel="stylesheet">
-    <link href="/css/hybrid.css?1564303988" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1564303988" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1564303988" rel="stylesheet">
-    <link href="/css/auto-complete.css?1564303988" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1564303988" rel="stylesheet">
-    <link href="/css/theme.css?1564303988" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1564303988" rel="stylesheet">
+    <link href="/css/nucleus.css?1564307091" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1564307091" rel="stylesheet">
+    <link href="/css/hybrid.css?1564307091" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1564307091" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1564307091" rel="stylesheet">
+    <link href="/css/auto-complete.css?1564307091" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1564307091" rel="stylesheet">
+    <link href="/css/theme.css?1564307091" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1564307091" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1564303988"></script>
+    <script src="/js/jquery-3.3.1.min.js?1564307091"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -58,14 +58,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1564303988"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1564303988"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1564307091"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1564307091"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/ww2.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1564303988"></script>
+<script type="text/javascript" src="/js/search.js?1564307091"></script>
 
     
   </div>
@@ -2170,14 +2170,7 @@
 
 	<p>Ejemplos usando java EE. (La competencia de Spring 😄 )</p>
 
-
-
-
-
-
-
-
-<ul class="children children-h2">
+<ul class="children children-li">
 	
 
 	
@@ -2192,19 +2185,15 @@
 		
 			
 				
-					
-					
-
-<h2>
+<li>
 <a href="/2018/10/06/aplicacion-rest-en-javaee/" >Aplicación CRUD usando REST en JavaEE</a>
-</h2>
-
+</li>
 				
 
 				
 					
-<p align="left">Buenas, chicos, en esta ocasión voy a explicar como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
-Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificaciones, la realidad es que es muy fácil el realizar una aplicación totalmente funcional y muy fácilmente con la libreria JACKSON.</p>
+<p align="left"><p>Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.</p></p>
 					
 				
 			
@@ -2214,22 +2203,14 @@ Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificacione
 		
 			
 				
-					
-					
-
-<h2>
+<li>
 <a href="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/" >Aplicación CRUD usando REST en JavaEE  (2ª Parte)</a>
-</h2>
-
+</li>
 				
 
 				
 					
-<p align="left">Buenas otra vez.
-En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
-Recordar que tenéis el código fuente en https://github.com/chuchip/crudJavaEE
-En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/ habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.
- Funcion create  @POST @Consumes(MediaType.APPLICATION_JSON) public Response create(Locales locale) { if ( localeController.exists(locale.getCodigo())) { return Response.status(Response.Status.CONFLICT).build(); } localeController.create(locale); URI location = UriBuilder.</p>
+<p align="left"><p>En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.</p></p>
 					
 				
 			
@@ -2239,19 +2220,14 @@ En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10
 		
 			
 				
-					
-					
-
-<h2>
+<li>
 <a href="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/" >Desarrollando aplicaciones Java EE en NetBeans 9</a>
-</h2>
-
+</li>
 				
 
 				
 					
-<p align="left">El recien salido NetBeans 9, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.
-Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versión 8.2, incluso a nivel de plugins.</p>
+<p align="left"><p>El recién salido <a href="https://netbeans.apache.org/download/nb90/nb90.html" target="_blank" rel="noopener">NetBeans 9</a>, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.</p></p>
 					
 				
 			
@@ -2261,11 +2237,6 @@ Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versi
 
 	
 </ul>
-
-
-
-
-
 
 
 
@@ -3409,20 +3380,20 @@ Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1564303988"></script>
-    <script src="/js/perfect-scrollbar.min.js?1564303988"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1564303988"></script>
-    <script src="/js/jquery.sticky.js?1564303988"></script>
-    <script src="/js/featherlight.min.js?1564303988"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1564303988"></script>
-    <script src="/js/highlight.pack.js?1564303988"></script>
+    <script src="/js/clipboard.min.js?1564307091"></script>
+    <script src="/js/perfect-scrollbar.min.js?1564307091"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1564307091"></script>
+    <script src="/js/jquery.sticky.js?1564307091"></script>
+    <script src="/js/featherlight.min.js?1564307091"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1564307091"></script>
+    <script src="/js/highlight.pack.js?1564307091"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1564303988"></script>
-    <script src="/js/learn.js?1564303988"></script>
-    <script src="/js/hugo-learn.js?1564303988"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1564307091"></script>
+    <script src="/js/learn.js?1564307091"></script>
+    <script src="/js/hugo-learn.js?1564307091"></script>
 
-    <link href="/mermaid/mermaid.css?1564303988" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1564303988"></script>
+    <link href="/mermaid/mermaid.css?1564307091" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1564307091"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

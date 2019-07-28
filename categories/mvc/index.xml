@@ -17,7 +17,7 @@
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
-      <description>Buenas, estudiantes. En este articulo intentare explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
+      <description>Voy a intentar explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
     </item>
     
@@ -48,8 +48,8 @@ La página principal del programa no esta dentro de ningún flujo y sus peticion
       <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
-      <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
-Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
     </item>
     
     <item>

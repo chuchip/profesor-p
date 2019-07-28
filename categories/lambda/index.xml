@@ -17,8 +17,9 @@
       <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
-      <description>Expresiones Lamba en Spring JDBC Data. Mejorando la explicación. En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
-Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.</description>
+      <description>En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
+Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.
+Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:</description>
     </item>
     
     <item>

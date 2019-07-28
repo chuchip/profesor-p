@@ -17,8 +17,8 @@
       <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
-      <description>Buenas, chicos, en esta ocasión voy a explicar como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
-Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificaciones, la realidad es que es muy fácil el realizar una aplicación totalmente funcional y muy fácilmente con la libreria JACKSON.</description>
+      <description>&lt;p&gt;Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,11 +27,7 @@ Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificacione
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
-      <description>Buenas otra vez.
-En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
-Recordar que tenéis el código fuente en https://github.com/chuchip/crudJavaEE
-En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/ habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.
- Funcion create  @POST @Consumes(MediaType.APPLICATION_JSON) public Response create(Locales locale) { if ( localeController.exists(locale.getCodigo())) { return Response.status(Response.Status.CONFLICT).build(); } localeController.create(locale); URI location = UriBuilder.</description>
+      <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -52,8 +48,7 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
       <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
-      <description>Introducción Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.
-Estableciendo perfiles en la aplicación Spring provee una manera sencilla de gestionar esta situación haciendo uso de los perfiles.</description>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -104,8 +99,7 @@ En el caso de que un microservicio deba acceder a otro lo ideal seria que de alg
       <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
-      <description>Buenas, Alumnos/as.
-En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
 Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
 Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
     </item>
@@ -116,7 +110,7 @@ Es el caso típico de que realizamos una petición RESTful para solicitar un reg
       <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
-      <description>Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+      <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
 Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
     </item>

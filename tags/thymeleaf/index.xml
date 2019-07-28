@@ -17,8 +17,8 @@
       <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
-      <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
-Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
     </item>
     
   </channel>

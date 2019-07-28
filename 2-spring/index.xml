@@ -17,8 +17,7 @@
       <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
-      <description>Introducción Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.
-Estableciendo perfiles en la aplicación Spring provee una manera sencilla de gestionar esta situación haciendo uso de los perfiles.</description>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,8 +26,9 @@ Estableciendo perfiles en la aplicación Spring provee una manera sencilla de ge
       <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
-      <description>Expresiones Lamba en Spring JDBC Data. Mejorando la explicación. En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
-Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.</description>
+      <description>En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
+Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.
+Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por
       <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</guid>
-      <description>Usando cache en Spring Boot Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
     </item>
     
     <item>
@@ -87,8 +87,7 @@ Para probar este programa deberemos tener un servidor funcionando con los topics
       <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
-      <description>Buenas, Alumnos/as.
-En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
 Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
 Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
     </item>

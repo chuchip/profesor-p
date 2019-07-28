@@ -38,8 +38,7 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
       <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
-      <description>Introducción Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.
-Estableciendo perfiles en la aplicación Spring provee una manera sencilla de gestionar esta situación haciendo uso de los perfiles.</description>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +47,7 @@ Estableciendo perfiles en la aplicación Spring provee una manera sencilla de ge
       <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</guid>
-      <description>Usando cache en Spring Boot Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
     </item>
     
     <item>
@@ -120,8 +119,7 @@ Esto se utiliza ampliamente en microservicios pues una mismo servicio o aplicaci
       <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
-      <description>Buenas, Alumnos/as.
-En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
 Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
 Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
     </item>
@@ -132,7 +130,7 @@ Es el caso típico de que realizamos una petición RESTful para solicitar un reg
       <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
-      <description>Buenas, estudiantes. En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+      <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
 Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
     </item>
@@ -143,8 +141,8 @@ OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el 
       <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
-      <description>Hola de nuevo, estudiantes 😉 . En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
-Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.</description>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
     </item>
     
     <item>

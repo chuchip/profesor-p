@@ -17,7 +17,7 @@
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
-      <description>Buenas, estudiantes. En este articulo intentare explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
+      <description>Voy a intentar explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
     </item>
     

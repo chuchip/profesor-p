@@ -17,11 +17,7 @@
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
-      <description>Buenas otra vez.
-En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
-Recordar que tenéis el código fuente en https://github.com/chuchip/crudJavaEE
-En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/ habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.
- Funcion create  @POST @Consumes(MediaType.APPLICATION_JSON) public Response create(Locales locale) { if ( localeController.exists(locale.getCodigo())) { return Response.status(Response.Status.CONFLICT).build(); } localeController.create(locale); URI location = UriBuilder.</description>
+      <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
     </item>
     
     <item>

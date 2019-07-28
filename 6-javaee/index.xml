@@ -17,8 +17,8 @@
       <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
-      <description>Buenas, chicos, en esta ocasión voy a explicar como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.
-Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificaciones, la realidad es que es muy fácil el realizar una aplicación totalmente funcional y muy fácilmente con la libreria JACKSON.</description>
+      <description>&lt;p&gt;Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,11 +27,7 @@ Si bien es cierto que JavaEE no soporta oficialmente JSON en sus especificacione
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
-      <description>Buenas otra vez.
-En esta entrada continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.
-Recordar que tenéis el código fuente en https://github.com/chuchip/crudJavaEE
-En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/ habíamos visto como consultar los lenguajes disponibles. Ahora vamos a ver como añadir nuevos, modificarlos y borrarlos.
- Funcion create  @POST @Consumes(MediaType.APPLICATION_JSON) public Response create(Locales locale) { if ( localeController.exists(locale.getCodigo())) { return Response.status(Response.Status.CONFLICT).build(); } localeController.create(locale); URI location = UriBuilder.</description>
+      <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,8 +36,7 @@ En la anterior entrada, que podéis ver en en http://www.profesor-p.com/2018/10
       <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</guid>
-      <description>El recien salido NetBeans 9, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.
-Pero es solo en teoria, pues NetBeans 9, mantiene la compatibilidad con la versión 8.2, incluso a nivel de plugins.</description>
+      <description>&lt;p&gt;El recién salido &lt;a href=&#34;https://netbeans.apache.org/download/nb90/nb90.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NetBeans 9&lt;/a&gt;, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.&lt;/p&gt;</description>
     </item>
     
   </channel>
