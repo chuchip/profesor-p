@@ -18,7 +18,7 @@ tags:
 
 ---
 En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.
-
+<!--more-->
 Ademas haremos todo esto en un Linux Ubuntu 18.04
 
 Si no sabéis lo que es Spring Boot, ya estáis tardando en aprender al menos los conceptos básicos.
@@ -54,7 +54,7 @@ Ok. Ya podemos ejecutar Netbeans, con el comando **/nb/bin/netbeans.sh**
 
 La primera vez que ejecutamos NetBeans 9, nos solicita que instalemos la librería nbjavac, para mejorar el editor de textos y la funcionalidad en general. Le hacemos caso y la instalamos.
 
-![](/img/2018/08/Captura-1024x680.png]
+![](/img/2018/08/Captura-1024x680.png)
 
 Una vez instalada, nos pedirá que reiniciemos el IDE. Somos buenos chicos y lo reiniciamos.
 
@@ -62,6 +62,6 @@ Ahora toca instalar el plugin para poder funcionar con Spring Boot. Para ello no
 
 &nbsp;
 
-<img class="alignnone size-full wp-image-124" src="http://www.profesor-p.com/wp-content/uploads/2018/08/Captura2.png" alt="" width="934" height="586" srcset="http://www.profesor-p.com/wp-content/uploads/2018/08/Captura2.png 934w, http://www.profesor-p.com/wp-content/uploads/2018/08/Captura2-300x188.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/08/Captura2-768x482.png 768w" sizes="(max-width: 934px) 100vw, 934px" />
+![](/img/2018/08/Captura2.png)
 
 Reiniciamos, una vez más nuestro IDE, y ya podremos crear nuestro proyecto Spring Boot, en NetBeans 9. Como crearlo lo contare en la próxima entrada.

@@ -18,10 +18,9 @@ tags:
   - spring
 
 ---
-![Logotipo](/img/2019/01/spring-kafka-1024x335.jpg)
-
 **Kafka** es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o **consumidores** se subscriben a un tipo de noticia o **topic** y cuando un emisor o **broker** manda un mensaje sobre ese **topic** Kafka lo distribuye a los **consumidores** suscritos.
-
+<!--more-->
+![Logotipo](/img/2019/01/spring-kafka-1024x335.jpg)
 Para probar este programa deberemos tener un servidor funcionando con los _topics_ ya definidos . En la página <https://kafka.apache.org/quickstart> hay un manual rápido y muy claro de como levantar uno en apenas 10 minutos.
 
 Hay una extensa documentación sobre **Kafka** en internet, por lo cual no voy a profundizar demasiado en su funcionamiento, ni instalación. No obstante, aclarare dos conceptos básicos de Kafka.
