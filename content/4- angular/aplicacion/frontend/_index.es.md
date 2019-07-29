@@ -1,6 +1,7 @@
 ---
 title: Frontend
 author: El Profe
+chapter: true
 type: page
 weight: 2
 date: 2018-09-05T14:11:35+00:00
