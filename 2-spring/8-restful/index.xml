@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Restful on Documentacion en español</title>
+    <link>http://ww2.profesor-p.com/2-spring/8-restful/</link>
+    <description>Recent content in Restful on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Thu, 13 Jun 2019 16:11:53 +0000</lastBuildDate>
+    
+	<atom:link href="http://ww2.profesor-p.com/2-spring/8-restful/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Estableciendo filtros en Spring</title>
+      <link>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
+      <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
+Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
+    </item>
+    
+    <item>
+      <title>Usando Zuul para redirigir peticiones REST</title>
+      <link>http://ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
+      <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
+Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
+En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>
+    </item>
+    
+    <item>
+      <title>Personalizar salidas de códigos HTTP en Spring Boot</title>
+      <link>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</link>
+      <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
+Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
+    </item>
+    
+  </channel>
+</rss>

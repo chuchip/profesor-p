@@ -325,8 +325,7 @@ En casi cualquier proyecto donde haya microservicios, es deseable que todas las 
       <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</guid>
-      <description>Kafka es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o consumidores se subscriben a un tipo de noticia o topic y cuando un emisor o broker manda un mensaje sobre ese topic Kafka lo distribuye a los consumidores suscritos.
-Para probar este programa deberemos tener un servidor funcionando con los topics ya definidos . En la página https://kafka.apache.org/quickstart hay un manual rápido y muy claro de como levantar uno en apenas 10 minutos.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Kafka&lt;/strong&gt; es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o &lt;strong&gt;consumidores&lt;/strong&gt; se subscriben a un tipo de noticia o &lt;strong&gt;topic&lt;/strong&gt; y cuando un emisor o &lt;strong&gt;broker&lt;/strong&gt; manda un mensaje sobre ese &lt;strong&gt;topic&lt;/strong&gt; Kafka lo distribuye a los &lt;strong&gt;consumidores&lt;/strong&gt; suscritos.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -480,10 +479,7 @@ Más información aquí.</description>
       <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
-      <description>En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.
-Ademas haremos todo esto en un Linux Ubuntu 18.04
-Si no sabéis lo que es Spring Boot, ya estáis tardando en aprender al menos los conceptos básicos.
- Spring Boot es Spring hecho (más) fácil.  Con Spring Boot, entre otras cosas, se puede realizar una aplicación Web, con una mínima configuración. Una aplicación demo se crea en apenas 5 minutos.</description>
+      <description>&lt;p&gt;En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -566,6 +562,19 @@ Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base
       <guid>http://ww2.profesor-p.com/contacto/experiencia_sistemas/</guid>
       <description>Experiencia como administrador sistemas
  HPUX &amp;#8211; 6 Años Linux &amp;#8211; 10 años  Centos, Debian, Ubuntu.  Windows &amp;#8211; 1 año VMWARE &amp;#8211; 4 años CITRIX &amp;#8211; 1 Año  </description>
+    </item>
+    
+    <item>
+      <title>Ultimas entradas</title>
+      <link>http://ww2.profesor-p.com/last/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/last/</guid>
+      <description>Aquí tienes un listdo de las últimas entradas.
+ Estableciendo Filtros en Spring  Implementa filtros en Spring.Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.
+ Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.
+ Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.
+ Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA.</description>
     </item>
     
   </channel>

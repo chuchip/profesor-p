@@ -99,8 +99,7 @@ Imaginemos que tenemos un programa que dependiendo de unos parámetros deba carg
       <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</guid>
-      <description>Kafka es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o consumidores se subscriben a un tipo de noticia o topic y cuando un emisor o broker manda un mensaje sobre ese topic Kafka lo distribuye a los consumidores suscritos.
-Para probar este programa deberemos tener un servidor funcionando con los topics ya definidos . En la página https://kafka.apache.org/quickstart hay un manual rápido y muy claro de como levantar uno en apenas 10 minutos.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Kafka&lt;/strong&gt; es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o &lt;strong&gt;consumidores&lt;/strong&gt; se subscriben a un tipo de noticia o &lt;strong&gt;topic&lt;/strong&gt; y cuando un emisor o &lt;strong&gt;broker&lt;/strong&gt; manda un mensaje sobre ese &lt;strong&gt;topic&lt;/strong&gt; Kafka lo distribuye a los &lt;strong&gt;consumidores&lt;/strong&gt; suscritos.&lt;/p&gt;</description>
     </item>
     
     <item>

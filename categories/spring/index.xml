@@ -132,10 +132,7 @@ Como siempre, comienzo diciendo que el código fuente de lo que explico lo tené
       <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
-      <description>En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.
-Ademas haremos todo esto en un Linux Ubuntu 18.04
-Si no sabéis lo que es Spring Boot, ya estáis tardando en aprender al menos los conceptos básicos.
- Spring Boot es Spring hecho (más) fácil.  Con Spring Boot, entre otras cosas, se puede realizar una aplicación Web, con una mínima configuración. Una aplicación demo se crea en apenas 5 minutos.</description>
+      <description>&lt;p&gt;En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.&lt;/p&gt;</description>
     </item>
     
     <item>
