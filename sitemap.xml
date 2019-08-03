@@ -124,7 +124,7 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/2-spring/8-restful/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -217,12 +217,65 @@
   
   <url>
     <loc>http://ww2.profesor-p.com/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://ww2.profesor-p.com/categories/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/tags/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/categories/java/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/tags/java/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/categories/rest/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/tags/rest/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/categories/spring/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/tags/spring/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://ww2.profesor-p.com/categories/web/</loc>
+    <lastmod>2019-08-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,55 +285,7 @@
   </url>
   
   <url>
-    <loc>http://ww2.profesor-p.com/tags/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://ww2.profesor-p.com/tags/filters/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/categories/java/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/tags/java/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/categories/rest/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/tags/rest/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/categories/spring/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/tags/spring/</loc>
-    <lastmod>2019-06-13T16:11:53+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://ww2.profesor-p.com/categories/web/</loc>
     <lastmod>2019-06-13T16:11:53+00:00</lastmod>
     <priority>0</priority>
   </url>

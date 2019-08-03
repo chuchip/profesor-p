@@ -6,7 +6,7 @@
     <description>Recent content in spring on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 13 Jun 2019 16:11:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://ww2.profesor-p.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
@@ -71,6 +71,18 @@ Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que
       <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    
+    <item>
+      <title>La clase RestTemplate</title>
+      <link>http://ww2.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://ww2.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
+      <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
+Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
+Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
+RestTemplate esta en el core de Spring por lo cual no es necesario instalar ninguna dependencia.</description>
     </item>
     
     <item>
