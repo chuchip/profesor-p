@@ -4,9 +4,9 @@ title = "Ultimas entradas"
 type = "page"
 
 +++
-Aquí tienes un listdo de las últimas entradas.
+**Estás son las ultimas entradas del blog**
 
-- [Trabajando con la clase RestTemplate](http://localhost:1313/2-spring/8-restful/resttemplate/)
+- [Trabajando con la clase RestTemplate](/2019/08/03/trabajando-con-la-clase-resttemplate/)
 
 Utiliza la clase **RestTemplate**  para realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. 
 
