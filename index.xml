@@ -570,7 +570,7 @@ Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://ww2.profesor-p.com/last/</guid>
-      <description>Aquí tienes un listdo de las últimas entradas.
+      <description>Estás son las ultimas entradas del blog
  Trabajando con la clase RestTemplate  Utiliza la clase RestTemplate para realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.
  Estableciendo Filtros en Spring  Implementa filtros en Spring.Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.
  Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.</description>
