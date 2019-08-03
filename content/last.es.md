@@ -6,6 +6,10 @@ type = "page"
 +++
 Aquí tienes un listdo de las últimas entradas.
 
+- [Trabajando con la clase RestTemplate](http://localhost:1313/2-spring/8-restful/resttemplate/)
+
+Utiliza la clase **RestTemplate**  para realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. 
+
 - [Estableciendo Filtros en Spring](/2019/06/13/estableciendo-filtros-en-spring/)
 
 Implementa filtros en Spring.Un filtro se puede establecer para controlar acciones  a realizar cuando se recibe una petición HTTP. 
