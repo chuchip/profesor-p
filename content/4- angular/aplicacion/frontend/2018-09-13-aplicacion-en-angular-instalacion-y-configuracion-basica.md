@@ -34,11 +34,11 @@ Este comando creara la estructura básica (o template que dirían los ingleses) 
 
 Esta es una salida típica del comando **ng new **en una ventana windows:
 
-<img class="alignnone size-full wp-image-260" src="http://www.profesor-p.com/wp-content/uploads/2018/09/angular1.png" alt="" width="835" height="647" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/angular1.png 835w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular1-300x232.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular1-768x595.png 768w" sizes="(max-width: 835px) 100vw, 835px" />
+![](/img/2018/09/angular1.png)
 
 Y podemos ver que nos ha creado el directorio **yagesclient, **debajo del directorio donde estábamos:
 
-<img class="alignnone size-full wp-image-261" src="http://www.profesor-p.com/wp-content/uploads/2018/09/angular2.png" alt="" width="606" height="296" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/angular2.png 606w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular2-300x147.png 300w" sizes="(max-width: 606px) 100vw, 606px" />
+![](/img/2018/09/angular2.png)
 
 Ahora mismo ya podríamos ver esa aplicación mínima que hemos creado en nuestro navegador. Para ello, lanzamos nuestro servidor web con el comando:
 
@@ -48,26 +48,12 @@ Ahora mismo ya podríamos ver esa aplicación mínima que hemos creado en nuestr
 
 Este comando nos mostrara la siguiente salida:
 
-<img class="alignnone size-full wp-image-263" src="http://www.profesor-p.com/wp-content/uploads/2018/09/angular3.png" alt="" width="912" height="221" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/angular3.png 912w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular3-300x73.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular3-768x186.png 768w" sizes="(max-width: 912px) 100vw, 912px" />
+![](/img/2018/09/angular4.png)
 
-Cambien abrirá una ventana de nuestro navegador donde podremos ver nuestra aplicación.
 
-_Pulse encima de la imagen para ampliarla_<a href="http://www.profesor-p.com/wp-content/uploads/2018/09/angular4.png" target="_blank" rel="noopener"><img class="alignleft wp-image-262 size-medium" src="http://www.profesor-p.com/wp-content/uploads/2018/09/angular4-300x284.png" alt="" width="300" height="284" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/angular4-300x284.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/angular4.png 670w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+Tambien abrirá una ventana de nuestro navegador donde podremos ver nuestra aplicación.
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 Fácil, ¿ verdad ?. Como se puede observar con muy poco esfuerzo se ha creado una aplicación en Angular, totalmente funcional que el servidor de <a href="https://nodejs.org/es/" target="_blank" rel="noopener">Node </a>que hemos instalado sirve.
 
- [1]: http://www.profesor-p.com/aplicacion-usando-java-y-angular/
+ [1]: /aplicacion-usando-java-y-angular/

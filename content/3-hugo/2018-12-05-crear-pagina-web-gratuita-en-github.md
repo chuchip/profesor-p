@@ -10,6 +10,7 @@ categories:
   - html
   - web
 tags:
+  - hugo
   - html
   - web
 

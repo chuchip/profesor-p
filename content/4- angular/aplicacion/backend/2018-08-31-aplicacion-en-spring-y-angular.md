@@ -20,7 +20,7 @@ tags:
 ---
 En <a href="http://anjelica.sf.net" target="_blank" rel="noopener">Anjelica</a>, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
 
-<img class="alignnone size-full wp-image-150" src="http://www.profesor-p.com/wp-content/uploads/2018/08/cohive.png" alt="" width="996" height="578" />
+![](/img/2018/08/cohive.png)
 
 La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
 
