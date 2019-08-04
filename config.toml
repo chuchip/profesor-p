@@ -8,7 +8,7 @@ themesdir = "./themes"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 publishDir = "docs"
-
+googleAnalytics = "UA-124706971-1"
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
   description = "Documentation for Hugo Learn Theme"
