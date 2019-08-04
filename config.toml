@@ -1,20 +1,20 @@
-baseURL = "http://ww2.profesor-p.com/"
+baseURL = "http://www.profesor-p.com/"
 languageCode = "es-ES"
 defaultContentLanguage = "es"
 enableEmoji = true
-title = "Hugo Learn Documentation"
+title = "Blog del Profesor-P"
 theme = "hugo-theme-learn"
 themesdir = "./themes"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 publishDir = "docs"
-googleAnalytics = "UA-124706971-1"
+
 [params]
-  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "Documentation for Hugo Learn Theme"
-  author = "Mathieu Cornic"
+  editURL = "https://github.com/chuchip/profesor-p"
+  description = "Articulos sobre informática "
+  author = "Jesus J. Puente"
   showVisitedLinks = true
-  disableBreadcrumb = true
+  disableBreadcrumb = false
   disableNextPrev = false
   disableLanguageSwitchingButton=true
   
