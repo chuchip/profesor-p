@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sin categoría on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/</link>
+    <link>http://www.profesor-p.com/categories/sin-categor%C3%ADa/</link>
     <description>Recent content in Sin categoría on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 24 Aug 2018 10:53:55 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/categories/sin-categor%C3%ADa/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JPA con Lombok, simplificando.</title>
-      <link>http://ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
+      <link>http://www.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
       <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
+      <guid>http://www.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
       <description>En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok.
 Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Anteriormente teniamos definido nuestro objeto de esta manera:

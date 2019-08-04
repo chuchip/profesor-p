@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CRUD on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/categories/crud/</link>
+    <link>http://www.profesor-p.com/categories/crud/</link>
     <description>Recent content in CRUD on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 25 Mar 2019 16:02:14 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/categories/crud/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/categories/crud/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
-      <link>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
       <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
       <description>Buenas chavales,
 En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
 Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
@@ -25,20 +25,20 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
     
     <item>
       <title>Accediendo facilmente a los datos con Spring Rest Data</title>
-      <link>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <link>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
       <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <guid>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
       <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
 Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
     </item>
     
     <item>
       <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)</title>
-      <link>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
       <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
       <description>Hola de nuevo, chicos.
 Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
 Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.

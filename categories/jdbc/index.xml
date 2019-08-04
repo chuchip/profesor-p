@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jdbc on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/categories/jdbc/</link>
+    <link>http://www.profesor-p.com/categories/jdbc/</link>
     <description>Recent content in jdbc on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 29 Oct 2018 08:49:12 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/categories/jdbc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/categories/jdbc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Spring WebFlow con JSP – Configuración</title>
-      <link>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
+      <link>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
+      <guid>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
       <description>Voy a intentar explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
 El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
     </item>
     
     <item>
       <title>Backend (V)</title>
-      <link>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
+      <link>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
       <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
       <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
 Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
 Empezare describiendo la clase
@@ -35,10 +35,10 @@ Empezare describiendo la clase
     
     <item>
       <title>Lambdas en JDBC Data</title>
-      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
 Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.
 Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:</description>
@@ -46,10 +46,10 @@ Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada 
     
     <item>
       <title>JPA &#43; Hibernate en Spring</title>
-      <link>http://ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
+      <link>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
       <pubDate>Sat, 25 Aug 2018 18:14:42 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
+      <guid>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
       <description>En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA.
 Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior.
@@ -58,10 +58,10 @@ Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java 
     
     <item>
       <title>Acceso a Base de Datos con  Spring Data JDBC</title>
-      <link>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <link>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
       <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <guid>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
       <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
 El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
 Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>

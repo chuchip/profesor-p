@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>profiles on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/categories/profiles/</link>
+    <link>http://www.profesor-p.com/categories/profiles/</link>
     <description>Recent content in profiles on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 01 Mar 2019 13:50:57 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/categories/profiles/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/categories/profiles/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Uso de perfiles para testear en Spring Boot</title>
-      <link>http://ww2.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</link>
+      <link>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</link>
       <pubDate>Fri, 01 Mar 2019 13:50:57 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</guid>
-      <description>&lt;p&gt;Como comentaba &lt;a href=&#34;http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/&#34;&gt;en el articulo anterior&lt;/a&gt; gracias al uso de perfiles es fácil personalizar las aplicaciones en &lt;strong&gt;Spring Boot&lt;/strong&gt;.&lt;/p&gt;</description>
+      <guid>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</guid>
+      <description>&lt;p&gt;Como comentaba &lt;a href=&#34;http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/&#34;&gt;en el articulo anterior&lt;/a&gt; gracias al uso de perfiles es fácil personalizar las aplicaciones en &lt;strong&gt;Spring Boot&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Perfiles en Spring Boot</title>
-      <link>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
+      <link>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
       <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
+      <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
       <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
     </item>
     

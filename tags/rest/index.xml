@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>rest on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/tags/rest/</link>
+    <link>http://www.profesor-p.com/tags/rest/</link>
     <description>Recent content in rest on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicación CRUD usando REST en JavaEE</title>
-      <link>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</link>
+      <link>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</link>
       <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
+      <guid>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
       <description>&lt;p&gt;Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
 En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
-      <link>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
+      <link>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
       <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
       <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Aplicación CRUD en Angular</title>
-      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <link>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
       <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <guid>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
       <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 Por supuesto el protocolo para las comunicaciones es JSON.
 El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
@@ -44,10 +44,10 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
     
     <item>
       <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
-      <link>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
       <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
       <description>Buenas chavales,
 En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
 Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
@@ -56,10 +56,10 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
     
     <item>
       <title>Frontend en Angular</title>
-      <link>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
+      <link>http://www.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
       <pubDate>Thu, 13 Sep 2018 07:51:25 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
+      <guid>http://www.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
       <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
 El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
 Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
@@ -67,40 +67,40 @@ Lo primero sera instalar Angular, para ello tenemos un excelente manual de com
     
     <item>
       <title>Backend (II)</title>
-      <link>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <link>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
       <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
       <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
 Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
     </item>
     
     <item>
       <title>Backend  (III)</title>
-      <link>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
+      <link>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
       <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
       <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
 Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
     </item>
     
     <item>
       <title>Backend (IV)</title>
-      <link>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <link>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
       <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
     </item>
     
     <item>
       <title>La clase RestTemplate</title>
-      <link>http://ww2.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
       <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
       <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
 Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
 Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
@@ -109,30 +109,30 @@ RestTemplate esta en el core de Spring por lo cual no es necesario instalar ning
     
     <item>
       <title>Estableciendo filtros en Spring</title>
-      <link>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
+      <link>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
       <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
+      <guid>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
       <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
 Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
     </item>
     
     <item>
       <title>Accediendo facilmente a los datos con Spring Rest Data</title>
-      <link>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <link>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
       <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <guid>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
       <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
 Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
     </item>
     
     <item>
       <title>Microservicios distribuidos con Eureka</title>
-      <link>http://ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
+      <link>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
       <pubDate>Thu, 03 Jan 2019 08:52:59 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
+      <guid>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
       <description>En esta clase hablare de como crear microservicios distribuidos en Spring Boot utilizando las facilidades que nos da el paquete Spring Cloud NetFlix.
 Cualquier microservicio debe poder localizar las diferentes instancias de otro servicio del que dependa sin tener sus direcciones definidas en el código.
 En el caso de que un microservicio deba acceder a otro lo ideal seria que de alguna manera pudiera saber en que direcciones esta las instancias de ese otro microservicio funcionando, pues lo más común es que se levanten diferentes instancias dependiendo de la carga.</description>
@@ -140,10 +140,10 @@ En el caso de que un microservicio deba acceder a otro lo ideal seria que de alg
     
     <item>
       <title>Personalizar salidas de códigos HTTP en Spring Boot</title>
-      <link>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</link>
+      <link>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</link>
       <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
+      <guid>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
       <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
 Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
 Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
@@ -151,10 +151,10 @@ Es el caso típico de que realizamos una petición RESTful para solicitar un reg
     
     <item>
       <title>Securizando servicios REST con Oauth2 en SpringBoot</title>
-      <link>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
+      <link>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
       <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
+      <guid>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
       <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
 Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
 OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>

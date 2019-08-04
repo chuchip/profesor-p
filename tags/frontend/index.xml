@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>frontend on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/tags/frontend/</link>
+    <link>http://www.profesor-p.com/tags/frontend/</link>
     <description>Recent content in frontend on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 08 Oct 2018 20:23:38 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aplicación CRUD en Angular</title>
-      <link>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <link>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
       <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <guid>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
       <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
 Por supuesto el protocolo para las comunicaciones es JSON.
 El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
@@ -25,10 +25,10 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
     
     <item>
       <title>Angular - Inicializando</title>
-      <link>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
+      <link>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
       <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
+      <guid>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
       <description>Continuando con la entrada donde instalaba Angular, seguimos desarrollando la aplicación que detallo en esta página.
 Una vez tenemos creado el esqueleto de nuestro programa, con el comando &amp;#8220;ng new&amp;#8221; ,  entraremos al directorio src. En este directorio es donde realmente vamos a trabajar.
 Los demás directorios son donde están las librerías y utilidades que nuestra aplicación usara pero que son propias de Angular y nosotros no las tocaremos (al menos en este ejemplo).</description>

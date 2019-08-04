@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>i18n on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/categories/i18n/</link>
+    <link>http://www.profesor-p.com/categories/i18n/</link>
     <description>Recent content in i18n on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Mon, 24 Sep 2018 10:45:43 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/categories/i18n/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/categories/i18n/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Angular – Hablando español</title>
-      <link>http://ww2.profesor-p.com/2018/09/24/hablando-espanol/</link>
+      <link>http://www.profesor-p.com/2018/09/24/hablando-espanol/</link>
       <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/09/24/hablando-espanol/</guid>
+      <guid>http://www.profesor-p.com/2018/09/24/hablando-espanol/</guid>
       <description>Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.
 El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</description>
     </item>

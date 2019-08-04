@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>web on Documentacion en español</title>
-    <link>http://ww2.profesor-p.com/tags/web/</link>
+    <link>http://www.profesor-p.com/tags/web/</link>
     <description>Recent content in web on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
     <lastBuildDate>Wed, 05 Dec 2018 10:32:08 +0000</lastBuildDate>
     
-	<atom:link href="http://ww2.profesor-p.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.profesor-p.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Generar paginas Web estáticas dinámicamente</title>
-      <link>http://ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</link>
+      <link>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</link>
       <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</guid>
+      <guid>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</guid>
       <description>&lt;p&gt;Vamos a  hablar de &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Crear pagina web gratuita en GitHub</title>
-      <link>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
+      <link>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
       <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
       
-      <guid>http://ww2.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
+      <guid>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
       <description>&lt;p&gt;En esta entrada explicare como crear una página  web gratuita  en &lt;a href=&#34;https://www.github.com&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Estas  páginas deben ser estáticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meterán publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉&lt;/p&gt;</description>
