@@ -1,8 +1,9 @@
 ---
-title: La clase RestTemplate
+title: La Clase RestTemplate - 2 
+draft: true
 pre: "<b>o </b>"
 author: El Profe
-url: /2019/08/03/trabajando-con-la-clase-resttemplate/
+url: /clase-resttemplate-2/
 type: post
 date: 2019-08-02
 categories:
@@ -14,8 +15,52 @@ tags:
   - java
   - rest
   - spring
-
+ 
 ---
+
+En [la anterior entrada](/2019/08/03/trabajando-con-la-clase-resttemplate/) vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.
+
+## 3. Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo mandado,  ¿ qué pasara ?
+
+Como hemos visto cuando se realiza la petición uno de los parámetros  mandados es el objeto que se espera devolver. **Spring** creara un objeto del tipo mandado e intentara cargar los variables que lo definen.
+
+En el proyecto de ejemplo se trabaja con el objeto  `Customer` que solo tiene dos campos `name` y `address`, por lo tanto **Spring**  recogerá el cuerpo de la respuesta en formato JSON (puede trabajar en otros formatos como XML, pero en este articulo nos ceñiremos a JSON) e intentara establecer los valores a esos dos campos.
+
+Para simular este caso en el ejemplo si realizamos esta llamada: 
+
+```
+curl -s http://localhost:8080/ACCEPT
+```
+
+El servidor lanzara una excepción pero el código HTTP será 202 (**ACCEPTED**) con lo cual la clase **RestTemplate** no dará ningún error, sin embargo el cuerpo devuelto será algo como esto:
+
+```
+ {"timestamp":"2019-08-05T11:02:18.314+0000","status":202,"error":"Accepted","message":"Don't send me accepts!!","trace":"com.profesorp.restTemplate.MyAcceptedException: Don't send me accepts!!..... }
+```
+
+Como **RestTemplate** no encontrara ningún valor para los campos  `name` o `address`, la salida de nuestro programa será la siguiente:
+
+````
+Http Status: 202 ACCEPTED -> Customer(name=null, address=null)
+````
+
+Contestando a la pregunta: *No pasara nada* simplemente los campos del objeto `Customer` tendrán el valor NULL, pues no se llamara a las correspondientes funciones *setter*.
+
+## 4. ¿Cómo podría tener un registro de lo enviado y recibido por el servidor ?
+
+La respuesta esta en la función 
+
+
+
+logging.level.com.profesorp=debug
+
+
+
+
+
+
+
+
 
 Este será el primero de una serie de entradas sobre la clase  **RestTemplate** de **Spring.**
 
@@ -273,7 +318,7 @@ Por lo tanto se obtendrá esta salida, ya que el código HTTP es 400 y se por lo
 Http Status: 400 BAD_REQUEST ->  Error message: {"name":"Customer ERROR","address":"Address Customer ERROR"}
 ```
 
-En nuestro ejemplo si pasamos el parámetro CREATED, el servidor devolverá un objeto `Customer` con el código HTTP **CREATED** . Como en la clase `CustomResponseErrorHandler` se ha definido que cualquier código HTTP diferente de **OK** será considerada un error,  el cuerpo del mensaje será NULL ya que se ha consumido el `StreamReader` en la clase `getBody` de la clase `CustomResponseErrorHandler`
+En nuestro ejemplo si pasamos el parámetro CREATED, el servidor devolverá un objeto `Customer` con el código HTTP **CREATED** . Como en la clase `CustomResponseErrorHandler` se ha definido que cualquier código HTTP diferente de **OK** será considerada un error,  el cuerpo del mensaje será NULL.
 
 ``` 
 > curl -s http:/localhost:8080/custom/CREATED
@@ -281,9 +326,7 @@ Http Status: 201 CREATED -> Body: null
 
 ```
 
-{{% notice note %}}
-En el siguiente articulo explicare como se puede leer el cuerpo del mensaje y no consumirlo para que la llamada a `getBody` del `ResponseEntity` no devuelva NULL.
-{{% /notice %}}
+
 
 ## 2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?
 
