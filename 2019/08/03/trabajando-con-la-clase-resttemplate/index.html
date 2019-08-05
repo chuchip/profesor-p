@@ -12,19 +12,19 @@
     <title>La clase RestTemplate :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1564944001" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1564944001" rel="stylesheet">
-    <link href="/css/hybrid.css?1564944001" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1564944001" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1564944001" rel="stylesheet">
-    <link href="/css/auto-complete.css?1564944001" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1564944001" rel="stylesheet">
-    <link href="/css/theme.css?1564944001" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1564944001" rel="stylesheet">
-	<link href="/css/tags.css?1564944001" rel="stylesheet">
+    <link href="/css/nucleus.css?1565010091" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565010091" rel="stylesheet">
+    <link href="/css/hybrid.css?1565010091" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565010091" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565010091" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565010091" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565010091" rel="stylesheet">
+    <link href="/css/theme.css?1565010091" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565010091" rel="stylesheet">
+	<link href="/css/tags.css?1565010091" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1564944001"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565010091"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -60,14 +60,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1564944001"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1564944001"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565010091"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565010091"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1564944001"></script>
+<script type="text/javascript" src="/js/search.js?1565010091"></script>
 
     
   </div>
@@ -2376,18 +2376,18 @@
 <ul>
 <li>
 <ul>
-<li><a href="#1-como-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Como puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</a>
+<li><a href="#1-cómo-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</a>
 <ul>
 <li><a href="#1-1-capturar-la-excepción-del-tipo-httpclienterrorexception">1.1 Capturar la excepción del tipo HttpClientErrorException</a>
 <ul>
-<li><a href="#1-1-1-practica">1.1.1 Practica</a></li>
+<li><a href="#1-1-1-práctica">1.1.1 Práctica</a></li>
 </ul></li>
 <li><a href="#1-2-establecer-un-manejador-de-errores-personalizados">1.2 Establecer un manejador de Errores personalizados</a>
 <ul>
-<li><a href="#1-2-1-practica">1.2.1 Practica</a></li>
+<li><a href="#1-2-1-práctica">1.2.1 Práctica</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#2-que-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Que pasa si la llamada falla porque el servidor esta caído?</a></li>
+<li><a href="#2-qué-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2505,16 +2505,16 @@
 <p>Fácil, ¿ verdad ?. Pero, ¿ no os parece que falta algo ?. Haceros las siguientes preguntas:</p>
 
 <ol>
-<li>¿Como puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</li>
-<li>¿Que pasa si la llamada falla porque el servidor esta caído?</li>
-<li>Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo <code>Customer</code>,  ¿ que pasara?.</li>
-<li>¿Como podría tener un registro de lo enviado y recibido por el servidor ?</li>
+<li>¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</li>
+<li>¿Qué pasa si la llamada falla porque el servidor esta caído?</li>
+<li>Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo <code>Customer</code>,  ¿ qué pasara?.</li>
+<li>¿Cómo podría tener un registro de lo enviado y recibido por el servidor ?</li>
 <li>¿Me devolverá el objeto tipo <code>Customer</code> en el cuerpo de la respuesta aunque no sea OK el estado de esta?</li>
 </ol>
 
 <p>Bueno, pues no todas son tan obvias como podría parecer.  Voy a intentar responder a ellas.</p>
 
-<h2 id="1-como-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Como puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</h2>
+<h2 id="1-cómo-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</h2>
 
 <p>En la aplicación de ejemplo si realizamos esta llamada.</p>
 
@@ -2546,7 +2546,7 @@
 
 <p>Ahora si la respuesta no es del tipo 2XX la llamada lanzara una excepción tipo <code>HttpClientErrorException</code> y a través de ella podremos capturar el mensaje y el  código HTTP, devuelto, así como las correspondientes cabeceras.</p>
 
-<h4 id="1-1-1-practica">1.1.1 Practica</h4>
+<h4 id="1-1-1-práctica">1.1.1 Práctica</h4>
 
 <p>Si realizamos una llamada como esta:</p>
 
@@ -2641,7 +2641,7 @@ public CustomResponseErrorHandler getErrorHandler() {
 
 <p>Es importante destacar que si el servidor NO devuelve un código HTTP del tipo 2XX el cuerpo de la respuesta del será siempre igual a NULL, <code>ResponseEntity</code>  aunque el servidor haya devuelto algo.</p>
 
-<h4 id="1-2-1-practica">1.2.1 Practica</h4>
+<h4 id="1-2-1-práctica">1.2.1 Práctica</h4>
 
 <p>En el proyecto de ejemplo, cuando realizamos una petición a:</p>
 
@@ -2680,14 +2680,19 @@ public CustomResponseErrorHandler getErrorHandler() {
 <pre><code>Http Status: 400 BAD_REQUEST -&gt;  Error message: {&quot;name&quot;:&quot;Customer ERROR&quot;,&quot;address&quot;:&quot;Address Customer ERROR&quot;}
 </code></pre>
 
-<p>En nuestro ejemplo si pasamos el parámetro CREATED, el servidor devolverá un objeto <code>Customer</code> con el código HTTP <strong>CREATED</strong> . Como en la clase <code>CustomResponseErrorHandler</code> se ha definido que cualquier código HTTP diferente de <strong>OK</strong> será considerada un error,  el cuerpo del mensaje será NULL.</p>
+<p>En nuestro ejemplo si pasamos el parámetro CREATED, el servidor devolverá un objeto <code>Customer</code> con el código HTTP <strong>CREATED</strong> . Como en la clase <code>CustomResponseErrorHandler</code> se ha definido que cualquier código HTTP diferente de <strong>OK</strong> será considerada un error,  el cuerpo del mensaje será NULL ya que se ha consumido el <code>StreamReader</code> en la clase <code>getBody</code> de la clase <code>CustomResponseErrorHandler</code></p>
 
 <pre><code>&gt; curl -s http:/localhost:8080/custom/CREATED
 Http Status: 201 CREATED -&gt; Body: null
 
 </code></pre>
 
-<h2 id="2-que-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Que pasa si la llamada falla porque el servidor esta caído?</h2>
+
+<div class="notices note" ><p>En el siguiente articulo explicare como se puede leer el cuerpo del mensaje y no consumirlo para que la llamada a <code>getBody</code> del <code>ResponseEntity</code> no devuelva NULL.</p>
+</div>
+
+
+<h2 id="2-qué-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?</h2>
 
 <p>En ese caso, tengamos o no tengamos establecido un <strong>handleError</strong>  la llamada a la función <code>getForEntity</code> lanzara una excepción del tipo <code>RestClientException</code>. En esta clase podremos conseguir información sobre el error generado.</p>
 
@@ -3919,20 +3924,20 @@ The server didn't respond: I/O error on GET request for &quot;http://localhost:1
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1564944001"></script>
-    <script src="/js/perfect-scrollbar.min.js?1564944001"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1564944001"></script>
-    <script src="/js/jquery.sticky.js?1564944001"></script>
-    <script src="/js/featherlight.min.js?1564944001"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1564944001"></script>
-    <script src="/js/highlight.pack.js?1564944001"></script>
+    <script src="/js/clipboard.min.js?1565010091"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565010091"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565010091"></script>
+    <script src="/js/jquery.sticky.js?1565010091"></script>
+    <script src="/js/featherlight.min.js?1565010091"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565010091"></script>
+    <script src="/js/highlight.pack.js?1565010091"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1564944001"></script>
-    <script src="/js/learn.js?1564944001"></script>
-    <script src="/js/hugo-learn.js?1564944001"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565010091"></script>
+    <script src="/js/learn.js?1565010091"></script>
+    <script src="/js/hugo-learn.js?1565010091"></script>
 
-    <link href="/mermaid/mermaid.css?1564944001" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1564944001"></script>
+    <link href="/mermaid/mermaid.css?1565010091" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565010091"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
