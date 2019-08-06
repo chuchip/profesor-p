@@ -6,9 +6,13 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+- [Trabajando con la clase RestTemplate-2](/clase-resttemplate-2/)
+
+Segunda parte de la serie de artículos sobre la clase **RestTemplate** donde sigo despejando dudas.
+
 - [Trabajando con la clase RestTemplate](/2019/08/03/trabajando-con-la-clase-resttemplate/)
 
-Utiliza la clase **RestTemplate**  para realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. 
+Primero de los artículos sobre la clase **RestTemplate** . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. 
 
 - [Estableciendo Filtros en Spring](/2019/06/13/estableciendo-filtros-en-spring/)
 

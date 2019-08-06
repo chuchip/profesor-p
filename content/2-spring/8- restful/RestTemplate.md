@@ -1,6 +1,7 @@
 ---
 title: La clase RestTemplate
 pre: "<b>o </b>"
+weight: 10
 author: El Profe
 url: /2019/08/03/trabajando-con-la-clase-resttemplate/
 type: post
@@ -94,7 +95,7 @@ Fácil, ¿ verdad ?. Pero, ¿ no os parece que falta algo ?. Haceros las siguien
 
 Bueno, pues no todas son tan obvias como podría parecer.  Voy a intentar responder a ellas.
 
-## 1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?
+### 1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?
 
 En la aplicación de ejemplo si realizamos esta llamada.
 
@@ -112,7 +113,7 @@ Si **Spring** intentara meter esa variable en el objeto `Customer` no veríamos 
 
 Hay dos opciones:
 
-### 1.1 Capturar la excepción del tipo HttpClientErrorException
+#### 1.1 Capturar la excepción del tipo HttpClientErrorException
 
 Este sería el método fácil. Para ello simplemente deberemos meter entre un **try/catch** la llamada a la función de RestTemplate.
 
@@ -129,7 +130,7 @@ try {
 
 Ahora si la respuesta no es del tipo 2XX la llamada lanzara una excepción tipo `HttpClientErrorException` y a través de ella podremos capturar el mensaje y el  código HTTP, devuelto, así como las correspondientes cabeceras.
 
-#### 1.1.1 Práctica
+##### 1.1.1 Práctica
 
 Si realizamos una llamada como esta: 
 
@@ -157,7 +158,7 @@ Se intentara realizar una petición al puerto 1111, donde no habrá nada escucha
 Servidor no respondio: I/O error on GET request for "http://localhost:1111": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
 ```
 
-### 1.2 Establecer un manejador de Errores personalizados
+#### 1.2 Establecer un manejador de Errores personalizados
 
 Con este método tendremos un manera para decidir nosotros que consideramos un error y realizar acciones sobre él. Además en el caso de no utilizar llamadas que devuelvan un objeto `ResponseEntity` sino el objeto en si podremos acceder a la cabeceras, cuerpo de mensaje, y código devuelto de una manera más personalizada.
 
@@ -231,7 +232,7 @@ if (!httpStatus.is2xxSuccessful())
 
 Es importante destacar que si el servidor NO devuelve un código HTTP del tipo 2XX el cuerpo de la respuesta del será siempre igual a NULL, `ResponseEntity`  aunque el servidor haya devuelto algo.
 
-#### 1.2.1 Práctica
+##### 1.2.1 Práctica
 
 En el proyecto de ejemplo, cuando realizamos una petición a:
 
@@ -285,7 +286,7 @@ Http Status: 201 CREATED -> Body: null
 En el siguiente articulo explicare como se puede leer el cuerpo del mensaje y no consumirlo para que la llamada a `getBody` del `ResponseEntity` no devuelva NULL.
 {{% /notice %}}
 
-## 2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?
+### 2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?
 
 En ese caso, tengamos o no tengamos establecido un **handleError**  la llamada a la función `getForEntity` lanzara una excepción del tipo `RestClientException`. En esta clase podremos conseguir información sobre el error generado.
 
