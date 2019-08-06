@@ -6,10 +6,22 @@
     <description>Recent content in spring on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/spring/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>La clase RestTemplate</title>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
+      <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
+Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
+Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
+RestTemplate esta en el core de Spring por lo cual no es necesario instalar ninguna dependencia.</description>
+    </item>
     
     <item>
       <title>Spring WebFlow con JSP – Configuración</title>
@@ -31,6 +43,16 @@ El programa simulara que entras a la página de un banco donde puedes realizar u
 La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
 Para ello se realizaran los siguientes pasos:
   Crear tablas y cargar datos de prueba en la base de datos.</description>
+    </item>
+    
+    <item>
+      <title>La Clase RestTemplate - 2</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-2/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/clase-resttemplate-2/</guid>
+      <description>En la anterior entrada vimos como lanzar una petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.
+3. Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo mandado, ¿ qué pasara ? Como hemos visto cuando se realiza la petición uno de los parámetros mandados es el objeto que se espera devolver.</description>
     </item>
     
     <item>
@@ -83,18 +105,6 @@ En la anterior entrada empece a explicar como se desplegaría la aplicación y 
 Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
 Empezare describiendo la clase
 @Component public class YagesBussines { @Autowired CalendarioRepositorioService calendarioRepositorio; @Autowired HistVentasRepository histVentasRepository; @Autowired DataSource dataSource; @Autowired private JdbcOperations jdbc; @Bean public JdbcTemplate jdbcTemplate() { return new JdbcTemplate(dataSource); } .</description>
-    </item>
-    
-    <item>
-      <title>La clase RestTemplate</title>
-      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
-      <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
-Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
-Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
-RestTemplate esta en el core de Spring por lo cual no es necesario instalar ninguna dependencia.</description>
     </item>
     
     <item>

@@ -12,19 +12,19 @@
     <title>La clase RestTemplate :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1565069894" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565069894" rel="stylesheet">
-    <link href="/css/hybrid.css?1565069894" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565069894" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565069894" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565069894" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565069894" rel="stylesheet">
-    <link href="/css/theme.css?1565069894" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565069894" rel="stylesheet">
-	<link href="/css/tags.css?1565069894" rel="stylesheet">
+    <link href="/css/nucleus.css?1565092389" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565092389" rel="stylesheet">
+    <link href="/css/hybrid.css?1565092389" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565092389" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565092389" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565092389" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565092389" rel="stylesheet">
+    <link href="/css/theme.css?1565092389" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565092389" rel="stylesheet">
+	<link href="/css/tags.css?1565092389" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565069894"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565092389"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -73,14 +73,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565069894"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565069894"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565092389"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565092389"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565069894"></script>
+<script type="text/javascript" src="/js/search.js?1565092389"></script>
 
     
   </div>
@@ -1113,6 +1113,34 @@ if (!doNotTrack) {
       <li data-nav-id="/2019/08/03/trabajando-con-la-clase-resttemplate/" title="La clase RestTemplate" class="dd-item activeMenu ">
         <a href="/2019/08/03/trabajando-con-la-clase-resttemplate/">
         <b>o </b>La clase RestTemplate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/clase-resttemplate-2/" title="La Clase RestTemplate - 2" class="dd-item ">
+        <a href="/clase-resttemplate-2/">
+        <b>o </b>La Clase RestTemplate - 2
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2389,6 +2417,8 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
+<li>
+<ul>
 <li><a href="#1-cómo-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</a>
 <ul>
 <li><a href="#1-1-capturar-la-excepción-del-tipo-httpclienterrorexception">1.1 Capturar la excepción del tipo HttpClientErrorException</a>
@@ -2401,6 +2431,7 @@ if (!doNotTrack) {
 </ul></li>
 </ul></li>
 <li><a href="#2-qué-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2527,7 +2558,7 @@ if (!doNotTrack) {
 
 <p>Bueno, pues no todas son tan obvias como podría parecer.  Voy a intentar responder a ellas.</p>
 
-<h2 id="1-cómo-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</h2>
+<h3 id="1-cómo-puedo-capturar-el-mensaje-de-error-devuelto-por-el-servidor-si-el-código-devuelto-no-es-ok">1. ¿Cómo puedo capturar el mensaje de error devuelto por el servidor si el código devuelto no es OK?</h3>
 
 <p>En la aplicación de ejemplo si realizamos esta llamada.</p>
 
@@ -2543,7 +2574,7 @@ if (!doNotTrack) {
 
 <p>Hay dos opciones:</p>
 
-<h3 id="1-1-capturar-la-excepción-del-tipo-httpclienterrorexception">1.1 Capturar la excepción del tipo HttpClientErrorException</h3>
+<h4 id="1-1-capturar-la-excepción-del-tipo-httpclienterrorexception">1.1 Capturar la excepción del tipo HttpClientErrorException</h4>
 
 <p>Este sería el método fácil. Para ello simplemente deberemos meter entre un <strong>try/catch</strong> la llamada a la función de RestTemplate.</p>
 
@@ -2559,7 +2590,7 @@ if (!doNotTrack) {
 
 <p>Ahora si la respuesta no es del tipo 2XX la llamada lanzara una excepción tipo <code>HttpClientErrorException</code> y a través de ella podremos capturar el mensaje y el  código HTTP, devuelto, así como las correspondientes cabeceras.</p>
 
-<h4 id="1-1-1-práctica">1.1.1 Práctica</h4>
+<h5 id="1-1-1-práctica">1.1.1 Práctica</h5>
 
 <p>Si realizamos una llamada como esta:</p>
 
@@ -2583,7 +2614,7 @@ if (!doNotTrack) {
 <pre><code>Servidor no respondio: I/O error on GET request for &quot;http://localhost:1111&quot;: Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
 </code></pre>
 
-<h3 id="1-2-establecer-un-manejador-de-errores-personalizados">1.2 Establecer un manejador de Errores personalizados</h3>
+<h4 id="1-2-establecer-un-manejador-de-errores-personalizados">1.2 Establecer un manejador de Errores personalizados</h4>
 
 <p>Con este método tendremos un manera para decidir nosotros que consideramos un error y realizar acciones sobre él. Además en el caso de no utilizar llamadas que devuelvan un objeto <code>ResponseEntity</code> sino el objeto en si podremos acceder a la cabeceras, cuerpo de mensaje, y código devuelto de una manera más personalizada.</p>
 
@@ -2654,7 +2685,7 @@ public CustomResponseErrorHandler getErrorHandler() {
 
 <p>Es importante destacar que si el servidor NO devuelve un código HTTP del tipo 2XX el cuerpo de la respuesta del será siempre igual a NULL, <code>ResponseEntity</code>  aunque el servidor haya devuelto algo.</p>
 
-<h4 id="1-2-1-práctica">1.2.1 Práctica</h4>
+<h5 id="1-2-1-práctica">1.2.1 Práctica</h5>
 
 <p>En el proyecto de ejemplo, cuando realizamos una petición a:</p>
 
@@ -2705,7 +2736,7 @@ Http Status: 201 CREATED -&gt; Body: null
 </div>
 
 
-<h2 id="2-qué-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?</h2>
+<h3 id="2-qué-pasa-si-la-llamada-falla-porque-el-servidor-esta-caído">2.  ¿Qué pasa si la llamada falla porque el servidor esta caído?</h3>
 
 <p>En ese caso, tengamos o no tengamos establecido un <strong>handleError</strong>  la llamada a la función <code>getForEntity</code> lanzara una excepción del tipo <code>RestClientException</code>. En esta clase podremos conseguir información sobre el error generado.</p>
 
@@ -3361,6 +3392,22 @@ The server didn't respond: I/O error on GET request for &quot;http://localhost:1
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3927,7 +3974,7 @@ The server didn't respond: I/O error on GET request for &quot;http://localhost:1
 			<a class="nav nav-prev" href="/2-spring/8-restful/" title="Restful"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/clase-resttemplate-2/" title="La Clase RestTemplate - 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3937,20 +3984,20 @@ The server didn't respond: I/O error on GET request for &quot;http://localhost:1
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565069894"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565069894"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565069894"></script>
-    <script src="/js/jquery.sticky.js?1565069894"></script>
-    <script src="/js/featherlight.min.js?1565069894"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565069894"></script>
-    <script src="/js/highlight.pack.js?1565069894"></script>
+    <script src="/js/clipboard.min.js?1565092389"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565092389"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565092389"></script>
+    <script src="/js/jquery.sticky.js?1565092389"></script>
+    <script src="/js/featherlight.min.js?1565092389"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565092389"></script>
+    <script src="/js/highlight.pack.js?1565092389"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565069894"></script>
-    <script src="/js/learn.js?1565069894"></script>
-    <script src="/js/hugo-learn.js?1565069894"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565092389"></script>
+    <script src="/js/learn.js?1565092389"></script>
+    <script src="/js/hugo-learn.js?1565092389"></script>
 
-    <link href="/mermaid/mermaid.css?1565069894" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565069894"></script>
+    <link href="/mermaid/mermaid.css?1565092389" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565092389"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

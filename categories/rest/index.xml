@@ -6,7 +6,7 @@
     <description>Recent content in rest on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Fri, 02 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/rest/index.xml" rel="self" type="application/rss+xml" />
     
@@ -43,6 +43,18 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
     </item>
     
     <item>
+      <title>La clase RestTemplate</title>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
+      <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
+Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
+Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
+RestTemplate esta en el core de Spring por lo cual no es necesario instalar ninguna dependencia.</description>
+    </item>
+    
+    <item>
       <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
       <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
       <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
@@ -63,6 +75,16 @@ Esta aplicación seria una variación del que explique en la entrada http://www.
       <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
 El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
 Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
+    </item>
+    
+    <item>
+      <title>La Clase RestTemplate - 2</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-2/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/clase-resttemplate-2/</guid>
+      <description>En la anterior entrada vimos como lanzar una petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.
+3. Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo mandado, ¿ qué pasara ? Como hemos visto cuando se realiza la petición uno de los parámetros mandados es el objeto que se espera devolver.</description>
     </item>
     
     <item>
@@ -102,18 +124,6 @@ En la anterior entrada empece a explicar como se desplegaría la aplicación y 
       
       <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
       <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>La clase RestTemplate</title>
-      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
-      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
-      <description>Este será el primero de una serie de entradas sobre la clase RestTemplate de Spring.
-Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente. Es una gran alternativa dada por Spring sobre otras librerías ya existentes en el mercado.
-Como siempre tenéis el proyecto sobre el que esta basado este artículo en: https://github.com/chuchip/RestTemplateExample
-RestTemplate esta en el core de Spring por lo cual no es necesario instalar ninguna dependencia.</description>
     </item>
     
     <item>
