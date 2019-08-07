@@ -116,6 +116,7 @@ public class KafkaTestListener {
 	   }
 }
 ```
+
 En la función <strong>listenTopic1</strong> con la etiqueta <strong>@KafkaListener</strong>, definiremos el <em>topics</em> , en plural pues pueden ser varios, que queremos escuchar. En este caso escucharemos los definidos en la variable <strong>message.topic.name</strong> del fichero <em>properties</em> de <strong>Spring Boot</strong>. Si esa variable no estuviera definida, tendrá el valor <code>profesorp</code>. Además especificamos el <strong>grupo</strong> al que pertenece el <em>listener</em>. Recordar si no lo definimos cogerá el que hayamos configurado con el parametro <strong>spring.kafka.consumer.group-id</strong>
 
 En la función <strong>listenTopic2</strong> recibiremos los mensajes del <em>topic</em> <strong>message.topic.name2</strong>.
@@ -143,13 +144,13 @@ Para hacer las pruebas he creado el fichero <strong>jar</strong> a través de ma
 
 ```
 java -Dtopicname=$TOPICNAME  -Dtopicname2=$TOPICNAME2 -Dgroupid=$GROUPID -jar  ./kafkatest.jar
-````
-
+```
 
 Como variables de entorno habremos definido TOPICNAME,TOPICNAME2 y GROUPID.
 
 
-```export TOPICNAME="mytopic_1"
+```
+export TOPICNAME="mytopic_1"
 export TOPICNAME2="mytopic_2"
 EXPORT GROUPID="profe_group"
 ```
@@ -207,7 +208,8 @@ Para probar la aplicación en un entorno más real vamos a dockerizar nuestra ap
 
 El fichero <code>DockerFile</code> sera el siguiente:
      
-```FROM openjdk:8-jdk-alpine
+```
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ENV JAR_FILE kafkatest.jar
 ENV TOPICNAMER rofesorp
