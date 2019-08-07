@@ -12,19 +12,19 @@
     <title>Mensajería con Kafka y Spring Boot :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1565092390" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1565092390" rel="stylesheet">
-    <link href="/css/hybrid.css?1565092390" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1565092390" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1565092390" rel="stylesheet">
-    <link href="/css/auto-complete.css?1565092390" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1565092390" rel="stylesheet">
-    <link href="/css/theme.css?1565092390" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1565092390" rel="stylesheet">
-	<link href="/css/tags.css?1565092390" rel="stylesheet">
+    <link href="/css/nucleus.css?1565169018" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565169018" rel="stylesheet">
+    <link href="/css/hybrid.css?1565169018" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565169018" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565169018" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565169018" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565169018" rel="stylesheet">
+    <link href="/css/theme.css?1565169018" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565169018" rel="stylesheet">
+	<link href="/css/tags.css?1565169018" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1565092390"></script>
+    <script src="/js/jquery-3.3.1.min.js?1565169018"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -73,14 +73,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1565092390"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1565092390"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1565169018"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1565169018"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1565092390"></script>
+<script type="text/javascript" src="/js/search.js?1565169018"></script>
 
     
   </div>
@@ -2381,6 +2381,7 @@ if (!doNotTrack) {
 <li><a href="#2-enviando-mensajes">2. Enviando mensajes</a></li>
 <li><a href="#3-recibiendo-mensajes">3. Recibiendo mensajes</a></li>
 <li><a href="#probando-la-aplicación">Probando la aplicación</a></li>
+<li><a href="#dockerizando-la-aplicación">Dockerizando la aplicación</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2550,82 +2551,59 @@ public class KafkaTestController {
 <p>Para hacer las pruebas he creado el fichero <strong>jar</strong> a través de maven (<strong><em>maven package</em></strong>) y he creado este pequeño script al que he llamado <code>javaapp.sh</code> que lo ejecuta:</p>
 
 <pre><code>java -Dtopicname=$TOPICNAME  -Dtopicname2=$TOPICNAME2 -Dgroupid=$GROUPID -jar  ./kafkatest.jar
-````
-
-
-Como variables de entorno habremos definido TOPICNAME,TOPICNAME2 y GROUPID.
-
-
 </code></pre>
 
-<p>export TOPICNAME=&ldquo;mytopic_1&rdquo;
-export TOPICNAME2=&ldquo;mytopic_2&rdquo;
-EXPORT GROUPID=&ldquo;profe_group&rdquo;</p>
+<p>Como variables de entorno habremos definido TOPICNAME,TOPICNAME2 y GROUPID.</p>
 
-<pre><code>
-Recordar que tenemos que tener creados los topics en el servidor de kafka. Eso se puede hacer con el comando
-
-
+<pre><code>export TOPICNAME=&quot;mytopic_1&quot;
+export TOPICNAME2=&quot;mytopic_2&quot;
+EXPORT GROUPID=&quot;profe_group&quot;
 </code></pre>
 
-<blockquote>
-<p>bin/kafka-topics.sh &ndash;create &ndash;zookeeper localhost:2181 &ndash;replication-factor 1 &ndash;partitions 1 &ndash;topic mytopic_1
-bin/kafka-topics.sh &ndash;create &ndash;zookeeper localhost:2181 &ndash;replication-factor 1 &ndash;partitions 1 &ndash;topic mytopic_2</p>
+<p>Recordar que tenemos que tener creados los topics en el servidor de kafka. Eso se puede hacer con el comando</p>
 
-<pre><code>
-Para comprobar que están creados los &lt;em&gt;topics&lt;/em&gt; podemos ejecutar el comando
-
+<pre><code>&gt; bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic mytopic_1
+&gt; bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic mytopic_2
 </code></pre>
 
-<p>bin/kafka-topics.sh &ndash;list &ndash;zookeeper localhost:2181</p>
+<p>Para comprobar que están creados los <em>topics</em> podemos ejecutar el comando</p>
 
-<pre><code>
-Una vez tengamos la aplicación corriendo en un terminal, abrimos otro, y ejecutamos la sentencia:
-
-
+<pre><code>bin/kafka-topics.sh --list --zookeeper localhost:2181
 </code></pre>
 
-<p>curl &ndash;request POST localhost:8080/add/mytopic_1 -d &ldquo;Mensaje para topic1 &ldquo;</p>
+<p>Una vez tengamos la aplicación corriendo en un terminal, abrimos otro, y ejecutamos la sentencia:</p>
 
-<pre><code>
-La cual hace una petición POST a la URL &lt;strong&gt;localhost:8080/add/topic2&lt;/strong&gt; . En el cuerpo de esta petición ira el texto &lt;em&gt;&amp;#8220;Mensaje para topic profegroup&amp;#8221;&lt;/em&gt;
-
-La salida que veremos en nuestro programa será la siguiente
+<pre><code>&gt; curl --request POST localhost:8080/add/mytopic_1 -d &quot;Mensaje para topic1 &quot;
 </code></pre>
 
-<p>Sent message=[Mensaje+para+topic+mytopic_1=] with offset=[13]
-Recieved Message of mytopic_1 in  listener:  Mensaje+para+topic1=</p>
+<p>La cual hace una petición POST a la URL <strong>localhost:8080/add/topic2</strong> . En el cuerpo de esta petición ira el texto <em>&#8220;Mensaje para topic profegroup&#8221;</em></p>
 
-<pre><code>
-Con lo cual vemos, como se ha enviado y luego recibido correctamente en el **topic1**.
- 
-Si ahora ejecutamos la sentencia:
+<p>La salida que veremos en nuestro programa será la siguiente</p>
 
+<pre><code>Sent message=[Mensaje+para+topic+mytopic_1=] with offset=[13]
+Recieved Message of mytopic_1 in  listener:  Mensaje+para+topic1=
 </code></pre>
 
-<p>curl &ndash;request POST localhost:8080/add/mytopic_2 -d &ldquo;Mensaje para topic2&rdquo;</p>
+<p>Con lo cual vemos, como se ha enviado y luego recibido correctamente en el <strong>topic1</strong>.</p>
 
-<pre><code>
+<p>Si ahora ejecutamos la sentencia:</p>
 
-Observaremos la siguiente salida:
-
-
+<pre><code>curl --request POST localhost:8080/add/mytopic_2 -d &quot;Mensaje para topic2&quot;
 </code></pre>
 
-<p>Sent message=[Mensaje+para+topic+mytopic_2=] with offset=[32]
-Recieved Message of topic1 in  listener: Mensaje+para+topic+topic2=</p>
+<p>Observaremos la siguiente salida:</p>
 
-<pre><code>
-###  Dockerizando la aplicación
-
-
-Para probar la aplicación en un entorno más real vamos a dockerizar nuestra aplicación.
-
-El fichero &lt;code&gt;DockerFile&lt;/code&gt; sera el siguiente:
-     
+<pre><code>Sent message=[Mensaje+para+topic+mytopic_2=] with offset=[32]
+Recieved Message of topic1 in  listener: Mensaje+para+topic+topic2=
 </code></pre>
 
-<p>FROM openjdk:8-jdk-alpine
+<h3 id="dockerizando-la-aplicación">Dockerizando la aplicación</h3>
+
+<p>Para probar la aplicación en un entorno más real vamos a dockerizar nuestra aplicación.</p>
+
+<p>El fichero <code>DockerFile</code> sera el siguiente:</p>
+
+<pre><code>FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ENV JAR_FILE kafkatest.jar
 ENV TOPICNAMER rofesorp
@@ -2634,75 +2612,54 @@ ENV GROUPID profe_group
 COPY $JAR_FILE /tmp/kafkatest.jar
 COPY javaapp.sh /tmp/
 EXPOSE 8080
-ENTRYPOINT &ldquo;/tmp/javaapp.sh&rdquo;</p>
-
-<pre><code>
-
-En el directorio donde este el fichero &lt;strong&gt;DockerFile&lt;/strong&gt; deberemos tener también &lt;strong&gt;javaapp.sh&lt;/strong&gt; y &lt;strong&gt;kafakatest.jar&lt;/strong&gt;
-
-
-
-Creamos la imagen con el comando:
-
+ENTRYPOINT &quot;/tmp/javaapp.sh&quot;
 </code></pre>
 
-<p>docker build -t kafkatest .</p>
+<p>En el directorio donde este el fichero <strong>DockerFile</strong> deberemos tener también <strong>javaapp.sh</strong> y <strong>kafakatest.jar</strong></p>
 
-<pre><code>     
+<p>Creamos la imagen con el comando:</p>
 
-Antes de ejecutarlo debemos asegurarnos que nuestro servidor de Kafka este bien configurado.
-
-Una vez un consumidor llama al servidor, lo primero que hace este servidor es comunicarle al cliente la dirección donde esta el servidor &lt;em&gt;lider&lt;/em&gt; con el que debe comunicarse. Normalmente esto no es problema, pero cuando la red es un poco compleja, como en el caso de Docker o máquinas virtuales hay que asegurarse que el nombre del &lt;em&gt;lider&lt;/em&gt; que suministra Kafka, es accesible por el &lt;em&gt;consumidor&lt;/em&gt;.
-  
-Como Docker crea siempre un interface virtual en la dirección &lt;strong&gt;172.17.0.1&lt;/strong&gt;, añadiremos esta IP al fichero &lt;strong&gt;/etc/hosts&lt;/strong&gt;, añadiéndole la línea
-
-
+<pre><code>docker build -t kafkatest .
 </code></pre>
 
-<p>172.17.0.1 kafkaserver</p>
+<p>Antes de ejecutarlo debemos asegurarnos que nuestro servidor de Kafka este bien configurado.</p>
 
-<pre><code>
-Y en el fichero &lt;strong&gt;config/server.properties&lt;/strong&gt; definiremos las siguientes variables:
-     
+<p>Una vez un consumidor llama al servidor, lo primero que hace este servidor es comunicarle al cliente la dirección donde esta el servidor <em>lider</em> con el que debe comunicarse. Normalmente esto no es problema, pero cuando la red es un poco compleja, como en el caso de Docker o máquinas virtuales hay que asegurarse que el nombre del <em>lider</em> que suministra Kafka, es accesible por el <em>consumidor</em>.</p>
 
+<p>Como Docker crea siempre un interface virtual en la dirección <strong>172.17.0.1</strong>, añadiremos esta IP al fichero <strong>/etc/hosts</strong>, añadiéndole la línea</p>
+
+<pre><code>172.17.0.1 kafkaserver
 </code></pre>
 
-<p>listeners=PLAINTEXT://kafkaserver:9092
-advertised.listeners=PLAINTEXT://kafkaserver:9092</p>
+<p>Y en el fichero <strong>config/server.properties</strong> definiremos las siguientes variables:</p>
 
-<pre><code>
-
-La primera línea especifica donde debe escuchar el servidor de Kafka y la segunda el nombre que mandara al &lt;strong&gt;consumidor&lt;/strong&gt; cuando pregunte por el &lt;em&gt;lider&lt;/em&gt; con el que debe conectarse.
-
-Reiniciamos el servidor de Kafka, y ejecutamos el contenedor docker con la siguiente sentencia:
-
+<pre><code>listeners=PLAINTEXT://kafkaserver:9092
+advertised.listeners=PLAINTEXT://kafkaserver:9092
 </code></pre>
 
-<p>docker run -i -t  &ndash;name=kafkatest1 -p 8880:8080  &ndash;hostname kafkatest1   -e &ldquo;TOPICNAME=my_topic1&rdquo;  -e &ldquo;TOPICNAME2=my_topic2&rdquo; -e &ldquo;GROUPID=profe_group&rdquo;  &ndash;add-host kafkaserver:172.17.0.1  kafkatest</p>
+<p>La primera línea especifica donde debe escuchar el servidor de Kafka y la segunda el nombre que mandara al <strong>consumidor</strong> cuando pregunte por el <em>lider</em> con el que debe conectarse.</p>
 
-<pre><code>
-En otro terminal ejecutamos el mismo comando cambiando el nombre del contenedor y mapeando el puerto 8080 al 8881
-   
+<p>Reiniciamos el servidor de Kafka, y ejecutamos el contenedor docker con la siguiente sentencia:</p>
+
+<pre><code>docker run -i -t  --name=kafkatest1 -p 8880:8080  --hostname kafkatest1   -e &quot;TOPICNAME=my_topic1&quot;  -e &quot;TOPICNAME2=my_topic2&quot; -e &quot;GROUPID=profe_group&quot;  --add-host kafkaserver:172.17.0.1  kafkatest
 </code></pre>
 
-<p>docker run -i -t  &ndash;name=kafkatest2 -p 8881:8080  &ndash;hostname kafkatest2   -e &ldquo;TOPICNAME=my_topic2&rdquo;  -e &ldquo;TOPICNAME2=my_topic2&rdquo; -e &ldquo;GROUPID=profe_group&rdquo;  &ndash;add-host kafkaserver:172.17.0.1  kafkatest</p>
+<p>En otro terminal ejecutamos el mismo comando cambiando el nombre del contenedor y mapeando el puerto 8080 al 8881</p>
 
-<pre><code>
-Si en un tercer terminal ejecutamos la sentencia
+<pre><code>docker run -i -t  --name=kafkatest2 -p 8881:8080  --hostname kafkatest2   -e &quot;TOPICNAME=my_topic2&quot;  -e &quot;TOPICNAME2=my_topic2&quot; -e &quot;GROUPID=profe_group&quot;  --add-host kafkaserver:172.17.0.1  kafkatest
 </code></pre>
 
-<p>curl &ndash;request POST localhost:8880/add/my_topic1 -d &ldquo;Mensaje para topic numero 1&rdquo;</p>
+<p>Si en un tercer terminal ejecutamos la sentencia</p>
 
-<pre><code>
-Observaremos que solo uno de los dos programas recibe el mensaje de Kafka pues ambos pertenecen al mismo grupo (&lt;strong&gt;profe_group&lt;/strong&gt;)
-
-Abriendo un nuevo terminal, volvemos a lanzar una nueva instancia de docker, especificando &lt;strong&gt;otro_grupo&lt;/strong&gt;.
-
+<pre><code>curl --request POST localhost:8880/add/my_topic1 -d &quot;Mensaje para topic numero 1&quot;
 </code></pre>
 
-<p>docker run -i -t  &ndash;name=kafkatest3 -p 8881:8080  &ndash;hostname kafkatest2   -e &ldquo;TOPICNAME=my_topic1&rdquo;  -e &ldquo;TOPICNAME2=my_topic2&rdquo; -e &ldquo;GROUPID=otro_grupo&rdquo;  &ndash;add-host kafkaserver:172.17.0.1  kafkatest
-```</p>
-</blockquote>
+<p>Observaremos que solo uno de los dos programas recibe el mensaje de Kafka pues ambos pertenecen al mismo grupo (<strong>profe_group</strong>)</p>
+
+<p>Abriendo un nuevo terminal, volvemos a lanzar una nueva instancia de docker, especificando <strong>otro_grupo</strong>.</p>
+
+<pre><code>docker run -i -t  --name=kafkatest3 -p 8881:8080  --hostname kafkatest2   -e &quot;TOPICNAME=my_topic1&quot;  -e &quot;TOPICNAME2=my_topic2&quot; -e &quot;GROUPID=otro_grupo&quot;  --add-host kafkaserver:172.17.0.1  kafkatest
+</code></pre>
 
 <p>Veremos que la anterior petición <strong>curl</strong> hace que los mensajes sean recibidos en dos instancias en <strong>docker</strong>. En una de las dos, que tiene el grupo <strong>profe_group</strong> y en la que tiene el grupo <strong>otro_grupo</strong></p>
 
@@ -3946,20 +3903,20 @@ Abriendo un nuevo terminal, volvemos a lanzar una nueva instancia de docker, esp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1565092390"></script>
-    <script src="/js/perfect-scrollbar.min.js?1565092390"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1565092390"></script>
-    <script src="/js/jquery.sticky.js?1565092390"></script>
-    <script src="/js/featherlight.min.js?1565092390"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1565092390"></script>
-    <script src="/js/highlight.pack.js?1565092390"></script>
+    <script src="/js/clipboard.min.js?1565169018"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565169018"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565169018"></script>
+    <script src="/js/jquery.sticky.js?1565169018"></script>
+    <script src="/js/featherlight.min.js?1565169018"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565169018"></script>
+    <script src="/js/highlight.pack.js?1565169018"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1565092390"></script>
-    <script src="/js/learn.js?1565092390"></script>
-    <script src="/js/hugo-learn.js?1565092390"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565169018"></script>
+    <script src="/js/learn.js?1565169018"></script>
+    <script src="/js/hugo-learn.js?1565169018"></script>
 
-    <link href="/mermaid/mermaid.css?1565092390" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1565092390"></script>
+    <link href="/mermaid/mermaid.css?1565169018" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565169018"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
