@@ -19,7 +19,7 @@ tags:
  
 ---
 
-En [la anterior entrada](/2019/08/03/trabajando-con-la-clase-resttemplate/) vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.
+En [la anterior entrada](/2019/08/03/trabajando-con-la-clase-resttemplate/) vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.<!--more-->
 
 ### 3. Y si el servidor devuelve un OK, pero lo devuelto no es un objeto del tipo mandado,  ¿ qué pasara ?
 

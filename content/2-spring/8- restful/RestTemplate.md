@@ -20,7 +20,7 @@ tags:
 
 Este será el primero de una serie de entradas sobre la clase  **RestTemplate** de **Spring.**
 
-Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización  de los objetos de una manera transparente. Es una gran alternativa dada por **Spring** sobre otras librerías ya existentes en el mercado.
+Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización  de los objetos de una manera transparente. Es una gran alternativa dada por **Spring** sobre otras librerías ya existentes en el mercado.<!--more-->
 
 Como siempre tenéis el proyecto sobre el que esta basado este artículo en: [https://github.com/chuchip/RestTemplateExample](https://github.com/chuchip/RestTemplateExample)
 

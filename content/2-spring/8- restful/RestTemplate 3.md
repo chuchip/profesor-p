@@ -19,7 +19,9 @@ tags:
  
 ---
 
-Esta es la tercera y última  entrada sobre la clase **RestTemplate**. Puedes ver las anteriores entradas en [Trabajando con la clase RestTemplate](/2019/08/03/trabajando-con-la-clase-resttemplate/) y en
+Esta es la tercera y última  entrada sobre la clase **RestTemplate**.<!--more-->
+
+Puedes ver las anteriores entradas en [Trabajando con la clase RestTemplate](/2019/08/03/trabajando-con-la-clase-resttemplate/) y en
 [La clase RestTemplate-2](/clase-resttemplate-2/).
 
 En esta ocasión hablare sobre las funciones más utilizadas en esta clase y como usarlas.
