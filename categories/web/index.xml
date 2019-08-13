@@ -54,6 +54,18 @@ RestTemplate esta en el core de Spring por lo cual no es necesario instalar ning
     </item>
     
     <item>
+      <title>La Clase RestTemplate - 3</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-3/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/clase-resttemplate-3/</guid>
+      <description>Esta es la tercera y última entrada sobre la clase RestTemplate. Puedes ver las anteriores entradas en Trabajando con la clase RestTemplate y en La clase RestTemplate-2.
+En esta ocasión hablare sobre las funciones más utilizadas en esta clase y como usarlas.
+Para más detalles visita la pagina oficial de Spring https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html.
+Antes de enumerar como realizar las diferentes tipos de peticiones insistiré en que c siempre podremos recibir directamente el cuerpo el mensaje o un ResponseEntity.</description>
+    </item>
+    
+    <item>
       <title>Estableciendo filtros en Spring</title>
       <link>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
       <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>

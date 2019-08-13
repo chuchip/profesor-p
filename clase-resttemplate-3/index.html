@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Angular :: Documentacion en español</title>
+    <title>La Clase RestTemplate - 3 :: Documentacion en español</title>
 
     
     <link href="/css/nucleus.css?1565681704" rel="stylesheet">
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/4-angular/">
+  <body class="" data-url="/clase-resttemplate-3/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -299,7 +299,7 @@ if (!doNotTrack) {
 
     
     <li data-nav-id="/2-spring/" title="Spring"  class="dd-item 
-        
+        parent
         lineaMenu 
         		"
        >		
@@ -1075,7 +1075,7 @@ if (!doNotTrack) {
 
     
     <li data-nav-id="/2-spring/8-restful/" title="Restful"  class="dd-item 
-        
+        parent
         lineaMenu 
         		"
        >		
@@ -1110,6 +1110,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/2019/08/03/trabajando-con-la-clase-resttemplate/" title="La clase RestTemplate" class="dd-item ">
+        <a href="/2019/08/03/trabajando-con-la-clase-resttemplate/">
+        <b>o </b>La clase RestTemplate
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1131,6 +1138,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/clase-resttemplate-2/" title="La Clase RestTemplate - 2" class="dd-item ">
+        <a href="/clase-resttemplate-2/">
+        <b>o </b>La Clase RestTemplate - 2
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1152,6 +1166,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/clase-resttemplate-3/" title="La Clase RestTemplate - 3" class="dd-item activeMenu ">
+        <a href="/clase-resttemplate-3/">
+        <b>o </b>La Clase RestTemplate - 3
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1173,6 +1194,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" class="dd-item ">
+        <a href="/2019/06/13/estableciendo-filtros-en-spring/">
+        <b>o </b>Estableciendo filtros en Spring
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1194,6 +1222,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/" title="Usando Zuul para redirigir peticiones REST" class="dd-item ">
+        <a href="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/">
+        <b>o </b>Usando Zuul para redirigir peticiones REST
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1215,6 +1250,13 @@ if (!doNotTrack) {
   
     
 	
+      <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/" title="Personalizar salidas de códigos HTTP en Spring Boot" class="dd-item ">
+        <a href="/2018/11/20/personalizar-codigo-http-en-spring-boot/">
+        <b>o </b>Personalizar salidas de códigos HTTP en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
 	 
   
  
@@ -1408,14 +1450,14 @@ if (!doNotTrack) {
 
  
   
-  	 
+  	
 		 
 	
 
     
     <li data-nav-id="/4-angular/" title="Angular"  class="dd-item 
-        parent
-        activeMenu 
+        
+        lineaMenu 
         		"
        >		
       <a href="/4-angular/">
@@ -2361,6 +2403,8 @@ if (!doNotTrack) {
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2372,7 +2416,21 @@ if (!doNotTrack) {
             
           
           
-            <a href='/'>Bienvenido a mi página</a> > Angular
+
+            
+            
+          
+          
+
+            
+            
+          
+          
+            <a href='/'>Bienvenido a mi página</a> > <a href='/2-spring/'>Spring</a> > <a href='/2-spring/8-restful/'>Restful</a> > La Clase RestTemplate - 3
+          
+         
+          
+         
           
          
           
@@ -2381,146 +2439,208 @@ if (!doNotTrack) {
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-peticiones-get">1. Peticiones GET</a></li>
+<li><a href="#2-peticiones-post">2. Peticiones POST</a></li>
+<li><a href="#3-otras-peticiones">3. Otras peticiones.</a></li>
+<li><a href="#4-peticiones-avanzadas-con-exchange">4. Peticiones avanzadas con Exchange</a></li>
+<li><a href="#5-recibir-contenedores-de-objetos-genéricos">5. Recibir contenedores de  objetos genéricos.</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+ 					
+										
+                
               </div>
             </div>
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/java">java</a>
+
+  <a class="tag-link" href="/tags/rest">rest</a>
+
+  <a class="tag-link" href="/tags/spring">spring</a>
+
+</div>
+
         </div>
         
-          <div id="chapter"> 
-        
         <div id="body-inner">
+          
+            <h1>
+              
+			  
+				La Clase RestTemplate - 3 
+			  
+			   
+				<class id ="fecha">
+				August 06, 2019 </div>
+			  
+            </h1>
+			
           
         
 
 
 
 
-	<p>Artículos diversos sobre el framework Angular</p>
 
-<ul class="children children-li">
-	
+<p>Esta es la tercera y última  entrada sobre la clase <strong>RestTemplate</strong>. Puedes ver las anteriores entradas en <a href="/2019/08/03/trabajando-con-la-clase-resttemplate/">Trabajando con la clase RestTemplate</a> y en
+<a href="/clase-resttemplate-2/">La clase RestTemplate-2</a>.</p>
 
-	
-		
-			
-		
-	
+<p>En esta ocasión hablare sobre las funciones más utilizadas en esta clase y como usarlas.</p>
 
-	
+<p>Para más detalles visita la pagina oficial de <strong>Spring</strong> <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html">https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html</a>.</p>
 
-	
-		
-	
-		
-			
-				
-<li>
-<a href="/4-angular/curso/" >Curso de Angular 6</a>
-</li>
-				
+<p>Antes de enumerar como realizar las diferentes tipos de peticiones insistiré en que c siempre podremos recibir directamente el cuerpo el mensaje  o un <strong>ResponseEntity</strong>. Como comente anteriormente siempre es mejor recibir el <strong>ResponseEntity</strong> pues de otra manera no tendremos información sobre el resultado de la petición.  Para recibir el cuerpo podremos usar las funciones tipo <strong>getForObject</strong>,  <strong>postForObject</strong>, etc.</p>
 
-				
-					
-<p align="left">En esta página iré poniendo las sucesivas entradas donde intentare dar un curso básico sobre Angular 6
-En el curso se desarrollara una aplicación que usando peticiones RESTFUL, realizara una consulta mostrando un histórico de ventas. En la aplicación se usara Boostrap y se explicara como utilizar rultas.
-La aplicación backend, en el servidor, esta hecho en Java, usando Spring Framework, y se puede ver en su desarrollo en la pagina: http://www.</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/4-angular/aplicacion/" >Aplicación usando Java y Angular</a>
-</li>
-				
+<h3 id="1-peticiones-get">1. Peticiones GET</h3>
 
-				
-					
-<p align="left">A continuación detallo las entradas donde voy explicando, paso a paso, como crear un aplicación, que es una migración de una consulta realizada en el ERP Anjelica, el cual es software libre . Esta es la pantalla original de la aplicación en Anjelica.
-Esta aplicación es una consulta donde la parte del servidor se realiza en Java, usando Spring como Framework y la parte del cliente se realiza en Angular.</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/2018/10/08/aplicacion-crud-en-angular/" >Aplicación CRUD en Angular</a>
-</li>
-				
+<p>Este tipo de petición es la más sencilla y en las anteriores entradas ya se han realizado varias.</p>
 
-				
-					
-<p align="left">En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
-Por supuesto el protocolo para las comunicaciones es JSON.
-El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
-Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/2018/09/24/hablando-espanol/" >Angular – Hablando español</a>
-</li>
-				
+<p>Añadir que también disponemos de la función</p>
 
-				
-					
-<p align="left">Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.
-El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</p>
-					
-				
-			
-			
-		
-	
-		
-			
-				
-<li>
-<a href="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/" >Angular 6 – Añadir Bootstrap 4 con JQuery</a>
-</li>
-				
+<pre><code>public &lt;T&gt; ResponseEntity&lt;T&gt; getForEntity(String url,
+                                          Class&lt;T&gt; responseType,
+                                          Map&lt;String,?&gt; uriVariables)
+                                   throws RestClientException
+</code></pre>
 
-				
-					
-<p align="left">Recordar lo primero que para utilizar toda la potencia de BootStrap, necesitamos tener instaladas las librerias de JQuery y Popper Hay varias maneras de instalar estas librerías.
- Localmente usando npm  Una vez estemos situados el directorio principal del proyecto, desde tu terminal preferido ejecutar las instrucciones siguientes:
-npm install bootstrap@4 jquery popper.js --save Esto nos instalara los archivos necesarios bajo el directorio node-modules. 
-Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías JavaScript de BootStrap, JQuery y Pooper.</p>
-					
-				
-			
-			
-		
-	
+<p>En ella, podremos pasar un objeto <code>Map&lt;String,?&gt;</code> para hacer sustituciones sobre la URL.</p>
 
-	
-</ul>
+<p>Es decir si la URL mandada, como en el proyecto de ejemplo es: <code>http://8080/server?queryParam={queryParam}</code> mandaremos un <code>Map</code>  con el valor deseado para la clave <code>queryParam</code>.</p>
 
+<pre><code>Map&lt;String,String&gt; sustitute=new HashMap&lt;&gt;();
+sustitute.put(&quot;queryParam&quot;,path);
+</code></pre>
 
+<h3 id="2-peticiones-post">2. Peticiones POST</h3>
+
+<p>La única diferencia con la anterior petición es que deberemos incluir el objeto a enviar. Ese objeto puede ser del tipo  <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/http/HttpEntity.html"><code>HttpEntity</code></a>  si necesitamos incluir cabeceras en la petición.</p>
+
+<pre><code>HttpHeaders headers = new HttpHeaders();
+headers.setContentType(MediaType.APPLICATION_JSON);
+headers.set(&quot;my-id&quot;, &quot;profe-test&quot;);
+HttpEntity&lt;Customer&gt; httpEntity = new HttpEntity&lt;&gt;(customer,headers);
+ResponseEntity&lt;String&gt; responseEntity = restTemplateInterceptor.postForEntity( localUrl, httpEntity,String.class);
+</code></pre>
+
+<p>En el proyecto de ejemplo si ejecutamos lo siguiente.</p>
+
+<pre><code>&gt; curl -XPOST http://localhost:8080/client/ -H &quot;content-type: application/json&quot; -d '{&quot;name&quot;: &quot;Profe&quot;,&quot;address&quot;:&quot;Spain&quot;}'
+Http Status: 200 OK -&gt; {&quot;name&quot;:&quot;Profe&quot;,&quot;address&quot;:&quot;Spain&quot;}
+</code></pre>
+
+<p>En los logs del programa veremos:</p>
+
+<pre><code>Client - Received custom request type POST. Customer: Customer(name=Profe, address=Spain)
+===========================request begin================================================
+URI         : http://localhost:8080
+Method      : POST
+Headers     : [Accept:&quot;text/plain, application/json, application/*+json, */*&quot;, Content-Type:&quot;application/json&quot;, my-id:&quot;profe-test&quot;, Content-Length:&quot;34&quot;]
+Request body: {&quot;name&quot;:&quot;Profe&quot;,&quot;address&quot;:&quot;Spain&quot;}
+==========================request end================================================
+============================response begin==========================================
+Status code  : 200 OK
+Status text  : 
+Headers      : [Content-Type:&quot;application/json&quot;, Transfer-Encoding:&quot;chunked&quot;, Date:&quot;Tue, Response body: {&quot;name&quot;:&quot;Profe&quot;,&quot;address&quot;:&quot;Spain&quot;}
+=======================response end=================================================
+
+</code></pre>
+
+<h3 id="3-otras-peticiones">3. Otras peticiones.</h3>
+
+<p>La clase RestTemplate tiene funciones para realizar cualquier tipo de petición. Así si deseamos realizar una petición tipo <strong>put</strong> podremos utilizar.</p>
+
+<pre><code>public void put(URI url, @Nullable  Object request) throws RestClientException
+</code></pre>
+
+<p>Si la petición a realizar tiene que ser tipo <strong>delete</strong> podremos utilizar</p>
+
+<pre><code>public void delete(String url) throws RestClientException
+</code></pre>
+
+<p>y así con todos los tipos de peticiones como <strong>patch</strong>, <strong>head</strong>, etc.</p>
+
+<h3 id="4-peticiones-avanzadas-con-exchange">4. Peticiones avanzadas con Exchange</h3>
+
+<p>Sin embargo hay algunos casos donde no tendremos la combinación necesaria para ejecutar una petición. Por ejemplo, si deseamos realizar una petición tipo <strong>get</strong> incluyendo cabeceras en la petición no podremos usar la función <strong>getForEntity</strong>. Para esos casos disponemos de la función <strong>exchange</strong>.</p>
+
+<pre><code>public &lt;T&gt; ResponseEntity&lt;T&gt; exchange(RequestEntity&lt;?&gt; requestEntity,
+                                      Class&lt;T&gt; responseType)
+                               throws RestClientException
+</code></pre>
+
+<p>Esta función siempre recibe un objeto <strong>HttpEntity</strong> donde podremos especificar el tipo de petición (<strong>POST</strong>,<strong>GET</strong>, etc), incluir cabeceras y por supuesto el objeto a mandar.</p>
+
+<p>Hay diversas variantes de esta función para cubrir diferentes situaciones.</p>
+
+<h3 id="5-recibir-contenedores-de-objetos-genéricos">5. Recibir contenedores de  objetos genéricos.</h3>
+
+<p>Si el servidor debe devolver un contenedor de objetos genérico, como puede  ser un <strong>List&lt;T&gt;</strong>  o un <strong>Map <T,R></strong> no podremos especificar el objeto a devolver como hemos visto hasta ahora.</p>
+
+<p>Supongamos que el servidor devuelve una lista de <strong>Strings</strong>. En java no se puede poner <strong>List&lt;String&gt;.class</strong> pues nos dará un error de sintaxis. Tampoco deberíamos escribir nuestro código así:</p>
+
+<pre><code>ResponseEntity&lt;List&lt;String&gt;&gt; myObject=restTemplate.getForEntity(url,List.class);
+</code></pre>
+
+<p>pues se nos quejara de que hemos especificado que vamos a recibir un objeto <strong>List</strong> y no un objeto <strong>List&lt;String&gt;</strong></p>
+
+<p>Por supuesto podríamos poner lo siguiente:</p>
+
+<pre><code>ResponseEntity&lt;List&gt; myObject=restTemplate.getForEntity(url,List.class);
+</code></pre>
+
+<p>pero nos saldrá un aviso de que en <strong>List</strong> deberíamos especificar el tipo a recibir y nos puede dar problemas cuando <strong>Spring</strong> intente  convertir el objeto <strong>JSON</strong> recibido.</p>
+
+<p>Para evitar este problema se debe utilizar la siguiente llamada.</p>
+
+<pre><code>public &lt;T&gt; ResponseEntity&lt;T&gt; exchange(RequestEntity&lt;?&gt; requestEntity,
+                                      ParameterizedTypeReference&lt;T&gt; responseType)
+                               throws RestClientException
+</code></pre>
+
+<p>En la clase <strong>ParameterizedTypeReference</strong> especificaremos el objeto  a devolver.</p>
+
+<p>En la propia documentación de <strong>Spring</strong> hay un excelente ejemplo que clarifica la llamada.</p>
+
+<pre><code>MyRequest body = ...
+RequestEntity request = RequestEntity
+     .post(new URI(&quot;https://example.com/foo&quot;))
+     .accept(MediaType.APPLICATION_JSON)
+     .body(body);
+ParameterizedTypeReference&lt;List&lt;MyResponse&gt;&gt; myBean =
+     new ParameterizedTypeReference&lt;List&lt;MyResponse&gt;&gt;() {};
+ResponseEntity&lt;List&lt;MyResponse&gt;&gt; response = template.exchange(request, myBean);
+</code></pre>
+
+<p>Como se ve, el truco es crear un objeto que extienda de la clase <strong>ParameterizedTypeReference</strong> (la cual es abstracta) y especificar el tipo del objeto a devolver.</p>
+
+<p>Y con esto doy por terminada la serie de artículos sobre <strong>RestTemplate</strong>.</p>
+
+<p>Recomiendo mirar todas las funciones de esta clase en la <a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html">documentación oficial</a> de <strong>Spring</strong> donde estan todas las funciones de las que he hablado y algunas más que si bien son útiles no he tratado en esta serie, como puede ser la función <code>public void setMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; messageConverters)</code>para especificar los conversores a usar.</p>
+
+<p>Un saludo y hasta la próxima entrada.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
 
-        
-            </div> 
+
         
         </div> 
         
@@ -3129,6 +3249,26 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -3172,22 +3312,6 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -3279,7 +3403,6 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
             
                 
                     
-                    
                 
                 
 
@@ -3294,9 +3417,6 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3755,10 +3875,10 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2018/12/05/crear-pagina-web-gratuita-en-github/" title="Crear pagina web gratuita en GitHub"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/clase-resttemplate-2/" title="La Clase RestTemplate - 2"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/4-angular/curso/" title="Curso de Angular 6" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2019/06/13/estableciendo-filtros-en-spring/" title="Estableciendo filtros en Spring" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3789,3 +3909,4 @@ Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías 
 
   </body>
 </html>
+
