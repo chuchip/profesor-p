@@ -6,6 +6,10 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+* [Trabajando con la clase RestTemplate-3](/clase-resttemplate-3/)
+
+Último artículo sobre la clase **RestTemplate** donde hablo de sus diferentes métodos y peculiaridades.
+
 - [Trabajando con la clase RestTemplate-2](/clase-resttemplate-2/)
 
 Segunda parte de la serie de artículos sobre la clase **RestTemplate** donde sigo despejando dudas.
