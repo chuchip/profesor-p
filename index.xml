@@ -600,9 +600,9 @@ Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base
       
       <guid>http://www.profesor-p.com/last/</guid>
       <description>Estás son las ultimas entradas del blog
+ Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.
  Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.
- Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.
- Estableciendo Filtros en Spring  Implementa filtros en Spring.</description>
+ Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.</description>
     </item>
     
   </channel>
