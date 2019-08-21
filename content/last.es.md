@@ -6,7 +6,7 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
-- [Iniciación a la clase WebClient](http://localhost:1313/webclient/)
+- [Iniciación a la clase WebClient](/webclient/)
 
 Aquí tenéis un proyecto usando la clase **WebClient** que es la equivalente a **RestTemplate** para programación Reactiva y por lo tanto permite llamadas asíncronas.
 
