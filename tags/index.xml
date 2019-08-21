@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>java</title>
       <link>http://www.profesor-p.com/tags/java/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>reactor</title>
+      <link>http://www.profesor-p.com/tags/reactor/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/reactor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>rest</title>
       <link>http://www.profesor-p.com/tags/rest/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/rest/</guid>
       <description></description>
@@ -32,9 +41,18 @@
     <item>
       <title>spring</title>
       <link>http://www.profesor-p.com/tags/spring/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webflux</title>
+      <link>http://www.profesor-p.com/tags/webflux/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/webflux/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,7 @@
     <description>Recent content in java on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
@@ -139,6 +139,19 @@ Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor d
       <guid>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
       <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
 Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
+    </item>
+    
+    <item>
+      <title>La clase WebClient</title>
+      <link>http://www.profesor-p.com/webclient/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/webclient/</guid>
+      <description>En esta ocasión hablare de la clase WebClient de SpringBoot.
+El proyecto de ejemplo esta disponible en: https://github.com/chuchip/webClientExample
+Esta clase seria la equivalente a RestTemplate pero para realizar peticiones asíncronas.
+Para poder usar esta clase debemos poner estas dependencias en nuestro fichero maven
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  Esto es así porque debemos usar WebFlux el cual esta disponible con la versión 5.0 de Spring. Esta versión de Spring requiere que usemos al menos Java 8.</description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 06 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>java</title>
       <link>http://www.profesor-p.com/categories/java/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/java/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>reactor</title>
+      <link>http://www.profesor-p.com/categories/reactor/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/reactor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>rest</title>
       <link>http://www.profesor-p.com/categories/rest/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/rest/</guid>
       <description></description>
@@ -32,7 +41,7 @@
     <item>
       <title>spring</title>
       <link>http://www.profesor-p.com/categories/spring/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/spring/</guid>
       <description></description>
@@ -41,9 +50,18 @@
     <item>
       <title>web</title>
       <link>http://www.profesor-p.com/categories/web/</link>
-      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webflux</title>
+      <link>http://www.profesor-p.com/categories/webflux/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/webflux/</guid>
       <description></description>
     </item>
     
