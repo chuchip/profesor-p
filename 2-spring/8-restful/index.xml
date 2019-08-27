@@ -85,5 +85,18 @@ Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que 
 Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>http://www.profesor-p.com/2-spring/8-restful/webclient_en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2-spring/8-restful/webclient_en/</guid>
+      <description>In this article we will speak about the WebClient class of the SpringBoot framework.
+You have the source about what I write in the post at https://github.com/chuchip/webClientExample](https://github.com/chuchip/webClientExample)
+This class would be the equivalent of RestTemplate class, but it work with asynchronous requests.
+If you want to use this class, you should put this dependencies in your maven file.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  This is so why you need to use WebFlux which is available in the version 5 of Spring.</description>
+    </item>
+    
   </channel>
 </rss>
