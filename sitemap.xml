@@ -118,6 +118,11 @@
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/7-django/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/2-spring/7-base/</loc>
     <lastmod>2019-05-12T07:57:07+00:00</lastmod>
   </url>
@@ -125,6 +130,11 @@
   <url>
     <loc>http://www.profesor-p.com/2-spring/8-restful/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/7-django/djangoeneclipse/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -253,19 +263,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/java/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/java/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/reactor/</loc>
+    <loc>http://www.profesor-p.com/tags/java/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -277,7 +281,7 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/rest/</loc>
+    <loc>http://www.profesor-p.com/tags/reactor/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -289,7 +293,7 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/spring/</loc>
+    <loc>http://www.profesor-p.com/tags/rest/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -301,7 +305,19 @@
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/tags/spring/</loc>
+    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/categories/web/</loc>
+    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/webflux/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -313,8 +329,26 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/webflux/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <loc>http://www.profesor-p.com/categories/django/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/eclipse/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/python/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/python-eclipse-django-django-rest/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -335,25 +369,25 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/cache/</loc>
-    <lastmod>2019-05-12T07:57:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/cache/</loc>
     <lastmod>2019-05-12T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
+    <loc>http://www.profesor-p.com/tags/cache/</loc>
     <lastmod>2019-05-12T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
+    <lastmod>2019-05-12T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
     <lastmod>2019-05-12T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -375,19 +409,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/h2/</loc>
-    <lastmod>2019-04-05T10:54:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/h2/</loc>
     <lastmod>2019-04-05T10:54:22+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/hibernate/</loc>
+    <loc>http://www.profesor-p.com/tags/h2/</loc>
     <lastmod>2019-04-05T10:54:22+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -399,13 +427,19 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/jpa/</loc>
+    <loc>http://www.profesor-p.com/tags/hibernate/</loc>
     <lastmod>2019-04-05T10:54:22+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/jpa/</loc>
+    <lastmod>2019-04-05T10:54:22+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/jpa/</loc>
     <lastmod>2019-04-05T10:54:22+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -422,13 +456,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/json/</loc>
+    <loc>http://www.profesor-p.com/categories/json/</loc>
     <lastmod>2019-03-25T16:02:14+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/json/</loc>
+    <loc>http://www.profesor-p.com/tags/json/</loc>
     <lastmod>2019-03-25T16:02:14+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -439,13 +473,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/cloud/</loc>
+    <loc>http://www.profesor-p.com/categories/cloud/</loc>
     <lastmod>2019-03-16T07:19:41+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/cloud/</loc>
+    <loc>http://www.profesor-p.com/tags/cloud/</loc>
     <lastmod>2019-03-16T07:19:41+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -463,25 +497,25 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/zuul/</loc>
-    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/zuul/</loc>
     <lastmod>2019-03-16T07:19:41+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/profiles/</loc>
-    <lastmod>2019-03-01T13:50:57+00:00</lastmod>
+    <loc>http://www.profesor-p.com/tags/zuul/</loc>
+    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/profiles/</loc>
+    <lastmod>2019-03-01T13:50:57+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/profiles/</loc>
     <lastmod>2019-03-01T13:50:57+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -497,25 +531,25 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/docker/</loc>
-    <lastmod>2019-01-24T15:31:06+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/docker/</loc>
     <lastmod>2019-01-24T15:31:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/kafka/</loc>
+    <loc>http://www.profesor-p.com/tags/docker/</loc>
     <lastmod>2019-01-24T15:31:06+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/kafka/</loc>
+    <lastmod>2019-01-24T15:31:06+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/kafka/</loc>
     <lastmod>2019-01-24T15:31:06+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -537,13 +571,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/html/</loc>
+    <loc>http://www.profesor-p.com/categories/html/</loc>
     <lastmod>2018-12-05T10:32:08+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/html/</loc>
+    <loc>http://www.profesor-p.com/tags/html/</loc>
     <lastmod>2018-12-05T10:32:08+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -572,19 +606,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/bootstrap/</loc>
-    <lastmod>2018-10-30T17:12:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/bootstrap/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/mvc/</loc>
+    <loc>http://www.profesor-p.com/tags/bootstrap/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -596,13 +624,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/seguridad/</loc>
+    <loc>http://www.profesor-p.com/tags/mvc/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/tomcat/</loc>
+    <loc>http://www.profesor-p.com/tags/seguridad/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -614,7 +642,7 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/webflow/</loc>
+    <loc>http://www.profesor-p.com/tags/tomcat/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -626,8 +654,8 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/jdbc/</loc>
-    <lastmod>2018-10-29T08:49:12+00:00</lastmod>
+    <loc>http://www.profesor-p.com/tags/webflow/</loc>
+    <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -638,7 +666,7 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/jquery/</loc>
+    <loc>http://www.profesor-p.com/tags/jdbc/</loc>
     <lastmod>2018-10-29T08:49:12+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -650,13 +678,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/jsp/</loc>
+    <loc>http://www.profesor-p.com/tags/jquery/</loc>
     <lastmod>2018-10-29T08:49:12+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/jstl/</loc>
+    <loc>http://www.profesor-p.com/categories/jsp/</loc>
     <lastmod>2018-10-29T08:49:12+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -668,13 +696,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/l/</loc>
+    <loc>http://www.profesor-p.com/tags/jstl/</loc>
     <lastmod>2018-10-29T08:49:12+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/security/</loc>
+    <loc>http://www.profesor-p.com/tags/l/</loc>
     <lastmod>2018-10-29T08:49:12+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -686,18 +714,24 @@
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/tags/security/</loc>
+    <lastmod>2018-10-29T08:49:12+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</loc>
     <lastmod>2018-10-18T13:20:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/oauth2/</loc>
+    <loc>http://www.profesor-p.com/categories/oauth2/</loc>
     <lastmod>2018-10-18T13:20:43+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/oauth2/</loc>
+    <loc>http://www.profesor-p.com/tags/oauth2/</loc>
     <lastmod>2018-10-18T13:20:43+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -708,13 +742,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/thymeleaf/</loc>
+    <loc>http://www.profesor-p.com/categories/thymeleaf/</loc>
     <lastmod>2018-10-17T10:19:34+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/thymeleaf/</loc>
+    <loc>http://www.profesor-p.com/tags/thymeleaf/</loc>
     <lastmod>2018-10-17T10:19:34+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -731,25 +765,25 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/kotlin/</loc>
-    <lastmod>2018-10-11T09:50:19+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/kotlin/</loc>
     <lastmod>2018-10-11T09:50:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/angular/</loc>
-    <lastmod>2018-10-08T20:23:38+00:00</lastmod>
+    <loc>http://www.profesor-p.com/tags/kotlin/</loc>
+    <lastmod>2018-10-11T09:50:19+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/angular/</loc>
+    <lastmod>2018-10-08T20:23:38+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/angular/</loc>
     <lastmod>2018-10-08T20:23:38+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -761,25 +795,25 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/glassfish/</loc>
-    <lastmod>2018-10-07T05:49:37+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/glassfish/</loc>
     <lastmod>2018-10-07T05:49:37+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/javaee/</loc>
+    <loc>http://www.profesor-p.com/tags/glassfish/</loc>
     <lastmod>2018-10-07T05:49:37+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/javaee/</loc>
+    <lastmod>2018-10-07T05:49:37+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/javaee/</loc>
     <lastmod>2018-10-07T05:49:37+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -801,13 +835,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/i18n/</loc>
+    <loc>http://www.profesor-p.com/categories/i18n/</loc>
     <lastmod>2018-09-24T10:45:43+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/i18n/</loc>
+    <loc>http://www.profesor-p.com/tags/i18n/</loc>
     <lastmod>2018-09-24T10:45:43+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -824,13 +858,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/pooper/</loc>
+    <loc>http://www.profesor-p.com/categories/pooper/</loc>
     <lastmod>2018-09-20T09:16:12+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/pooper/</loc>
+    <loc>http://www.profesor-p.com/tags/pooper/</loc>
     <lastmod>2018-09-20T09:16:12+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -928,13 +962,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/junit/</loc>
+    <loc>http://www.profesor-p.com/categories/junit/</loc>
     <lastmod>2018-08-27T08:24:45+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/junit/</loc>
+    <loc>http://www.profesor-p.com/tags/junit/</loc>
     <lastmod>2018-08-27T08:24:45+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1021,12 +1055,12 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/tags/experiencia/</loc>
+    <loc>http://www.profesor-p.com/categories/experiencia/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/experiencia/</loc>
+    <loc>http://www.profesor-p.com/tags/experiencia/</loc>
     <priority>0</priority>
   </url>
   
