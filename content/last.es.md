@@ -6,6 +6,10 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+- [Creando un proyecto de Django con Eclipse](/7-django/djangoeneclipse/)
+
+Aquí tenéis un pequeño manual de como crear un proyecto de **DJango** usando el IDE **Eclipse** y el plugin **PyDev**.
+
 - [Iniciación a la clase WebClient](/webclient/)
 
 Aquí tenéis un proyecto usando la clase **WebClient** que es la equivalente a **RestTemplate** para programación Reactiva y por lo tanto permite llamadas asíncronas.
