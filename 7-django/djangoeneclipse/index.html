@@ -12,19 +12,19 @@
     <title>Creando una aplicacion DJango con Python3 en Eclipse :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1568808128" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1568808128" rel="stylesheet">
-    <link href="/css/hybrid.css?1568808128" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1568808128" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1568808128" rel="stylesheet">
-    <link href="/css/auto-complete.css?1568808128" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1568808128" rel="stylesheet">
-    <link href="/css/theme.css?1568808128" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1568808128" rel="stylesheet">
-	<link href="/css/tags.css?1568808128" rel="stylesheet">
+    <link href="/css/nucleus.css?1568875214" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1568875214" rel="stylesheet">
+    <link href="/css/hybrid.css?1568875214" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1568875214" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1568875214" rel="stylesheet">
+    <link href="/css/auto-complete.css?1568875214" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1568875214" rel="stylesheet">
+    <link href="/css/theme.css?1568875214" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1568875214" rel="stylesheet">
+	<link href="/css/tags.css?1568875214" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1568808128"></script>
+    <script src="/js/jquery-3.3.1.min.js?1568875214"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -73,14 +73,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1568808128"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1568808128"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1568875214"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1568875214"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1568808128"></script>
+<script type="text/javascript" src="/js/search.js?1568875214"></script>
 
     
   </div>
@@ -2514,7 +2514,8 @@ if (!doNotTrack) {
 <ul>
 <li>
 <ul>
-<li><a href="#usando-un-entorno-de-trabajo"><strong>Usando  un entorno de trabajo.</strong></a></li>
+<li><a href="#1-usando-un-entorno-de-trabajo"><strong>1. Usando  un entorno de trabajo.</strong></a></li>
+<li><a href="#2-creando-el-proyecto-django">2. Creando  el proyecto DJango</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2563,11 +2564,13 @@ if (!doNotTrack) {
 
 <p><a href="https://www.django-rest-framework.org/tutorial/quickstart/">En esta página</a> tienes los primeros pasos para crear un entorno para DJango pero yo voy a explicarlo para poder usarlo después con <strong>PyDev</strong>. Aclarar que este este articulo el proyecto fue creado  en una máquina con Windows 10.</p>
 
-<p>Hay dos opciones para crear el proyecto. Con entornos de trabajo (enviroment) o sin el.</p>
+<p>Hay dos opciones para crear el proyecto. Usando un entorno de trabajo (<em>enviroment</em>) o sin usarlo. Si prefiere no usarlo pase al <a href="./#creando-el-proyecto-django">punto dos</a>. En caso de querer usarlo  sigue leyendo.</p>
 
-<h3 id="usando-un-entorno-de-trabajo"><strong>Usando  un entorno de trabajo.</strong></h3>
+<h3 id="1-usando-un-entorno-de-trabajo"><strong>1. Usando  un entorno de trabajo.</strong></h3>
 
-<p>Primero deberemos crear un entorno de trabajo que incluya <a href="https://www.djangoproject.com/">DJango</a> y <a href="https://www.django-rest-framework.org">Django-Rest</a> , para ello desde la línea de comandos (cmd) ejecutaremos lo siguiente:</p>
+<p>El usar un entorno de trabajo en Python es muy recomendable ya que nos evita problemas de dependencias. Podremos tener diferentes versiones de Python y de las librerías usadas para cada entorno, de tal manera que si, por ejemplo, actualizamos la versión de Python en la máquina, los proyectos creados bajo un entorno dado, seguirán usando la versión de Python con las que originalmente se  realizaron.</p>
+
+<p>En nuestro caso vamos a crear un entorno de trabajo que incluya <a href="https://www.djangoproject.com/">DJango</a> y <a href="https://www.django-rest-framework.org">Django-Rest</a> , para ello desde la línea de comandos (cmd) ejecutaremos lo siguiente:</p>
 
 <pre><code class="language-bash">c:\python&gt; python -m vvenv djangoenv
 </code></pre>
@@ -2611,6 +2614,8 @@ Python 3.7.4
 <p>En la siguiente pantalla dejaremos los valores como aparecen por defecto.</p>
 
 <p><img src="/img/djangoeclipse/captura3.png" alt="captura3" /></p>
+
+<h3 id="2-creando-el-proyecto-django">2. Creando  el proyecto DJango</h3>
 
 <p>Cerraremos la ventana  de preferencias y crearemos un nuevo proyecto del tipo &ldquo;<em>PyDev DDJango</em>&ldquo;</p>
 
@@ -3967,20 +3972,20 @@ Quit the server with CTRL-BREAK.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1568808128"></script>
-    <script src="/js/perfect-scrollbar.min.js?1568808128"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1568808128"></script>
-    <script src="/js/jquery.sticky.js?1568808128"></script>
-    <script src="/js/featherlight.min.js?1568808128"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1568808128"></script>
-    <script src="/js/highlight.pack.js?1568808128"></script>
+    <script src="/js/clipboard.min.js?1568875214"></script>
+    <script src="/js/perfect-scrollbar.min.js?1568875214"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1568875214"></script>
+    <script src="/js/jquery.sticky.js?1568875214"></script>
+    <script src="/js/featherlight.min.js?1568875214"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1568875214"></script>
+    <script src="/js/highlight.pack.js?1568875214"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1568808128"></script>
-    <script src="/js/learn.js?1568808128"></script>
-    <script src="/js/hugo-learn.js?1568808128"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1568875214"></script>
+    <script src="/js/learn.js?1568875214"></script>
+    <script src="/js/hugo-learn.js?1568875214"></script>
 
-    <link href="/mermaid/mermaid.css?1568808128" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1568808128"></script>
+    <link href="/mermaid/mermaid.css?1568875214" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1568875214"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
