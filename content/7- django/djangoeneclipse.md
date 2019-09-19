@@ -24,11 +24,13 @@ Podríamos usar [PyCharm](https://www.jetbrains.com/pycharm/download/) el cual c
 
 [En esta página](https://www.django-rest-framework.org/tutorial/quickstart/) tienes los primeros pasos para crear un entorno para DJango pero yo voy a explicarlo para poder usarlo después con **PyDev**. Aclarar que este este articulo el proyecto fue creado  en una máquina con Windows 10.
 
-Hay dos opciones para crear el proyecto. Con entornos de trabajo (enviroment) o sin el. 
+Hay dos opciones para crear el proyecto. Usando un entorno de trabajo (*enviroment*) o sin usarlo. Si prefiere no usarlo pase al [punto dos](./#creando-el-proyecto-django). En caso de querer usarlo  sigue leyendo.
 
-### **Usando  un entorno de trabajo.**
+### **1. Usando  un entorno de trabajo.**
 
-Primero deberemos crear un entorno de trabajo que incluya [DJango](https://www.djangoproject.com/) y [Django-Rest](https://www.django-rest-framework.org) , para ello desde la línea de comandos (cmd) ejecutaremos lo siguiente:
+El usar un entorno de trabajo en Python es muy recomendable ya que nos evita problemas de dependencias. Podremos tener diferentes versiones de Python y de las librerías usadas para cada entorno, de tal manera que si, por ejemplo, actualizamos la versión de Python en la máquina, los proyectos creados bajo un entorno dado, seguirán usando la versión de Python con las que originalmente se  realizaron.
+
+En nuestro caso vamos a crear un entorno de trabajo que incluya [DJango](https://www.djangoproject.com/) y [Django-Rest](https://www.django-rest-framework.org) , para ello desde la línea de comandos (cmd) ejecutaremos lo siguiente:
 
 ```bash
 c:\python> python -m vvenv djangoenv
@@ -80,11 +82,13 @@ En la siguiente pantalla dejaremos los valores como aparecen por defecto.
 
 ![captura3](/img/djangoeclipse/captura3.png)
 
+
+
+### 2. Creando  el proyecto DJango
+
 Cerraremos la ventana  de preferencias y crearemos un nuevo proyecto del tipo "*PyDev DDJango*"
 
 ![Ficheros creados](/img/djangoeclipse/captura1.png)
-
-
 
 Elegiremos el nuevo *interprete* creado, pondremos un nombre al proyecto y daremos a **Next**:
 
