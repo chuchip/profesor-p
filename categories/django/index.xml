@@ -22,5 +22,17 @@ Podríamos usar PyCharm el cual crea un entorno automáticamente pero en este tu
 En esta página tienes los primeros pasos para crear un entorno para DJango pero yo voy a explicarlo para poder usarlo después con PyDev.</description>
     </item>
     
+    <item>
+      <title>Aplicación CRUD con DJango-REST.</title>
+      <link>http://www.profesor-p.com/7-django/aplicacioncrudendjango/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/7-django/aplicacioncrudendjango/</guid>
+      <description>Partiendo del artículo anterior, y usando el esqueleto del proyecto Eclipse creado, vamos a ver como hacer una pequeña aplicación CRUD con Django-Rest. El código fuente esta disponible en https://github.com/chuchip/djangorestcrud
+Esta aplicación nos servirá para consultar, modificar, borrar o añadir los libros disponibles en una biblioteca.
+El modelo de datos con el vamos a trabajar será el siguiente:
+ title. Tipo: String. Titulo del libro. type. TIpo: String. Tipo libro (aventura, científico,comic, etc.</description>
+    </item>
+    
   </channel>
 </rss>

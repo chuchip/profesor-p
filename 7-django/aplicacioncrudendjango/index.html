@@ -9,22 +9,22 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>jstl :: Documentacion en español</title>
+    <title>Aplicación CRUD con DJango-REST. :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1569784739" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1569784739" rel="stylesheet">
-    <link href="/css/hybrid.css?1569784739" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1569784739" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1569784739" rel="stylesheet">
-    <link href="/css/auto-complete.css?1569784739" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1569784739" rel="stylesheet">
-    <link href="/css/theme.css?1569784739" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1569784739" rel="stylesheet">
-	<link href="/css/tags.css?1569784739" rel="stylesheet">
+    <link href="/css/nucleus.css?1569784738" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1569784738" rel="stylesheet">
+    <link href="/css/hybrid.css?1569784738" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1569784738" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1569784738" rel="stylesheet">
+    <link href="/css/auto-complete.css?1569784738" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1569784738" rel="stylesheet">
+    <link href="/css/theme.css?1569784738" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1569784738" rel="stylesheet">
+	<link href="/css/tags.css?1569784738" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1569784739"></script>
+    <script src="/js/jquery-3.3.1.min.js?1569784738"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 </script>
 
   </head>
-  <body class="" data-url="/categories/jstl/">
+  <body class="" data-url="/7-django/aplicacioncrudendjango/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -73,14 +73,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1569784739"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1569784739"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1569784738"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1569784738"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1569784739"></script>
+<script type="text/javascript" src="/js/search.js?1569784738"></script>
 
     
   </div>
@@ -95,10 +95,7 @@ if (!doNotTrack) {
         
           
 					
-		    
-				
-				CT &#34;Java&#34; 
-						
+		    			
 			
 
 
@@ -2199,7 +2196,7 @@ if (!doNotTrack) {
 
     
     <li data-nav-id="/7-django/" title="DJango"  class="dd-item 
-        
+        parent
         lineaMenu 
         		"
        >		
@@ -2262,7 +2259,7 @@ if (!doNotTrack) {
   
     
 	
-      <li data-nav-id="/7-django/aplicacioncrudendjango/" title="Aplicación CRUD con DJango-REST." class="dd-item ">
+      <li data-nav-id="/7-django/aplicacioncrudendjango/" title="Aplicación CRUD con DJango-REST." class="dd-item activeMenu ">
         <a href="/7-django/aplicacioncrudendjango/">
         <b>o </b>Aplicación CRUD con DJango-REST.
         <i class="fas fa-check read-icon"></i>
@@ -2495,6 +2492,11 @@ if (!doNotTrack) {
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -2511,7 +2513,21 @@ if (!doNotTrack) {
                     
           
           
-            jstl
+
+            
+            
+          
+          
+
+            
+            
+          
+          
+            <a href='/'>Bienvenido a mi página</a> > <a href='/7-django/'>DJango</a> > Aplicación CRUD con DJango-REST.
+          
+         
+          
+         
           
         
                  
@@ -2531,17 +2547,24 @@ if (!doNotTrack) {
             
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/python-eclipse-django-django-rest">python - eclipse - django - django-rest</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
           
             <h1>
               
-                taxonomy ::
-              
 			  
-				Documentacion en español 
+				Aplicación CRUD con DJango-REST. 
 			  
+			   
+				<class id ="fecha">
+				August 18, 2019 </div>
 			  
             </h1>
 			
@@ -2550,19 +2573,245 @@ if (!doNotTrack) {
 
 
 
+<p>Partiendo del <a href="/7-django/djangoeneclipse/">artículo anterior</a>, y usando  el esqueleto del proyecto  Eclipse creado, vamos a ver como hacer una pequeña aplicación <strong>CRUD</strong> con <strong>Django-Rest</strong>. El código fuente esta disponible en <a href="https://github.com/chuchip/djangorestcrud">https://github.com/chuchip/djangorestcrud</a></p>
 
+<p>Esta aplicación nos servirá para consultar, modificar, borrar o añadir los libros disponibles en una biblioteca.</p>
 
+<p>El modelo de datos con el vamos a trabajar será el siguiente:</p>
 
 <ul>
-	
-		<li><a href="/2018/10/29/spring-webflow-con-jsp-configuracion/">Spring WebFlow con JSP – Configuración</a></li>
-	
+<li>title. Tipo: String. Titulo del libro.</li>
+<li>type. TIpo: String. Tipo libro (aventura, científico,comic, etc.)</li>
+<li>author -&gt; String</li>
+<li>creation_date -&gt; Date</li>
+<li>number_of_pages -&gt; int</li>
+<li>user. Tipo: String. Usuario al que se le presto el libro.</li>
+<li>borrow_date: Tipo Date. Fecha en la que se presto el libro.</li>
 </ul>
+
+<p>Para plasmar este modelo de datos en nuestro proyecto, primero debemos crear una aplicación. Para crearlo desde la línea de comandos, estando dentro del entorno de <strong>djangoenv</strong> y situándonos en el directorio donde creamos el proyecto, ejecutaremos este comando:</p>
+
+<pre><code class="language-bash">c:\&gt; cd \python # Este directorio es donde creamos el entorno de trabajo
+C:\python&gt;djangoenv\Scripts\activate # Activamos el entorno de trabajo
+C:\python&gt;djangoenv\Scripts\activate &gt; cd \DIR_PROYECTO # Moverse donde este el proyeco.
+(djangoenv) \DIR_PROYECTO &gt; python manage.py startapp library # Creamos la app
+</code></pre>
+
+<p>También lo podemos hacer de una manera más cómoda desde eclipse, pulsando con el botón derecho del ratón y eligiendo el menú <code>Django/Create Application</code></p>
+
+<p><img src="/img/djangocrud/captura1.png" alt="captura1" /></p>
+
+<p>El árbol de directorios del proyecto será el siguiente:</p>
+
+<p><img src="/img/djangocrud/captura2.png" alt="captura2" /></p>
+
+<p>Ahora debemos especificar en el fichero de configuración de  DJango que tenemos la app <code>library</code>, aprovecharemos para indicar que también vamos a utilizar la app <code>rest_framework</code>. Para ello editaremos el fichero <code>settings.py</code>y en la variable <code>INSTALLED_APPS</code> añadiremos la app.</p>
+
+<pre><code>INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'library.apps.LibraryConfig',
+]
+</code></pre>
+
+<p>Observar que la línea añadida para definir la <em>app</em> se compone del nombre de la <em>app</em> más el nombre del fichero  (sin la extensión &ldquo;.py&rdquo;) y la clase donde definimos la configuración de la aplicación.</p>
+
+<p>De acuerdo, vamos a crear el modelo de datos. Para ello editaremos el fichero <code>library\models.py</code>, y escribiremos el siguiente código:</p>
+
+<pre><code>from django.db import models
+
+class Books(models.Model):
+    title = models.CharField('Titulo',max_length=100, blank=False)
+    type = models.CharField('Tipo', max_length=40,blank=False)
+    author = models.CharField('Autor', max_length=100,blank=False)
+    creation_date = models.DateField('Fecha alta',null=False)
+    number_of_pages=models.IntegerField(null=True)
+    user=models.CharField(max_length=30,null=False)
+    borrow_date= models.DateField('Fecha de prestamo',null=False)   
+</code></pre>
+
+<p>Como se puede ver, simplemente creamos una clase a la que llamamos <code>Books</code> y que extiende de <code>models.Model</code>. Dentro de la clase definimos variables  de los tipos que necesitamos, especificando además ciertas propiedades para cada campo.</p>
+
+<p><a href="https://docs.djangoproject.com/en/2.2/topics/db/models/">Aquí</a> tienes más información sobre los modelos de datos en Django</p>
+
+<p>Con el modelo creado es hora de decirle a DJango que cree las tablas correspondientes en la base de datos sqlite . Esto lo podemos hacer desde el propio eclipse eligiendo la opción <code>Django|Make Migrations</code> que nos aparecerá al pulsar con el botón derecho encima del proyecto.</p>
+
+<p><img src="/img/djangocrud/captura3.png" alt="captura3" /></p>
+
+<p>En la ventana que nos saldrá preguntando por la app que migrar, pondremos <code>library</code></p>
+
+<p>Si todo va bien en la consola aparecerá algo parecido a esto:</p>
+
+<pre><code>Migrations for 'library':
+  library\migrations\0001_initial.py
+    - Create model Books
+Finished &quot;....\manage.py makemigrations library&quot; execution.
+</code></pre>
+
+
+<div class="notices note" ><p>Esto seria el equivalente a ejecutar el comando  <code>python manage.py makemigrations library</code></p>
+</div>
+
+
+<p>Lo que este comando ha creado ha sido un fichero en el directorio <code>library\migrations</code> con los comandos necesarios para crear una representación de nuestro modelo en la base de datos.</p>
+
+<p>Para crear la estructura de tablas  en la base de datos volveremos a pulsar con el botón derecho del ratón sobre el proyecto y elegiremos la opción <code>Django|Migrate</code></p>
+
+<p>Lo cual nos deberá mostrar la siguiente salida:</p>
+
+<pre><code>Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, library, sessions
+Running migrations:
+  Applying library.0001_initial... OK
+Finished &quot;..\manage.py migrate&quot; execution.
+</code></pre>
+
+
+<div class="notices note" ><p>El usar esta opción en Eclipse seria el equivalente a ejecutar el comando  <code>python manage.py migrate</code> desde la línea de comandos.</p>
+</div>
+
+
+<p>Ahora que ya tendremos la estructura en la base de datos, vamos a crear una clase para serializar el modelo de datos, en el fichero <code>library/serializers.py</code></p>
+
+<pre><code>from rest_framework import serializers
+from library.models import Books
+
+class LibrarySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Books
+        fields = ['id', 'title', 'type', 'author', 'creation_date', 'number_of_pages','user','borrow_date']
+
+</code></pre>
+
+<p>Con esta simple clase definiremos como <strong>DJango</strong> tiene que convertir el modelo de datos a JSON y viceversa. Al heredar de <code>serializers.ModelSerializer</code> simplemente tendremos que especificar el modelo de datos a usar y los campos a presentar.  Si queremos personalizar como presentar los datos en la salida podríamos usar heredar de la clase <strong>serializers.Serializer</strong> pero en este tutorial vamos a intentar hacerlo sencillo.</p>
+
+<p>Hasta ahora ya hemos definido los datos y como representarlos, ahora nos falta poder comunicarnos con el exterior a través de una API.  Eso es tan fácil como crear un fichero llamado <code>library/views.py</code> con el siguiente contenido.</p>
+
+<pre><code>from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from library.models import Books
+from library.serializers import BooksSerializer
+
+@api_view(['GET', 'POST'])
+def book_list(request):
+    &quot;&quot;&quot;
+    List all code Books, or create a new Book.
+    &quot;&quot;&quot;
+    if request.method == 'GET':
+        books = Books.objects.all()
+        serializer = BooksSerializer(books, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = BooksSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+</code></pre>
+
+<p>Con la función <code>def book_list(request)</code>  será la utilizada para devolver todos los libros en la biblioteca o para insertar un nuevo libro.</p>
+
+<p>Como se puede ver esta función aceptara peticiones GET y POST. Si la petición es GET buscara todos los libros dentro del modelo <code>Books</code>  llamando a la función <code>Books.objects.all()</code>, el cual devolverá una lista de instancias de la clase <code>Book</code>. Esa lista será pasada al constructor de la clase <code>BookSerializer</code>, añadiendo el parámetro <code>many=True</code> por ser una lista de modelos y no un único modelo . Para terminar se devolverá un objeto Response, al que se le pasara los datos del objeto <code>serializer</code>.</p>
+
+<p>En caso de que la petición sea tipo POST, creara un <em>serializer</em> con los datos de la petición. Para ello simplemente pasara al crear el objeto tipo <code>BookSerializer</code> le pasara en el constructor los datos enviados en la petición (<strong>request.data</strong>).</p>
+
+<p>Si los datos son validos, se guardaran en la base datos y se devolverán los datos insertados con el código HTTP 201. En el caso de que los datos no fueran validos, se devolverán los errores detectados y el codigo HTTP 400 (Bad_Request).</p>
+
+<p>Antes de poder realizar ninguna prueba, en el fichero <code>library/urls.py</code> vamos a indicar la ruta que ejecutara la función:</p>
+
+<pre><code>from django.urls import path
+from library import views
+
+urlpatterns = [
+    path('books/', views.book_list),   
+]
+</code></pre>
+
+<p>Con esto indicamos a <strong>DJango</strong> que las peticiones a <a href="http://localhost:8000/books">http://localhost:8000/books</a>  deben ser tratadas en la función <code>book_list</code> de la clase <code>views</code>. Sin embargo todavía nos falta un paso y es definir en el fichero <code>djangorestcrud/urls.py</code> que tipo de peticiones deben ser dirigidas a la aplicación <strong>library</strong> .</p>
+
+<pre><code>from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [  
+     path('', include('library.urls')),
+]
+</code></pre>
+
+<p>Recordemos que <strong>Django</strong> funciona añadiendo aplicaciones al modulo principal y  cada aplicación tendrá su propia URL. En este caso estamos especificando que cualquier petición sea dirigida al modulo <code>library</code>. Si quisiéramos que solo se mandaran al modulo <code>library</code> las peticiones que contuvieran en el path la cadena <strong>library</strong> pondríamos la siguiente linea:  <code>path('library/', include('library.urls'))</code></p>
+
+<p>Para poder hacer nuestra primera prueba, sin depender de ninguna herramienta externa a Python, vamos a usar la libreria <strong>httpie</strong> de Python. La instalaremos con el comando:</p>
+
+<pre><code>pip install httpie
+</code></pre>
+
+<p>Para insertar nuestro primer libro, ejecutaremos la siguiente sentencia:</p>
+
+<pre><code>&gt; http POST http://localhost:8000/books/ title=&quot;mi primer libro&quot; type=&quot;Aventuras&quot;    author=&quot;yo mismo&quot;  &quot;creation_date&quot;=&quot;2019-09-27&quot;    &quot;number_of_pages&quot;=15
+HTTP/1.1 201 Created
+Allow: POST, OPTIONS, GET
+Content-Length: 155
+Content-Type: application/json
+Date: Sun, 29 Sep 2019 18:41:10 GMT
+Server: WSGIServer/0.2 CPython/3.7.4
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+    &quot;author&quot;: &quot;yo mismo&quot;,
+    &quot;borrow_date&quot;: null,
+    &quot;creation_date&quot;: &quot;2019-09-27&quot;,
+    &quot;id&quot;: 1,
+    &quot;number_of_pages&quot;: 15,
+    &quot;title&quot;: &quot;mi primer libro&quot;,
+    &quot;type&quot;: &quot;Aventuras&quot;,
+    &quot;user&quot;: null
+}
+</code></pre>
+
+<p>Como se ve  la petición POST nos devuelve el registro insertado, incluyendo su id, y el código HTTP devuelto es un 201 (Created)</p>
+
+<p>Esta sería la misma sentencia desde postman:</p>
+
+<p><img src="/img/djangocrud/captura4.png" alt="Captura4" /></p>
+
+<p>Podemos comprobar que el registro se ha insertado correctamente con la sentencia</p>
+
+<pre><code>&gt; http GET http://localhost:8000/books/
+HTTP/1.1 200 OK
+Allow: POST, OPTIONS, GET
+Content-Length: 1704
+Content-Type: application/json
+Date: Sun, 29 Sep 2019 18:42:56 GMT
+Server: WSGIServer/0.2 CPython/3.7.4
+Vary: Accept, Cookie
+X-Frame-Options: SAMEORIGIN
+
+{
+        &quot;author&quot;: &quot;yo mismo&quot;,
+        &quot;borrow_date&quot;: null,
+        &quot;creation_date&quot;: &quot;2019-09-27&quot;,
+        &quot;id&quot;: 1,
+        &quot;number_of_pages&quot;: 15,
+        &quot;title&quot;: &quot;mi primer libro&quot;,
+        &quot;type&quot;: &quot;Aventuras&quot;,
+        &quot;user&quot;: null
+    },
+</code></pre>
+
+<p>Terminar diciendo que <strong>DJango-Rest</strong> dispone de una bonita interfaz para realizar peticiones desde el navegador para ello iremos a la misma URL de antes: <a href="http://localhost:8000/books/">http://localhost:8000/books/</a></p>
+
+<p><img src="/img/djangocrud/captura5.png" alt="Captura5" /></p>
+
+<p>En próximas entradas seguiré profundizando en esta aplicación, añadiéndole más funcionalidades.</p>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -3742,6 +3991,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -3754,6 +4004,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3771,6 +4024,7 @@ if (!doNotTrack) {
             
                 
                     
+                    
                 
                 
 
@@ -3789,6 +4043,9 @@ if (!doNotTrack) {
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3874,8 +4131,10 @@ if (!doNotTrack) {
 	 
 	 
 		
+			<a class="nav nav-prev" href="/7-django/djangoeneclipse/" title="Creando una aplicacion DJango con Python3 en Eclipse"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/1-java/" title="Java" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/contacto/" title="Contacto" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3885,20 +4144,20 @@ if (!doNotTrack) {
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1569784739"></script>
-    <script src="/js/perfect-scrollbar.min.js?1569784739"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1569784739"></script>
-    <script src="/js/jquery.sticky.js?1569784739"></script>
-    <script src="/js/featherlight.min.js?1569784739"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1569784739"></script>
-    <script src="/js/highlight.pack.js?1569784739"></script>
+    <script src="/js/clipboard.min.js?1569784738"></script>
+    <script src="/js/perfect-scrollbar.min.js?1569784738"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1569784738"></script>
+    <script src="/js/jquery.sticky.js?1569784738"></script>
+    <script src="/js/featherlight.min.js?1569784738"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1569784738"></script>
+    <script src="/js/highlight.pack.js?1569784738"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1569784739"></script>
-    <script src="/js/learn.js?1569784739"></script>
-    <script src="/js/hugo-learn.js?1569784739"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1569784738"></script>
+    <script src="/js/learn.js?1569784738"></script>
+    <script src="/js/hugo-learn.js?1569784738"></script>
 
-    <link href="/mermaid/mermaid.css?1569784739" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1569784739"></script>
+    <link href="/mermaid/mermaid.css?1569784738" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1569784738"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -3906,3 +4165,4 @@ if (!doNotTrack) {
 
   </body>
 </html>
+
