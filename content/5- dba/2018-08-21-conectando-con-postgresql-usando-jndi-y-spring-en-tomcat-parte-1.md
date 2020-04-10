@@ -5,7 +5,7 @@ pre: "<b>o </b>"
 type: post
 date: 2018-08-21T13:34:56+00:00
 url: /2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/
-featured_image: /wp-content/uploads/2018/08/springsource.jpg
+featured_image: /img/2018/08/springsource.jpg
 cwp_meta_box_check:
   - No
 categories:
@@ -27,7 +27,7 @@ En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Sprin
 
 El código fuente lo teneis en: <a href="https://github.com/chuchip/jdbc_jpa_tomcat" target="_blank" rel="noopener">https://github.com/chuchip/jdbc_jpa_tomcat</a>
 
-En <a href="http://www.profesor-p.com/wp-content/uploads/2018/08/ejemplo-jpa-y-jdbc-con-spring.pdf" target="_blank" rel="noopener">este enlace</a> teneis este mismo documento (todas las partes) pero en PDF.
+En <a href="http://www.profesor-p.com/img/2018/08/ejemplo-jpa-y-jdbc-con-spring.pdf" target="_blank" rel="noopener">este enlace</a> teneis este mismo documento (todas las partes) pero en PDF.
 
 El ejemplo usa Maven y explicare como deberá estar configurado Tomcat para que la aplicación funcione correctamente.
 

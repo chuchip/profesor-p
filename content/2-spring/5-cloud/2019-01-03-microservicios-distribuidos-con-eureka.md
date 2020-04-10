@@ -120,7 +120,7 @@ Establece el tiempo que la entrada **/{country}** realizara una pausa antes de d
 
 Este servicio es el que llamara al anterior para solicitar todos los datos de un país, pero mostrara solo la capital, el puerto del servicio al que realizo la llamada y el nombre del país.<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2019/01/captura9.png" alt="" class="wp-image-543" srcset="http://www.profesor-p.com/wp-content/uploads/2019/01/captura9.png 420w, http://www.profesor-p.com/wp-content/uploads/2019/01/captura9-300x132.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></figure> 
+<img src="http://www.profesor-p.com/img/2019/01/captura9.png" alt="" class="wp-image-543" srcset="http://www.profesor-p.com/img/2019/01/captura9.png 420w, http://www.profesor-p.com/img/2019/01/captura9-300x132.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></figure> 
 
 Necesitaremos tener los siguientes _starters_
 

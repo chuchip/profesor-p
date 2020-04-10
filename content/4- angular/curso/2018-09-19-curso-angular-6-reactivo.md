@@ -9,7 +9,7 @@ url: /2018/09/19/curso-angular-6-reactivo/
 enclosure:
   - |
     |
-        http://www.profesor-p.com/wp-content/uploads/2018/09/prueba4.mp4
+        http://www.profesor-p.com/img/2018/09/prueba4.mp4
         86909
         video/mp4
         

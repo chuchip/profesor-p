@@ -3,7 +3,7 @@ title: ERP Anjelica
 author: airec69
 type: page
 date: 2018-08-27T18:05:48+00:00
-featured_image: /wp-content/uploads/2018/08/anjelica_logo.png
+featured_image: /img/2018/08/anjelica_logo.png
 cwp_meta_box_check:
   - No
 

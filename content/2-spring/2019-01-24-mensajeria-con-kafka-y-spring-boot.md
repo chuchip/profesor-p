@@ -5,7 +5,7 @@ author: El Profe
 type: post
 date: 2019-01-24T15:31:06+00:00
 url: /2019/01/24/mensajeria-con-kafka-y-spring-boot/
-featured_image: /wp-content/uploads/2019/01/spring-kafka.jpg
+featured_image: /img/2019/01/spring-kafka.jpg
 categories:
   - docker
   - java

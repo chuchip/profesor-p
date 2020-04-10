@@ -54,7 +54,7 @@ La única dependencia para poder crear un servidor de configuraciones es incluir
 
 El starter de Spring seria **Config Server**<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-1024x371.png" alt="" class="wp-image-519" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-1024x371.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-300x109.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-768x278.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1.png 1162w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
+<img src="http://www.profesor-p.com/img/2018/12/captura1-1024x371.png" alt="" class="wp-image-519" srcset="http://www.profesor-p.com/img/2018/12/captura1-1024x371.png 1024w, http://www.profesor-p.com/img/2018/12/captura1-300x109.png 300w, http://www.profesor-p.com/img/2018/12/captura1-768x278.png 768w, http://www.profesor-p.com/img/2018/12/captura1.png 1162w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure> 
 
 El servidor de configuraciones se compone de una sola clase, que detallo a continuación:
 
@@ -114,13 +114,13 @@ Obsérvese que el valor puede ser asignado con **:** (dos puntos) o **=** (igual
 
 Para ver los valores pasados a nuestros cliente, realizaremos una petición GET especificando el nombre del cliente y el perfil. <figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura2.png" alt="" class="wp-image-520" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura2.png 800w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura2-300x158.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura2-768x405.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure> 
+<img src="http://www.profesor-p.com/img/2018/12/captura2.png" alt="" class="wp-image-520" srcset="http://www.profesor-p.com/img/2018/12/captura2.png 800w, http://www.profesor-p.com/img/2018/12/captura2-300x158.png 300w, http://www.profesor-p.com/img/2018/12/captura2-768x405.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure> 
 
 En este caso solicitamos la configuración para el cliente `config-client`y el perfil `default`que es el perfil utilizado si no especifica ninguno.
 
 Para ver la configuración para el perfil `production` se llamaría a la URL:<a href="http://localhost:8888/config-client/production" target="_blank" rel="noreferrer noopener">http://localhost:8888/config-client/production</a>. Lo cual muestra la siguiente salida:<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura3.png" alt="" class="wp-image-521" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura3.png 838w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura3-300x205.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura3-768x524.png 768w" sizes="(max-width: 838px) 100vw, 838px" /></figure> 
+<img src="http://www.profesor-p.com/img/2018/12/captura3.png" alt="" class="wp-image-521" srcset="http://www.profesor-p.com/img/2018/12/captura3.png 838w, http://www.profesor-p.com/img/2018/12/captura3-300x205.png 300w, http://www.profesor-p.com/img/2018/12/captura3-768x524.png 768w" sizes="(max-width: 838px) 100vw, 838px" /></figure> 
 
 Como se puede observar, muestra el contenido del fichero `config-client-production.properties`y después el contenido del fichero`config-client.properties`. 
 
@@ -216,7 +216,7 @@ En nuestro ejemplo se exponen las URL `/limites`, `refrescado`y `datos`.
 La llamada a `limites`nos devolverá esta salida:
 
 <div class="wp-block-image">
-  <figure class="aligncenter"><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura4.png" alt="" class="wp-image-522" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura4.png 358w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura4-150x150.png 150w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura4-300x298.png 300w" sizes="(max-width: 358px) 100vw, 358px" /></figure>
+  <figure class="aligncenter"><img src="http://www.profesor-p.com/img/2018/12/captura4.png" alt="" class="wp-image-522" srcset="http://www.profesor-p.com/img/2018/12/captura4.png 358w, http://www.profesor-p.com/img/2018/12/captura4-150x150.png 150w, http://www.profesor-p.com/img/2018/12/captura4-300x298.png 300w" sizes="(max-width: 358px) 100vw, 358px" /></figure>
 </div>
 
 Suponiendo que realizáramos un _commit_ de tal manera que los valores en nuestro servidor GIT hayan cambiado, sucesivas llamadas a esta URL nos mostrarían los antiguos datos, pues el cliente solo lee la configuración al principio, a no ser que se le obligue a refrescar sus datos.
@@ -238,7 +238,7 @@ Hacemos el correspondiente _commit_ y _push_
 
 Cuando llamemos a la URL <a href="http://localhost:8080/actuator/refresh" target="_blank" rel="noreferrer noopener">http://localhost:8080/actuator/refresh</a> con un método POST obligaremos a Spring a llamar al servidor de configuraciones y refrescar los valores.<figure class="wp-block-image">
 
-<img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura5.png" alt="" class="wp-image-523" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura5.png 397w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura5-300x275.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></figure> 
+<img src="http://www.profesor-p.com/img/2018/12/captura5.png" alt="" class="wp-image-523" srcset="http://www.profesor-p.com/img/2018/12/captura5.png 397w, http://www.profesor-p.com/img/2018/12/captura5-300x275.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></figure> 
 
 Como se ve, la salida de esta petición nos devuelve las variables refrescadas.
 

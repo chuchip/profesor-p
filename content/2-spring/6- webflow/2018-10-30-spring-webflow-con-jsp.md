@@ -297,7 +297,7 @@ Por último la vista **confirmar,** muestra todos los datos introducidos y solic
 
 Esto se nos mostrara en pantalla una vez hayamos confirmado la transferencia
 
-<img class="imagen_con_borde aligncenter wp-image-489 size-full" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-29.png" alt="" width="670" height="326" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-29.png 670w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-29-300x146.png 300w" sizes="(max-width: 670px) 100vw, 670px" />
+<img class="imagen_con_borde aligncenter wp-image-489 size-full" src="http://www.profesor-p.com/img/2018/10/Captura-29.png" alt="" width="670" height="326" srcset="http://www.profesor-p.com/img/2018/10/Captura-29.png 670w, http://www.profesor-p.com/img/2018/10/Captura-29-300x146.png 300w" sizes="(max-width: 670px) 100vw, 670px" />
 
 Y con esto termino esta entrada tan larga, pero donde creo que he explicado bastantes conceptos de WebFlow.
 

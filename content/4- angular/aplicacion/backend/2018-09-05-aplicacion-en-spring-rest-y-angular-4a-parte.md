@@ -122,7 +122,7 @@ public class VentasMesBean {
 
 Si realizamos una petición, usando curl, obtendremos la siguiente salida:
 
-<img class="alignright size-large wp-image-205" src="http://www.profesor-p.com/wp-content/uploads/2018/09/curl2-1024x152.png" alt="" width="1024" height="152" srcset="http://www.profesor-p.com/wp-content/uploads/2018/09/curl2-1024x152.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/09/curl2-300x45.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/09/curl2-768x114.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/09/curl2.png 1145w" sizes="(max-width: 1024px) 100vw, 1024px" />
+<img class="alignright size-large wp-image-205" src="http://www.profesor-p.com/img/2018/09/curl2-1024x152.png" alt="" width="1024" height="152" srcset="http://www.profesor-p.com/img/2018/09/curl2-1024x152.png 1024w, http://www.profesor-p.com/img/2018/09/curl2-300x45.png 300w, http://www.profesor-p.com/img/2018/09/curl2-768x114.png 768w, http://www.profesor-p.com/img/2018/09/curl2.png 1145w" sizes="(max-width: 1024px) 100vw, 1024px" />
 
 En la ultima entrada  de la parte servidor, explicare como se consiguen los objetos  _VentasMesBean_ y _VentasAnoBean._
 

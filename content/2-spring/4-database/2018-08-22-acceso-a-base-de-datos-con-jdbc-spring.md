@@ -5,7 +5,7 @@ author: airec69
 type: post
 date: 2018-08-22T15:39:57+00:00
 url: /2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/
-featured_image: /wp-content/uploads/2018/08/springsource.jpg
+featured_image: /img/2018/08/springsource.jpg
 categories:
   - java
   - jdbc

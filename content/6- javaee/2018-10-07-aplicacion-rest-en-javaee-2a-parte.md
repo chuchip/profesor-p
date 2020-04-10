@@ -75,7 +75,7 @@ Si todo va bien, devolvemos un código 200 (OK).
 
 Aquí tenéis un pantallazo actualizando el registro anteriormente insertado.
 
-<img class="size-full wp-image-354 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-3.png" alt="" width="886" height="626" srcset="http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-3.png 886w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-3-300x212.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/10/Captura-3-768x543.png 768w" sizes="(max-width: 886px) 100vw, 886px" />
+<img class="size-full wp-image-354 aligncenter" src="http://www.profesor-p.com/img/2018/10/Captura-3.png" alt="" width="886" height="626" srcset="http://www.profesor-p.com/img/2018/10/Captura-3.png 886w, http://www.profesor-p.com/img/2018/10/Captura-3-300x212.png 300w, http://www.profesor-p.com/img/2018/10/Captura-3-768x543.png 768w" sizes="(max-width: 886px) 100vw, 886px" />
 
   * Funcion **delete**
 

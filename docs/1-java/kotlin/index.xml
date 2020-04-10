@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kotlin on Documentacion en español</title>
+    <link>http://www.profesor-p.com/1-java/kotlin/</link>
+    <description>Recent content in Kotlin on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Thu, 11 Oct 2018 09:50:19 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.profesor-p.com/1-java/kotlin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kotlin vs Java</title>
+      <link>http://www.profesor-p.com/2018/08/23/kotlin-vs-java/</link>
+      <pubDate>Thu, 23 Aug 2018 19:37:38 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/23/kotlin-vs-java/</guid>
+      <description>&lt;p&gt;Ultimamente se habla mucho de Kotlin, que si Google lo ha marcado como lenguaje preferente en la IO 2017, que si es un lenguaje muy mega-guay para programar en Android, que si soluciona los problemas de Null Pointer Exception.&lt;/p&gt;
+
+&lt;p&gt;En esta entrada voy a dar mi opinión (sin que nadie me pague 😉 ) comparando ambos lenguajes y diciendo, en mi opinión si es tan guay Kotlin, o es mas humo e intereses comerciales.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <description>Buenas chavales,
+En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
+Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
+Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
+      <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
+      <description>Hola de nuevo, chicos.
+Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
+Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
+La clase en cuestión es ApiController.</description>
+    </item>
+    
+  </channel>
+</rss>

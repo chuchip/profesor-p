@@ -305,5 +305,5 @@ En la próxima entrada explicare el programa paso a paso 😉
 
 ¡¡ Nos vemos!!
 
- [1]: http://www.profesor-p.com/wp-content/uploads/2018/10/diagrama_flujo.gif
+ [1]: http://www.profesor-p.com/img/2018/10/diagrama_flujo.gif
  [2]: http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/

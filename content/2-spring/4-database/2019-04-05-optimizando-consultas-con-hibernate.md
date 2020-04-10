@@ -30,7 +30,7 @@ Las tablas están definidas en el fichero `schema.sql` y se cargan datos para pr
 
 Este es el esquema de la base de datos:
 
-<img class="size-full wp-image-639 aligncenter" src="http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema.png" alt="" width="455" height="521" srcset="http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema.png 455w, http://www.profesor-p.com/wp-content/uploads/2019/04/jpajoins_schema-262x300.png 262w" sizes="(max-width: 455px) 100vw, 455px" />
+<img class="size-full wp-image-639 aligncenter" src="http://www.profesor-p.com/img/2019/04/jpajoins_schema.png" alt="" width="455" height="521" srcset="http://www.profesor-p.com/img/2019/04/jpajoins_schema.png 455w, http://www.profesor-p.com/img/2019/04/jpajoins_schema-262x300.png 262w" sizes="(max-width: 455px) 100vw, 455px" />
 
 En esa ocasión no voy a explicar el código pues es muy parecido al de otros programas que he explicado detalladamente en otras entradas. Me centrare en como realizar las diferentes consultas realizadas en el programa.
 

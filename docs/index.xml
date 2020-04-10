@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bienvenido a mi página on Documentacion en español</title>
+    <link>http://www.profesor-p.com/</link>
+    <description>Recent content in Bienvenido a mi página on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.profesor-p.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Generar paginas Web estáticas dinámicamente</title>
+      <link>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</link>
+      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/</guid>
+      <description>&lt;p&gt;Vamos a  hablar de &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aplicación CRUD usando REST en JavaEE</title>
+      <link>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</link>
+      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/</guid>
+      <description>&lt;p&gt;Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kotlin vs Java</title>
+      <link>http://www.profesor-p.com/2018/08/23/kotlin-vs-java/</link>
+      <pubDate>Thu, 23 Aug 2018 19:37:38 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/23/kotlin-vs-java/</guid>
+      <description>&lt;p&gt;Ultimamente se habla mucho de Kotlin, que si Google lo ha marcado como lenguaje preferente en la IO 2017, que si es un lenguaje muy mega-guay para programar en Android, que si soluciona los problemas de Null Pointer Exception.&lt;/p&gt;
+
+&lt;p&gt;En esta entrada voy a dar mi opinión (sin que nadie me pague 😉 ) comparando ambos lenguajes y diciendo, en mi opinión si es tan guay Kotlin, o es mas humo e intereses comerciales.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Crear pagina web gratuita en GitHub</title>
+      <link>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</link>
+      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear una página  web gratuita  en &lt;a href=&#34;https://www.github.com&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Estas  páginas deben ser estáticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meterán publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
+      <link>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</link>
+      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/</guid>
+      <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Aplicación CRUD en Angular</title>
+      <link>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</link>
+      <pubDate>Mon, 08 Oct 2018 20:23:38 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/08/aplicacion-crud-en-angular/</guid>
+      <description>En esta ocasión os traigo un programa realizado en Angular, el cual a través de peticiones REST, da de alta, modifica, borra y consulta los diferentes países disponibles en una base de datos. Lo que se viene diciendo una aplicacion CRUD.
+Por supuesto el protocolo para las comunicaciones es JSON.
+El código fuente lo tenéis en: https://github.com/chuchip/crud-rest-angular
+Este programa es el frontend del realizado en JavaEE, y que explico como funciona en las entradas: http://www.</description>
+    </item>
+    
+    <item>
+      <title>Creando una aplicacion DJango con Python3 en Eclipse</title>
+      <link>http://www.profesor-p.com/7-django/djangoeneclipse/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/7-django/djangoeneclipse/</guid>
+      <description>Realmente para crear un proyecto con DJango no necesitamos ningún IDE sin embargo siempre es más cómodo usar uno que nos facilite el poder realizar debug , además de ofrecernos otras ventajas.
+Podríamos usar PyCharm el cual crea un entorno automáticamente pero en este tutorial vamos a explicar como usar Eclipse con el plugin PyDev.
+En esta página tienes los primeros pasos para crear un entorno para DJango pero yo voy a explicarlo para poder usarlo después con PyDev.</description>
+    </item>
+    
+    <item>
+      <title>La clase RestTemplate</title>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/</guid>
+      <description>&lt;p&gt;Este será el primero de una serie de entradas sobre la clase  &lt;strong&gt;RestTemplate&lt;/strong&gt; de &lt;strong&gt;Spring.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización  de los objetos de una manera transparente. Es una gran alternativa dada por &lt;strong&gt;Spring&lt;/strong&gt; sobre otras librerías ya existentes en el mercado.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring WebFlow con JSP – Configuración</title>
+      <link>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/</guid>
+      <description>Voy a intentar explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
+El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <description>Buenas chavales,
+En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
+Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
+Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Frontend en Angular</title>
+      <link>http://www.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</link>
+      <pubDate>Thu, 13 Sep 2018 07:51:25 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/</guid>
+      <description>En anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6.
+El código fuente del programa lo tenéis, como siempre, en mi página de GitHub.
+Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular. Básicamente es instalar el servidor de aplicaciones Node.js. y su aplicación incluida npm (es un solo ejecutable) de https://nodejs.</description>
+    </item>
+    
+    <item>
+      <title>Backend I</title>
+      <link>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</link>
+      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/</guid>
+      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
+La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
+Para ello se realizaran los siguientes pasos:
+  Crear tablas y cargar datos de prueba en la base de datos.</description>
+    </item>
+    
+    <item>
+      <title>Testeando las aplicaciones</title>
+      <link>http://www.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</link>
+      <pubDate>Mon, 27 Aug 2018 08:24:45 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/27/testeando-las-aplicaciones/</guid>
+      <description>&lt;p&gt;En una próxima entrada hablare sobre como testear las aplicaciones con pruebas unitarias. Bueno, mostrare como lo hago en mi código.&lt;/p&gt;
+
+&lt;p&gt;De momento, viendo que alguien ya la ha hecho antes (y seguramente mejor) dejo este enlace como aperitivo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Experiencia Laboral</title>
+      <link>http://www.profesor-p.com/contacto/experiencia_laboral/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/contacto/experiencia_laboral/</guid>
+      <description>Tengo más de 30 años de experiencia en el mundo de la informática. Empece en los años 80 como freelance, realizando videojuegos, usando ensamblador como lenguaje de programación. A partir de ahí he trabajado de analista, administrador de sistemas y DBA.
+Soy miembro de grupos como AULIR (Asociacion Usuarios de Linux de La Rioja), y GDG (Google Developer Group). La informática es mi trabajo y, ademas, mi pasión, por lo cual siempre he estado y estoy aprendiendo múltiples lenguajes y tecnologías de forma autodidacta.</description>
+    </item>
+    
+    <item>
+      <title>Aplicación CRUD con DJango-REST.</title>
+      <link>http://www.profesor-p.com/7-django/aplicacioncrudendjango/</link>
+      <pubDate>Sun, 18 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/7-django/aplicacioncrudendjango/</guid>
+      <description>Partiendo del artículo anterior, y usando el esqueleto del proyecto Eclipse creado, vamos a ver como hacer una pequeña aplicación CRUD con Django-Rest. El código fuente esta disponible en https://github.com/chuchip/djangorestcrud
+Esta aplicación nos servirá para consultar, modificar, borrar o añadir los libros disponibles en una biblioteca.
+El modelo de datos con el vamos a trabajar será el siguiente:
+ title. Tipo: String. Titulo del libro. type. TIpo: String. Tipo libro (aventura, científico,comic, etc.</description>
+    </item>
+    
+    <item>
+      <title>La Clase RestTemplate - 2</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-2/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/clase-resttemplate-2/</guid>
+      <description>&lt;p&gt;En &lt;a href=&#34;http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/&#34;&gt;la anterior entrada&lt;/a&gt; vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Uso de perfiles para testear en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</link>
+      <pubDate>Fri, 01 Mar 2019 13:50:57 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</guid>
+      <description>&lt;p&gt;Como comentaba &lt;a href=&#34;http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/&#34;&gt;en el articulo anterior&lt;/a&gt; gracias al uso de perfiles es fácil personalizar las aplicaciones en &lt;strong&gt;Spring Boot&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring WebFlow con JSP</title>
+      <link>http://www.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
+      <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
+La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos &amp;#8220;/&amp;#8221; e &amp;#8220;index&amp;#8221;</description>
+    </item>
+    
+    <item>
+      <title>Angular - Inicializando</title>
+      <link>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</link>
+      <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/</guid>
+      <description>Continuando con la entrada donde instalaba Angular, seguimos desarrollando la aplicación que detallo en esta página.
+Una vez tenemos creado el esqueleto de nuestro programa, con el comando &amp;#8220;ng new&amp;#8221; ,  entraremos al directorio src. En este directorio es donde realmente vamos a trabajar.
+Los demás directorios son donde están las librerías y utilidades que nuestra aplicación usara pero que son propias de Angular y nosotros no las tocaremos (al menos en este ejemplo).</description>
+    </item>
+    
+    <item>
+      <title>Backend (II)</title>
+      <link>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>La Clase RestTemplate - 3</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-3/</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/clase-resttemplate-3/</guid>
+      <description>&lt;p&gt;Esta es la tercera y última  entrada sobre la clase &lt;strong&gt;RestTemplate&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular – Rutas</title>
+      <link>http://www.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</link>
+      <pubDate>Sun, 16 Sep 2018 14:42:39 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</guid>
+      <description>Una vez he explicado en la anterior entrada como inicializa Angular la aplicación, voy a explicar como hacer para que esta pueda aceptar parámetros a través de la URL introducida en el navegador. Básicamente, lo que deseo hacer es que, suponiendo que nuestra aplicación este corriendo en http://localhost:4200/ (es la dirección por defecto en la que escucha Node.js cuando lo lanzamos con el comando ng serve ), si vamos a la dirección http://localhost:4200/2018  nos muestre las ventas del ejercicio 2018.</description>
+    </item>
+    
+    <item>
+      <title>Desarrollando aplicaciones Java EE en NetBeans 9</title>
+      <link>http://www.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</link>
+      <pubDate>Wed, 05 Sep 2018 15:05:08 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/</guid>
+      <description>&lt;p&gt;El recién salido &lt;a href=&#34;https://netbeans.apache.org/download/nb90/nb90.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NetBeans 9&lt;/a&gt;, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para  Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Backend  (III)</title>
+      <link>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</link>
+      <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/</guid>
+      <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
+Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
+    </item>
+    
+    <item>
+      <title>La clase WebClient</title>
+      <link>http://www.profesor-p.com/webclient/</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/webclient/</guid>
+      <description>En esta ocasión hablare de la clase WebClient de SpringBoot.
+El proyecto de ejemplo esta disponible en: https://github.com/chuchip/webClientExample
+Esta clase seria la equivalente a RestTemplate pero para realizar peticiones asíncronas.
+Para poder usar esta clase debemos poner estas dependencias en nuestro fichero maven
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  Esto es así porque debemos usar WebFlux el cual esta disponible con la versión 5.0 de Spring. Esta versión de Spring requiere que usemos al menos Java 8.</description>
+    </item>
+    
+    <item>
+      <title>Backend (IV)</title>
+      <link>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
+      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
+En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    
+    <item>
+      <title>Backend (V)</title>
+      <link>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/</guid>
+      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
+Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase YagesBussines, que eran las que construían esos objetos.
+Empezare describiendo la clase
+@Component public class YagesBussines { @Autowired CalendarioRepositorioService calendarioRepositorio; @Autowired HistVentasRepository histVentasRepository; @Autowired DataSource dataSource; @Autowired private JdbcOperations jdbc; @Bean public JdbcTemplate jdbcTemplate() { return new JdbcTemplate(dataSource); } .</description>
+    </item>
+    
+    <item>
+      <title>Perfiles en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
+      <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lambdas en JDBC Data</title>
+      <link>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <pubDate>Tue, 04 Sep 2018 11:04:46 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <description>En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
+Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.
+Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:</description>
+    </item>
+    
+    <item>
+      <title>Estableciendo filtros en Spring</title>
+      <link>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/</guid>
+      <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
+Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
+    </item>
+    
+    <item>
+      <title>Cacheando resultados con Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</link>
+      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</guid>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+    </item>
+    
+    <item>
+      <title>Beans avanzados</title>
+      <link>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</link>
+      <pubDate>Thu, 18 Apr 2019 21:26:57 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/</guid>
+      <description>En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles).
+Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.</description>
+    </item>
+    
+    <item>
+      <title>Optimizando relaciones entre entidades en Hibernate</title>
+      <link>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</link>
+      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</guid>
+      <description>En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA.
+Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.
+EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.</description>
+    </item>
+    
+    <item>
+      <title>Accediendo facilmente a los datos con Spring Rest Data</title>
+      <link>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
+Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
+    </item>
+    
+    <item>
+      <title>Usando Zuul para redirigir peticiones REST</title>
+      <link>http://www.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
+      <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
+Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
+En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>
+    </item>
+    
+    <item>
+      <title>Querys avanzadas con JPA en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</link>
+      <pubDate>Thu, 14 Feb 2019 15:37:15 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</guid>
+      <description>Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .</description>
+    </item>
+    
+    <item>
+      <title>Mensajería con Kafka y Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</link>
+      <pubDate>Thu, 24 Jan 2019 15:31:06 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/01/24/mensajeria-con-kafka-y-spring-boot/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Kafka&lt;/strong&gt; es un programa de mensajería pensado para comunicaciones asíncronas. Básicamente la idea es que los clientes o &lt;strong&gt;consumidores&lt;/strong&gt; se subscriben a un tipo de noticia o &lt;strong&gt;topic&lt;/strong&gt; y cuando un emisor o &lt;strong&gt;broker&lt;/strong&gt; manda un mensaje sobre ese &lt;strong&gt;topic&lt;/strong&gt; Kafka lo distribuye a los &lt;strong&gt;consumidores&lt;/strong&gt; suscritos.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Microservicios distribuidos con Eureka</title>
+      <link>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
+      <pubDate>Thu, 03 Jan 2019 08:52:59 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
+      <description>En esta clase hablare de como crear microservicios distribuidos en Spring Boot utilizando las facilidades que nos da el paquete Spring Cloud NetFlix.
+Cualquier microservicio debe poder localizar las diferentes instancias de otro servicio del que dependa sin tener sus direcciones definidas en el código.
+En el caso de que un microservicio deba acceder a otro lo ideal seria que de alguna manera pudiera saber en que direcciones esta las instancias de ese otro microservicio funcionando, pues lo más común es que se levanten diferentes instancias dependiendo de la carga.</description>
+    </item>
+    
+    <item>
+      <title>Servidor configuraciones usando Spring Cloud</title>
+      <link>http://www.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</link>
+      <pubDate>Mon, 10 Dec 2018 14:56:56 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</guid>
+      <description>En esta ocasión vamos a usar el paquete Spring Cloud Config para poder tener configuraciones remotas para nuestras aplicaciones.
+La idea es que nuestro programa o programas puedan ir a buscar sus parámetros de configuración a un lugar externo, de tal manera que nuestra aplicación sea fácilmente parametrizable e incluso se puedan cambiar sus configuraciones en caliente.
+Esto se utiliza ampliamente en microservicios pues una mismo servicio o aplicación puede estar lanzada muchas veces en diferentes contenedores y es interesante tener un lugar central desde donde se puedan aplicar las configuraciones a estos servicios.</description>
+    </item>
+    
+    <item>
+      <title>Personalizar salidas de códigos HTTP en Spring Boot</title>
+      <link>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</link>
+      <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
+Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
+    </item>
+    
+    <item>
+      <title>Securizando servicios REST con Oauth2 en SpringBoot</title>
+      <link>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
+      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
+      <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
+OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
+    </item>
+    
+    <item>
+      <title>Seguridad WEB en Spring Boot</title>
+      <link>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
+      <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
+      <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
+      <description>Hola de nuevo, chicos.
+Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
+Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
+La clase en cuestión es ApiController.</description>
+    </item>
+    
+    <item>
+      <title>Acerca de</title>
+      <link>http://www.profesor-p.com/acerca/</link>
+      <pubDate>Fri, 28 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/acerca/</guid>
+      <description>&lt;p&gt;Este es mi blog profesional, hecho con mimo personal.&lt;/p&gt;
+
+&lt;p&gt;Detrás del &lt;strong&gt;Profesor P.&lt;/strong&gt; esta Jesús Javier &lt;strong&gt;P&lt;/strong&gt;uente Sánchez. Un analista/programador, que también es administrador de sistemas y bases de datos. Defensor del software libre, y con varios ERPs a sus espaldas, he querido aportar mi granito de arena a la comunidad, creando &lt;strong&gt;&lt;a href=&#34;http://anjelica.sf.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anjelica&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Angular – Hablando español</title>
+      <link>http://www.profesor-p.com/2018/09/24/hablando-espanol/</link>
+      <pubDate>Mon, 24 Sep 2018 10:45:43 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/24/hablando-espanol/</guid>
+      <description>Angular si no se le dice lo contrario, es ingles del bueno. Las fechas las pondrá en su formato de mes/dia/año . Los números serán con las comas con separadores de miles y los decimales con puntos. Vamos, muy ingles todo.
+El problema es que no todo el mundo es ingles (aunque les pene a los ingleses ;- )) . Así que en esta entrada voy a explicar como hacer que Angular se nos vuelva español.</description>
+    </item>
+    
+    <item>
+      <title>Angular 6 – Añadir Bootstrap 4 con JQuery</title>
+      <link>http://www.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/</link>
+      <pubDate>Thu, 20 Sep 2018 09:16:12 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/</guid>
+      <description>Recordar lo primero que para utilizar toda la potencia de BootStrap, necesitamos tener instaladas las librerias de JQuery y Popper Hay varias maneras de instalar estas librerías.
+ Localmente usando npm  Una vez estemos situados el directorio principal del proyecto, desde tu terminal preferido ejecutar las instrucciones siguientes:
+npm install bootstrap@4 jquery popper.js --save Esto nos instalara los archivos necesarios bajo el directorio node-modules. 
+Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías JavaScript de BootStrap, JQuery y Pooper.</description>
+    </item>
+    
+    <item>
+      <title>Curso Angular 6 – Reactivo!</title>
+      <link>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</link>
+      <pubDate>Wed, 19 Sep 2018 10:43:09 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</guid>
+      <description>Antes de continuar con el curso quiero dejar claro que Angular es reactivo.
+¿ Que significa eso ?.
+Pues básicamente que cualquier cambio que se haga en el modelo sera transmitido a la vista y viceversa. El modelo, entiéndase que son nuestros _Componentes. _Es decir, nuestras clases definidas en los ficheros TypeScript. La vista es el código HTML que se visualizara en nuestro navegador.
+Así, si cambiamos el valor de un campo INPUT del HTML, que este unido con la directiva [(ngModel)] a una variable.</description>
+    </item>
+    
+    <item>
+      <title>Curso Angular 6 – Formularios (1)</title>
+      <link>http://www.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</link>
+      <pubDate>Wed, 19 Sep 2018 08:29:58 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/19/curso-angular-6-formularios-1/</guid>
+      <description>En la aplicación que estamos desarrollando, de la cual, os recuerdo tenéis el código fuente en https://github.com/chuchip/yagesclient-angular, tenemos que poder solicitar al usuario el ejercicio sobre el que vamos a realizar la consulta.
+Para introducir ese dato, vamos a utilizar un formulario muy simple, pero que nos servirá para entender algunos conceptos básicos de Angular.
+Trabajando con el componente AppComponent, definido en el fichero src/app/app.component.ts nos centramos primero en el código HTML el cual, es el siguiente:</description>
+    </item>
+    
+    <item>
+      <title>Ejemplo aplicación MVC con Spring Boot  usando NetBeans 9</title>
+      <link>http://www.profesor-p.com/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/</link>
+      <pubDate>Tue, 28 Aug 2018 06:51:33 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/</guid>
+      <description>En una entrada anterior explique como instalar NetBeans 9, añadiendole el plugin para usar Spring Boot.
+Ahora vamos a crear nuestro primer proyecto en este entorno.
+Pulsaremos New Project, lo cual nos mostrara una pantalla como la siguiente.
+y en el campo Filter pondremos spring,  para después eligir Spring Boot Inititilizr project. Pulsaremos Next y nos pedirá una serie de datos sobre nuestro proyecto. Para este ejemplo podemos dejar los campos como aparecen por defecto.</description>
+    </item>
+    
+    <item>
+      <title>ERP Anjelica</title>
+      <link>http://www.profesor-p.com/anjelica/</link>
+      <pubDate>Mon, 27 Aug 2018 18:05:48 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/anjelica/</guid>
+      <description>Para aquellas pequeñas empresas que necesitan tener una trazabilidad sencilla pero potente, y ademas gratis, prueba mi ERP.
+Totalmente funcional, te sorprenderá gratamente.
+Más información aquí.</description>
+    </item>
+    
+    <item>
+      <title>Instalar plugin Spring Boot en NetBeans</title>
+      <link>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JPA &#43; Hibernate en Spring</title>
+      <link>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</link>
+      <pubDate>Sat, 25 Aug 2018 18:14:42 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/</guid>
+      <description>En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA.
+Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior.
+Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java Persistence API. Es decir la API de persistencia en Java.</description>
+    </item>
+    
+    <item>
+      <title>JPA con Lombok, simplificando.</title>
+      <link>http://www.profesor-p.com/2018/08/24/jpa-con-lombok/</link>
+      <pubDate>Fri, 24 Aug 2018 10:53:55 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/24/jpa-con-lombok/</guid>
+      <description>En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok.
+Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Anteriormente teniamos definido nuestro objeto de esta manera:
+@Entity @Table(name = &amp;quot;usuario&amp;quot;, uniqueConstraints = { @UniqueConstraint(columnNames = {&amp;quot;login&amp;quot;})}) public class Usuario implements Serializable { @Id String login; @Column String nombre; public Usuario() { } public String getLogin() { return login; } public void setLogin(String login) { this.</description>
+    </item>
+    
+    <item>
+      <title>Usando Lambdas</title>
+      <link>http://www.profesor-p.com/2018/08/23/usando-lambdas/</link>
+      <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/23/usando-lambdas/</guid>
+      <description>&lt;p&gt;En esta breve entrada explicare como mejorar el &lt;a href=&#34;http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/&#34;&gt;ejemplo anterior&lt;/a&gt;, con el uso de lambdas.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Acceso a Base de Datos con  Spring Data JDBC</title>
+      <link>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</link>
+      <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/</guid>
+      <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
+El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>
+    </item>
+    
+    <item>
+      <title>Conectando a una base de datos usando JNDI y Spring en Tomcat</title>
+      <link>http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</link>
+      <pubDate>Tue, 21 Aug 2018 13:34:56 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/</guid>
+      <description>&lt;p&gt;En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://www.profesor-p.com/2-spring/8-restful/webclient_en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2-spring/8-restful/webclient_en/</guid>
+      <description>In this article we will speak about the WebClient class of the SpringBoot framework.
+You have the source about what I write in the post at https://github.com/chuchip/webClientExample](https://github.com/chuchip/webClientExample)
+This class would be the equivalent of RestTemplate class, but it work with asynchronous requests.
+If you want to use this class, you should put this dependencies in your maven file.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  This is so why you need to use WebFlux which is available in the version 5 of Spring.</description>
+    </item>
+    
+    <item>
+      <title>Bases de Datos</title>
+      <link>http://www.profesor-p.com/contacto/experiencia_basesdatos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/contacto/experiencia_basesdatos/</guid>
+      <description>Experiencia como administrador de Base de Datos:
+ Informix &amp;#8211; 10 años Oracle &amp;#8211; 1 año Postgresql &amp;#8211; 2 años MYSQL &amp;#8211; 6 Meses SQL SERVER &amp;#8211; 3 Meses  </description>
+    </item>
+    
+    <item>
+      <title>Lenguajes  de programación</title>
+      <link>http://www.profesor-p.com/contacto/experiencia_lenguajesprogramacion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/contacto/experiencia_lenguajesprogramacion/</guid>
+      <description> JAVA - 15 Años experiencia. Trabajando en entornos: SWING, SPRING y J2EE Informix 4GL &amp;#8211; 4 años experiencia. Ensamblador &amp;#8211; 4 años experiencia. C - 2 Años experiencia. PHP &amp;#8211; 6 Meses experiencia. PERL &amp;#8211; 6 Meses experiencia. PHP &amp;#8211; 6 Meses experiencia. KOTLIN &amp;#8211; 6 Meses experiencia. Android &amp;#8211; 6 Meses experiencia. Angular &amp;#8211; 9 Meses experiencia    </description>
+    </item>
+    
+    <item>
+      <title>Sistemas</title>
+      <link>http://www.profesor-p.com/contacto/experiencia_sistemas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/contacto/experiencia_sistemas/</guid>
+      <description>Experiencia como administrador sistemas
+ HPUX &amp;#8211; 6 Años Linux &amp;#8211; 10 años  Centos, Debian, Ubuntu.  Windows &amp;#8211; 1 año VMWARE &amp;#8211; 4 años CITRIX &amp;#8211; 1 Año  </description>
+    </item>
+    
+    <item>
+      <title>Ultimas entradas</title>
+      <link>http://www.profesor-p.com/last/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/last/</guid>
+      <description>Estás son las ultimas entradas del blog
+ Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.
+ Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.
+ Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.</description>
+    </item>
+    
+  </channel>
+</rss>
