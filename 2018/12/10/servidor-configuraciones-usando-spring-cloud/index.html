@@ -12,19 +12,19 @@
     <title>Servidor configuraciones usando Spring Cloud :: Documentacion en español</title>
 
     
-    <link href="/css/nucleus.css?1569784739" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1569784739" rel="stylesheet">
-    <link href="/css/hybrid.css?1569784739" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1569784739" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1569784739" rel="stylesheet">
-    <link href="/css/auto-complete.css?1569784739" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1569784739" rel="stylesheet">
-    <link href="/css/theme.css?1569784739" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1569784739" rel="stylesheet">
-	<link href="/css/tags.css?1569784739" rel="stylesheet">
+    <link href="/css/nucleus.css?1586504087" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1586504087" rel="stylesheet">
+    <link href="/css/hybrid.css?1586504087" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1586504087" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1586504087" rel="stylesheet">
+    <link href="/css/auto-complete.css?1586504087" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1586504087" rel="stylesheet">
+    <link href="/css/theme.css?1586504087" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1586504087" rel="stylesheet">
+	<link href="/css/tags.css?1586504087" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1569784739"></script>
+    <script src="/js/jquery-3.3.1.min.js?1586504087"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -73,14 +73,14 @@ if (!doNotTrack) {
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1569784739"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1569784739"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1586504087"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1586504087"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/www.profesor-p.com\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1569784739"></script>
+<script type="text/javascript" src="/js/search.js?1586504087"></script>
 
     
   </div>
@@ -2662,7 +2662,7 @@ if (!doNotTrack) {
 
 <p>El starter de Spring seria <strong>Config Server</strong><figure class="wp-block-image"></p>
 
-<p><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-1024x371.png" alt="" class="wp-image-519" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-1024x371.png 1024w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-300x109.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1-768x278.png 768w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura1.png 1162w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></p>
+<p><img src="http://www.profesor-p.com/img/2018/12/captura1-1024x371.png" alt="" class="wp-image-519" srcset="http://www.profesor-p.com/img/2018/12/captura1-1024x371.png 1024w, http://www.profesor-p.com/img/2018/12/captura1-300x109.png 300w, http://www.profesor-p.com/img/2018/12/captura1-768x278.png 768w, http://www.profesor-p.com/img/2018/12/captura1.png 1162w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure></p>
 
 <p>El servidor de configuraciones se compone de una sola clase, que detallo a continuación:</p>
 
@@ -2724,13 +2724,13 @@ valores.valor_funcion: "VALORDEFUNCION";
 
 <p>Para ver los valores pasados a nuestros cliente, realizaremos una petición GET especificando el nombre del cliente y el perfil. <figure class="wp-block-image"></p>
 
-<p><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura2.png" alt="" class="wp-image-520" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura2.png 800w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura2-300x158.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura2-768x405.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure></p>
+<p><img src="http://www.profesor-p.com/img/2018/12/captura2.png" alt="" class="wp-image-520" srcset="http://www.profesor-p.com/img/2018/12/captura2.png 800w, http://www.profesor-p.com/img/2018/12/captura2-300x158.png 300w, http://www.profesor-p.com/img/2018/12/captura2-768x405.png 768w" sizes="(max-width: 800px) 100vw, 800px" /></figure></p>
 
 <p>En este caso solicitamos la configuración para el cliente <code>config-client</code>y el perfil <code>default</code>que es el perfil utilizado si no especifica ninguno.</p>
 
 <p>Para ver la configuración para el perfil <code>production</code> se llamaría a la URL:<a href="http://localhost:8888/config-client/production" target="_blank" rel="noreferrer noopener"><a href="http://localhost:8888/config-client/production">http://localhost:8888/config-client/production</a></a>. Lo cual muestra la siguiente salida:<figure class="wp-block-image"></p>
 
-<p><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura3.png" alt="" class="wp-image-521" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura3.png 838w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura3-300x205.png 300w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura3-768x524.png 768w" sizes="(max-width: 838px) 100vw, 838px" /></figure></p>
+<p><img src="http://www.profesor-p.com/img/2018/12/captura3.png" alt="" class="wp-image-521" srcset="http://www.profesor-p.com/img/2018/12/captura3.png 838w, http://www.profesor-p.com/img/2018/12/captura3-300x205.png 300w, http://www.profesor-p.com/img/2018/12/captura3-768x524.png 768w" sizes="(max-width: 838px) 100vw, 838px" /></figure></p>
 
 <p>Como se puede observar, muestra el contenido del fichero <code>config-client-production.properties</code>y después el contenido del fichero<code>config-client.properties</code>.</p>
 
@@ -2832,7 +2832,7 @@ public BeanConfiguration getConfiguracionRefrescada(@Value("${valores.valor_func
 <p>La llamada a <code>limites</code>nos devolverá esta salida:</p>
 
 <div class="wp-block-image">
-  <figure class="aligncenter"><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura4.png" alt="" class="wp-image-522" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura4.png 358w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura4-150x150.png 150w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura4-300x298.png 300w" sizes="(max-width: 358px) 100vw, 358px" /></figure>
+  <figure class="aligncenter"><img src="http://www.profesor-p.com/img/2018/12/captura4.png" alt="" class="wp-image-522" srcset="http://www.profesor-p.com/img/2018/12/captura4.png 358w, http://www.profesor-p.com/img/2018/12/captura4-150x150.png 150w, http://www.profesor-p.com/img/2018/12/captura4-300x298.png 300w" sizes="(max-width: 358px) 100vw, 358px" /></figure>
 </div>
 
 <p>Suponiendo que realizáramos un <em>commit</em> de tal manera que los valores en nuestro servidor GIT hayan cambiado, sucesivas llamadas a esta URL nos mostrarían los antiguos datos, pues el cliente solo lee la configuración al principio, a no ser que se le obligue a refrescar sus datos.</p>
@@ -2854,7 +2854,7 @@ valores.valor_funcion: "OTROVALORDEFUNCION"
 
 <p>Cuando llamemos a la URL <a href="http://localhost:8080/actuator/refresh" target="_blank" rel="noreferrer noopener"><a href="http://localhost:8080/actuator/refresh">http://localhost:8080/actuator/refresh</a></a> con un método POST obligaremos a Spring a llamar al servidor de configuraciones y refrescar los valores.<figure class="wp-block-image"></p>
 
-<p><img src="http://www.profesor-p.com/wp-content/uploads/2018/12/captura5.png" alt="" class="wp-image-523" srcset="http://www.profesor-p.com/wp-content/uploads/2018/12/captura5.png 397w, http://www.profesor-p.com/wp-content/uploads/2018/12/captura5-300x275.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></figure></p>
+<p><img src="http://www.profesor-p.com/img/2018/12/captura5.png" alt="" class="wp-image-523" srcset="http://www.profesor-p.com/img/2018/12/captura5.png 397w, http://www.profesor-p.com/img/2018/12/captura5-300x275.png 300w" sizes="(max-width: 397px) 100vw, 397px" /></figure></p>
 
 <p>Como se ve, la salida de esta petición nos devuelve las variables refrescadas.</p>
 
@@ -4199,20 +4199,20 @@ valores.valor_funcion: "OTROVALORDEFUNCION"
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1569784739"></script>
-    <script src="/js/perfect-scrollbar.min.js?1569784739"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1569784739"></script>
-    <script src="/js/jquery.sticky.js?1569784739"></script>
-    <script src="/js/featherlight.min.js?1569784739"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1569784739"></script>
-    <script src="/js/highlight.pack.js?1569784739"></script>
+    <script src="/js/clipboard.min.js?1586504087"></script>
+    <script src="/js/perfect-scrollbar.min.js?1586504087"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1586504087"></script>
+    <script src="/js/jquery.sticky.js?1586504087"></script>
+    <script src="/js/featherlight.min.js?1586504087"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1586504087"></script>
+    <script src="/js/highlight.pack.js?1586504087"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1569784739"></script>
-    <script src="/js/learn.js?1569784739"></script>
-    <script src="/js/hugo-learn.js?1569784739"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1586504087"></script>
+    <script src="/js/learn.js?1586504087"></script>
+    <script src="/js/hugo-learn.js?1586504087"></script>
 
-    <link href="/mermaid/mermaid.css?1569784739" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1569784739"></script>
+    <link href="/mermaid/mermaid.css?1586504087" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1586504087"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
