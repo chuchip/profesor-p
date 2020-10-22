@@ -6,7 +6,7 @@
     <description>Recent content in Base on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 12 May 2019 07:57:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/2-spring/7-base/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
       <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Logging en Spring Boot</title>
+      <link>http://www.profesor-p.com/springboot/logging-en-spring-boot/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/springboot/logging-en-spring-boot/</guid>
+      <description>&lt;p&gt;Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general,  como se va comportando.&lt;/p&gt;</description>
     </item>
     
     <item>

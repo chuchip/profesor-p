@@ -118,13 +118,13 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/7-django/</loc>
-    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
+    <loc>http://www.profesor-p.com/2-spring/7-base/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/2-spring/7-base/</loc>
-    <lastmod>2019-05-12T07:57:07+00:00</lastmod>
+    <loc>http://www.profesor-p.com/7-django/</loc>
+    <lastmod>2019-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -247,35 +247,76 @@
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/springboot/logging-en-spring-boot/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/contacto/</loc>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/tags/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/java/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/tags/java/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/logging/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/logging/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/mvn/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/mvn/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
+    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -381,18 +422,6 @@
   
   <url>
     <loc>http://www.profesor-p.com/tags/cache/</loc>
-    <lastmod>2019-05-12T07:57:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
-    <lastmod>2019-05-12T07:57:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
     <lastmod>2019-05-12T07:57:07+00:00</lastmod>
     <priority>0</priority>
   </url>

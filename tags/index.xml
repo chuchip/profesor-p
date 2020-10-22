@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>java</title>
       <link>http://www.profesor-p.com/tags/java/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>http://www.profesor-p.com/tags/logging/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mvn</title>
+      <link>http://www.profesor-p.com/tags/mvn/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/mvn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring boot</title>
+      <link>http://www.profesor-p.com/tags/spring-boot/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/spring-boot/</guid>
       <description></description>
     </item>
     
@@ -80,15 +107,6 @@
       <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/cache/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spring boot</title>
-      <link>http://www.profesor-p.com/tags/spring-boot/</link>
-      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/tags/spring-boot/</guid>
       <description></description>
     </item>
     

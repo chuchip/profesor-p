@@ -161,18 +161,18 @@
 	"content": "Ejemplos usando java EE. (La competencia de Spring 😄 )\n Aplicación CRUD usando REST en JavaEE  Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones. En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.\n Aplicación CRUD usando REST en JavaEE (II)  En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.\n Desarrollando aplicaciones Java EE en NetBeans 9  El recién salido NetBeans 9, es un excelente IDE, con soporte para Java 10 y 11, y con otra serie de características muy interesantes. Sin embargo, por temas de licencias con Oracle que es el dueño del antiguo NetBeans, solo tiene soporte para Java Standard Edition, no pudiendo, en teoría, hacer aplicaciones para Java EE.\n"
 },
 {
+	"uri": "http://www.profesor-p.com/2-spring/7-base/",
+	"title": "Base",
+	"tags": [],
+	"description": "",
+	"content": "Explicaciones sobre el core de Spring\n Perfiles en Spring Boot  Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.\n Logging en Spring Boot  Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general, como se va comportando.\n Cacheando resultados con Spring Boot  Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.\n Beans avanzados  En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles). Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.\n ⁠⁠⁠"
+},
+{
 	"uri": "http://www.profesor-p.com/7-django/",
 	"title": "DJango",
 	"tags": [],
 	"description": "",
 	"content": "Artículos sobre el framework DJango . Porque no todo en la vida es Java ;-)\nAquí tienes un listado de los artículos disponibles:\n Creando una aplicacion DJango con Python3 en Eclipse  Realmente para crear un proyecto con DJango no necesitamos ningún IDE sin embargo siempre es más cómodo usar uno que nos facilite el poder realizar debug , además de ofrecernos otras ventajas. Podríamos usar PyCharm el cual crea un entorno automáticamente pero en este tutorial vamos a explicar como usar Eclipse con el plugin PyDev. En esta página tienes los primeros pasos para crear un entorno para DJango pero yo voy a explicarlo para poder usarlo después con PyDev.\n Aplicación CRUD con DJango-REST.  Partiendo del artículo anterior, y usando el esqueleto del proyecto Eclipse creado, vamos a ver como hacer una pequeña aplicación CRUD con Django-Rest. El código fuente esta disponible en https://github.com/chuchip/djangorestcrud Esta aplicación nos servirá para consultar, modificar, borrar o añadir los libros disponibles en una biblioteca. El modelo de datos con el vamos a trabajar será el siguiente: title. Tipo: String. Titulo del libro. type. TIpo: String. Tipo libro (aventura, científico,comic, etc.\n"
-},
-{
-	"uri": "http://www.profesor-p.com/2-spring/7-base/",
-	"title": "Base",
-	"tags": [],
-	"description": "",
-	"content": "Explicaciones sobre el core de Spring\n Perfiles en Spring Boot  Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.\n Cacheando resultados con Spring Boot  Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.\n Beans avanzados  En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles). Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.\n ⁠⁠⁠"
 },
 {
 	"uri": "http://www.profesor-p.com/2-spring/8-restful/",
@@ -343,6 +343,13 @@
 	"content": "En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.\nUna cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.\nUn ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función: \nT query(java.lang.String sql, java.lang.Object[] args, ResultSetExtractor rse) throws DataAccessException  Lo que hay que entender es que como funciona realmente esta función query . Esta función necesita tres parametros:\n sentencia SQL a ejecutar,  Argumentos de la sentencia SQL Clase ResultSetExtractor donde nuestro programa hará algo con los resultados obtenidos.  Así, voy a suponer que queremos realizar una consulta sobre una tabla, buscando el nombre de un usuario, a través de su identificador. La tabla usuarios, tendría solo estos dos campos:\n identificador, que seria un varchar de 15 caracteres (un texto para los que no conocen SQL) nombre, que seria otro de varchar de 50 caracteres (otro texto, vamos).  Es decir queremos buscar, el nombre de un usuario, sabiendo su identificador. La sentencia SQL para realizar esta búsqueda seria\nselect nombre from usuarios where identificador = ? La interrogación final hace referencia al parámetro que pasaremos, es decir el identificador del usuario.\nPor lo tanto, en nuestro programa pondremos una sentencia, como la siguiente:\njdbc.query(\u0026quot;select nombre from usuarios where identificador = ?\u0026quot;, new[] { \u0026quot;usuario1\u0026quot; }, OBJETO_RESULTSETEXTRACTOR)  El parámetro new Object[] { \u0026#8220;usuario1\u0026#8221; } simplemente crea un array de Objetos con los diferentes parámetros que necesitara nuestra sentencia SQL. En este caso solo necesita un parámetro que es el identificador del usuario. Vamos a buscar el usuario que tiene como identificador usuario1.\nY nos queda por definir el objeto del tipo ResultSetExtractor, donde interactuaremos con los resultados de nuestra sentencia SQL.\nEse tipo de objeto esta definido en el interface ResultSetExtractor el cual solo tiene una función, que detallo a continuación:\nT mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException  Antes de Java 1.8, deberíamos crear una clase que implemente el interfaz ResultSetExtractor. Esa clase seria algo así como:\nclass miResultSetExtractor implements ResultSetExtractor { @Override public T mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException { System.out.println(\u0026quot;El nombre del Usuario es: \u0026quot;+rs.getString(\u0026quot;nombre\u0026quot;)); // \u0026lt;strong\u0026gt;CODIGO A EJECUTAR\u0026lt;/strong\u0026gt; } }  Y ejecutaríamos la llamada a la función query de esta manera:\njdbc.query(\"select nombre from usuarios where identificador = ?\", new Object[] { \"usuario1\" },new miResultSetExtractor ()); También podríamos crear una clase abstracta, a la hora de llamar a la función query,  con una sentencia como esta:\njdbc.query(\"select nombre from usuarios where identificador = ?\", new Object[] { \"usuario1\" }, new ResultSetExtractor() { @Override public T mapRow(java.sql.ResultSet rs, int rowNum) throws java.sql.SQLException { System.out.println(\"El nombre del Usuario es: \"+rs.getString(\"nombre\")); // CODIGO A EJECUTAR } }); El caso es que tenemos que poner un montón de código auxiliar cuando nosotros solo quisiéramos poner nuestro System.out.println.\nY ahora es cuando viene al rescate las expresiones Lamba.\njdbc.query(\"select nombre from usuarios where identificador = ?\", new Object[] { \"usuario1\" }, (param1, param2) -\u0026gt; System.out.println(\"El nombre del Usuario es: \"+param1.getString(\"nombre\")); La expresión lambda se compone de dos partes. Los parámetros a mandar y el código a ejecutar.\nAsí, nosotros mandaremos dos parametros: param1 y param2. (le podriamos haber puesto los nombres que quisieramos)\nComo se ve, no hay que especificar de que tipo son esos parámetros, Java, se encargara de eso. Te estarás preguntado, pero, ¿ como funciona esto ?.\nBueno, en primer lugar, Java, cuando compile nuestro código buscara que que objeto debe crear, dependiendo del parámetro esperado por la función jdbc.query(). Vera que espera un objeto que implemente el interface ResultSetExtractor y comprobara que ese interface solo tiene una función, por lo cual, sabrá fácilmente que parámetros se tipo de objetos se deben pasar como objetos.\nEs por eso que solo se pueden aplicar este tipo de expresiones lambda cuando el interface implemente una única función.\nUna vez que Java, sabe que objetos debe pasar, el sustituirá nuestras variables param1 y param2 y las usara en el cuerpo de nuestra expresión Lambda. Por ello ahora nuestro código: System.out.println(\u0026#8220;El nombre del Usuario es: \u0026#8220;+param1.getString(\u0026#8220;nombre\u0026#8221;)) cogera la variable param1 y la usara sabiendo que es un objeto tipo ResultSet. Observar que aunque la variable param2, no la usamos en nuestro código, debemos definirla igualmente.\nEspero haberme explicado bien, y no dudéis en preguntar o seguirme en mi cuenta de twitter.\n¡ Hasta la próxima !!\n"
 },
 {
+	"uri": "http://www.profesor-p.com/springboot/logging-en-spring-boot/",
+	"title": "Logging en Spring Boot",
+	"tags": ["logging", "java", "mvn", "spring boot"],
+	"description": "",
+	"content": "Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general, como se va comportando.\nRedirigiendo la salida. Spring Boot, como cualquier aplicación, por defecto sacara todos los mensajes por la salida estándar y/o errores, pero a menudo deseamos guardar esos mensajes en un fichero. Para ello hay varias opciones. La primera y mas obvia es redirigir salida estándar y errores a un fichero. Así, en Linux y/o Windows, podríamos ejecutar nuestra aplicación de esta manera:\n java -jar APP.JAR \u0026gt; PATH/FICHERO.LOG 2\u0026gt;\u0026amp;1\n Esto, obviamente funciona, pero tendremos que mirar en el fichero generado para ver como va todo, sin posibilidad de ver inmediatamente en nuestra consola como ha ido el proceso recién lanzado.\nSi lo que deseamos es que deje la salida estándar en un fichero, pero, que además, nos muestre en la consola esos misma salida podremos lanzar el proceso de esta manera:\n java -jar -Dlogging.file.name=PATH/FICHERO.LOG APP.JAR\n Por supuesto también podemos poner en nuestro fichero de configuración esa misma propiedad y podremos lanzar el proceso sin el parámetro \u0026lsquo;-D\u0026rsquo;\nFichero:application.properties\nlogging.file.name=PATH/FICHERO.LOG APP.JAR  Si queremos ejecutar el proceso desde maven pondremos este comando:\n mvn spring-boot:run -Dspring-boot.run.arguments=\u0026ndash;logging.file.name=PATH/FICHERO.LOG\n Configurando nivel de log Por supuesto los mensajes que deseamos mostrar los podemos escribir con un simple system.out.print pero desde luego no sería muy elegante ni practico. Siempre es recomendable usar un logger.\nSpring usa Commons Logging, usando por defecto Logback, si bien incluye también configuraciones por defecto para r Java Util Logging y Log4J2.\nPor defecto Spring Boot, muestra los mensajes de nivel ERROR-level, WARN-level, and INFO-level pero esto se puede cambiar de diferentes maneras.\nLa mas simple es añadiendo el parámetro --trace o --debugcuando ejecutemos nuestro programa.\n java -jar APP.JAR \u0026ndash;debug\n Otra manera será especificar en la propiedad \u0026lsquo;logging.level.root\u0026rsquo;. Esto lo haremos añadiremos la línea correspondiente en el fichero application.properties o a la hora de ejecutarlo, añadiendo el parametro adecuado:\n java -jar -Dlogging.level.root=DEBUG APP.JAR\n Una vez más si usamos maven para ejecutar el proceso podremos poner el siguiente comando:\n mvn spring-boot:run -Dspring-boot.run.arguments=-logging.level.root=TRACE\n Por supuesto, se permite especificar niveles de logging por paquetes, así, si queremos que nuestra aplicación que esta en el paquete \u0026lsquo;com.profesorp.miaplicacion\u0026rsquo; muestre los mensajes de nivel debug, pero el resto de aplicaciones (que os recuerdo también tendrán sus salidas a través del log) solo muestren los mensajes de error, escribiremos esta sentencia:\n java -jar -Dlogging.level.root=ERROR -D-Dlogging.level.com.propesorp.miaplicacion=DEBUG APP.JAR\n Formateando la salida Spring por defecto muestra los mensajes de error con este formato:\n2019-03-05 10:57:51.112 INFO 45469 --- [ main] org.apache.catalina.core.StandardEngine : Starting Servlet Engine: Apache Tomcat/7.0.52 2019-03-05 10:57:51.253 INFO 45469 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext  Es decir:\n Día y hora, incluyendo milisegundos. Nivel de Log: ERROR, WARN, INFO, DEBUG, or TRACE. Identificador o número del proceso Un --- como separador El nombre del Thread entre corchetes. El nombre de la clase donde se esta escribiendo el log. El mensaje de log.  También podemos especificar que use colores para cuando muestre en la consola los logs, con la siguiente variable: spring.output.ansi.enabled=true. Así, los mensajes de error los mostrara en ROJO, los de aviso (WARN) en amarillo y los demás, en verde.\nEste formato puede ser cambiado con la variable logging.pattern.console para la salida de consola y con logging.pattern.file para la salida a fichero. Un ejemplo configuración seria este:\n# Salida a consola. logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n # Salida a consola con colores. logging.pattern.console=%clr(%d{yy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint} %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n # Salida a un fichero logging.pattern.file= %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%  El formato de estas variables es un poco complicado y os aconsejo ver este enlace si queréis modificarlo.\nConfiguración avanzada Si Spring Boot encuentra en el classpath un fichero con alguno de estos nombres, lo usara para configurar los loggers.\n logback-spring.xml logback.xml logback-spring.groovy logback.groovy  Spring recomienda que usemos la variante -spring como se describe aquí.\nEnlaces a más documentación Y para finalizar os dejo unos enlaces con más documentación en ingles, sobre logging:\nhttps://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-logging\nhttps://www.baeldung.com/spring-boot-logging\nhttps://howtodoinjava.com/spring-boot2/logging/spring-boot-logging-configurations/\n"
+},
+{
 	"uri": "http://www.profesor-p.com/contacto/",
 	"title": "Contacto",
 	"tags": [],
@@ -380,6 +387,48 @@
 {
 	"uri": "http://www.profesor-p.com/tags/java/",
 	"title": "java",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/logging/",
+	"title": "logging",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/logging/",
+	"title": "logging",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/mvn/",
+	"title": "mvn",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/mvn/",
+	"title": "mvn",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/spring-boot/",
+	"title": "spring boot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/spring-boot/",
+	"title": "spring boot",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -506,20 +555,6 @@
 {
 	"uri": "http://www.profesor-p.com/tags/cache/",
 	"title": "cache",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/categories/spring-boot/",
-	"title": "spring boot",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/spring-boot/",
-	"title": "spring boot",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1334,7 +1369,7 @@
 	"title": "Ultimas entradas",
 	"tags": [],
 	"description": "",
-	"content": "Estás son las ultimas entradas del blog\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
+	"content": "Estás son las ultimas entradas del blog\n Logging en Spring Boot  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/categories/experiencia/",
