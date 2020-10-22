@@ -6,7 +6,7 @@
     <description>Recent content in java on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
@@ -194,6 +194,16 @@ Empezare describiendo la clase
       <description>En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema.
 Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación.
 Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:</description>
+    </item>
+    
+    <item>
+      <title>Logging en Spring Boot</title>
+      <link>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</guid>
+      <description>Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general, como se va comportando.
+Redirigiendo la salida. Spring Boot, como cualquier aplicación, por defecto sacara todos los mensajes por la salida estándar y/o errores, pero a menudo deseamos guardar esos mensajes en un fichero.</description>
     </item>
     
     <item>

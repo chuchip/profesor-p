@@ -6,6 +6,10 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+- [Logging en Spring Boot](/springboot/logging-en-spring-boot/)
+
+Aquí tenéis un pequeño manual de como crear un proyecto de **DJango** usando el IDE **Eclipse** y el plugin **PyDev**.
+
 - [Creando un proyecto de Django con Eclipse](/7-django/djangoeneclipse/)
 
 Aquí tenéis un pequeño manual de como crear un proyecto de **DJango** usando el IDE **Eclipse** y el plugin **PyDev**.

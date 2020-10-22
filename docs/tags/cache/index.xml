@@ -6,10 +6,20 @@
     <description>Recent content in cache on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 12 May 2019 07:57:07 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/cache/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Logging en Spring Boot</title>
+      <link>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</guid>
+      <description>Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general, como se va comportando.
+Redirigiendo la salida. Spring Boot, como cualquier aplicación, por defecto sacara todos los mensajes por la salida estándar y/o errores, pero a menudo deseamos guardar esos mensajes en un fichero.</description>
+    </item>
     
     <item>
       <title>Cacheando resultados con Spring Boot</title>

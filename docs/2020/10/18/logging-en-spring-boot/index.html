@@ -1,0 +1,4146 @@
+<!DOCTYPE html>
+<html lang="es" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.56.0" />
+    <meta name="description" content="Articulos sobre informática ">
+<meta name="author" content="Jesus J. Puente">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Logging en Spring Boot :: Documentacion en español</title>
+
+    
+    <link href="/css/nucleus.css?1603366304" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1603366304" rel="stylesheet">
+    <link href="/css/hybrid.css?1603366304" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1603366304" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1603366304" rel="stylesheet">
+    <link href="/css/auto-complete.css?1603366304" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1603366304" rel="stylesheet">
+    <link href="/css/theme.css?1603366304" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1603366304" rel="stylesheet">
+	<link href="/css/tags.css?1603366304" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1603366304"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-124706971-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  </head>
+  <body class="" data-url="/2020/10/18/logging-en-spring-boot/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+
+
+	
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Buscar...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1603366304"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1603366304"></script>
+<script type="text/javascript">
+    
+        var baseurl = "http:\/\/www.profesor-p.com\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1603366304"></script>
+
+    
+  </div>
+  
+
+
+
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/1-java/" title="Java"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/1-java/">
+          <b>1.</b> Java
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/1-java/kotlin/" title="Kotlin"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/1-java/kotlin/">
+          <b>> </b> Kotlin
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/23/usando-lambdas/" title="Usando Lambdas" class="dd-item ">
+        <a href="/2018/08/23/usando-lambdas/">
+        <b>o </b>Usando Lambdas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/" title="Spring"  class="dd-item 
+        parent
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/">
+          <b>2. </b>Spring
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/1-testing/" title="Testing"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/1-testing/">
+          <b>- </b>Testing
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/2-seguridad/" title="Seguridad"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/2-seguridad/">
+          <b>- </b>Seguridad
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/3-mvc/" title="MVC"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/3-mvc/">
+          <b>- </b>MVC
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/4-database/" title="Database"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/4-database/">
+          <b>- </b>Database
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/5-cloud/" title="Cloud"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/5-cloud/">
+          <b>- </b>Cloud
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/6-webflow/" title="Webflow"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/6-webflow/">
+          <b>- </b>Webflow
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/7-base/" title="Base"  class="dd-item 
+        parent
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/7-base/">
+          <b>- </b>Base
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/" title="Perfiles en Spring Boot" class="dd-item ">
+        <a href="/2019/02/28/perfiles-en-spring-boot/">
+        <b>o </b>Perfiles en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2020/10/18/logging-en-spring-boot/" title="Logging en Spring Boot" class="dd-item activeMenu ">
+        <a href="/2020/10/18/logging-en-spring-boot/">
+        <b>o </b>Logging en Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/" title="Cacheando resultados con Spring Boot" class="dd-item ">
+        <a href="/2019/05/12/cacheando-datos-en-spring-boot/">
+        <b>o </b>Cacheando resultados con Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/" title="Beans avanzados" class="dd-item ">
+        <a href="/2019/04/18/beans-avanzados-en-spring/">
+        <b>o </b>Beans avanzados
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/2-spring/8-restful/" title="Restful"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/2-spring/8-restful/">
+          <b>- </b>Restful
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/" title="Mensajería con Kafka y Spring Boot" class="dd-item ">
+        <a href="/2019/01/24/mensajeria-con-kafka-y-spring-boot/">
+        <b>o </b>Mensajería con Kafka y Spring Boot
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/" title="Instalar plugin Spring Boot en NetBeans" class="dd-item ">
+        <a href="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/">
+        <b>o </b>Instalar plugin Spring Boot en NetBeans
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/3-hugo/" title="Hugo"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/3-hugo/">
+          <b>3. </b>Hugo
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/" title="Generar paginas Web estáticas dinámicamente" class="dd-item ">
+        <a href="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/">
+        <b>o </b> Generar paginas Web estáticas dinámicamente
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/" title="Crear pagina web gratuita en GitHub" class="dd-item ">
+        <a href="/2018/12/05/crear-pagina-web-gratuita-en-github/">
+        <b>o </b> Crear pagina web gratuita en GitHub
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/4-angular/" title="Angular"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/4-angular/">
+          <b>4. </b>Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/4-angular/curso/" title="Curso de Angular 6"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/4-angular/curso/">
+          <b>- </b>Curso de Angular 6
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/4-angular/aplicacion/" title="Aplicación usando Java y Angular"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/4-angular/aplicacion/">
+          <b>- </b>Aplicación usando Java y Angular
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/4-angular/aplicacion/backend/" title="Backend"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/4-angular/aplicacion/backend/">
+          <b>> </b>Backend
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/4-angular/aplicacion/frontend/" title="Frontend"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/4-angular/aplicacion/frontend/">
+          <b>> </b>Frontend
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/08/aplicacion-crud-en-angular/" title="Aplicación CRUD en Angular" class="dd-item ">
+        <a href="/2018/10/08/aplicacion-crud-en-angular/">
+        <b>o </b>Aplicación CRUD en Angular
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/24/hablando-espanol/" title="Angular – Hablando español" class="dd-item ">
+        <a href="/2018/09/24/hablando-espanol/">
+        <b>o </b>Angular – Hablando español
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/" title="Angular 6 – Añadir Bootstrap 4 con JQuery" class="dd-item ">
+        <a href="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/">
+        <b>o </b>Angular 6 – Añadir Bootstrap 4 con JQuery
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/5-dba/" title="DBA"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/5-dba/">
+          <b>5. </b>DBA
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/" title="Conectando a una base de datos usando JNDI y Spring en Tomcat" class="dd-item ">
+        <a href="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/">
+        <b>o </b>Conectando a una base de datos usando JNDI y Spring en Tomcat
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/6-javaee/" title="J2EE"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/6-javaee/">
+          <b>6. </b>J2EE
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/" title="Aplicación CRUD usando REST en JavaEE" class="dd-item ">
+        <a href="/2018/10/06/aplicacion-rest-en-javaee/">
+        <b>o </b>Aplicación CRUD usando REST en JavaEE
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/" title="Aplicación CRUD usando REST en JavaEE  (II)" class="dd-item ">
+        <a href="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/">
+        <b>o </b>Aplicación CRUD usando REST en JavaEE  (II)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/" title="Desarrollando aplicaciones Java EE en NetBeans 9" class="dd-item ">
+        <a href="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/">
+        <b>o </b>Desarrollando aplicaciones Java EE en NetBeans 9
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/7-django/" title="DJango"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/7-django/">
+          <b>7. </b>DJango
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/7-django/djangoeneclipse/" title="Creando una aplicacion DJango con Python3 en Eclipse" class="dd-item ">
+        <a href="/7-django/djangoeneclipse/">
+        <b>o </b>Creando una aplicacion DJango con Python3 en Eclipse
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/7-django/aplicacioncrudendjango/" title="Aplicación CRUD con DJango-REST." class="dd-item ">
+        <a href="/7-django/aplicacioncrudendjango/">
+        <b>o </b>Aplicación CRUD con DJango-REST.
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+					
+		    			
+			
+
+
+
+
+
+
+
+ 
+  
+  	
+		 
+	
+
+    
+    <li data-nav-id="/contacto/" title="Contacto"  class="dd-item 
+        
+        lineaMenu 
+        		"
+       >		
+      <a href="/contacto/">
+          <b> > </b>Contacto
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+		  
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/contacto/experiencia_laboral/" title="Experiencia Laboral" class="dd-item ">
+        <a href="/contacto/experiencia_laboral/">
+        Experiencia Laboral
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/contacto/experiencia_basesdatos/" title="Bases de Datos" class="dd-item ">
+        <a href="/contacto/experiencia_basesdatos/">
+        Bases de Datos
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/contacto/experiencia_lenguajesprogramacion/" title="Lenguajes  de programación" class="dd-item ">
+        <a href="/contacto/experiencia_lenguajesprogramacion/">
+        Lenguajes  de programación
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+			
+
+            
+				
+
+
+
+
+
+
+
+ 
+  
+    
+	
+      <li data-nav-id="/contacto/experiencia_sistemas/" title="Sistemas" class="dd-item ">
+        <a href="/contacto/experiencia_sistemas/">
+        Sistemas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+	 
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>Más</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="http://www.profesor-p.com/last"><i class='fas fa-fw fa-bullhorn'></i>Últimas entradas</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://www.profesor-p.com/acerca"><i class='fas fa-fw fa-camera'></i>Acerca de</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="http://www.profesor-p.com/anjelica"><i class='fas fa-fw fa-bolt'></i> Anjelica</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Borrar Historial</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+
+            
+            
+          
+          
+
+            
+            
+          
+          
+
+            
+            
+          
+          
+            <a href='/'>Bienvenido a mi página</a> > <a href='/2-spring/'>Spring</a> > <a href='/2-spring/7-base/'>Base</a> > Logging en Spring Boot
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#redirigiendo-la-salida">Redirigiendo la salida.</a></li>
+<li><a href="#configurando-nivel-de-log">Configurando nivel de log</a></li>
+<li><a href="#formateando-la-salida">Formateando la salida</a></li>
+<li><a href="#configuración-avanzada">Configuración avanzada</a></li>
+<li><a href="#enlaces-a-más-documentación">Enlaces a más documentación</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+ 					
+										
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/cache">cache</a>
+
+  <a class="tag-link" href="/tags/java">java</a>
+
+  <a class="tag-link" href="/tags/mvn">mvn</a>
+
+  <a class="tag-link" href="/tags/spring-boot">spring boot</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+			  
+				Logging en Spring Boot 
+			  
+			   
+				<class id ="fecha">
+				October 18, 2020 </div>
+			  
+            </h1>
+			
+          
+        
+
+
+
+
+
+<p>Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general,  como se va comportando.</p>
+
+<h3 id="redirigiendo-la-salida">Redirigiendo la salida.</h3>
+
+<p>Spring Boot, como cualquier aplicación, por defecto sacara todos los mensajes por la salida estándar y/o errores, pero a menudo deseamos guardar esos mensajes en un fichero. Para ello hay varias opciones. La primera y mas obvia es redirigir salida estándar y errores a un fichero. Así, en Linux y/o Windows, podríamos ejecutar nuestra aplicación de esta manera:</p>
+
+<blockquote>
+<p>java -jar APP.JAR &gt; PATH/FICHERO.LOG 2&gt;&amp;1</p>
+</blockquote>
+
+<p>Esto, obviamente funciona, pero tendremos que mirar en el fichero generado para ver como va todo, sin posibilidad de ver inmediatamente en nuestra consola como ha ido el proceso recién lanzado.</p>
+
+<p>Si lo que deseamos es que deje la salida estándar en un fichero, pero, que además, nos muestre en la consola  esos misma salida podremos lanzar el proceso de esta manera:</p>
+
+<blockquote>
+<p>java -jar -Dlogging.file.name=PATH/FICHERO.LOG APP.JAR</p>
+</blockquote>
+
+<p>Por supuesto también podemos poner en nuestro fichero de configuración esa misma propiedad y podremos lanzar el proceso sin el parámetro &lsquo;-D&rsquo;</p>
+
+<p><strong>Fichero</strong>:<code>application.properties</code></p>
+
+<pre><code class="language-java">logging.file.name=PATH/FICHERO.LOG APP.JAR
+</code></pre>
+
+<p>Si queremos ejecutar el proceso desde maven pondremos este comando:</p>
+
+<blockquote>
+<p>mvn spring-boot:run -Dspring-boot.run.arguments=&ndash;logging.file.name=PATH/FICHERO.LOG</p>
+</blockquote>
+
+<h3 id="configurando-nivel-de-log">Configurando nivel de log</h3>
+
+<p>Por supuesto los mensajes que deseamos mostrar los podemos escribir con un simple <code>system.out.print</code> pero desde luego no sería muy elegante ni practico.  Siempre es recomendable usar un logger.</p>
+
+<p>Spring usa  <a href="https://commons.apache.org/logging">Commons Logging</a>,  usando por defecto <a href="https://logback.qos.ch/">Logback</a>,  si bien incluye también configuraciones por defecto para r <a href="https://docs.oracle.com/javase/8/docs/api//java/util/logging/package-summary.html">Java Util Logging</a> y <a href="https://logging.apache.org/log4j/2.x/">Log4J2</a>.</p>
+
+<p>Por defecto Spring Boot, muestra los mensajes de nivel <code>ERROR</code>-level, <code>WARN</code>-level, and <code>INFO</code>-level pero esto se puede cambiar de diferentes maneras.</p>
+
+<p>La mas simple es añadiendo el parámetro <code>--trace</code> o  <code>--debug</code>cuando ejecutemos nuestro programa.</p>
+
+<blockquote>
+<p>java -jar  APP.JAR &ndash;debug</p>
+</blockquote>
+
+<p>Otra manera será especificar en la propiedad &lsquo;logging.level.root&rsquo;. Esto lo haremos  añadiremos la línea correspondiente en el fichero <code>application.properties</code> o a la hora de ejecutarlo, añadiendo el parametro adecuado:</p>
+
+<blockquote>
+<p>java -jar  -Dlogging.level.root=DEBUG APP.JAR</p>
+</blockquote>
+
+<p>Una vez más si usamos maven para ejecutar el proceso podremos poner el siguiente comando:</p>
+
+<blockquote>
+<p>mvn spring-boot:run
+    -Dspring-boot.run.arguments=-logging.level.root=TRACE</p>
+</blockquote>
+
+<p>Por supuesto, se permite especificar niveles de <em>logging</em> por paquetes, así, si queremos que nuestra aplicación que esta en el paquete &lsquo;com.profesorp.miaplicacion&rsquo; muestre los mensajes de nivel <em>debug</em>, pero el resto de aplicaciones (que os recuerdo también tendrán sus salidas a través del log) solo muestren los mensajes de error, escribiremos esta sentencia:</p>
+
+<blockquote>
+<p>java -jar -Dlogging.level.root=ERROR -D-Dlogging.level.com.propesorp.miaplicacion=DEBUG APP.JAR</p>
+</blockquote>
+
+<h3 id="formateando-la-salida">Formateando la salida</h3>
+
+<p>Spring por defecto muestra los mensajes de error con este formato:</p>
+
+<pre><code>2019-03-05 10:57:51.112  INFO 45469 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.52
+2019-03-05 10:57:51.253  INFO 45469 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+</code></pre>
+
+<p>Es decir:</p>
+
+<ul>
+<li>Día y hora, incluyendo milisegundos.</li>
+<li>Nivel de Log:  <code>ERROR</code>, <code>WARN</code>, <code>INFO</code>, <code>DEBUG</code>, or <code>TRACE</code>.</li>
+<li>Identificador o número del proceso</li>
+<li>Un <code>---</code> como separador</li>
+<li>El nombre del Thread entre corchetes.</li>
+<li>El nombre de la clase donde se esta escribiendo el log.</li>
+<li>El mensaje de log.</li>
+</ul>
+
+<p>También podemos especificar que use colores para cuando  muestre en la consola los logs, con la siguiente variable: <code>spring.output.ansi.enabled=true</code>. Así, los mensajes de error los mostrara en ROJO, los de aviso (WARN) en amarillo y los demás en verde.</p>
+
+<p>Este formato puede ser cambiado fácilmente con la variable <code>logging.pattern.console</code> para la salida de consola y con <code>logging.pattern.file</code> para la salida a fichero. Un ejemplo configuración seria este:</p>
+
+<pre><code># Salida a consola.
+logging.pattern.console= %d{yyyy-MM-dd HH:mm:ss} - %logger{36} - %msg%n
+# Salida a consola con colores.
+logging.pattern.console=%clr(%d{yy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-5p) %clr(${PID}){faint} %clr(---){faint} %clr([%8.15t]){cyan} %clr(%-40.40logger{0}){blue} %clr(:){red} %clr(%m){faint}%n
+
+# Salida a un fichero
+logging.pattern.file= %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%
+</code></pre>
+
+<p>El formato de estas variables es un poco complicado y os aconsejo ver <a href="https://logback.qos.ch/manual/layouts.html#ClassicPatternLayout">este enlace</a> si queréis modificarlo.</p>
+
+<h3 id="configuración-avanzada">Configuración avanzada</h3>
+
+<p>Si Spring Boot encuentra en el <em>classpath</em>  un fichero con alguno de estos nombres, lo usara para configurar los loggers.</p>
+
+<ul>
+<li><em>logback-spring.xml</em></li>
+<li><em>logback.xml</em></li>
+<li><em>logback-spring.groovy</em></li>
+<li><em>logback.groovy</em></li>
+</ul>
+
+<p>Spring recomienda que usemos la variante -spring como se describe <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-logging.html#boot-features-custom-log-configuration">aquí</a>.</p>
+
+<h3 id="enlaces-a-más-documentación">Enlaces a más documentación</h3>
+
+<p>Y para finalizar os dejo unos enlaces con más documentación en ingles, sobre logging:</p>
+
+<p><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-logging">https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-logging</a></p>
+
+<p><a href="https://www.baeldung.com/spring-boot-logging">https://www.baeldung.com/spring-boot-logging</a></p>
+
+<p><a href="https://howtodoinjava.com/spring-boot2/logging/spring-boot-logging-configurations/">https://howtodoinjava.com/spring-boot2/logging/spring-boot-logging-configurations/</a></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/2019/02/28/perfiles-en-spring-boot/" title="Perfiles en Spring Boot"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2019/05/12/cacheando-datos-en-spring-boot/" title="Cacheando resultados con Spring Boot" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1603366304"></script>
+    <script src="/js/perfect-scrollbar.min.js?1603366304"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1603366304"></script>
+    <script src="/js/jquery.sticky.js?1603366304"></script>
+    <script src="/js/featherlight.min.js?1603366304"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1603366304"></script>
+    <script src="/js/highlight.pack.js?1603366304"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1603366304"></script>
+    <script src="/js/learn.js?1603366304"></script>
+    <script src="/js/hugo-learn.js?1603366304"></script>
+
+    <link href="/mermaid/mermaid.css?1603366304" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1603366304"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
