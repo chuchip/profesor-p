@@ -47,7 +47,7 @@ Nuestro proyecto, por lo tanto, quedara así:
 
 Por no hacer demasiado largo el articulo, no voy a explicar como configurar el servidor y los clientes de Eureka. Tenéis un articulo explicando como hacerlo [en este mismo blog](http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/). Ambos programas son muy simples y viendo el código seguro que no necesitáis más explicaciones ;-) .
 
-
+Tenéis el fuente del proyecto en https://github.com/chuchip/springcloudgateway 
 
  En cuanto a **dummyRest** es una aplicación que simplemente responde en unas rutas con un mensaje que incluye las características de la petición:
 
