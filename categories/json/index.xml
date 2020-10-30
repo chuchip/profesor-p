@@ -6,7 +6,7 @@
     <description>Recent content in json on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 25 Mar 2019 16:02:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 17:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/json/index.xml" rel="self" type="application/rss+xml" />
     
@@ -41,6 +41,16 @@ Este programa es el frontend del realizado en JavaEE, y que explico como funcion
       <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    
+    <item>
+      <title>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.</title>
+      <link>http://www.profesor-p.com/spring/gateway/</link>
+      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/gateway/</guid>
+      <description>Hace tiempo escribí un articulo sobre como realizar una pasarela o gateway para redirigir peticiones utilizando Zuul. Sin embargo, Zuul ya no esta aconsejado por la gente de Pivotal, que como sabréis es la empresa detrás de Spring. Para sustituirlo han creado Spring Cloud Gateway.
+Principalmente, la mayor ventaja de este este software es que es reactivo. Es decir, utiliza las nuevas librerías de Webflux de Spring para que las llamadas no sean bloqueantes.</description>
     </item>
     
     <item>

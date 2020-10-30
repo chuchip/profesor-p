@@ -6,10 +6,20 @@
     <description>Recent content in Cloud on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Thu, 03 Jan 2019 08:52:59 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 17:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/2-spring/5-cloud/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.</title>
+      <link>http://www.profesor-p.com/spring/gateway/</link>
+      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/gateway/</guid>
+      <description>Hace tiempo escribí un articulo sobre como realizar una pasarela o gateway para redirigir peticiones utilizando Zuul. Sin embargo, Zuul ya no esta aconsejado por la gente de Pivotal, que como sabréis es la empresa detrás de Spring. Para sustituirlo han creado Spring Cloud Gateway.
+Principalmente, la mayor ventaja de este este software es que es reactivo. Es decir, utiliza las nuevas librerías de Webflux de Spring para que las llamadas no sean bloqueantes.</description>
+    </item>
     
     <item>
       <title>Microservicios distribuidos con Eureka</title>

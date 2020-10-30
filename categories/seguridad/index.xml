@@ -6,7 +6,7 @@
     <description>Recent content in seguridad on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 16 Mar 2019 07:19:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 17:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/seguridad/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,16 @@ El programa simulara que entras a la página de un banco donde puedes realizar u
       <guid>http://www.profesor-p.com/2018/10/30/spring-webflow-con-jsp/</guid>
       <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
 La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos &amp;#8220;/&amp;#8221; e &amp;#8220;index&amp;#8221;</description>
+    </item>
+    
+    <item>
+      <title>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.</title>
+      <link>http://www.profesor-p.com/spring/gateway/</link>
+      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/gateway/</guid>
+      <description>Hace tiempo escribí un articulo sobre como realizar una pasarela o gateway para redirigir peticiones utilizando Zuul. Sin embargo, Zuul ya no esta aconsejado por la gente de Pivotal, que como sabréis es la empresa detrás de Spring. Para sustituirlo han creado Spring Cloud Gateway.
+Principalmente, la mayor ventaja de este este software es que es reactivo. Es decir, utiliza las nuevas librerías de Webflux de Spring para que las llamadas no sean bloqueantes.</description>
     </item>
     
     <item>

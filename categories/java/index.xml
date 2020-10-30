@@ -6,7 +6,7 @@
     <description>Recent content in java on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 17:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
     
@@ -203,6 +203,16 @@ Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada 
       
       <guid>http://www.profesor-p.com/springboot/logging-en-spring-boot/</guid>
       <description>&lt;p&gt;Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general,  como se va comportando.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.</title>
+      <link>http://www.profesor-p.com/spring/gateway/</link>
+      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/gateway/</guid>
+      <description>Hace tiempo escribí un articulo sobre como realizar una pasarela o gateway para redirigir peticiones utilizando Zuul. Sin embargo, Zuul ya no esta aconsejado por la gente de Pivotal, que como sabréis es la empresa detrás de Spring. Para sustituirlo han creado Spring Cloud Gateway.
+Principalmente, la mayor ventaja de este este software es que es reactivo. Es decir, utiliza las nuevas librerías de Webflux de Spring para que las llamadas no sean bloqueantes.</description>
     </item>
     
     <item>

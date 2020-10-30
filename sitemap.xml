@@ -99,7 +99,7 @@
   
   <url>
     <loc>http://www.profesor-p.com/2-spring/5-cloud/</loc>
-    <lastmod>2019-01-03T08:52:59+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -257,30 +257,101 @@
   
   <url>
     <loc>http://www.profesor-p.com/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/spring/gateway/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/tags/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/cloud/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/cloud/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/gateway/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/gateway/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/hystrix/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/java/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/tags/java/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/json/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/rest/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/seguridad/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring-cloud-gateway/</loc>
+    <lastmod>2020-10-28T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -309,18 +380,6 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/spring-boot/</loc>
-    <lastmod>2020-10-18T07:57:07+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/reactor/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -328,12 +387,6 @@
   
   <url>
     <loc>http://www.profesor-p.com/tags/reactor/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/rest/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -490,12 +543,6 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/json/</loc>
-    <lastmod>2019-03-25T16:02:14+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/tags/json/</loc>
     <lastmod>2019-03-25T16:02:14+00:00</lastmod>
     <priority>0</priority>
@@ -504,30 +551,6 @@
   <url>
     <loc>http://www.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</loc>
     <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/cloud/</loc>
-    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/cloud/</loc>
-    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/gateway/</loc>
-    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/seguridad/</loc>
-    <lastmod>2019-03-16T07:19:41+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
