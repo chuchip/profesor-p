@@ -47,8 +47,6 @@ Nuestro proyecto, por lo tanto, quedara así:
 
 Por no hacer demasiado largo el articulo, no voy a explicar como configurar el servidor y los clientes de Eureka. Tenéis un articulo explicando como hacerlo [en este mismo blog](http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/). Ambos programas son muy simples y viendo el código seguro que no necesitáis más explicaciones ;-) .
 
-Tenéis el fuente del proyecto en https://github.com/chuchip/springcloudgateway 
-
  En cuanto a **dummyRest** es una aplicación que simplemente responde en unas rutas con un mensaje que incluye las características de la petición:
 
 ```java
@@ -464,5 +462,6 @@ Con la función getOrder() indicamos cuando se debe ejecutar este filtro. Cuanto
 
 ¡¡ Espero que esta entrada haya sido útil y nos vemos en la próxima!!
 
-[4]: https://marketplace.eclipse.org/content/spring-tools-4-spring-boot-aka-spring-tool-suite-4
+[4]: 
+[3]: https://github.com/chuchip/springcloudgateway
 [5]: https://raw.githubusercontent.com/chuchip/zuulSpringTest/master/starters.png
