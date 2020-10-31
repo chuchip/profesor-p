@@ -6,9 +6,15 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+
+
+* [Spring Cloud Gateway. Redirigiendo peticiones Reactivamente](/spring/gateway/)
+
+Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo *logging* y *fallback*.
+
 - [Logging en Spring Boot](/springboot/logging-en-spring-boot/)
 
-Aquí tenéis un pequeño manual de como crear un proyecto de **DJango** usando el IDE **Eclipse** y el plugin **PyDev**.
+Configuración del loging en una aplicación realizada con Spring Boot.
 
 - [Creando un proyecto de Django con Eclipse](/7-django/djangoeneclipse/)
 
