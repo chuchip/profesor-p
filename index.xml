@@ -668,9 +668,9 @@ If you want to use this class, you should put this dependencies in your maven fi
       
       <guid>http://www.profesor-p.com/last/</guid>
       <description>Estás son las ultimas entradas del blog
- Logging en Spring Boot  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.
- Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.
- Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.</description>
+ Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.
+ Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.
+ Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.</description>
     </item>
     
   </channel>
