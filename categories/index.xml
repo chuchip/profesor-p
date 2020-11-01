@@ -6,10 +6,73 @@
     <description>Recent content in Categories on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Wed, 28 Oct 2020 17:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>java</title>
+      <link>http://www.profesor-p.com/categories/java/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jwt</title>
+      <link>http://www.profesor-p.com/categories/jwt/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/jwt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keycloack</title>
+      <link>http://www.profesor-p.com/categories/keycloack/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/keycloack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oauth2</title>
+      <link>http://www.profesor-p.com/categories/oauth2/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/oauth2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rest</title>
+      <link>http://www.profesor-p.com/categories/rest/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/rest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>seguridad</title>
+      <link>http://www.profesor-p.com/categories/seguridad/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/seguridad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring boot</title>
+      <link>http://www.profesor-p.com/categories/spring-boot/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/spring-boot/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cloud</title>
@@ -30,47 +93,11 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>http://www.profesor-p.com/categories/java/</link>
-      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>json</title>
       <link>http://www.profesor-p.com/categories/json/</link>
       <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/json/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rest</title>
-      <link>http://www.profesor-p.com/categories/rest/</link>
-      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/rest/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>seguridad</title>
-      <link>http://www.profesor-p.com/categories/seguridad/</link>
-      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/seguridad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>spring boot</title>
-      <link>http://www.profesor-p.com/categories/spring-boot/</link>
-      <pubDate>Wed, 28 Oct 2020 17:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/spring-boot/</guid>
       <description></description>
     </item>
     
@@ -332,15 +359,6 @@
       <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>oauth2</title>
-      <link>http://www.profesor-p.com/categories/oauth2/</link>
-      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/oauth2/</guid>
       <description></description>
     </item>
     

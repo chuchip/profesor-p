@@ -6,7 +6,7 @@
     <description>Recent content in rest on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     
@@ -135,6 +135,19 @@ Para poder usar esta clase debemos poner estas dependencias en nuestro fichero m
       <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    
+    <item>
+      <title>Securizando aplicación de SpringBoot con KeyCloack</title>
+      <link>http://www.profesor-p.com/springboot/seguridad-con-keycloack/</link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/springboot/seguridad-con-keycloack/</guid>
+      <description>&lt;h3 id=&#34;u-borrador-u-pendiente-de-refactorizar-y-documentar-en-español&#34;&gt;&lt;u&gt;&lt;em&gt;Borrador&lt;/em&gt;&lt;/u&gt;. Pendiente de refactorizar y documentar en español.&lt;/h3&gt;
+
+&lt;p&gt;Programa demostrando como crear una aplicación en Spring Boot cuya seguridad es gestionada por &lt;a href=&#34;https://www.keycloak.org/&#34;&gt;KeyCloak&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;El programa esta basado en este articulo  &lt;a href=&#34;https://medium.com/@ddezoysa/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e&#34;&gt;https://medium.com/@ddezoysa/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
