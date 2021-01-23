@@ -6,7 +6,7 @@
     <description>Recent content in spring on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     
@@ -113,16 +113,6 @@ Para poder usar esta clase debemos poner estas dependencias en nuestro fichero m
       <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/</guid>
       <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
 En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
-    </item>
-    
-    <item>
-      <title>Usar QBE en Spring Data</title>
-      <link>http://www.profesor-p.com/spring/data/qbe/</link>
-      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/spring/data/qbe/</guid>
-      <description>A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla &amp;lsquo;paises&amp;rsquo; puede que debamos tener cargados los países del mundo. O en la tabla &amp;lsquo;roles&amp;rsquo;, debemos tener definidos una serie de roles.
-Una de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.</description>
     </item>
     
     <item>

@@ -6,7 +6,7 @@
     <description>Recent content in spring boot on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     
@@ -58,16 +58,6 @@ Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor d
       
       <guid>http://www.profesor-p.com/springboot/logging-en-spring-boot/</guid>
       <description>&lt;p&gt;Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general,  como se va comportando.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Usar QBE en Spring Data</title>
-      <link>http://www.profesor-p.com/spring/data/qbe/</link>
-      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/spring/data/qbe/</guid>
-      <description>A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla &amp;lsquo;paises&amp;rsquo; puede que debamos tener cargados los países del mundo. O en la tabla &amp;lsquo;roles&amp;rsquo;, debemos tener definidos una serie de roles.
-Una de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.</description>
     </item>
     
     <item>
