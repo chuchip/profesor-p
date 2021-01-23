@@ -6,7 +6,9 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+* [Query By Example](/spring/data/qbe/)
 
+Usando **Query By Example** para buscar registros en **Spring Data JPA.**
 
 * [Spring Cloud Gateway. Redirigiendo peticiones Reactivamente](/spring/gateway/)
 
