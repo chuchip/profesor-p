@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sun, 01 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,45 @@
     <item>
       <title>java</title>
       <link>http://www.profesor-p.com/tags/java/</link>
-      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jpa</title>
+      <link>http://www.profesor-p.com/tags/jpa/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/jpa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qbe</title>
+      <link>http://www.profesor-p.com/tags/qbe/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/qbe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring</title>
+      <link>http://www.profesor-p.com/tags/spring/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/spring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spring data JPA</title>
+      <link>http://www.profesor-p.com/tags/spring-data-jpa/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/tags/spring-data-jpa/</guid>
       <description></description>
     </item>
     
@@ -138,15 +174,6 @@
     </item>
     
     <item>
-      <title>spring</title>
-      <link>http://www.profesor-p.com/tags/spring/</link>
-      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/tags/spring/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>webflux</title>
       <link>http://www.profesor-p.com/tags/webflux/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
@@ -206,15 +233,6 @@
       <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/tags/hibernate/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jpa</title>
-      <link>http://www.profesor-p.com/tags/jpa/</link>
-      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/tags/jpa/</guid>
       <description></description>
     </item>
     

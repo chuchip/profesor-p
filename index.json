@@ -123,7 +123,7 @@
 	"title": "Database",
 	"tags": [],
 	"description": "",
-	"content": "Entradas sobre como acceder a bases de datos, con JPA y JDBC\n Lambdas en JDBC Data  En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema. Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación. Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:\n Optimizando relaciones entre entidades en Hibernate  En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática. EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente. Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.\n Querys avanzadas con JPA en Spring Boot  Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .\n JPA \u0026#43; Hibernate en Spring  En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA. Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior. Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java Persistence API. Es decir la API de persistencia en Java.\n JPA con Lombok, simplificando.  En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok. Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Anteriormente teniamos definido nuestro objeto de esta manera: @Entity @Table(name = \u0026quot;usuario\u0026quot;, uniqueConstraints = { @UniqueConstraint(columnNames = {\u0026quot;login\u0026quot;})}) public class Usuario implements Serializable { @Id String login; @Column String nombre; public Usuario() { } public String getLogin() { return login; } public void setLogin(String login) { this.\n Acceso a Base de Datos con Spring Data JDBC  En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )\n"
+	"content": "Entradas sobre como acceder a bases de datos, con JPA y JDBC\n Lambdas en JDBC Data  En una entrada anterior, puse un ejemplo de como usar expresiones Lambas, como me parece que es un tema interesante, este de la programación funcional, voy a insistir en este tema. Una cosa muy común en Java es tener que pesarle como argumento a una función externa, una objeto que implemente una función donde nosotros pondremos el código a ejecutar en nuestra aplicación. Un ejemplo practico es en el uso de la clase JdbcOperations, que es utilizada por Spring para poder realizar operaciones JDBC, la cual tiene la función:\n Usar QBE en Spring Data  A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla \u0026lsquo;paises\u0026rsquo; puede que debamos tener cargados los países del mundo. O en la tabla \u0026lsquo;roles\u0026rsquo;, debemos tener definidos una serie de roles. Una de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.\n Optimizando relaciones entre entidades en Hibernate  En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática. EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente. Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.\n Querys avanzadas con JPA en Spring Boot  Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .\n JPA \u0026#43; Hibernate en Spring  En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA. Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior. Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java Persistence API. Es decir la API de persistencia en Java.\n JPA con Lombok, simplificando.  En un entrada anterior, explique que para usar JPA hay que tener nuestros objetos POJO definidos . En esta entrada hablare de como mejorar la la definicion de nuestro objeto POJO, con la libreria Lombok. Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Anteriormente teniamos definido nuestro objeto de esta manera: @Entity @Table(name = \u0026quot;usuario\u0026quot;, uniqueConstraints = { @UniqueConstraint(columnNames = {\u0026quot;login\u0026quot;})}) public class Usuario implements Serializable { @Id String login; @Column String nombre; public Usuario() { } public String getLogin() { return login; } public void setLogin(String login) { this.\n Acceso a Base de Datos con Spring Data JDBC  En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )\n"
 },
 {
 	"uri": "http://www.profesor-p.com/4-angular/",
@@ -371,18 +371,18 @@
 	"content": ""
 },
 {
-	"uri": "http://www.profesor-p.com/springboot/seguridad-con-keycloack/",
-	"title": "Securizando aplicación de SpringBoot con KeyCloack",
-	"tags": ["java", "oauth2", "keycloack", "jwt", "rest", "seguridad", "spring boot"],
-	"description": "",
-	"content": "Borrador. Pendiente de refactorizar y documentar en español. Programa demostrando como crear una aplicación en Spring Boot cuya seguridad es gestionada por KeyCloak.\nEl programa esta basado en este articulo https://medium.com/@ddezoysa/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e\nEl código fuente del programa esta en https://github.com/chuchip/keycloack-springboot\nEn la clase KeycloakSecurityConfigse ha incluido la función accessToken . Con este bean podremos comprobar dentro de nuestro código como los recursos del token JWT mandado a la aplicación.\n@Bean @Scope(scopeName = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS) public AccessToken accessToken() { HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest(); return ((KeycloakSecurityContext) ((KeycloakAuthenticationToken) request.getUserPrincipal()).getCredentials()).getToken(); } "
-},
-{
 	"uri": "http://www.profesor-p.com/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/spring/data/qbe/",
+	"title": "Usar QBE en Spring Data",
+	"tags": ["java", "spring", "jpa", "qbe", "spring data JPA"],
+	"description": "",
+	"content": "A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla \u0026lsquo;paises\u0026rsquo; puede que debamos tener cargados los países del mundo. O en la tabla \u0026lsquo;roles\u0026rsquo;, debemos tener definidos una serie de roles.\nUna de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.\nEstaría bien que pudiéramos comprobar fácilmente si el registro a insertar ya existe y en caso de que sea así que no lo insertara.\nEn este artículo vamos a utilizar Query By Example (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example) de Spring Data JPA para realizar esta tarea.\nEmpezaremos creando un proyecto en Spring Boot, con los siguientes starters:\n Spring Data JPA Lombok H2 (la base de datos que usaremos)  En este proyecto he creado dos entidades para las pruebas. Son estas:\n@Entity @Setter @Getter @NoArgsConstructor @AllArgsConstructor @Builder @ToString public class Alumno { @GeneratedValue(strategy=GenerationType.AUTO) @Id\tint id; String nombre; Integer edad; String clase; }  @Entity @Setter @Getter @Builder @NoArgsConstructor @AllArgsConstructor @ToString public class Profesor { @GeneratedValue(strategy=GenerationType.AUTO) @Id Integer id; String nombre; String materia; String colegio;\tInteger numeroClase; }  También he creado sus correspondientes interfaces para los repositorios.\npublic interface AlumnoRepository extends JpaRepository\u0026lt;Alumno, Integer\u0026gt;{} public interface ProfesorRepository extends JpaRepository\u0026lt;Profesor, Integer\u0026gt;{}  Ahora, en la clase JpaQueryByExampleApplication he añadido este código\n@Autowired AlumnoRepository alumnRepository; @Autowired ProfesorRepository teacherRepository; @PostConstruct void iniciar() { log.info(\u0026quot;\\n\\nINSERTANDO PROFESORES .... \\n\\n\u0026quot;); var teacher = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).colegio(\u0026quot;Colegio1\u0026quot;).materia(\u0026quot;Matematicas\u0026quot;).numeroClase(55) .build(); guardar(teacherRepository, teacher); teacher = Profesor.builder().nombre(\u0026quot;Nombre2\u0026quot;).colegio(\u0026quot;Colegio2\u0026quot;).materia(\u0026quot;Lengua\u0026quot;).numeroClase(55).build(); guardar(teacherRepository, teacher); // Buscando registros cuyo nombre sea \u0026quot;Nombre1\u0026quot; sin importar los demas campos. var buscaNombre = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).build(); guardar(teacherRepository, buscaNombre); log.info(\u0026quot;\\n\\nINSERTANDO ALUMNOS .... \\n\\n\u0026quot;); var alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(12).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); guardar(alumnRepository, alumno); alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(13).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); }  Como se puede apreciar, la función iniciar tiene la etiqueta @PostConstruct lo que hará que Spring Boot ejecute esta función una vez se haya inicializado la aplicación.\nEn ella, creamos diferentes instancias de Profesor y Alumno llamando a la función guardar donde esta lo interesante.\nvoid guardar(JpaRepository jpaRepository, Object entidad) { Example qbe = Example.of(entidad); var registros = jpaRepository.findAll(qbe); if (registros.size() \u0026gt; 0) log.warning(\u0026quot;Ya existe Registro: \u0026quot; + entidad.toString()); else { jpaRepository.save(entidad); log.info(\u0026quot;Insertado registro: \u0026quot; + entidad.toString()); } }  Recibiremos un objeto que implemente la interfaz JpaRepository y un objeto que será donde estén los datos, es decir nuestra entidad.\nA partir de la función estática org.springframework.data.domain.Example.of() (no confundir con org.hibernate.criterion.Example) crearemos un objeto Example que contendrá los datos sobre los que realizaremos la búsqueda.\nUna vez tenemos nuestro objeto Example creado, lo utilizamos para llamar a la función findAll del interface JpaRepository .\nEsto devolverá una List con todos los registros cuyos valores sean igual a los valores mandados en entidad siempre y cuando el valor del campo no sea null, en cuyo caso no se realizara la búsqueda por ese campo.\nEs decir, en la primera llamada a guardar se ejecutará esta sentencia SQL:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=? and profesor0_.numero_clase=55 and profesor0_.materia=? and profesor0_.colegio=?  Sin embargo cuando usamos la variable buscaNombre donde solo establecemos el valor para el campo, haciendolo igual \u0026lsquo;Nombre1\u0026rsquo;, se buscaran aquellos registros cuyo nombre sea \u0026ldquo;Nombre1\u0026rdquo; sin importar los demás campos. La select por tanto será esta:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=?  Hay que tener en cuenta que la búsqueda se realizará sobre todos los campos que no tengan un valor igual null. Es por esto, que es importante que ninguno de los campos de la entidad este definido como un objeto primitivo (int, double, etc.). Si algún campo es de un tipo primitivo al realizar la búsqueda en caso de que no hayamos establecido el valor de ese campo, buscara aquel que tenga un valor igual 0 lo cual, seguramente, no es lo que deseamos.\nCreo que la salida mostrada al ejecutar la aplicación explica perfectamente la lógica:\nINSERTANDO PROFESORES .... 2021-01-23 18:14:23.493 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=1, nombre=Nombre1, materia=Matematicas, colegio=Colegio1, numeroClase=55) 2021-01-23 18:14:23.495 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=2, nombre=Nombre2, materia=Lengua, colegio=Colegio2, numeroClase=55) 2021-01-23 18:14:23.501 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Profesor(id=null, nombre=Nombre1, materia=null, colegio=null, numeroClase=null) 2021-01-23 18:14:23.501 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : INSERTANDO ALUMNOS .... 2021-01-23 18:14:23.507 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.509 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.514 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=4, nombre=Luis, edad=13, clase=1A)  ¡Y esto es todo!. Nos vemos en la próxima clase.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/categories/java/",
@@ -397,6 +397,69 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/jpa/",
+	"title": "jpa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/jpa/",
+	"title": "jpa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/qbe/",
+	"title": "qbe",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/qbe/",
+	"title": "qbe",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/spring/",
+	"title": "spring",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/spring-boot/",
+	"title": "spring boot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/spring-data-jpa/",
+	"title": "spring data JPA",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/spring-data-jpa/",
+	"title": "spring data JPA",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/springboot/seguridad-con-keycloack/",
+	"title": "Securizando aplicación de SpringBoot con KeyCloack",
+	"tags": ["java", "oauth2", "keycloack", "jwt", "rest", "seguridad", "spring boot"],
+	"description": "",
+	"content": "Borrador. Pendiente de refactorizar y documentar en español. Programa demostrando como crear una aplicación en Spring Boot cuya seguridad es gestionada por KeyCloak.\nEl programa esta basado en este articulo https://medium.com/@ddezoysa/securing-spring-boot-rest-apis-with-keycloak-1d760b2004e\nEl código fuente del programa esta en https://github.com/chuchip/keycloack-springboot\nEn la clase KeycloakSecurityConfigse ha incluido la función accessToken . Con este bean podremos comprobar dentro de nuestro código como los recursos del token JWT mandado a la aplicación.\n@Bean @Scope(scopeName = WebApplicationContext.SCOPE_REQUEST, proxyMode = ScopedProxyMode.TARGET_CLASS) public AccessToken accessToken() { HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest(); return ((KeycloakSecurityContext) ((KeycloakAuthenticationToken) request.getUserPrincipal()).getCredentials()).getToken(); } "
 },
 {
 	"uri": "http://www.profesor-p.com/categories/jwt/",
@@ -464,13 +527,6 @@
 {
 	"uri": "http://www.profesor-p.com/tags/seguridad/",
 	"title": "seguridad",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/categories/spring-boot/",
-	"title": "spring boot",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -582,13 +638,6 @@
 },
 {
 	"uri": "http://www.profesor-p.com/categories/spring/",
-	"title": "spring",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/spring/",
 	"title": "spring",
 	"tags": [],
 	"description": "",
@@ -723,20 +772,6 @@
 {
 	"uri": "http://www.profesor-p.com/tags/hibernate/",
 	"title": "hibernate",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/categories/jpa/",
-	"title": "jpa",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/jpa/",
-	"title": "jpa",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -1432,7 +1467,7 @@
 	"title": "Ultimas entradas",
 	"tags": [],
 	"description": "",
-	"content": "Estás son las ultimas entradas del blog\n Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.\n Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
+	"content": "Estás son las ultimas entradas del blog\n Query By Example  Usando Query By Example para buscar registros en Spring Data JPA.\n Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.\n Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/categories/experiencia/",

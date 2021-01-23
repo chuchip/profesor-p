@@ -89,7 +89,7 @@
   
   <url>
     <loc>http://www.profesor-p.com/2-spring/4-database/</loc>
-    <lastmod>2019-04-05T10:54:22+00:00</lastmod>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -257,36 +257,89 @@
   
   <url>
     <loc>http://www.profesor-p.com/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/spring/data/qbe/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/java/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/java/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/jpa/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/jpa/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/qbe/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/qbe/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/spring-data-jpa/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/spring-data-jpa/</loc>
+    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/springboot/seguridad-con-keycloack/</loc>
     <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/java/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/java/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -345,12 +398,6 @@
   
   <url>
     <loc>http://www.profesor-p.com/tags/seguridad/</loc>
-    <lastmod>2020-11-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/spring-boot/</loc>
     <lastmod>2020-11-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -446,12 +493,6 @@
   
   <url>
     <loc>http://www.profesor-p.com/categories/spring/</loc>
-    <lastmod>2019-08-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/spring/</loc>
     <lastmod>2019-08-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -562,18 +603,6 @@
   
   <url>
     <loc>http://www.profesor-p.com/tags/hibernate/</loc>
-    <lastmod>2019-04-05T10:54:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/jpa/</loc>
-    <lastmod>2019-04-05T10:54:22+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/jpa/</loc>
     <lastmod>2019-04-05T10:54:22+00:00</lastmod>
     <priority>0</priority>
   </url>
