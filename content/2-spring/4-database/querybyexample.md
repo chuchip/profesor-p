@@ -183,7 +183,7 @@ INSERTANDO ALUMNOS ....
 2021-01-23 18:14:23.514  INFO 5416 --- [           main] c.p.qbe.JpaQueryByExampleApplication     : Insertado registro: Alumno(id=4, nombre=Luis, edad=13, clase=1A)
 ```
 
+Y por si acaso, tenéis el código fuente en:  https://github.com/chuchip/JPAQBE
 
-
-¡Y esto es todo!. Nos vemos en la próxima clase. 
+¡ Esto es todo!. Nos vemos en la próxima clase. 
 
