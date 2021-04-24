@@ -6,7 +6,7 @@
     <description>Recent content in Bienvenido a mi página on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -220,6 +220,15 @@ Los demás directorios son donde están las librerías y utilidades que nuestra 
       <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
       <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
 Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Testeando Spring</title>
+      <link>http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/</guid>
+      <description>&lt;p&gt;En este artículo muestro diferentes maneras de testear una aplicación  basada con &lt;strong&gt;SpringBoot&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -691,10 +700,10 @@ If you want to use this class, you should put this dependencies in your maven fi
       
       <guid>http://www.profesor-p.com/last/</guid>
       <description>Estás son las ultimas entradas del blog
+ Testing en SpringBoot  Realizando test en SpringBoot utilizando diferentes técnicas.
  Query By Example  Usando Query By Example para buscar registros en Spring Data JPA.
  Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.
- Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.
- Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.</description>
+ Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.</description>
     </item>
     
   </channel>

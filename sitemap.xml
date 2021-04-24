@@ -14,7 +14,7 @@
   
   <url>
     <loc>http://www.profesor-p.com/2-spring/1-testing/</loc>
-    <lastmod>2019-03-01T13:50:57+00:00</lastmod>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -202,6 +202,11 @@
   </url>
   
   <url>
+    <loc>http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.profesor-p.com/clase-resttemplate-3/</loc>
     <lastmod>2019-08-06T00:00:00+00:00</lastmod>
   </url>
@@ -257,36 +262,90 @@
   
   <url>
     <loc>http://www.profesor-p.com/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/categories/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/tags/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/java/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/java/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/junit/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/junit/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/mockito/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/mockito/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/mvc/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/mvc/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/categories/springboot/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/springboot/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.profesor-p.com/tags/test/</loc>
+    <lastmod>2021-04-24T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.profesor-p.com/spring/data/qbe/</loc>
     <lastmod>2021-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/java/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/java/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -751,18 +810,6 @@
   </url>
   
   <url>
-    <loc>http://www.profesor-p.com/categories/mvc/</loc>
-    <lastmod>2018-10-30T17:12:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/mvc/</loc>
-    <lastmod>2018-10-30T17:12:49+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://www.profesor-p.com/categories/tomcat/</loc>
     <lastmod>2018-10-30T17:12:49+00:00</lastmod>
     <priority>0</priority>
@@ -1074,24 +1121,6 @@
   <url>
     <loc>http://www.profesor-p.com/anjelica/</loc>
     <lastmod>2018-08-27T18:05:48+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/categories/junit/</loc>
-    <lastmod>2018-08-27T08:24:45+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/junit/</loc>
-    <lastmod>2018-08-27T08:24:45+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.profesor-p.com/tags/test/</loc>
-    <lastmod>2018-08-27T08:24:45+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

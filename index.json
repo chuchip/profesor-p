@@ -18,7 +18,7 @@
 	"title": "Testing",
 	"tags": [],
 	"description": "",
-	"content": "Estos son los artículos disponibles sobre testing:\n Testeando las aplicaciones  En una próxima entrada hablare sobre como testear las aplicaciones con pruebas unitarias. Bueno, mostrare como lo hago en mi código.\nDe momento, viendo que alguien ya la ha hecho antes (y seguramente mejor) dejo este enlace como aperitivo.\n Uso de perfiles para testear en Spring Boot  Como comentaba en el articulo anterior gracias al uso de perfiles es fácil personalizar las aplicaciones en Spring Boot.\n"
+	"content": "Estos son los artículos disponibles sobre testing:\n Testeando las aplicaciones  En una próxima entrada hablare sobre como testear las aplicaciones con pruebas unitarias. Bueno, mostrare como lo hago en mi código.\nDe momento, viendo que alguien ya la ha hecho antes (y seguramente mejor) dejo este enlace como aperitivo.\n Uso de perfiles para testear en Spring Boot  Como comentaba en el articulo anterior gracias al uso de perfiles es fácil personalizar las aplicaciones en Spring Boot.\n Testeando Spring  En este artículo muestro diferentes maneras de testear una aplicación basada con SpringBoot.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/",
@@ -280,6 +280,13 @@
 	"content": "En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.\nEsta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.\nEsta el código fuente en: https://github.com/chuchip/yagesserver\nEstos serán los archivos usados en mi aplicación:\nLas dependencias, aparte de las básicas de Spring, son tener las siguientes librerías , de H2 Database e Hibernate.\ndependency\u0026gt; \u0026lt;groupId\u0026gt;com.fasterxml.jackson.core\u0026lt;/groupId\u0026gt; \u0026lt;!-- Jackson (JSON) --\u0026gt; \u0026lt;artifactId\u0026gt;jackson-core\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.9.6\u0026lt;/version\u0026gt; \u0026lt;/dependency\u0026gt; \u0026lt;dependency\u0026gt; \u0026lt;groupId\u0026gt;com.fasterxml.jackson.core\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;jackson-databind\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;2.9.6\u0026lt;/version\u0026gt; \u0026lt;/dependedncy\u0026gt; \u0026lt;dependency\u0026gt; \u0026lt;!-- H2 DATABASE --\u0026gt; \u0026lt;groupId\u0026gt;com.h2database\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;h2\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.4.197\u0026lt;/version\u0026gt; \u0026lt;scope\u0026gt;runtime\u0026lt;/scope\u0026gt; \u0026lt;/dependency\u0026gt; \u0026lt;dependency\u0026gt; \u0026lt;!-- LOMBOK --\u0026gt; \u0026lt;groupId\u0026gt;org.projectlombok\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;lombok\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;1.18.2\u0026lt;/version\u0026gt; \u0026lt;scope\u0026gt;provided\u0026lt;/scope\u0026gt; \u0026lt;/dependency\u0026gt; \u0026lt;dependency\u0026gt; \u0026lt;!-- HIBERNATE --\u0026gt; \u0026lt;groupId\u0026gt;org.hibernate\u0026lt;/groupId\u0026gt; \u0026lt;artifactId\u0026gt;hibernate-agroal\u0026lt;/artifactId\u0026gt; \u0026lt;version\u0026gt;5.3.5.Final\u0026lt;/version\u0026gt; \u0026lt;type\u0026gt;pom\u0026lt;/type\u0026gt; \u0026lt;/dependency\u0026gt; Para más detalles y otras librerías menores, mirar el fichero pom.xml del proyecto.\nEn este ejemplo no uso anotaciones XML, , todo se hace con anotaciones Java. Esta es el fichero con que se configura la base de datos.\n@Configuration @EnableJpaRepositories(\"yages.yagesserver\") @EnableTransactionManagement public class JpaConfig { @Bean public DataSource dataSource() { EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder(); EmbeddedDatabase db = builder .setType(EmbeddedDatabaseType.H2) .setName(\"yagesh2\") .ignoreFailedDrops(true) .addScript(\"db/sql/create-db.sql\") .addScript(\"db/sql/insert-data.sql\") .generateUniqueName(false) .build(); return db; } @Bean public HibernateExceptionTranslator hibernateExceptionTranslator() { return new HibernateExceptionTranslator(); } @Bean public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) throws NamingException { LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean(); em.setDataSource(dataSource()); em.setPackagesToScan(new String[]{\"yages.yagesserver\", \"yages.yagesserver.dao\"}); em.setPersistenceUnitName(\"yages-server\"); em.setJpaVendorAdapter(jpaVendorAdapter()); em.afterPropertiesSet(); return em; } @Bean public JpaVendorAdapter jpaVendorAdapter() { HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter(); jpaVendorAdapter.setGenerateDdl(false); jpaVendorAdapter.setDatabase(Database.H2); jpaVendorAdapter.setShowSql(false); return jpaVendorAdapter; } @Bean public PlatformTransactionManager transactionManager(EntityManagerFactory emf) { JpaTransactionManager transactionManager = new JpaTransactionManager(); transactionManager.setEntityManagerFactory(emf); return transactionManager; } } La configuración es una típica para cualquier base de de datos. Lo único destacable es el uso de la clase EmbeddedDatabaseBuilder , en la función dataSource. Esta clase es muy útil para crear una base de datos embebida del tipo H2, HSQL o incluso DERBY. Como se ve en el código el uso es tan simple como especificar el tipo de base de datos, y después añadir los scripts necesarios (en este caso el de creación de las tablas y el de carga de datos). Esto nos creara un objeto EmbeddedDatabase que implementa el interface DataSource. Observerse que los ficheros create-db.sql e insert-db.sql, contienen sentencias SQL puras.**\n**\ncreate table calendario ( cal_ano int, -- Año cal_mes int, -- Mes cal_fecini date, -- Fecha Inicial cal_fecfin date, -- Fecha Final. constraint ix_calendario primary key (cal_ano,cal_mes) ); ...... NSERT INTO calendario (cal_ano,cal_mes,cal_fecini,cal_fecfin) VALUES (2018,1,{d '2018-01-01'},{d '2018-01-27'}); INSERT INTO calendario (cal_ano,cal_mes,cal_fecini,cal_fecfin) VALUES (2018,2,{d '2018-01-28'},{d '2018-02-24'}); ....... Estos dos ficheros, deberán estar ubicados en la carpeta de resources (es decir, en el classpath)\nUna vez que tenemos nuestro objeto DataSource ya solo resta crear nuestro EntityManager en la función entityManagerFactory, apoyándonos en las demás funciones de la clase.\nAhora creare las clases que representan los objetos de la base de datos, estos objetos están en la carpeta:\n ### Implementando nuestras tablas **como objetos.   **\nEn el paquete yages.yagesserver.model tendremos las siguientes clases:\nCalendario.java \n@Entity @Table(name=\"calendario\") @NoArgsConstructor @Data public class Calendario implements Serializable{ private static final long serialVersionUID = 1L; @Column(name = \"cal_fecini\",nullable = false) @Temporal(javax.persistence.TemporalType.DATE) private Date fechaInicio; @Column(name = \"cal_fecfin\",nullable = false) @Temporal(javax.persistence.TemporalType.DATE) private Date fechaFinal; @Transient private Date fechaFinalSemana; @EmbeddedId private CalendarioKey calendarioKey; public Calendario(int ano,int mes,Date fecInicio,Date fecFinal) { calendarioKey = new CalendarioKey(ano,mes); setFechaInicio(fecInicio); setFechaFinal(fecFinal); } } CalendarioKey.java\n@Embeddable @Data @AllArgsConstructor @NoArgsConstructor public class CalendarioKey implements Serializable { private static final long serialVersionUID = 2L; @Column (name=\"cal_mes\", nullable=false) private int mes; @Column (name=\"cal_ano\", nullable=false) private int ano; }  Como se puede ver son dos simples POJOS, con una serie de anotaciones para su uso con JPA.\nSolo destacar el uso de que como la tabla Calendario tiene un indice multiple, haremos uso de la anotación EmbebedId de tal manera que la clase Calendario sera una @Entity y la clase CalendarioKey , que tendra los campos mes y ano (año 😀 ) sera la que tenga el indice y estara marcada como @Embeddable.\nEn el paquete yages.yagesserver.dao creare mi repositoio crud con el siguiente interface:\npublic interface CalendarioRepository extends CrudRepository\u0026lt;yages.yagesserver.model.Calendario, yages.yagesserver.model.CalendarioKey\u0026gt; { } Para mas datos sobre este interface que nos hace la vida tan fácil, podéis mirar el siguiente articulo de mi página.\nEn la clase CalendarioRepositorioService creo mi clase auxiliar que hace uso del repositorio.\n@Service @Transactional public class CalendarioRepositorioService { @Autowired CalendarioRepository calendarioRepository; public Optional\u0026lt;Calendario\u0026gt; getCalendario(CalendarioKey calendarioKey) { return calendarioRepository.findById(calendarioKey); } public Iterable\u0026lt;Calendario\u0026gt; getAllCalendarios() { return calendarioRepository.findAll(); } } Observese como anoto la clase con la etiqueta @Service y @Transacional. Despues inyectamos el interface CalendarioRepository que es el que usare en las dos unicas funciones que tiene esta clase.\nLa tabla histVentas es prácticamente igual que la tabla calendario, también con un indice múltiple y la configuración es básicamente la misma, por lo cual no creo necesario explicarla.\nY por hoy ya vale. En la próxima entrada, veremos como implementar las peticiones REST\n¡¡ Hasta pronto!!\n"
 },
 {
+	"uri": "http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/",
+	"title": "Testeando Spring",
+	"tags": ["java", "springboot", "mockito", "junit", "mvc", "test"],
+	"description": "",
+	"content": "En este artículo muestro diferentes maneras de testear una aplicación basada con SpringBoot.\nLa URL del proyecto de ejemplo es esta: https://github.com/chuchip/demoSpringTest\nEste programa tiene un simple controlador y una conexión con MongoDB. En el ejemplo uso una conexión a Atlas. Si no conoces esta magnifica herramienta, te animo a que veas está pagina y levantes tu propia base de datos en la nube: https://cloud.mongodb.com\nEste programa realiza los siguientes tipos de test:\n DemoSpringTestApplicationTests que no usa Mockito y es un test completo  Levanta una instancia de MongoDB embebida para realizar las pruebas y realiza las llamadas a nuestro controlador usando TestRestTemplate. En este caso las llamadas son reales, es decir se conecta por HTTP y el test es el más completo posible pues pasa por todas las partes de nuestro programa.\n MockMvcTestApplication  Las peticiones web son realizadas a través de MockMVC y por lo tanto vamos a la URL del controlador. Se levanta una instancia embebida de MongoDB. También es un test completo.\n MockitoTestApplication:  Es el test mas simple y también el más rápido. Usando Mockito no se levanta la aplicación de SpringBoot ni usa MongoDB. Las peticiones al controlador se hacen llamando a las funciones, por lo cual no se comprueban las URL.\n MockitoWebTestApplication:  Lanza la aplicación entera, es decir se levanta el servidor web pero usamos Mockito para crear el controlador y el repositorio de MongoDB. La base de datos en este caso se levanta pero no la usamos ya que mockeamos el repositorio.\nNo os voy a dar mucho la chapa de como funcionan las diferentes clases, he preferido comentar el código que creo que se explica el mismo y dejar, al que este interesado, que mire y juegue.\n"
+},
+{
 	"uri": "http://www.profesor-p.com/clase-resttemplate-3/",
 	"title": "La Clase RestTemplate - 3",
 	"tags": ["java", "rest", "spring"],
@@ -378,13 +385,6 @@
 	"content": ""
 },
 {
-	"uri": "http://www.profesor-p.com/spring/data/qbe/",
-	"title": "Usar QBE en Spring Data",
-	"tags": ["java", "spring", "jpa", "qbe", "spring data JPA"],
-	"description": "",
-	"content": "A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla \u0026lsquo;paises\u0026rsquo; puede que debamos tener cargados los países del mundo. O en la tabla \u0026lsquo;roles\u0026rsquo;, debemos tener definidos una serie de roles.\nUna de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.\nEstaría bien que pudiéramos comprobar fácilmente si el registro a insertar ya existe y en caso de que sea así que no lo insertara.\nEn este artículo vamos a utilizar Query By Example (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example) de Spring Data JPA para realizar esta tarea.\nEmpezaremos creando un proyecto en Spring Boot, con los siguientes starters:\n Spring Data JPA Lombok H2 (la base de datos que usaremos)  En este proyecto he creado dos entidades para las pruebas. Son estas:\n@Entity @Setter @Getter @NoArgsConstructor @AllArgsConstructor @Builder @ToString public class Alumno { @GeneratedValue(strategy=GenerationType.AUTO) @Id\tint id; String nombre; Integer edad; String clase; }  @Entity @Setter @Getter @Builder @NoArgsConstructor @AllArgsConstructor @ToString public class Profesor { @GeneratedValue(strategy=GenerationType.AUTO) @Id Integer id; String nombre; String materia; String colegio;\tInteger numeroClase; }  También he creado sus correspondientes interfaces para los repositorios.\npublic interface AlumnoRepository extends JpaRepository\u0026lt;Alumno, Integer\u0026gt;{} public interface ProfesorRepository extends JpaRepository\u0026lt;Profesor, Integer\u0026gt;{}  Ahora, en la clase JpaQueryByExampleApplication he añadido este código\n@Autowired AlumnoRepository alumnRepository; @Autowired ProfesorRepository teacherRepository; @PostConstruct void iniciar() { log.info(\u0026quot;\\n\\nINSERTANDO PROFESORES .... \\n\\n\u0026quot;); var teacher = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).colegio(\u0026quot;Colegio1\u0026quot;).materia(\u0026quot;Matematicas\u0026quot;).numeroClase(55) .build(); guardar(teacherRepository, teacher); teacher = Profesor.builder().nombre(\u0026quot;Nombre2\u0026quot;).colegio(\u0026quot;Colegio2\u0026quot;).materia(\u0026quot;Lengua\u0026quot;).numeroClase(55).build(); guardar(teacherRepository, teacher); // Buscando registros cuyo nombre sea \u0026quot;Nombre1\u0026quot; sin importar los demas campos. var buscaNombre = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).build(); guardar(teacherRepository, buscaNombre); log.info(\u0026quot;\\n\\nINSERTANDO ALUMNOS .... \\n\\n\u0026quot;); var alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(12).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); guardar(alumnRepository, alumno); alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(13).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); }  Como se puede apreciar, la función iniciar tiene la etiqueta @PostConstruct lo que hará que Spring Boot ejecute esta función una vez se haya inicializado la aplicación.\nEn ella, creamos diferentes instancias de Profesor y Alumno llamando a la función guardar donde esta lo interesante.\nvoid guardar(JpaRepository jpaRepository, Object entidad) { Example qbe = Example.of(entidad); var registros = jpaRepository.findAll(qbe); if (registros.size() \u0026gt; 0) log.warning(\u0026quot;Ya existe Registro: \u0026quot; + entidad.toString()); else { jpaRepository.save(entidad); log.info(\u0026quot;Insertado registro: \u0026quot; + entidad.toString()); } }  Recibiremos un objeto que implemente la interfaz JpaRepository y un objeto que será donde estén los datos, es decir nuestra entidad.\nA partir de la función estática org.springframework.data.domain.Example.of() (no confundir con org.hibernate.criterion.Example) crearemos un objeto Example que contendrá los datos sobre los que realizaremos la búsqueda.\nUna vez tenemos nuestro objeto Example creado, lo utilizamos para llamar a la función findAll del interface JpaRepository .\nEsto devolverá una List con todos los registros cuyos valores sean igual a los valores mandados en entidad siempre y cuando el valor del campo no sea null, en cuyo caso no se realizara la búsqueda por ese campo.\nEs decir, en la primera llamada a guardar se ejecutará esta sentencia SQL:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=? and profesor0_.numero_clase=55 and profesor0_.materia=? and profesor0_.colegio=?  Sin embargo cuando usamos la variable buscaNombre donde solo establecemos el valor para el campo, haciendolo igual \u0026lsquo;Nombre1\u0026rsquo;, se buscaran aquellos registros cuyo nombre sea \u0026ldquo;Nombre1\u0026rdquo; sin importar los demás campos. La select por tanto será esta:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=?  Hay que tener en cuenta que la búsqueda se realizará sobre todos los campos que no tengan un valor igual null. Es por esto, que es importante que ninguno de los campos de la entidad este definido como un objeto primitivo (int, double, etc.). Si algún campo es de un tipo primitivo al realizar la búsqueda en caso de que no hayamos establecido el valor de ese campo, buscara aquel que tenga un valor igual 0 lo cual, seguramente, no es lo que deseamos.\nCreo que la salida mostrada al ejecutar la aplicación explica perfectamente la lógica:\nINSERTANDO PROFESORES .... 2021-01-23 18:14:23.493 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=1, nombre=Nombre1, materia=Matematicas, colegio=Colegio1, numeroClase=55) 2021-01-23 18:14:23.495 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=2, nombre=Nombre2, materia=Lengua, colegio=Colegio2, numeroClase=55) 2021-01-23 18:14:23.501 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Profesor(id=null, nombre=Nombre1, materia=null, colegio=null, numeroClase=null) 2021-01-23 18:14:23.501 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : INSERTANDO ALUMNOS .... 2021-01-23 18:14:23.507 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.509 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.514 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=4, nombre=Luis, edad=13, clase=1A)  Y por si acaso, tenéis el código fuente en: https://github.com/chuchip/JPAQBE\n¡ Esto es todo!. Nos vemos en la próxima clase.\n"
-},
-{
 	"uri": "http://www.profesor-p.com/categories/java/",
 	"title": "java",
 	"tags": [],
@@ -397,6 +397,76 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/junit/",
+	"title": "junit",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/junit/",
+	"title": "junit",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/mockito/",
+	"title": "mockito",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/mockito/",
+	"title": "mockito",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/mvc/",
+	"title": "mvc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/mvc/",
+	"title": "mvc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/categories/springboot/",
+	"title": "springboot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/springboot/",
+	"title": "springboot",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/tags/test/",
+	"title": "test",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://www.profesor-p.com/spring/data/qbe/",
+	"title": "Usar QBE en Spring Data",
+	"tags": ["java", "spring", "jpa", "qbe", "spring data JPA"],
+	"description": "",
+	"content": "A menudo, cuando arranca nuestra aplicación, tenemos que tener ciertos registros en algunas tablas de diccionarios. Por ejemplo, en la tabla \u0026lsquo;paises\u0026rsquo; puede que debamos tener cargados los países del mundo. O en la tabla \u0026lsquo;roles\u0026rsquo;, debemos tener definidos una serie de roles.\nUna de las maneras de cargar esos datos es definiendo una rutina en el programa, la cual se ejecutara al inicio y que insertara esos registros necesarios. El problema que nos podemos encontrar es que entonces, debemos borrar todos los registros y luego volverlos a insertar para no tener registros duplicados.\nEstaría bien que pudiéramos comprobar fácilmente si el registro a insertar ya existe y en caso de que sea así que no lo insertara.\nEn este artículo vamos a utilizar Query By Example (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#query-by-example) de Spring Data JPA para realizar esta tarea.\nEmpezaremos creando un proyecto en Spring Boot, con los siguientes starters:\n Spring Data JPA Lombok H2 (la base de datos que usaremos)  En este proyecto he creado dos entidades para las pruebas. Son estas:\n@Entity @Setter @Getter @NoArgsConstructor @AllArgsConstructor @Builder @ToString public class Alumno { @GeneratedValue(strategy=GenerationType.AUTO) @Id\tint id; String nombre; Integer edad; String clase; }  @Entity @Setter @Getter @Builder @NoArgsConstructor @AllArgsConstructor @ToString public class Profesor { @GeneratedValue(strategy=GenerationType.AUTO) @Id Integer id; String nombre; String materia; String colegio;\tInteger numeroClase; }  También he creado sus correspondientes interfaces para los repositorios.\npublic interface AlumnoRepository extends JpaRepository\u0026lt;Alumno, Integer\u0026gt;{} public interface ProfesorRepository extends JpaRepository\u0026lt;Profesor, Integer\u0026gt;{}  Ahora, en la clase JpaQueryByExampleApplication he añadido este código\n@Autowired AlumnoRepository alumnRepository; @Autowired ProfesorRepository teacherRepository; @PostConstruct void iniciar() { log.info(\u0026quot;\\n\\nINSERTANDO PROFESORES .... \\n\\n\u0026quot;); var teacher = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).colegio(\u0026quot;Colegio1\u0026quot;).materia(\u0026quot;Matematicas\u0026quot;).numeroClase(55) .build(); guardar(teacherRepository, teacher); teacher = Profesor.builder().nombre(\u0026quot;Nombre2\u0026quot;).colegio(\u0026quot;Colegio2\u0026quot;).materia(\u0026quot;Lengua\u0026quot;).numeroClase(55).build(); guardar(teacherRepository, teacher); // Buscando registros cuyo nombre sea \u0026quot;Nombre1\u0026quot; sin importar los demas campos. var buscaNombre = Profesor.builder().nombre(\u0026quot;Nombre1\u0026quot;).build(); guardar(teacherRepository, buscaNombre); log.info(\u0026quot;\\n\\nINSERTANDO ALUMNOS .... \\n\\n\u0026quot;); var alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(12).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); guardar(alumnRepository, alumno); alumno = Alumno.builder().clase(\u0026quot;1A\u0026quot;).edad(13).nombre(\u0026quot;Luis\u0026quot;).build(); guardar(alumnRepository, alumno); }  Como se puede apreciar, la función iniciar tiene la etiqueta @PostConstruct lo que hará que Spring Boot ejecute esta función una vez se haya inicializado la aplicación.\nEn ella, creamos diferentes instancias de Profesor y Alumno llamando a la función guardar donde esta lo interesante.\nvoid guardar(JpaRepository jpaRepository, Object entidad) { Example qbe = Example.of(entidad); var registros = jpaRepository.findAll(qbe); if (registros.size() \u0026gt; 0) log.warning(\u0026quot;Ya existe Registro: \u0026quot; + entidad.toString()); else { jpaRepository.save(entidad); log.info(\u0026quot;Insertado registro: \u0026quot; + entidad.toString()); } }  Recibiremos un objeto que implemente la interfaz JpaRepository y un objeto que será donde estén los datos, es decir nuestra entidad.\nA partir de la función estática org.springframework.data.domain.Example.of() (no confundir con org.hibernate.criterion.Example) crearemos un objeto Example que contendrá los datos sobre los que realizaremos la búsqueda.\nUna vez tenemos nuestro objeto Example creado, lo utilizamos para llamar a la función findAll del interface JpaRepository .\nEsto devolverá una List con todos los registros cuyos valores sean igual a los valores mandados en entidad siempre y cuando el valor del campo no sea null, en cuyo caso no se realizara la búsqueda por ese campo.\nEs decir, en la primera llamada a guardar se ejecutará esta sentencia SQL:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=? and profesor0_.numero_clase=55 and profesor0_.materia=? and profesor0_.colegio=?  Sin embargo cuando usamos la variable buscaNombre donde solo establecemos el valor para el campo, haciendolo igual \u0026lsquo;Nombre1\u0026rsquo;, se buscaran aquellos registros cuyo nombre sea \u0026ldquo;Nombre1\u0026rdquo; sin importar los demás campos. La select por tanto será esta:\nselect profesor0_.id as id1_1_, profesor0_.colegio as colegio2_1_, profesor0_.materia as materia3_1_, profesor0_.nombre as nombre4_1_, profesor0_.numero_clase as numero_c5_1_ from profesor profesor0_ where profesor0_.nombre=?  Hay que tener en cuenta que la búsqueda se realizará sobre todos los campos que no tengan un valor igual null. Es por esto, que es importante que ninguno de los campos de la entidad este definido como un objeto primitivo (int, double, etc.). Si algún campo es de un tipo primitivo al realizar la búsqueda en caso de que no hayamos establecido el valor de ese campo, buscara aquel que tenga un valor igual 0 lo cual, seguramente, no es lo que deseamos.\nCreo que la salida mostrada al ejecutar la aplicación explica perfectamente la lógica:\nINSERTANDO PROFESORES .... 2021-01-23 18:14:23.493 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=1, nombre=Nombre1, materia=Matematicas, colegio=Colegio1, numeroClase=55) 2021-01-23 18:14:23.495 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Profesor(id=2, nombre=Nombre2, materia=Lengua, colegio=Colegio2, numeroClase=55) 2021-01-23 18:14:23.501 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Profesor(id=null, nombre=Nombre1, materia=null, colegio=null, numeroClase=null) 2021-01-23 18:14:23.501 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : INSERTANDO ALUMNOS .... 2021-01-23 18:14:23.507 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.509 WARN 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Ya existe Registro: Alumno(id=3, nombre=Luis, edad=12, clase=1A) 2021-01-23 18:14:23.514 INFO 5416 --- [ main] c.p.qbe.JpaQueryByExampleApplication : Insertado registro: Alumno(id=4, nombre=Luis, edad=13, clase=1A)  Y por si acaso, tenéis el código fuente en: https://github.com/chuchip/JPAQBE\n¡ Esto es todo!. Nos vemos en la próxima clase.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/categories/jpa/",
@@ -952,20 +1022,6 @@
 	"content": ""
 },
 {
-	"uri": "http://www.profesor-p.com/categories/mvc/",
-	"title": "mvc",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/mvc/",
-	"title": "mvc",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://www.profesor-p.com/categories/tomcat/",
 	"title": "tomcat",
 	"tags": [],
@@ -1344,27 +1400,6 @@
 	"content": "Para aquellas pequeñas empresas que necesitan tener una trazabilidad sencilla pero potente, y ademas gratis, prueba mi ERP.\nTotalmente funcional, te sorprenderá gratamente.\nMás información aquí.\n"
 },
 {
-	"uri": "http://www.profesor-p.com/categories/junit/",
-	"title": "junit",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/junit/",
-	"title": "junit",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://www.profesor-p.com/tags/test/",
-	"title": "test",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/",
 	"title": "Instalar plugin Spring Boot en NetBeans",
 	"tags": ["java", "linux", "netbeans", "spring boot"],
@@ -1467,7 +1502,7 @@
 	"title": "Ultimas entradas",
 	"tags": [],
 	"description": "",
-	"content": "Estás son las ultimas entradas del blog\n Query By Example  Usando Query By Example para buscar registros en Spring Data JPA.\n Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.\n Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
+	"content": "Estás son las ultimas entradas del blog\n Testing en SpringBoot  Realizando test en SpringBoot utilizando diferentes técnicas.\n Query By Example  Usando Query By Example para buscar registros en Spring Data JPA.\n Spring Cloud Gateway. Redirigiendo peticiones Reactivamente  Realización de un programa para enrutar y balancear las peticiones a otros servicios incluyendo logging y fallback.\n Logging en Spring Boot  Configuración del loging en una aplicación realizada con Spring Boot.\n Creando un proyecto de Django con Eclipse  Aquí tenéis un pequeño manual de como crear un proyecto de DJango usando el IDE Eclipse y el plugin PyDev.\n Iniciación a la clase WebClient  Aquí tenéis un proyecto usando la clase WebClient que es la equivalente a RestTemplate para programación Reactiva y por lo tanto permite llamadas asíncronas.\n Trabajando con la clase RestTemplate-3  Último artículo sobre la clase RestTemplate donde hablo de sus diferentes métodos y peculiaridades.\n Trabajando con la clase RestTemplate-2  Segunda parte de la serie de artículos sobre la clase RestTemplate donde sigo despejando dudas.\n Trabajando con la clase RestTemplate  Primero de los artículos sobre la clase RestTemplate . Aprende a realizar peticiones HTTP fácilmente, produciéndose la serialización y deserialización de los objetos de una manera transparente.\n Estableciendo Filtros en Spring  Implementa filtros en Spring. Un filtro se puede establecer para controlar acciones a realizar cuando se recibe una petición HTTP.\n Cacheando resultados con Spring Boot  Aprende a utilizar cache en Spring para acelerar tus aplicaciones.\n Beans avanzados en Spring  Aprende como cargar Beans dinámicamente desde Spring.\n Optimizando relaciones entre entidades en Hibernate  Explicare como optimizar las consultas a la base de datos usando JPA. Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager).\n Accediendo facilmente a los datos con Spring Rest Data  Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida fácilmente.\n"
 },
 {
 	"uri": "http://www.profesor-p.com/categories/experiencia/",

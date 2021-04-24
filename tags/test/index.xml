@@ -6,7 +6,7 @@
     <description>Recent content in test on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Mon, 27 Aug 2018 08:24:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <description>&lt;p&gt;En una próxima entrada hablare sobre como testear las aplicaciones con pruebas unitarias. Bueno, mostrare como lo hago en mi código.&lt;/p&gt;
 
 &lt;p&gt;De momento, viendo que alguien ya la ha hecho antes (y seguramente mejor) dejo este enlace como aperitivo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Testeando Spring</title>
+      <link>http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/spring/testeando-tu-aplicacion-web/</guid>
+      <description>&lt;p&gt;En este artículo muestro diferentes maneras de testear una aplicación  basada con &lt;strong&gt;SpringBoot&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     
   </channel>

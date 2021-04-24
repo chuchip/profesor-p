@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Documentacion en español</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-ES</language>
-    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://www.profesor-p.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,45 @@
     <item>
       <title>java</title>
       <link>http://www.profesor-p.com/categories/java/</link>
-      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>junit</title>
+      <link>http://www.profesor-p.com/categories/junit/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/junit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mockito</title>
+      <link>http://www.profesor-p.com/categories/mockito/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/mockito/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mvc</title>
+      <link>http://www.profesor-p.com/categories/mvc/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>springboot</title>
+      <link>http://www.profesor-p.com/categories/springboot/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/categories/springboot/</guid>
       <description></description>
     </item>
     
@@ -309,15 +345,6 @@
     </item>
     
     <item>
-      <title>mvc</title>
-      <link>http://www.profesor-p.com/categories/mvc/</link>
-      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/mvc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tomcat</title>
       <link>http://www.profesor-p.com/categories/tomcat/</link>
       <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
@@ -467,15 +494,6 @@
       <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
       
       <guid>http://www.profesor-p.com/categories/lambda/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>junit</title>
-      <link>http://www.profesor-p.com/categories/junit/</link>
-      <pubDate>Mon, 27 Aug 2018 08:24:45 +0000</pubDate>
-      
-      <guid>http://www.profesor-p.com/categories/junit/</guid>
       <description></description>
     </item>
     
