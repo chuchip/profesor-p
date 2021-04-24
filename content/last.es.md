@@ -6,6 +6,10 @@ type = "page"
 +++
 **Estás son las ultimas entradas del blog**
 
+* [Testing en SpringBoot](/spring/testeando-tu-aplicacion-web/)
+
+Realizando test en **SpringBoot** utilizando diferentes técnicas.
+
 * [Query By Example](/spring/data/qbe/)
 
 Usando **Query By Example** para buscar registros en **Spring Data JPA.**
