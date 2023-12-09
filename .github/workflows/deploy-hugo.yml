@@ -29,5 +29,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.TOKEN }}
-          publish_branch: master
-          publish_dir: ./public
+          publish_branch: master          
