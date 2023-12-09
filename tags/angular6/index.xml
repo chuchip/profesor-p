@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular6 on Documentacion en español</title>
+    <link>http://www.profesor-p.com/tags/angular6/</link>
+    <description>Recent content in angular6 on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Wed, 19 Sep 2018 10:43:09 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.profesor-p.com/tags/angular6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular – Rutas</title>
+      <link>http://www.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</link>
+      <pubDate>Sun, 16 Sep 2018 14:42:39 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/16/aplicacion-en-angular-rutas/</guid>
+      <description>Una vez he explicado en la anterior entrada como inicializa Angular la aplicación, voy a explicar como hacer para que esta pueda aceptar parámetros a través de la URL introducida en el navegador. Básicamente, lo que deseo hacer es que, suponiendo que nuestra aplicación este corriendo en http://localhost:4200/ (es la dirección por defecto en la que escucha Node.js cuando lo lanzamos con el comando ng serve ), si vamos a la dirección http://localhost:4200/2018  nos muestre las ventas del ejercicio 2018.</description>
+    </item>
+    
+    <item>
+      <title>Curso Angular 6 – Reactivo!</title>
+      <link>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</link>
+      <pubDate>Wed, 19 Sep 2018 10:43:09 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/</guid>
+      <description>Antes de continuar con el curso quiero dejar claro que Angular es reactivo.
+¿ Que significa eso ?.
+Pues básicamente que cualquier cambio que se haga en el modelo sera transmitido a la vista y viceversa. El modelo, entiéndase que son nuestros _Componentes. _Es decir, nuestras clases definidas en los ficheros TypeScript. La vista es el código HTML que se visualizara en nuestro navegador.
+Así, si cambiamos el valor de un campo INPUT del HTML, que este unido con la directiva [(ngModel)] a una variable.</description>
+    </item>
+    
+  </channel>
+</rss>

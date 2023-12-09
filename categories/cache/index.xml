@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cache on Documentacion en español</title>
+    <link>http://www.profesor-p.com/categories/cache/</link>
+    <description>Recent content in cache on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 12 May 2019 07:57:07 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.profesor-p.com/categories/cache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cacheando resultados con Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</link>
+      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</guid>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+    </item>
+    
+  </channel>
+</rss>

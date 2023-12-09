@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring boot on Documentacion en español</title>
+    <link>http://www.profesor-p.com/tags/spring-boot/</link>
+    <description>Recent content in spring boot on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-ES</language>
+    <lastBuildDate>Sun, 18 Oct 2020 07:57:07 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.profesor-p.com/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</link>
+      <pubDate>Thu, 11 Oct 2018 06:01:11 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/</guid>
+      <description>Buenas chavales,
+En esta nueva entrada os enseñare como realizar un programa CRUD, que sirva peticiones REST, usando Spring Boot y como lenguaje de programación usar Kotlin.
+Creo que no hará falta aclarar que una aplicación CRUD es la típica aplicación que permite consultar, insertar, modificar y borrar los datos de una tabla. Vamos, lo que se suele ir llamando un mantenimiento de una tabla.
+Esta aplicación seria una variación del que explique en la entrada http://www.</description>
+    </item>
+    
+    <item>
+      <title>Uso de perfiles para testear en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</link>
+      <pubDate>Fri, 01 Mar 2019 13:50:57 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/</guid>
+      <description>&lt;p&gt;Como comentaba &lt;a href=&#34;http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/&#34;&gt;en el articulo anterior&lt;/a&gt; gracias al uso de perfiles es fácil personalizar las aplicaciones en &lt;strong&gt;Spring Boot&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Backend (II)</title>
+      <link>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    
+    <item>
+      <title>Perfiles en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</link>
+      <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/</guid>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Logging en Spring Boot</title>
+      <link>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2020/10/18/logging-en-spring-boot/</guid>
+      <description>Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general, como se va comportando.
+Redirigiendo la salida. Spring Boot, como cualquier aplicación, por defecto sacara todos los mensajes por la salida estándar y/o errores, pero a menudo deseamos guardar esos mensajes en un fichero.</description>
+    </item>
+    
+    <item>
+      <title>Cacheando resultados con Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</link>
+      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/</guid>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+    </item>
+    
+    <item>
+      <title>Optimizando relaciones entre entidades en Hibernate</title>
+      <link>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</link>
+      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/</guid>
+      <description>En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA.
+Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.
+EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.</description>
+    </item>
+    
+    <item>
+      <title>Accediendo facilmente a los datos con Spring Rest Data</title>
+      <link>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</link>
+      <pubDate>Mon, 25 Mar 2019 16:02:14 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/</guid>
+      <description>Spring Boot ofrece un fantástico soporte para acceder a los datos con JPA a través de sus interfaces, del tipo Repository. Si a esto le añadimos la facilidad con que se crean servicios REST, como explicaba en la entrada [http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/][2] podremos hacer una aplicación ofreciendo una API para acceder a nuestra base de datos preferida muy facilmente.
+Pero si queremos implementar HATEOAS en nuestro proyecto o si hay muchos criterios sobre los que debemos acceder a los datos, deberemos escribir bastante código.</description>
+    </item>
+    
+    <item>
+      <title>Usando Zuul para redirigir peticiones REST</title>
+      <link>http://www.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</link>
+      <pubDate>Sat, 16 Mar 2019 07:19:41 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/</guid>
+      <description>En este articulo explicare como crear una pasarela para peticiones REST (una gateway) utilizando Zuul.
+Zuul es parte del paquete Spring Cloud NetFlix y permite redirigir peticiones REST, realizando diversos tipos de filtros.
+En casi cualquier proyecto donde haya microservicios, es deseable que todas las comunicaciones entre esos microservicios pasen por un lugar común, de tal manera que se registren las entradas y salidas, se pueda implementar seguridad o se puedan redirigir las peticiones dependiendo de diversos parámetros.</description>
+    </item>
+    
+    <item>
+      <title>Querys avanzadas con JPA en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</link>
+      <pubDate>Thu, 14 Feb 2019 15:37:15 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/</guid>
+      <description>Hay veces en que las campos sobre los que restringir una consulta pueden variar en tiempo de ejecución. En ese caso si queremos usar JPA no podemos usar una sentencia @Query definida en nuestro repositorio pues no sabemos los campos sobre los que se aplicaran condiciones en la consulta. Además es bastante común que el usuario pueda elegir el criterio de búsqueda sobre un campo, deseando que el valor de un campo deba ser igual, mayor o menor, respecto al valor introducido .</description>
+    </item>
+    
+    <item>
+      <title>Microservicios distribuidos con Eureka</title>
+      <link>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</link>
+      <pubDate>Thu, 03 Jan 2019 08:52:59 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2019/01/03/microservicios-distribuidos-con-eureka/</guid>
+      <description>En esta clase hablare de como crear microservicios distribuidos en Spring Boot utilizando las facilidades que nos da el paquete Spring Cloud NetFlix.
+Cualquier microservicio debe poder localizar las diferentes instancias de otro servicio del que dependa sin tener sus direcciones definidas en el código.
+En el caso de que un microservicio deba acceder a otro lo ideal seria que de alguna manera pudiera saber en que direcciones esta las instancias de ese otro microservicio funcionando, pues lo más común es que se levanten diferentes instancias dependiendo de la carga.</description>
+    </item>
+    
+    <item>
+      <title>Servidor configuraciones usando Spring Cloud</title>
+      <link>http://www.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</link>
+      <pubDate>Mon, 10 Dec 2018 14:56:56 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/12/10/servidor-configuraciones-usando-spring-cloud/</guid>
+      <description>En esta ocasión vamos a usar el paquete Spring Cloud Config para poder tener configuraciones remotas para nuestras aplicaciones.
+La idea es que nuestro programa o programas puedan ir a buscar sus parámetros de configuración a un lugar externo, de tal manera que nuestra aplicación sea fácilmente parametrizable e incluso se puedan cambiar sus configuraciones en caliente.
+Esto se utiliza ampliamente en microservicios pues una mismo servicio o aplicación puede estar lanzada muchas veces en diferentes contenedores y es interesante tener un lugar central desde donde se puedan aplicar las configuraciones a estos servicios.</description>
+    </item>
+    
+    <item>
+      <title>Personalizar salidas de códigos HTTP en Spring Boot</title>
+      <link>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</link>
+      <pubDate>Tue, 20 Nov 2018 17:46:55 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/11/20/personalizar-codigo-http-en-spring-boot/</guid>
+      <description>En esta articulo os voy a explicar como devolver errores HTTP personalizados. Para ello crearemos un proyecto llamado httpErrorPersonalizado. Teneis el código fuente de este proyecto en mi página de GitHub
+Cuando realizamos una petición HTTP a un recurso en Spring Boot, es común que esa petición tenga que considerar la opción de devolver un error.
+Es el caso típico de que realizamos una petición RESTful para solicitar un registro, pero ese registro no existe.</description>
+    </item>
+    
+    <item>
+      <title>Securizando servicios REST con Oauth2 en SpringBoot</title>
+      <link>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</link>
+      <pubDate>Thu, 18 Oct 2018 13:20:43 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/</guid>
+      <description>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
+OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</description>
+    </item>
+    
+    <item>
+      <title>Seguridad WEB en Spring Boot</title>
+      <link>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</link>
+      <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</guid>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
+    </item>
+    
+    <item>
+      <title>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)</title>
+      <link>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</link>
+      <pubDate>Thu, 11 Oct 2018 09:50:19 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/</guid>
+      <description>Hola de nuevo, chicos.
+Continuo con la entrada http://www.profesor-p.com/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/ para ver como realizar las peticiones REST , con protocolo JSON que es el estándar de facto 😉 en Kotlin.
+Una vez que ya tenemos la lógica de acceso a nuestra base de datos, tenemos que hacer la parte Web. Pues, aunque os parezca increíble, esto se hace con una sola clase y ademas de muy pocas lineas.
+La clase en cuestión es ApiController.</description>
+    </item>
+    
+    <item>
+      <title>Ejemplo aplicación MVC con Spring Boot  usando NetBeans 9</title>
+      <link>http://www.profesor-p.com/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/</link>
+      <pubDate>Tue, 28 Aug 2018 06:51:33 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/</guid>
+      <description>En una entrada anterior explique como instalar NetBeans 9, añadiendole el plugin para usar Spring Boot.
+Ahora vamos a crear nuestro primer proyecto en este entorno.
+Pulsaremos New Project, lo cual nos mostrara una pantalla como la siguiente.
+y en el campo Filter pondremos spring,  para después eligir Spring Boot Inititilizr project. Pulsaremos Next y nos pedirá una serie de datos sobre nuestro proyecto. Para este ejemplo podemos dejar los campos como aparecen por defecto.</description>
+    </item>
+    
+    <item>
+      <title>Instalar plugin Spring Boot en NetBeans</title>
+      <link>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
