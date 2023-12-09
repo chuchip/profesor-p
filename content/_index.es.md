@@ -1,6 +1,5 @@
 ---
 title: "Bienvenido a mi página"
-chapter: true
 ---
 # ¡¡El profe os da la bienvenida!! 
 <div  align="right" >{{% button  href="/last/"  icon="fas fa-dragon" icon-position="right" %}}  <span  style="background-color:cyan; font-size: large">**Últimas entradas**</span>   {{% /button %}}</div>
