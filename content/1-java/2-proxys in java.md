@@ -4,7 +4,7 @@ pre: "<b>o </b>"
 author: profesor-p
 type: post
 date: 2024-01-01
-url: /2024/01/01/proxies-in-java/
+url: /proxies-in-java
 categories:
   - java
   - spring
@@ -13,7 +13,7 @@ tags:
   - spring
 
 ---
-En este artículo explicaré como usar proxies en java usando la librería `java.lang.reflect.Proxy`
+En articulo anterior (https://www.profesor-p.com/springboot/aot/index.html) hablaba sobre AOT (*Aspect Oriented Programing*) y comentaba que  Spring Boot hacía uso de proxies para implementarlos. En este artículo profundizare como usar proxies en java usando la librería `java.lang.reflect.Proxy`
  <!--more--> 
 
 ####  ¿ Qué son y para qué sirven  ?
