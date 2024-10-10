@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.0">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Articulos sobre informática ">
+    <meta name="author" content="Jesus J. Puente">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Securizando servicios REST con Oauth2 en SpringBoot :: Documentacion en español">
+    <meta name="twitter:description" content="En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
+OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.">
+    <meta property="og:title" content="Securizando servicios REST con Oauth2 en SpringBoot :: Documentacion en español">
+    <meta property="og:description" content="En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la entrada de seguridad WEB anterior, así que el código fuente lo tenéis en: https://github.com/chuchip/OAuthServer.
+Explicando la tecnologia Oauth2 Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.
+OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y, para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.profesor-p.com/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html">
+    <meta property="article:section" content="Seguridad :: Documentacion en español">
+    <meta property="article:published_time" content="2018-10-18T13:20:43+00:00">
+    <meta property="article:modified_time" content="2018-10-18T13:20:43+00:00">
+    <meta property="og:site_name" content="Documentacion en español">
+    <title>Securizando servicios REST con Oauth2 en SpringBoot :: Documentacion en español</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1728574459" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1728574459" rel="stylesheet">
+    <link href="/css/fonts.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1728574459" rel="stylesheet">
+    <link href="/css/theme-auto.css?1728574459" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-auto.css?1728574459" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1728574459" rel="stylesheet">
+    <link href="/css/print.css?1728574459" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1728574459" rel="stylesheet">
+    <script src="/js/url.js?1728574459"></script>
+    <script src="/js/variant.js?1728574459"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72""
+      window.index_json_url="/es/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='http:\/\/www.profesor-p.com/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'auto' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copiar en el portapapeles`;
+      window.T_Copied_to_clipboard = `¡Copiado al portapapeles!`;
+      window.T_Copy_link_to_clipboard = `Copiar enlace al portapapeles`;
+      window.T_Link_copied_to_clipboard = `¡Enlace copiado al portapapeles!`;
+      window.T_Reset_view = `Restablecer vista`;
+      window.T_View_reset = `¡Ver reajuste!`;
+      window.T_No_results_found = `No se han encontrado resultados para "{0}"`;
+      window.T_N_results_found = `{1} resultados encontrados para "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menú (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Tabla de contenido (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#explicando-la-tecnologia-oauth2">Explicando la tecnologia Oauth2</a></li>
+        <li><a href="#creando-un-servidor-de-autorizaciones-authserver">Creando un Servidor de Autorizaciones (AuthServer)</a></li>
+        <li><a href="#creando-un-servidor-de-recursos-resourceserver">Creando un Servidor de Recursos (ResourceServer)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/index.html"><span itemprop="name">Bienvenido a mi página</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/index.html"><span itemprop="name">Spring</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/2-seguridad/index.html"><span itemprop="name">Seguridad</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Securizando servicios REST con Oauth2 en SpringBoot</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/chuchip/profesor-p2-spring/2-seguridad/2018-10-18-securizando-servicios-rest-con-oauth2-en-springboot.md" target="_blank" title="Editar (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/springboot/seguridad-con-keycloack/index.html" title="Securizando aplicación de SpringBoot con KeyCloack (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/2018/10/17/seguridad-web-en-spring-boot/index.html" title="Seguridad WEB en Spring Boot (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Más"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/es/tags/java/index.html">java</a></li>
+    <li><a class="term-link" href="/es/tags/oauth2/index.html">oauth2</a></li>
+    <li><a class="term-link" href="/es/tags/rest/index.html">rest</a></li>
+    <li><a class="term-link" href="/es/tags/seguridad/index.html">seguridad</a></li>
+    <li><a class="term-link" href="/es/tags/spring-boot/index.html">spring boot</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="securizando-servicios-rest-con-oauth2-en-springboot">Securizando servicios REST con Oauth2 en SpringBoot</h1>
+
+<p>En esta entrada explicare como podemos dotar de seguridad a servicios REST en Spring Boot. La aplicación de ejemplo es la misma que la <a href="http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/" target="_blank">entrada de seguridad WEB anterior</a>, así que el código fuente lo tenéis en: <!-- raw HTML omitted --><a href="https://github.com/chuchip/OAuthServer" target="_blank">https://github.com/chuchip/OAuthServer</a><!-- raw HTML omitted -->.</p>
+<h3 id="explicando-la-tecnologia-oauth2">Explicando la tecnologia Oauth2</h3>
+<p>Como he dicho, utilizaremos el protocolo OAuth2, así que lo primero sera explicar como funciona este protocolo.</p>
+<p>OAuth2 tiene algunas variantes pero yo os voy a explicar la que utilizare en el programa y,  para ello, voy a poneros un ejemplo para que entendáis lo que pretendemos hacer.</p>
+<p>Voy a poner una escena cotidiana: El pago con una tarjeta de crédito en un comercio.En este caso hay tres interlocutores: La tienda, el banco y nosotros. En el protocolo Oauth2 pasa algo parecido. Estos son los pasos:</p>
+<ol>
+<li>El cliente , o sea, el comprador, solicita al banco una tarjeta de crédito, para que el banco nos la de,  comprobara quienes somos, y nos otorga un crédito dependiendo de la pasta que tengamos en la cuenta o bien nos dice que no le hagamos perder el tiempo ;-). En el protocolo OAuth2 al que otorga las tarjetas se le llama Servidor de Autentificación.</li>
+<li>Si el banco nos ha dado la tarjeta, podremos ir a la tienda, es decir al servidor web, y le presentamos la tarjeta de crédito. La tienda no nos conoce de nada, pero puede preguntar al banco, a través del lector de tarjetas si puede confiar en nosotros y hasta que punto (el saldo de crédito). La tienda seria el Servidor de Recursos.</li>
+<li>La tienda  dependiendo del dinero que le diga el banco que tenemos nos permitirá comprar unos productos u otros. En la analogía OAuth2, el servidor web nos permitirá acceder a unas paginas u a otras dependiendo de si  somos muy ricos, ricos, medios  o pobres.</li>
+</ol>
+<p>Como comentario, decir, por si no os habéis dado cuenta, que se utilizan servidores de autentificación habitualmente. Cuando vais a una pagina web y os pide registraros, pero como opción os deja hacerlo a través de Facebook o Google, estáis utilizando esta tecnología. Google o Facebook se convierte en el ‘banco’ que emite esa ‘tarjeta’, la pagina web que os pide registraros, la usara para comprobar que tenéis ‘credito’ y dejaros entrar. Espero que se entienda el ejemplo ;-).</p>
+<p><a href="#R-image-001ebb61130e48de6064981258fb3764" class="lightbox-link"><img src="/img/2018/10/Captura-17.png%22" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-001ebb61130e48de6064981258fb3764"><img src="/img/2018/10/Captura-17.png%22" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Aquí podéis ver la pagina web de el periódico “El Pais’, creando una cuenta. Si utilizamos Google o Facebook, el periódico (la tienda) confiara en lo que les digan esos proveedores de autentificaciones. En este caso lo único que necesita la pagina web es que tengáis una tarjeta de crédito, sin importar el saldo 😉</p>
+<h3 id="creando-un-servidor-de-autorizaciones-authserver">Creando un Servidor de Autorizaciones (AuthServer)</h3>
+<p>¿ Entendido ?. OK, pues vamos a ver como crear un banco, la tienda y toda la parafernalia 😉</p>
+<p>Lo primero, en nuestro proyecto,  necesitamos tener las dependencias adecuadas, necesitaremos los inicializadores (starters en ingles) : <strong>Cloud OAuth2, Security y Web</strong></p>
+<p><a href="#R-image-cf4ee81db7a05b4d65b2ee310f5e323d" class="lightbox-link"><img src="/img/2018/10/Captura-13.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cf4ee81db7a05b4d65b2ee310f5e323d"><img src="/img/2018/10/Captura-13.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Bien, empecemos por definir el banco, esto lo hacemos en la clase: <strong>AuthorizacionServerConfiguration</strong></p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>@Configuration
+@EnableAuthorizationServer
+public class AuthorizacionServerConfiguration  extends AuthorizationServerConfigurerAdapter  {
+
+	  @Autowired
+	  @Qualifier(&#34;authenticationManagerBean&#34;)
+	  private AuthenticationManager authenticationManager;
+	  
+	  @Autowired
+	  private TokenStore tokenStore;
+	
+	@Override
+	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+		clients.inMemory()
+		    .withClient(&#34;cliente&#34;)
+            .authorizedGrantTypes(&#34;password&#34;, &#34;authorization_code&#34;, &#34;refresh_token&#34;, &#34;implicit&#34;)
+            .authorities(&#34;ROLE_CLIENT&#34;, &#34;ROLE_TRUSTED_CLIENT&#34;,&#34;USER&#34;)
+            .scopes(&#34;read&#34;,&#34;write&#34;)
+            .autoApprove(true)	        
+            .secret(passwordEncoder().encode(&#34;password&#34;));          
+	}
+	
+	 @Bean
+	    public PasswordEncoder passwordEncoder() {
+	        return new BCryptPasswordEncoder();
+	    }
+	 @Override
+	 public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+	     endpoints
+	             .authenticationManager(authenticationManager)	        
+	             .tokenStore(tokenStore);
+	 }
+	 
+	  @Bean
+	  public TokenStore tokenStore() {
+	      return new InMemoryTokenStore();
+	  }	
+}</code></pre></div><p>Empezamos la clase anotandola como de configuración con la etiqueta @<strong>Configuration</strong> y después usamos la etiqueta <strong>@EnableAuthorizationServer</strong> para decirle a Spring que active el servidor de autorizaciones. Para definir las propiedades del servidor especificamos que nuestra clase extiende de <strong>AuthorizationServerConfigurerAdapter</strong> , la cual implementa el interface <strong>AuthorizationServerConfigurerAdapter</strong>, por lo cual, Spring usara esta clase para parametrizar el servidor.</p>
+<p>Definimos un bean tipo **AuthenticationManager ** que Spring provee automagicamente y que nosotros recogeremos con la etiqueta <strong>@Autowired</strong>.  También definimos un objeto  <strong>TokenStore,</strong>   pero para poder injectarlo debemos definirlo, lo cual hacemos en la función <strong>public TokenStore tokenStore().</strong></p>
+<p>El **AuthenticationManager **  o Controladores de Autentificaciones, como he dicho lo provee Spring pero tenderemos que configurarlo nosotros. Más tarde explicare como se hace. El <strong>TokenStore</strong> o Almacén de Identificadores es  donde se guardaran los identificadores que nuestro servidor de autentificaciones vaya suministrando, para que cuando el servidor de recursos (la tienda) le pregunte el crédito sobre una tarjeta de crédito este pueda responderle. En este caso usamos la clase <strong>InMemoryTokenStore</strong> que guardara los identificadores en memoria. En una aplicación real podríamos usar un <strong>JdbcTokenStore</strong> para guardarlos en una base de datos, para que si se cae la aplicación los clientes no tengan que renovar sus tarjetas de credito 😉</p>
+<p>En la función <strong>configure(ClientDetailsServiceConfigurer clients)</strong> especificamos las credenciales del banco, digo del administrador de autentificaciones. ademas de los servicios que ofrece. Sí, hablando en plural, porque para poder acceder al banco debemos tener un usuario y contraseña para cada uno de los servicios que ofrece. Esto es  un concepto muy importante: <em>El usuario y contraseña es del banco no del cliente,</em> para cada servicio que ofrezca el banco habrá una única autentificación, si bien podrá ser la misma para diferentes servicios.</p>
+<p>Detallare las lineas:</p>
+<ul>
+<li><strong>clients.inMemory()</strong>  Especifica que vamos a guardar los servicios en memoria. En una aplicación ‘real’ lo guardaríamos en una base de datos, un servidor LDAP, etc.</li>
+<li><strong>withClient(“cliente”)</strong> Es el usuario con el que nos identificaremos en el banco. En este caso se llamara ‘cliente’. ¿ Igual habria sido mejor llamarle ‘user’ 😉 ?</li>
+<li>a<strong>uthorizedGrantTypes(“password”, “authorization_code”, “refresh_token”, “implicit”)</strong>. Especificamos los servicios que estamos configurando para el usuario definido , para ‘<strong>cliente</strong>‘. En nuestro ejemplo solo usaremos el servicio <strong>password</strong>.</li>
+<li><strong>authorities(“ROLE_CLIENT”, “ROLE_TRUSTED_CLIENT”,”USER”).</strong> Especifica roles o grupos que tiene el servicio ofrecido. Tampoco lo usaremos en nuestro ejemplo asi que dejemoslo correr de momento.</li>
+<li><strong>scopes(“read”,”write”).</strong> El ambito del servicio. Tampoco lo usaremos en nuestra aplicación.</li>
+<li><strong>autoApprove(true)</strong>. Si debe aprobar automaticamente las peticiones del cliente. Pondremos que si para hacer más sencilla la aplicación.</li>
+<li>secret(passwordEncoder().encode(“password”)). Contraseña del cliente. Observar que se llama la función <strong>encode</strong> que tenemos definida un poco más abajo, para especificar con que tipo de encriptación se guardara la contraseña. La función <strong>encode</strong>, esta anotada con la etiqueta @Bean porque spring, cuando le suministremos la contraseña en una petición HTTP, buscara un objeto <strong>PasswordEncoder</strong> para comprobar la validez de la contraseña entregada.</li>
+</ul>
+<p>Y por último tenemos la función <strong>configure(AuthorizationServerEndpointsConfigurer endpoints)</strong> donde definimos que controlador de autentificaciones y que almacén de identificadores deben usar los puntos de salida. Aclarar que los puntos de salida  son las URLs por donde ‘hablaremos con nuestro banco’, para solicitar las tarjetas de cerdito 😉</p>
+<p>De acuerdo, ya tenemos nuestro servidor de autentificaciones creado pero aun nos falta la manera de que este sepa quienes somos y nos ponga en diferentes grupos, según las credenciales introducidas. Bien, para hacer esto usaremos la misma clase que en utilizamos para proteger una pagina web. Si habéis leído el articulo anterior: <!-- raw HTML omitted --><a href="http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/" target="_blank">http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/</a> <!-- raw HTML omitted -->recordareis que creábamos una clase que heredaba de <strong>WebSecurityConfigurerAdapter</strong> , donde sobrescribiamos la función <strong>UserDetailsService userDetailsService().</strong></p>
+<div class="wrap-code highlight"><pre tabindex="0"><code class="language-@EnableWebSecurity" data-lang="@EnableWebSecurity">public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+ ....
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+    	
+    	UserDetails user=User.builder().username(&#34;user&#34;).password(passwordEncoder().encode(&#34;secret&#34;)).
+    			roles(&#34;USER&#34;).build();
+    	UserDetails userAdmin=User.builder().username(&#34;admin&#34;).password(passwordEncoder().encode(&#34;secret&#34;)).
+    			roles(&#34;ADMIN&#34;).build();
+        return new InMemoryUserDetailsManager(user,userAdmin);
+    }
+....
+}</code></pre></div><p>Pues los usuarios con sus roles o grupos se definen de la misma manera. Deberemos tener una clase que extienda **WebSecurityConfigurerAdapter ** y definir nuestros usuarios.</p>
+<p>Ahora y podemos comprobar si nuestro servidor de autorizaciones funciona. Vamos  a ver como, utilizando el excelente programa <strong>PostMan.</strong></p>
+<p>Para hablar con el ‘banco’ para solicitar nuestras credenciales, y como no hemos definido lo contrario, deberemos ir a la URI “/oauth/token”. Este es uno de los puntos finales de los que hablaba anteriormente. Hay más pero en nuestro ejemplo y como solo vamos a usar el servicio ‘password’ no usaremos más.</p>
+<p>Usaremos una petición HTTP tipo POST, indicando que queremos usar validación básica, pondremos el usuario y contraseña, que serán los del “banco”, en nuestro ejemplo: ‘cliente’ y ‘password’ respectivamente.</p>
+<p><a href="#R-image-07ad19caf8dc5a55c34a0987b7cc72f7" class="lightbox-link"><img src="/img/2018/10/Captura-14.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-07ad19caf8dc5a55c34a0987b7cc72f7"><img src="/img/2018/10/Captura-14.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>En el cuerpo de la petición, en formato form-url-encoded introduciremos el servicio a solicitar, nuestro usuario y nuestra contraseña.</p>
+<p><a href="#R-image-08d2c96db9f0a159ab65f7ee33a468be" class="lightbox-link"><img src="/img/2018/10/Captura-15.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08d2c96db9f0a159ab65f7ee33a468be"><img src="/img/2018/10/Captura-15.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>y lanzamos la petición, la cual nos deberá sacar una salida como esta:</p>
+<p><a href="#R-image-ecfe5d45c79847c0ba58146a48fbca86" class="lightbox-link"><img src="/img/2018/10/Captura-16.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ecfe5d45c79847c0ba58146a48fbca86"><img src="/img/2018/10/Captura-16.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Ese ‘access_token’ “<strong>8279b6f2-013d-464a-b7da-33fe37ca9afb</strong>” es nuestra tarjeta de crédito y es la que deberemos presentar a nuestro servidor de recursos (la tienda) para poder ver paginas (recursos) que no sean públicos.</p>
+<h3 id="creando-un-servidor-de-recursos-resourceserver">Creando un Servidor de Recursos (ResourceServer)</h3>
+<p>Ahora que ya tenemos nuestra tarjeta de crédito vamos a crear la tienda que acepte esa tarjeta 😉</p>
+<p>En nuestro ejemplo vamos a crear el servidor de recursos y de autentificación en el mismo programa, con lo cual Spring Boot, se encargara de hacer que confié una parte en otra, sin tener que configurar nada. Si, como es habitual en la vida real, el servidor de recursos esta en un sitio  y el servidor de autentificaciones en otro, deberíamos indicarle al servidor de recursos, cual es nuestro ‘banco’ y como debe hablar con el. Pero eso lo dejaremos para otra entrada.</p>
+<p>La única clase del servidor de recursos es <strong>ResourceServerConfiguration</strong></p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>@EnableResourceServer
+@RestController
+public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
+{
+.....
+}</code></pre></div><p>Observar la anotación  @<strong>EnableResourceServer</strong> que hara que Spring active el servidor de recursos.  La etiqueta <strong>@RestController</strong> es porque en esta misma clase nosotros tendremos los recursos, pero podrían estar perfectamente en otra clase.</p>
+<p>Por ultimo fijaros que la clase extiende de <strong>ResourceServerConfigurerAdapter</strong> esto es así porque vamos a sobrescribir metodos de esa clase para configurar nuestro servidor de recursos.</p>
+<p>Como he dicho antes al estar el servidor de autentificación y de recursos en el mismo programa no tenemos mas que configurar la seguridad de nuestro servidor de recursos. Esto se hace en la función:</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>@Override
+public void configure(HttpSecurity http) throws Exception {
+	http
+	.authorizeRequests().antMatchers(&#34;/oauth/token&#34;, &#34;/oauth/authorize**&#34;, &#34;/publica&#34;).permitAll();  
+//	 .anyRequest().authenticated(); 
+
+	http.requestMatchers().antMatchers(&#34;/privada&#34;)  //  Denegamos el acceso a &#34;/privada&#34;
+	.and().authorizeRequests()
+	.antMatchers(&#34;/privada&#34;).access(&#34;hasRole(&#39;USER&#39;)&#34;) 
+	.and().requestMatchers().antMatchers(&#34;/admin&#34;) // Denegamos el acceso a &#34;/admin&#34;
+	.and().authorizeRequests()
+	.antMatchers(&#34;/admin&#34;).access(&#34;hasRole(&#39;ADMIN&#39;)&#34;);
+}</code></pre></div><p>En la entrada anterior cuando definíamos la seguridad en la web, explicaba una función llamada <strong>configure(HttpSecurity http)</strong>, ¿ a que se parece mucho a esta ?. Pues si básicamente es la misma, y de hecho recibe un objeto HttpSecurity que debemos configurar.</p>
+<p>Explico linea a linea las sentencias:</p>
+<ul>
+<li><strong>http.authorizeRequests().antMatchers(&quot;/oauth/token&quot;, &ldquo;/oauth/authorize&rdquo;, &ldquo;/publica&rdquo;).permitAll()</strong> Permitimos todas las peticiones a  “/oauth/token”, “/oauth/authorize**”, “/publica” sin ningún tipo de validación.</li>
+<li><strong>anyRequest().authenticated()</strong> Esta linea esta comentada, si no lo estuviera todos los recursos serian accesibles solo si se el usuario ha sido validado.</li>
+<li><strong>requestMatchers().antMatchers(&quot;/privada&quot;)</strong> Denegamos el acceso a la url “/privada”</li>
+<li><strong>authorizeRequests().antMatchers(&quot;/privada&quot;).access(&ldquo;hasRole(&lsquo;USER&rsquo;)&rdquo;)</strong>  Permitimos el acceso a “/privada” si el usuario validado tiene el role ‘USER’</li>
+<li><strong>requestMatchers().antMatchers(&quot;/admin&quot;)</strong>  Denegamos el acceso a la url “/admin”</li>
+<li><strong>authorizeRequests().antMatchers(&quot;/admin&quot;).access(&ldquo;hasRole(&lsquo;ADMIN&rsquo;)&rdquo;)</strong>  Permitimos el acceso a “/admin” si el usuario validado tiene el role ‘ADMIN’</li>
+</ul>
+<p>Una vez que tenemos nuestra servidor de recursos creado solo debemos crear los servicios lo cual se hace con estas lineas:</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>  @RequestMapping(&#34;/publica&#34;)
+  public String publico() {
+	   return &#34;Pagina Publica&#34;;
+  }
+  @RequestMapping(&#34;/privada&#34;)
+  public String privada() {
+         return &#34;Pagina Privada&#34;;
+  }
+  @RequestMapping(&#34;/admin&#34;)
+  public String admin() {
+	    return &#34;Pagina Administrador&#34;;
+  }</code></pre></div><p>Como veis son 3 funciones basicas que solo devuelven sus correspondientes Strings.</p>
+<p>Veamos ahora como funciona la validación.</p>
+<p>Primero comprobamos que podemos acceder a “/publica” sin ningún tipo de validación:</p>
+<p><a href="#R-image-282ef23cecc270a61419e6e4c5cd3ed7" class="lightbox-link"><img src="/img/2018/10/Captura-18.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-282ef23cecc270a61419e6e4c5cd3ed7"><img src="/img/2018/10/Captura-18.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Correcto. ¡¡ Esto funciona!!</p>
+<p>Si intento acceder a la pagina “/privada” recibo un error “401 unauthorized”, lo cual nos indica que no tenemos permiso para ver esa pagina, así que vamos a usar  el token emitido por nuestro servidor de autorizaciones, para el usuario ‘user’, a ver que pasa 😉</p>
+<p><a href="#R-image-41a3280ecc5414941bbcddf021553338" class="lightbox-link"><img src="/img/2018/10/Captura-19.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-41a3280ecc5414941bbcddf021553338"><img src="/img/2018/10/Captura-19.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Anda, si podemos ver nuestra pagina privada. Probemos con la pagina del administrador…</p>
+<p><a href="#R-image-97e5c10f9ad1cb07c87d37c90835135d" class="lightbox-link"><img src="/img/2018/10/Captura-20.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-97e5c10f9ad1cb07c87d37c90835135d"><img src="/img/2018/10/Captura-20.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Correcto, no podemos verla. Asi que vamos a solicitar un nuevo token al administrador de credenciales, pero identificandonos con el usuario ‘admin’.</p>
+<p>El token devuelto es: ” “ab205ca7-bb54-4d84-a24d-cad4b7aeab57”. Lo usamos a ver que pasa:</p>
+<p><a href="#R-image-5b686a53a61b86f2193827550a4526e2" class="lightbox-link"><img src="/img/2018/10/Captura-21.png" alt="" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5b686a53a61b86f2193827550a4526e2"><img src="/img/2018/10/Captura-21.png" alt="" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Bueno, pues ya esta, ya podemos ir de compras con seguridad!!. Ahora ya solo falta montar la tienda y tener los productos 😉</p>
+<p>Nos vemos en la próxima, estudiantes 🙂</p>
+
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/es/categories/java/index.html">java</a></li>
+    <li><a class="term-link" href="/es/categories/oauth2/index.html">oauth2</a></li>
+    <li><a class="term-link" href="/es/categories/rest/index.html">rest</a></li>
+    <li><a class="term-link" href="/es/categories/seguridad/index.html">seguridad</a></li>
+    <li><a class="term-link" href="/es/categories/spring-boot/index.html">spring boot</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Buscar (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">Buscar</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Buscar...">
+          <button class="search-clear" type="button" data-search-clear="" title="Borrar búsqueda"><i class="fas fa-times" title="Borrar búsqueda"></i></button>
+        </div>
+        <script>
+          var contentLangs=['es'];
+        </script>
+        <script src="/js/auto-complete.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.es.min.js?1728574460" defer></script>
+        <script src="/js/search.js?1728574460" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/es/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/index.html" class=""><a class="padding" href="/es/1-java/index.html"><b>1.</b> Java<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3b91fe72b7afa483d06a78066e2c9e97" class="morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/kotlin/index.html" class="alwaysopen"><a class="padding" href="/es/1-java/kotlin/index.html"><b>> </b> Kotlin<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-699e77bafa43beee8fa9b490ab3ce63b" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/23/kotlin-vs-java/index.html" class=""><a class="padding" href="/2018/08/23/kotlin-vs-java/index.html"><b>o </b>Kotlin vs Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/proxies-in-java/index.html" class=""><a class="padding" href="/proxies-in-java/index.html"><b>o </b>Proxies in Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/23/usando-lambdas/index.html" class=""><a class="padding" href="/2018/08/23/usando-lambdas/index.html"><b>o </b>Usando Lambdas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/index.html" class="parent "><a class="padding" href="/es/2-spring/index.html"><b>2. </b>Spring<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-b97beb613b9897bd944073efb81537bf" class="morespace collapsible-menu">
+          <li data-nav-id="/es/2-spring/1-testing/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/1-testing/index.html"><b>- </b>Testing<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-aaec4f6843788c490f6deac67b0a63c5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/27/testeando-las-aplicaciones/index.html" class=""><a class="padding" href="/2018/08/27/testeando-las-aplicaciones/index.html"><b>o </b>Testeando las aplicaciones<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html"><b>o </b>Uso de perfiles para testear en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/testeando-tu-aplicacion-web/index.html" class=""><a class="padding" href="/spring/testeando-tu-aplicacion-web/index.html"><b>o </b>Testeando Spring<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/2-seguridad/index.html" class="parent alwaysopen"><a class="padding" href="/es/2-spring/2-seguridad/index.html"><b>- </b>Seguridad<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-77762ac49f9c6fed0102de0462d125bd" class="morespace collapsible-menu">
+          <li data-nav-id="/springboot/seguridad-con-keycloack/index.html" class=""><a class="padding" href="/springboot/seguridad-con-keycloack/index.html"><b>o </b>Securizando aplicación de SpringBoot con KeyCloack<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html" class="active"><a class="padding" href="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html"><b>o </b>Securizando servicios REST con Oauth2 en SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/17/seguridad-web-en-spring-boot/index.html" class=""><a class="padding" href="/2018/10/17/seguridad-web-en-spring-boot/index.html"><b>o </b>Seguridad WEB en Spring Boot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/3-mvc/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/3-mvc/index.html"><b>- </b>MVC<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-647dd4aaeff1a9b473a05667d14a0d02" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html" class=""><a class="padding" href="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html"><b>o </b>Ejemplo aplicación MVC con Spring Boot  usando NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/4-database/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/4-database/index.html"><b>- </b>Database<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d9a0b1bdf63fbc66b09dcab2aa2df50d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Lambdas en JDBC Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/data/qbe/index.html" class=""><a class="padding" href="/spring/data/qbe/index.html"><b>o </b>Usar QBE en Spring Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/05/optimizando-consultas-con-hibernate/index.html" class=""><a class="padding" href="/2019/04/05/optimizando-consultas-con-hibernate/index.html"><b>o </b>Optimizando relaciones entre entidades en Hibernate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html" class=""><a class="padding" href="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html"><b>o </b>Accediendo facilmente a los datos con Spring Rest Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html" class=""><a class="padding" href="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html"><b>o </b>Querys avanzadas con JPA en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/25/jpa-hibernate-en-spring/index.html" class=""><a class="padding" href="/2018/08/25/jpa-hibernate-en-spring/index.html"><b>o </b>JPA &#43; Hibernate en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/24/jpa-con-lombok/index.html" class=""><a class="padding" href="/2018/08/24/jpa-con-lombok/index.html"><b>o </b>JPA con Lombok, simplificando.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Acceso a Base de Datos con  Spring Data JDBC<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/5-cloud/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/5-cloud/index.html"><b>- </b>Cloud<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a9b4fe9e0470dbc7c3b85b748fddca1d" class="morespace collapsible-menu">
+          <li data-nav-id="/spring/gateway/index.html" class=""><a class="padding" href="/spring/gateway/index.html"><b>o </b>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/01/03/microservicios-distribuidos-con-eureka/index.html" class=""><a class="padding" href="/2019/01/03/microservicios-distribuidos-con-eureka/index.html"><b>o </b>Microservicios distribuidos con Eureka<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html" class=""><a class="padding" href="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html"><b>o </b>Servidor configuraciones usando Spring Cloud<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/6-webflow/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/6-webflow/index.html"><b>- </b>Webflow<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-18c90b54004edf3c1545f7262f04372d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html" class=""><a class="padding" href="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html"><b>o </b>Spring WebFlow con JSP – Configuración<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/30/spring-webflow-con-jsp/index.html" class=""><a class="padding" href="/2018/10/30/spring-webflow-con-jsp/index.html"><b>o </b>Spring WebFlow con JSP<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/7-base/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/7-base/index.html"><b>- </b>Base<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7c6388919f62e38e35736c79f5c1ea98" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/index.html" class=""><a class="padding" href="/2019/02/28/perfiles-en-spring-boot/index.html"><b>o </b>Perfiles en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/aot/index.html" class=""><a class="padding" href="/springboot/aot/index.html"><b>o </b>AOT en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/logging-en-spring-boot/index.html" class=""><a class="padding" href="/springboot/logging-en-spring-boot/index.html"><b>o </b>Logging en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/index.html" class=""><a class="padding" href="/2019/05/12/cacheando-datos-en-spring-boot/index.html"><b>o </b>Cacheando resultados con Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/index.html" class=""><a class="padding" href="/2019/04/18/beans-avanzados-en-spring/index.html"><b>o </b>Beans avanzados<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/8-restful/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/8-restful/index.html"><b>- </b>Restful<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bb093340a872d822a64ba8d28129dc3c" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html" class=""><a class="padding" href="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html"><b>o </b>La clase RestTemplate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-2/index.html" class=""><a class="padding" href="/clase-resttemplate-2/index.html"><b>o </b>La Clase RestTemplate - 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-3/index.html" class=""><a class="padding" href="/clase-resttemplate-3/index.html"><b>o </b>La Clase RestTemplate - 3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/webclient/index.html" class=""><a class="padding" href="/webclient/index.html"><b>o </b>La clase WebClient<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/index.html" class=""><a class="padding" href="/2019/06/13/estableciendo-filtros-en-spring/index.html"><b>o </b>Estableciendo filtros en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html"><b>o </b>Usando Zuul para redirigir peticiones REST<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html" class=""><a class="padding" href="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html"><b>o </b>Personalizar salidas de códigos HTTP en Spring Boot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html" class=""><a class="padding" href="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html"><b>o </b>Mensajería con Kafka y Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html" class=""><a class="padding" href="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html"><b>o </b>Instalar plugin Spring Boot en NetBeans<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/3-hugo/index.html" class=""><a class="padding" href="/es/3-hugo/index.html"><b>3. </b>Hugo<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a79509bad188129b4e581cd3a8864880" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html" class=""><a class="padding" href="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html"><b>o </b> Generar paginas Web estáticas dinámicamente<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html" class=""><a class="padding" href="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html"><b>o </b> Crear pagina web gratuita en GitHub<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/index.html" class=""><a class="padding" href="/es/4-angular/index.html"><b>4. </b>Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-19c0fe74f91949f0fac265e09735f574" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/curso/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/curso/index.html"><b>- </b>Curso de Angular 6<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-4931649d99e9cd697f2576f174785208" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/19/curso-angular-6-reactivo/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-reactivo/index.html"><b>o </b>Curso Angular 6 – Reactivo!<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/19/curso-angular-6-formularios-1/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-formularios-1/index.html"><b>o </b>Curso Angular 6 – Formularios (1)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/index.html"><b>- </b>Aplicación usando Java y Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-9d940d61f30c47a412b70be82cda61f6" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/aplicacion/backend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/backend/index.html"><b>> </b>Backend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-104df51ea6f656109cf91385ade9a610" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/31/aplicacion-en-spring-y-angular/index.html" class=""><a class="padding" href="/2018/08/31/aplicacion-en-spring-y-angular/index.html"><b>o </b>Backend I<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html" class=""><a class="padding" href="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html"><b>o </b>Backend (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html" class=""><a class="padding" href="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html"><b>o </b>Backend  (III)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html" class=""><a class="padding" href="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html"><b>o </b>Backend (IV)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html" class=""><a class="padding" href="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html"><b>o </b>Backend (V)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/frontend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/frontend/index.html"><b>> </b>Frontend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-515fbe72201a274d0326d69273f375a9" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html" class=""><a class="padding" href="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html"><b>o </b>Frontend en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/14/aplicacion-en-angular-inicializando/index.html" class=""><a class="padding" href="/2018/09/14/aplicacion-en-angular-inicializando/index.html"><b>o </b>Angular - Inicializando<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/16/aplicacion-en-angular-rutas/index.html" class=""><a class="padding" href="/2018/09/16/aplicacion-en-angular-rutas/index.html"><b>o </b>Angular – Rutas<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/2018/10/08/aplicacion-crud-en-angular/index.html" class=""><a class="padding" href="/2018/10/08/aplicacion-crud-en-angular/index.html"><b>o </b>Aplicación CRUD en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/24/hablando-espanol/index.html" class=""><a class="padding" href="/2018/09/24/hablando-espanol/index.html"><b>o </b>Angular – Hablando español<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html" class=""><a class="padding" href="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html"><b>o </b>Angular 6 – Añadir Bootstrap 4 con JQuery<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/5-dba/index.html" class=""><a class="padding" href="/es/5-dba/index.html"><b>5. </b>DBA<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d5f30e219912971f2f315464da41bc1c" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html" class=""><a class="padding" href="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html"><b>o </b>Conectando a una base de datos usando JNDI y Spring en Tomcat<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/6-javaee/index.html" class=""><a class="padding" href="/es/6-javaee/index.html"><b>6. </b>J2EE<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7a8c7cc82ca90e360d6e192c335062d5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/index.html" class=""><a class="padding" href="/2018/10/06/aplicacion-rest-en-javaee/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html" class=""><a class="padding" href="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE  (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html" class=""><a class="padding" href="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html"><b>o </b>Desarrollando aplicaciones Java EE en NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/7-django/index.html" class=""><a class="padding" href="/es/7-django/index.html"><b>7. </b>DJango<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-2e81288d5a72e57f8ecae81ad8f60145" class="morespace collapsible-menu">
+          <li data-nav-id="/es/7-django/djangoeneclipse/index.html" class=""><a class="padding" href="/es/7-django/djangoeneclipse/index.html"><b>o </b>Creando una aplicacion DJango con Python3 en Eclipse<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/7-django/aplicacioncrudendjango/index.html" class=""><a class="padding" href="/es/7-django/aplicacioncrudendjango/index.html"><b>o </b>Aplicación CRUD con DJango-REST.<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/contacto/index.html" class=""><a class="padding" href="/es/contacto/index.html"><b> > </b>Contacto<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-23eac2fb87301460c7941519d797fc08" class="morespace collapsible-menu">
+          <li data-nav-id="/es/contacto/experiencia_laboral/index.html" class=""><a class="padding" href="/es/contacto/experiencia_laboral/index.html">Experiencia Laboral<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_basesdatos/index.html" class=""><a class="padding" href="/es/contacto/experiencia_basesdatos/index.html">Bases de Datos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_lenguajesprogramacion/index.html" class=""><a class="padding" href="/es/contacto/experiencia_lenguajesprogramacion/index.html">Lenguajes  de programación<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_sistemas/index.html" class=""><a class="padding" href="/es/contacto/experiencia_sistemas/index.html">Sistemas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/acerca/index.html" class=""><a class="padding" href="/es/acerca/index.html">Acerca de<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/anjelica/index.html" class=""><a class="padding" href="/es/anjelica/index.html">ERP Anjelica<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/last/index.html" class=""><a class="padding" href="/es/last/index.html">Ultimas entradas<i class="fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div id="R-shortcuts">
+          <div class="nav-title padding">Más</div>
+          <ul class="space">
+            <li><a class="padding" href="/es/last/index.html"><i class='fas fa-fw fa-bullhorn'></i>Últimas entradas</a></li>
+            <li><a class="padding" href="/es/acerca/index.html"><i class='fas fa-fw fa-camera'></i>Acerca de</a></li>
+            <li><a class="padding" href="/es/anjelica/index.html"><i class='fas fa-fw fa-bolt'></i> Anjelica</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Idioma</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Tema</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Borrar Historial</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1728574460" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1728574460" defer></script>
+    <script src="/js/theme.js?1728574460" defer></script>
+  </body>
+</html>

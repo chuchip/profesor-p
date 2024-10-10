@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/categories/web/index.html</link>
+    <description>Recent content in web on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Tue, 20 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Generar paginas Web estáticas dinámicamente</title>
+      <link>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html</link>
+      <pubDate>Wed, 28 Nov 2018 12:32:50 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html</guid>
+      <description>&lt;p&gt;Vamos a  hablar de &lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;. Este un software  permite crear sitios web estáticos pero trabajando &lt;em&gt;casi&lt;/em&gt; como si fueran dinámicos. Para ello podremos usar diferentes plantillas que configuraremos, para luego añadir entradas y contenido dinámico fácilmente.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Crear pagina web gratuita en GitHub</title>
+      <link>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/index.html</link>
+      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/index.html</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear una página  web gratuita  en &lt;a href=&#34;https://www.github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Estas  páginas deben ser estáticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meterán publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>La clase RestTemplate</title>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/index.html</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/index.html</guid>
+      <description>&lt;p&gt;Este será el primero de una serie de entradas sobre la clase  &lt;strong&gt;RestTemplate&lt;/strong&gt; de &lt;strong&gt;Spring.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización  de los objetos de una manera transparente. Es una gran alternativa dada por &lt;strong&gt;Spring&lt;/strong&gt; sobre otras librerías ya existentes en el mercado.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>La Clase RestTemplate - 2</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-2/index.html</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/clase-resttemplate-2/index.html</guid>
+      <description>&lt;p&gt;En &lt;a href=&#34;http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/&#34;&gt;la anterior entrada&lt;/a&gt; vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>La Clase RestTemplate - 3</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-3/index.html</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/clase-resttemplate-3/index.html</guid>
+      <description>&lt;p&gt;Esta es la tercera y última  entrada sobre la clase &lt;strong&gt;RestTemplate&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>La clase WebClient</title>
+      <link>http://www.profesor-p.com/webclient/index.html</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/webclient/index.html</guid>
+      <description>En esta ocasión hablare de la clase WebClient de SpringBoot.
+El proyecto de ejemplo esta disponible en: https://github.com/chuchip/webClientExample
+Esta clase seria la equivalente a RestTemplate pero para realizar peticiones asíncronas.
+Para poder usar esta clase debemos poner estas dependencias en nuestro fichero maven
+&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;Esto es así porque debemos usar WebFlux el cual esta disponible con la versión 5.0 de Spring. Esta versión de Spring requiere que usemos al menos Java 8.</description>
+    </item>
+    <item>
+      <title>Estableciendo filtros en Spring</title>
+      <link>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/index.html</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/index.html</guid>
+      <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
+Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
+    </item>
+  </channel>
+</rss>

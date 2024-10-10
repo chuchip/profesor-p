@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/tags/html/index.html</link>
+    <description>Recent content in html on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 05 Dec 2018 10:32:08 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Crear pagina web gratuita en GitHub</title>
+      <link>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/index.html</link>
+      <pubDate>Wed, 05 Dec 2018 10:32:08 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/12/05/crear-pagina-web-gratuita-en-github/index.html</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear una página  web gratuita  en &lt;a href=&#34;https://www.github.com&#34; target=&#34;_blank&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Estas  páginas deben ser estáticas  pero no hay limitaciones de ancho de banda, numero de ficheros y por supuesto no meterán publicidad en vuestra pagina web. Ademas, utilizara  https y podreis usar un dominio propio, si lo habeis comprado con anterioridad. Aclarar que un dominio se puede registrar por solo un euro al año 😉&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Angular - Inicializando</title>
+      <link>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/index.html</link>
+      <pubDate>Fri, 14 Sep 2018 14:53:10 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/14/aplicacion-en-angular-inicializando/index.html</guid>
+      <description>Continuando con la entrada donde instalaba Angular, seguimos desarrollando la aplicación que detallo en esta página.
+Una vez tenemos creado el esqueleto de nuestro programa, con el comando “**ng new” , ** entraremos al directorio **src. **En este directorio es donde realmente vamos a trabajar.
+Los demás directorios son donde están las librerías y utilidades que nuestra aplicación usara pero que son propias de Angular y nosotros no las tocaremos (al menos en este ejemplo).</description>
+    </item>
+  </channel>
+</rss>

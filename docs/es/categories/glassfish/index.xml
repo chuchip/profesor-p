@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>glassfish on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/categories/glassfish/index.html</link>
+    <description>Recent content in glassfish on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sun, 07 Oct 2018 05:49:37 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/categories/glassfish/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aplicación CRUD usando REST en JavaEE</title>
+      <link>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/index.html</link>
+      <pubDate>Sat, 06 Oct 2018 21:54:13 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/10/06/aplicacion-rest-en-javaee/index.html</guid>
+      <description>&lt;p&gt;Explicaré como hacer una aplicación CRUD, que sirva peticiones REST con el protocolo JSON, usando JavaEE y Glasfish como servidor de aplicaciones.
+En esta aplicación actualizaremos y consultaremos una pequeña tabla a través de diferentes peticiones REST.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aplicación CRUD usando REST en JavaEE  (II)</title>
+      <link>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html</link>
+      <pubDate>Sun, 07 Oct 2018 05:49:37 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html</guid>
+      <description>&lt;p&gt;En esta ocasión continuo explicando la aplicación CRUD, utilizando peticiones REST, con JavaEE.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

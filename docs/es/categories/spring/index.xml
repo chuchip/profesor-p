@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>spring on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/categories/spring/index.html</link>
+    <description>Recent content in spring on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/categories/spring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>La clase RestTemplate</title>
+      <link>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/index.html</link>
+      <pubDate>Fri, 02 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/index.html</guid>
+      <description>&lt;p&gt;Este será el primero de una serie de entradas sobre la clase  &lt;strong&gt;RestTemplate&lt;/strong&gt; de &lt;strong&gt;Spring.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Con los diferentes métodos de la clase se realizan peticiones HTTP fácilmente, produciéndose la serialización y deserialización  de los objetos de una manera transparente. Es una gran alternativa dada por &lt;strong&gt;Spring&lt;/strong&gt; sobre otras librerías ya existentes en el mercado.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring WebFlow con JSP – Configuración</title>
+      <link>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/index.html</link>
+      <pubDate>Mon, 29 Oct 2018 08:49:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/index.html</guid>
+      <description>Voy a intentar explicar como funciona Spring WebFlow y para ello, como siempre, lo haré desarrollando un programa que podéis descargar de https://github.com/chuchip/webflowExample
+El programa simulara que entras a la página de un banco donde puedes realizar una transferencia de tus cuentas personales a otra. Para ello, primero deberás identificarte y según el usuario con el que te identifiques tendrás acceso a unas cuentas que a su vez disponen de un saldo establecido.</description>
+    </item>
+    <item>
+      <title>Backend I</title>
+      <link>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/index.html</link>
+      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/index.html</guid>
+      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
+La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
+Para ello se realizaran los siguientes pasos:
+Crear tablas y cargar datos de prueba en la base de datos. Usare H2 embebido, en vez de postgresql, que es la base de datos que usa Anjelica.</description>
+    </item>
+    <item>
+      <title>La Clase RestTemplate - 2</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-2/index.html</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/clase-resttemplate-2/index.html</guid>
+      <description>&lt;p&gt;En &lt;a href=&#34;http://www.profesor-p.com/2019/08/03/trabajando-con-la-clase-resttemplate/&#34;&gt;la anterior entrada&lt;/a&gt; vimos como lanzar una  petición HTTP contra un servidor externo, pero al lanzarla surgieron algunas dudas. Dos ya fueron resueltas así que continuemos resolviendo las siguientes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spring WebFlow con JSP</title>
+      <link>http://www.profesor-p.com/2018/10/30/spring-webflow-con-jsp/index.html</link>
+      <pubDate>Tue, 30 Oct 2018 17:12:49 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/10/30/spring-webflow-con-jsp/index.html</guid>
+      <description>En el articulo anterior http://www.profesor-p.com/2018/10/29/spring-webflow-con-jsp-configuracion/ explicaba como configurar el programa para que Spring WebFlow funcionara. En este articulo explicare como hacer el flujo en si.
+La página principal del programa no esta dentro de ningún flujo y sus peticiones son respondidas por Spring MVC, en la clase MyController, la cual podemos encontrar en el paquete profesorp.webflow.controller. Esta clase anotada con la etiqueta @Controller responde en la función indice1 a las peticiones de los recursos “/” e “index”</description>
+    </item>
+    <item>
+      <title>Backend (II)</title>
+      <link>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    <item>
+      <title>La Clase RestTemplate - 3</title>
+      <link>http://www.profesor-p.com/clase-resttemplate-3/index.html</link>
+      <pubDate>Tue, 06 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/clase-resttemplate-3/index.html</guid>
+      <description>&lt;p&gt;Esta es la tercera y última  entrada sobre la clase &lt;strong&gt;RestTemplate&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Backend  (III)</title>
+      <link>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html</link>
+      <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html</guid>
+      <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
+Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
+    </item>
+    <item>
+      <title>La clase WebClient</title>
+      <link>http://www.profesor-p.com/webclient/index.html</link>
+      <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/webclient/index.html</guid>
+      <description>En esta ocasión hablare de la clase WebClient de SpringBoot.
+El proyecto de ejemplo esta disponible en: https://github.com/chuchip/webClientExample
+Esta clase seria la equivalente a RestTemplate pero para realizar peticiones asíncronas.
+Para poder usar esta clase debemos poner estas dependencias en nuestro fichero maven
+&amp;lt;dependency&amp;gt;&amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;&amp;lt;artifactId&amp;gt;spring-boot-starter-webflux&amp;lt;/artifactId&amp;gt;&amp;lt;/dependency&amp;gt;Esto es así porque debemos usar WebFlux el cual esta disponible con la versión 5.0 de Spring. Esta versión de Spring requiere que usemos al menos Java 8.</description>
+    </item>
+    <item>
+      <title>Backend (IV)</title>
+      <link>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html</guid>
+      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
+En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    <item>
+      <title>Backend (V)</title>
+      <link>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html</guid>
+      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
+Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase **YagesBussines, **que eran las que construían esos objetos.
+Empezare describiendo la clase
+Lo primero, marcamos nuestra clase como @Component para que Spring la cree y este disponible para inyectarla en otras clases.</description>
+    </item>
+    <item>
+      <title>AOT en Spring</title>
+      <link>http://www.profesor-p.com/springboot/aot/index.html</link>
+      <pubDate>Sat, 09 Dec 2023 07:57:07 +0000</pubDate>
+      <guid>http://www.profesor-p.com/springboot/aot/index.html</guid>
+      <description>Creo que Aspect Oriented Programing (AOP) no es muy conocido. Spring lo usa mucho y, a menudo, cuando pones etiquetas en tu código, Spring usará AOT.
+No quiero explicar que es AOP porque hay mucha documentación al respecto. En este artículo, quiero darte algunos ejemplos y casos en los que el uso de AOP podría mejorar tu código. Quiero mostrarte una nueva herramienta para programar. Veamos si puedo hacerlo.
+En primer lugar, te estarás preguntando, ¿por qué debería usar AOP?</description>
+    </item>
+    <item>
+      <title>Proxies in Java</title>
+      <link>http://www.profesor-p.com/proxies-in-java/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/proxies-in-java/index.html</guid>
+      <description>&lt;p&gt;En articulo anterior (&lt;a href=&#34;https://www.profesor-p.com/springboot/aot/index.html&#34; target=&#34;_blank&#34;&gt;https://www.profesor-p.com/springboot/aot/index.html&lt;/a&gt;) hablaba sobre AOT (&lt;em&gt;Aspect Oriented Programing&lt;/em&gt;) y comentaba que  Spring Boot hacía uso de proxies para implementarlos. En este artículo profundizare como usar proxies en java usando la librería &lt;code&gt;java.lang.reflect.Proxy&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Estableciendo filtros en Spring</title>
+      <link>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/index.html</link>
+      <pubDate>Thu, 13 Jun 2019 16:11:53 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/06/13/estableciendo-filtros-en-spring/index.html</guid>
+      <description>En esta entrada voy a hablar de como implementar filtros en Spring. Los filtros son de los que se pueden establecer cuando se recibe una petición HTTP. Es decir, suponiendo que tenemos un programa escuchando en unas URI, poder especificar que deseamos ejecutar algo antes de que las peticiones sea procesadas por el controlador.
+Esto es muy útil si queremos que todas las peticiones cumplan un requisito, por ejemplo incluir una cabecera especifica.</description>
+    </item>
+    <item>
+      <title>Beans avanzados</title>
+      <link>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/index.html</link>
+      <pubDate>Thu, 18 Apr 2019 21:26:57 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/index.html</guid>
+      <description>En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles).
+Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.</description>
+    </item>
+    <item>
+      <title>Optimizando relaciones entre entidades en Hibernate</title>
+      <link>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/index.html</link>
+      <pubDate>Fri, 05 Apr 2019 10:54:22 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/04/05/optimizando-consultas-con-hibernate/index.html</guid>
+      <description>En esta entrada, siguiendo el proyecto de ejemplo que teneis en https://github.com/chuchip/jpajoins explicando como optimizar las consultas a la base de datos usando JPA.
+Se verán diferentes tipos de consultas, explicando como realizar uniones entre tablas de modo perezoso (lazy) o agresivo (eager). Se unirán tablas por un solo campo, por varios e incluso por uno pero añadiendo una condición estática.
+EL proyecto de ejemplo esta desarrollado en Spring Boot con Hibernate, usando como base de datos H2.</description>
+    </item>
+    <item>
+      <title>Seguridad WEB en Spring Boot</title>
+      <link>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/index.html</link>
+      <pubDate>Wed, 17 Oct 2018 10:19:34 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/10/17/seguridad-web-en-spring-boot/index.html</guid>
+      <description>En esta entrada voy a explicar como gestiona Spring la seguridad. No todo, por supuesto, que el tema de la seguridad daría para un libro muy gordote, pero al menos aprender a securizar una pagina web. En una próxima entrada hablare de como securizar un servicio REST.
+Como siempre, comienzo diciendo que el código fuente de lo que explico lo tenéis en mi pagina de GITHUB, en https://github.com/chuchip/OAuthServer. El programa esta realizado en Java, usando Spring Boot.</description>
+    </item>
+    <item>
+      <title>Instalar plugin Spring Boot en NetBeans</title>
+      <link>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html</link>
+      <pubDate>Mon, 27 Aug 2018 00:00:00 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html</guid>
+      <description>&lt;p&gt;En esta entrada explicare como crear un aplicación con el framework Spring Boot, usando el IDE NetBeans 9.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>JPA &#43; Hibernate en Spring</title>
+      <link>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/index.html</link>
+      <pubDate>Sat, 25 Aug 2018 18:14:42 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/25/jpa-hibernate-en-spring/index.html</guid>
+      <description>En un entrada anterior, explique como crear nuestra conexión a la base de datos, usando JNDI. En esta entrada explicare como usar esa conexión con JPA.
+Recordar que el código fuente de de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Importante recalcar que este ejemplo solo funciona con Java 1.8 o superior.
+Lo primero explicar un poco de que va esto de JPA. JPA son las siglas de Java Persistence API. Es decir la API de persistencia en Java.</description>
+    </item>
+    <item>
+      <title>Acceso a Base de Datos con  Spring Data JDBC</title>
+      <link>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html</link>
+      <pubDate>Wed, 22 Aug 2018 15:39:57 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html</guid>
+      <description>En el anterior articulo explicaba como crear la conexion a la base de datos en un servidor de aplicaciones Tomcat . En este articulo explicare como acceder a esos datos a traves del paquete JDBC de Spring Data JDBC
+El código fuente de este ejemplo esta en: https://github.com/chuchip/jdbc_jpa_tomcat
+Creando nuestro POJO y Repositorio Ahora que ya tenemos nuestro acceso a la base de datos configurado y disponible, vamos a utilizarlo (por eso de que no se aburra 😉 )</description>
+    </item>
+    <item>
+      <title>Conectando a una base de datos usando JNDI y Spring en Tomcat</title>
+      <link>http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html</link>
+      <pubDate>Tue, 21 Aug 2018 13:34:56 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html</guid>
+      <description>&lt;p&gt;En este ejemplo veremos como conecta a Postgresql usando JPA + Hibernate y Spring JDBC. Para ello uso como servidor de aplicaciones Tomcat. La configuración esta realizada con anotaciones y XML y utilizo el pool de conexiones de Tomcat recogido a través de JNDI, para que la aplicación no deba saber realmente ni donde se conecta.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.0">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="description" content="Articulos sobre informática ">
+    <meta name="author" content="Jesus J. Puente">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="In this article we will speak about the WebClient class of the SpringBoot framework.
+You have the source about what I write in the post at https://github.com/chuchip/webClientExample](https://github.com/chuchip/webClientExample)
+This class would be the equivalent of RestTemplate class, but it work with asynchronous requests.
+If you want to use this class, you should put this dependencies in your maven file.
+&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt; &lt;/dependency&gt;This is so why you need to use WebFlux which is available in the version 5 of Spring.">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="In this article we will speak about the WebClient class of the SpringBoot framework.
+You have the source about what I write in the post at https://github.com/chuchip/webClientExample](https://github.com/chuchip/webClientExample)
+This class would be the equivalent of RestTemplate class, but it work with asynchronous requests.
+If you want to use this class, you should put this dependencies in your maven file.
+&lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt; &lt;/dependency&gt;This is so why you need to use WebFlux which is available in the version 5 of Spring.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.profesor-p.com/es/2-spring/8-restful/webclient_en/index.html">
+    <meta property="article:section" content="Restful :: Documentacion en español">
+    <meta property="og:site_name" content="Documentacion en español">
+    <title></title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1728574459" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1728574459" rel="stylesheet">
+    <link href="/css/fonts.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1728574459" rel="stylesheet">
+    <link href="/css/theme-auto.css?1728574459" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-auto.css?1728574459" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1728574459" rel="stylesheet">
+    <link href="/css/print.css?1728574459" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1728574459" rel="stylesheet">
+    <script src="/js/url.js?1728574459"></script>
+    <script src="/js/variant.js?1728574459"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72""
+      window.index_json_url="/es/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='http:\/\/www.profesor-p.com/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'auto' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copiar en el portapapeles`;
+      window.T_Copied_to_clipboard = `¡Copiado al portapapeles!`;
+      window.T_Copy_link_to_clipboard = `Copiar enlace al portapapeles`;
+      window.T_Link_copied_to_clipboard = `¡Enlace copiado al portapapeles!`;
+      window.T_Reset_view = `Restablecer vista`;
+      window.T_View_reset = `¡Ver reajuste!`;
+      window.T_No_results_found = `No se han encontrado resultados para "{0}"`;
+      window.T_N_results_found = `{1} resultados encontrados para "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/es/2-spring/8-restful/webclient_en/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menú (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Tabla de contenido (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/index.html"><span itemprop="name">Bienvenido a mi página</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/index.html"><span itemprop="name">Spring</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/8-restful/index.html"><span itemprop="name">Restful</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/chuchip/profesor-p2-spring/8-%20restful/WebClient_en.md" target="_blank" title="Editar (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html" title="Personalizar salidas de códigos HTTP en Spring Boot (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html" title="Mensajería con Kafka y Spring Boot (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Más"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id=""></h1>
+
+<p>In this article we will speak about the <a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html" target="_blank">WebClient</a> class of the <strong>SpringBoot</strong> framework.</p>
+<p>You have the source about what I write in the post at <a href="https://github.com/chuchip/webClientExample]%28https://github.com/chuchip/webClientExample%29" target="_blank">https://github.com/chuchip/webClientExample](https://github.com/chuchip/webClientExample)</a></p>
+<p>This class would be the equivalent of RestTemplate class, but it work with asynchronous requests.</p>
+<p>If you want to use this class, you should put this dependencies in your maven file.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-webflux<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span></span></span></code></pre></div><p>This is so why you need to use <strong>WebFlux</strong> which is available in the version 5 of Spring. Remember that this version of Spring requires <strong>Java 8</strong> or higher.</p>
+<p>With <a href="https://docs.spring.io/spring-framework/docs/5.0.0.BUILD-SNAPSHOT/spring-framework-reference/html/web-reactive.html" target="_blank">WebFlux</a> which is based on the project <a href="https://projectreactor.io/" target="_blank">Reactor</a> you can write reactive applications. This kind of applications is characterized because the requests aren&rsquo;t blocking and because the <a href="https://en.wikipedia.org/wiki/Functional_programming" target="_blank">functional programming</a> is widely used.</p>
+<p>If you want to understand this article you should have certain notions about Reactor and the <strong>Mono</strong> class.   Although if you have used <strong>Streams</strong> in <strong>Java</strong>  you may think that a <strong>Mono</strong> object is like a <strong>Stream</strong> that can emit a value or an error.</p>
+<p>But i am not going to delve into these issues  that are beyond the scope of this article. It will be sufficient to say that using the <strong>WebClient</strong> class you can make several calls in parallel, so if each request is answered in 2 seconds  and you make 5 calls, you can get all the answers in just over 2 seconds, instead of 10.</p>
+<h4 id="parallel-request">Parallel Request</h4>
+<p>In the example project I have written an server and a client. The server will be running in the 8081 port and the client will listen in the 8080 port.</p>
+<p>This is the code that execute the server application.</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code>@SpringBootApplication
+public class WebServerApplication {
+	public static void main(String[] args) {
+		new SpringApplicationBuilder(WebServerApplication.class).
+				properties(Collections.singletonMap(&#34;server.port&#34;, &#34;8081&#34;)).run(args);
+	}
+}</code></pre></div><p>if you make a request to http://localhost:8080/client/XXX the function <code>testGet</code> will be executed.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RequestMapping</span>(<span style="color:#e6db74">&#34;/client&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@Slf4j</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ClientController</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">final</span> String urlServer<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:8081&#34;</span>;
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">@GetMapping</span>(<span style="color:#e6db74">&#34;/{param}&#34;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> Mono<span style="color:#f92672">&lt;</span>ResponseEntity<span style="color:#f92672">&lt;</span>Mono<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#a6e22e">testGet</span>(<span style="color:#a6e22e">@PathVariable</span> String param) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">final</span> <span style="color:#66d9ef">long</span> dateStarted <span style="color:#f92672">=</span> System.<span style="color:#a6e22e">currentTimeMillis</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		WebClient webClient <span style="color:#f92672">=</span> WebClient.<span style="color:#a6e22e">create</span>(urlServer<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/server/&#34;</span>);
+</span></span><span style="display:flex;"><span>		Mono<span style="color:#f92672">&lt;</span>ClientResponse<span style="color:#f92672">&gt;</span> respuesta <span style="color:#f92672">=</span> webClient.<span style="color:#a6e22e">get</span>().<span style="color:#a6e22e">uri</span>(<span style="color:#e6db74">&#34;?queryParam={name}&#34;</span>, param).<span style="color:#a6e22e">exchange</span>();
+</span></span><span style="display:flex;"><span>		Mono<span style="color:#f92672">&lt;</span>ClientResponse<span style="color:#f92672">&gt;</span> respuesta1 <span style="color:#f92672">=</span> webClient.<span style="color:#a6e22e">get</span>().<span style="color:#a6e22e">uri</span>(<span style="color:#e6db74">&#34;?queryParam={name}&#34;</span>,<span style="color:#e6db74">&#34;SPEED&#34;</span>.<span style="color:#a6e22e">equals</span>(param)<span style="color:#f92672">?</span><span style="color:#e6db74">&#34;SPEED&#34;</span>:<span style="color:#e6db74">&#34;STOP&#34;</span>).<span style="color:#a6e22e">exchange</span>();
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		Mono<span style="color:#f92672">&lt;</span>ResponseEntity<span style="color:#f92672">&lt;</span>Mono<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;&gt;</span> f1 <span style="color:#f92672">=</span> Mono.<span style="color:#a6e22e">zip</span>(respuesta, respuesta1)
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">map</span>(t <span style="color:#f92672">-&gt;</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>t.<span style="color:#a6e22e">getT1</span>().<span style="color:#a6e22e">statusCode</span>().<span style="color:#a6e22e">is2xxSuccessful</span>()) {
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">status</span>(t.<span style="color:#a6e22e">getT1</span>().<span style="color:#a6e22e">statusCode</span>()).<span style="color:#a6e22e">body</span>(t.<span style="color:#a6e22e">getT1</span>().<span style="color:#a6e22e">bodyToMono</span>(String.<span style="color:#a6e22e">class</span>));
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>t.<span style="color:#a6e22e">getT2</span>().<span style="color:#a6e22e">statusCode</span>().<span style="color:#a6e22e">is2xxSuccessful</span>()) {
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">status</span>(t.<span style="color:#a6e22e">getT2</span>().<span style="color:#a6e22e">statusCode</span>()).<span style="color:#a6e22e">body</span>(t.<span style="color:#a6e22e">getT2</span>().<span style="color:#a6e22e">bodyToMono</span>(String.<span style="color:#a6e22e">class</span>));
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">ok</span>().<span style="color:#a6e22e">body</span>(Mono.<span style="color:#a6e22e">just</span>(
+</span></span><span style="display:flex;"><span>					<span style="color:#e6db74">&#34;All OK. Seconds elapsed: &#34;</span> <span style="color:#f92672">+</span> (((<span style="color:#66d9ef">double</span>) (System.<span style="color:#a6e22e">currentTimeMillis</span>() <span style="color:#f92672">-</span> dateStarted) <span style="color:#f92672">/</span> 1000))));
+</span></span><span style="display:flex;"><span>		});
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> f1;
+</span></span><span style="display:flex;"><span>	}</span></span></code></pre></div><p>This is a simple controller that performs  two requests  to the URL  http://localhost:8081 . In the first request the parameter passed is that the function received in the <strong>param</strong> variable.  In the second the sentence &ldquo;<strong>STOP</strong>&rdquo; is sent if the <strong>param</strong> variable  is different of the word <strong>SPEED</strong>.</p>
+<p>The server upon receiving the parameter &ldquo;<strong>STOP</strong>&rdquo; will wait 5 seconds and then will answer.</p>
+<p>At the moment of create the instance of the class <strong>WebClient</strong>  I specify the URL of the request.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>WebClient webClient <span style="color:#f92672">=</span> WebClient.<span style="color:#a6e22e">create</span>(urlServer<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/server/&#34;</span>);</span></span></code></pre></div><p>Then it execute the call of the type <strong>GET</strong> to the server passing the parameter <strong>QueryParam</strong>. At the end, executing the function <strong>exchange</strong> it will receive a <strong>Mono</strong> object containing a <strong>ClientResponse</strong> class that  is equivalent to the <strong>ResponseEntity</strong> object of the <strong>RestTemplate</strong> class. The class <strong>ClientResponse</strong> will have the HTTP code, the body and the headers sent by the server.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Mono<span style="color:#f92672">&lt;</span>ClientResponse<span style="color:#f92672">&gt;</span> respuesta <span style="color:#f92672">=</span> webClient.<span style="color:#a6e22e">get</span>().<span style="color:#a6e22e">uri</span>(<span style="color:#e6db74">&#34;?queryParam={name}&#34;</span>, param).<span style="color:#a6e22e">exchange</span>();</span></span></code></pre></div><p>Wait a minute .. , did I say it will execute ?. Well I lied. Really only what I want to do has been declared.  In reactive programming until someone does not subscribe to a request nothing is executed, so the request to the server has not yet been made.</p>
+<p>On the next line the second request to the server is defined.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Mono<span style="color:#f92672">&lt;</span>ClientResponse<span style="color:#f92672">&gt;</span> respuesta1 <span style="color:#f92672">=</span> webClient.<span style="color:#a6e22e">get</span>().<span style="color:#a6e22e">uri</span>(<span style="color:#e6db74">&#34;?queryParam={name}&#34;</span>,<span style="color:#e6db74">&#34;SPEED&#34;</span>.<span style="color:#a6e22e">equals</span>(param)<span style="color:#f92672">?</span><span style="color:#e6db74">&#34;SPEED&#34;</span>:<span style="color:#e6db74">&#34;STOP&#34;</span>).<span style="color:#a6e22e">exchange</span>();</span></span></code></pre></div><p>Finally, a  <strong>Mono</strong> object is created, which will be the result of the previous two, using the <code>zip</code> function.</p>
+<p>Using the <code>map</code> function a <strong>ResponseEntity</strong> object with the HTTP code equal to <strong>OK</strong> will be returned if the two requests have answered a 2XX code, otherwise the code and answer of the server will be returned.</p>
+<p>Being <strong>WebClient</strong>  reactive the two requests are realized simultaneously and therefore you will be able see that if you execute this code: <code>curl http://localhost:8080/client/STOP</code> you have the answer in just over 5 seconds, even if the sum of the call time is greater than 10 seconds.</p>
+<div class="wrap-code highlight"><pre tabindex="0"><code> All OK. Seconds elapsed: 5.092</code></pre></div><h4 id="a-post-request">A POST request</h4>
+<p>In the testURLs function there is an example of a call using POST.</p>
+<p>This function receives a <code>Map</code> in the body  that will then be placed  in the request headers. In addition this <code>map</code> will be sent in the body of the request that will be made to the server.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@PostMapping</span>(<span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> Mono<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">testURLs</span>(<span style="color:#a6e22e">@RequestBody</span> Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> body,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">@RequestParam</span>(required <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>) String url) {		
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	log.<span style="color:#a6e22e">debug</span>(<span style="color:#e6db74">&#34;Client: in testURLs&#34;</span>);
+</span></span><span style="display:flex;"><span>	WebClient.<span style="color:#a6e22e">Builder</span> builder <span style="color:#f92672">=</span> WebClient.<span style="color:#a6e22e">builder</span>().<span style="color:#a6e22e">baseUrl</span>(urlServer).
+</span></span><span style="display:flex;"><span>			defaultHeader(HttpHeaders.<span style="color:#a6e22e">CONTENT_TYPE</span>,MediaType.<span style="color:#a6e22e">APPLICATION_JSON_VALUE</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (body<span style="color:#f92672">!=</span><span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> body.<span style="color:#a6e22e">size</span>()<span style="color:#f92672">&gt;</span>0 )
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span> (Map.<span style="color:#a6e22e">Entry</span><span style="color:#f92672">&lt;</span>String, String<span style="color:#f92672">&gt;</span> map : body.<span style="color:#a6e22e">entrySet</span>() )
+</span></span><span style="display:flex;"><span>		{
+</span></span><span style="display:flex;"><span>			builder.<span style="color:#a6e22e">defaultHeader</span>(map.<span style="color:#a6e22e">getKey</span>(), map.<span style="color:#a6e22e">getValue</span>());
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	WebClient webClient <span style="color:#f92672">=</span> builder.<span style="color:#a6e22e">build</span>();	
+</span></span><span style="display:flex;"><span>	String urlFinal;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> (url<span style="color:#f92672">==</span><span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>		urlFinal<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/server/post&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>		urlFinal<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/server/&#34;</span><span style="color:#f92672">+</span>url;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	Mono<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> respuesta1 <span style="color:#f92672">=</span> webClient.<span style="color:#a6e22e">post</span>().<span style="color:#a6e22e">uri</span>(urlFinal).<span style="color:#a6e22e">body</span>(BodyInserters.<span style="color:#a6e22e">fromObject</span>(body)).<span style="color:#a6e22e">exchange</span>()
+</span></span><span style="display:flex;"><span>		.<span style="color:#a6e22e">flatMap</span>( x <span style="color:#f92672">-&gt;</span> 
+</span></span><span style="display:flex;"><span>		{ 
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> ( <span style="color:#f92672">!</span> x.<span style="color:#a6e22e">statusCode</span>().<span style="color:#a6e22e">is2xxSuccessful</span>())
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">return</span> 	Mono.<span style="color:#a6e22e">just</span>(<span style="color:#e6db74">&#34;LLamada a &#34;</span><span style="color:#f92672">+</span>urlServer<span style="color:#f92672">+</span>urlFinal<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; Error 4xx: &#34;</span><span style="color:#f92672">+</span>x.<span style="color:#a6e22e">statusCode</span>()<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>);
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> x.<span style="color:#a6e22e">bodyToMono</span>(String.<span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>		});		    	
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> respuesta1;		
+</span></span><span style="display:flex;"><span>}	</span></span></code></pre></div><p>To insert the body of the message the auxiliary class <code>BodyInserters</code> will be used. If the message were on an object <strong>Mono</strong> this code could be used:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>BodyInserters.<span style="color:#a6e22e">fromPublisher</span>(Mono.<span style="color:#a6e22e">just</span>(MONO_OBJECT),String.<span style="color:#a6e22e">class</span>);</span></span></code></pre></div><p>When performing a <code>flatMap</code>, the output of the <code>ClientResponse</code> object will be captured and an <strong>Mono</strong> object will be returned with the string to be returned. . The <code>flatMap</code> function  will flatten  that <strong>Mono</strong>  object and will extract  the string inside it and that is why a <code>Mono &lt;String&gt;</code> will be received and not a <code>Mono &lt;Mono &lt;String&gt;&gt;</code> as It would happen if we used the function <code>map</code>.</p>
+<p>Making the following call:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; curl  -s -XPOST http://localhost:8080/client  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> -d<span style="color:#e6db74">&#39;{&#34;aa&#34;: &#34;bbd&#34;}&#39;</span></span></span></code></pre></div><p>The following output will be obtained:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>the server said: <span style="color:#f92672">{</span>aa<span style="color:#f92672">=</span>bbd<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Headers: content-length:12
+</span></span><span style="display:flex;"><span>Headers: aa:bbd
+</span></span><span style="display:flex;"><span>Headers: accept-encoding:gzip
+</span></span><span style="display:flex;"><span>Headers: Content-Type:application/json
+</span></span><span style="display:flex;"><span>Headers: accept:*/*
+</span></span><span style="display:flex;"><span>Headers: user-agent:ReactorNetty/0.9.0.M3
+</span></span><span style="display:flex;"><span>Headers: host:localhost:8081</span></span></code></pre></div><p>This output is produced by the function <code>postExamle</code> of the server</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@PostMapping</span>(<span style="color:#e6db74">&#34;post&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">postExample</span>(<span style="color:#a6e22e">@RequestBody</span> Map<span style="color:#f92672">&lt;</span>String,String<span style="color:#f92672">&gt;</span> body,ServerHttpRequest  request) {
+</span></span><span style="display:flex;"><span>	String s<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;the server said: &#34;</span><span style="color:#f92672">+</span>body<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> (Entry<span style="color:#f92672">&lt;</span>String, List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;&gt;</span> map : request.<span style="color:#a6e22e">getHeaders</span>().<span style="color:#a6e22e">entrySet</span>())
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		s<span style="color:#f92672">+=</span><span style="color:#e6db74">&#34;Headers: &#34;</span><span style="color:#f92672">+</span>map.<span style="color:#a6e22e">getKey</span>()<span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span><span style="color:#f92672">+</span>map.<span style="color:#a6e22e">getValue</span>().<span style="color:#a6e22e">get</span>(0)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;\n&#34;</span>;		
+</span></span><span style="display:flex;"><span>	}		
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> ResponseEntity.<span style="color:#a6e22e">ok</span>().<span style="color:#a6e22e">body</span>(s);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p>Note that when using the <strong>WebFlux</strong> library that is not fully compatible with <strong>javax.servlet</strong> we must receive a <code>ServerHttpRequest</code> object to collect all raw headers. The equivalent in a non-reactive application would be an <code>HttpServletRequest</code> object.</p>
+<p>If you execute the sentence:</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; curl  -s -XPOST http://localhost:8080/client?url<span style="color:#f92672">=</span>aa  -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span> -d<span style="color:#e6db74">&#39;{&#34;aa&#34;: &#34;bbd&#34;}&#39;</span></span></span></code></pre></div><p>The client  will try to call http://localhost:8081/server/aa  which will cause an error and the following will be received.</p>
+<div class="wrap-code highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>http://localhost:8081/server/aa Called. Error 4xx: <span style="color:#ae81ff">404</span> NOT_FOUND</span></span></code></pre></div><p>The original article  was written in Spanish and you can read it at <a href="http://profesor-p.com/webclient" target="_blank">http://profesor-p.com/webclient</a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Buscar (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">Buscar</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Buscar...">
+          <button class="search-clear" type="button" data-search-clear="" title="Borrar búsqueda"><i class="fas fa-times" title="Borrar búsqueda"></i></button>
+        </div>
+        <script>
+          var contentLangs=['es'];
+        </script>
+        <script src="/js/auto-complete.js?1728574461" defer></script>
+        <script src="/js/lunr/lunr.min.js?1728574461" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1728574461" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1728574461" defer></script>
+        <script src="/js/lunr/lunr.es.min.js?1728574461" defer></script>
+        <script src="/js/search.js?1728574461" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/es/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/index.html" class=""><a class="padding" href="/es/1-java/index.html"><b>1.</b> Java<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3b91fe72b7afa483d06a78066e2c9e97" class="morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/kotlin/index.html" class="alwaysopen"><a class="padding" href="/es/1-java/kotlin/index.html"><b>> </b> Kotlin<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-699e77bafa43beee8fa9b490ab3ce63b" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/23/kotlin-vs-java/index.html" class=""><a class="padding" href="/2018/08/23/kotlin-vs-java/index.html"><b>o </b>Kotlin vs Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/proxies-in-java/index.html" class=""><a class="padding" href="/proxies-in-java/index.html"><b>o </b>Proxies in Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/23/usando-lambdas/index.html" class=""><a class="padding" href="/2018/08/23/usando-lambdas/index.html"><b>o </b>Usando Lambdas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/index.html" class="parent "><a class="padding" href="/es/2-spring/index.html"><b>2. </b>Spring<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-b97beb613b9897bd944073efb81537bf" class="morespace collapsible-menu">
+          <li data-nav-id="/es/2-spring/1-testing/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/1-testing/index.html"><b>- </b>Testing<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-aaec4f6843788c490f6deac67b0a63c5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/27/testeando-las-aplicaciones/index.html" class=""><a class="padding" href="/2018/08/27/testeando-las-aplicaciones/index.html"><b>o </b>Testeando las aplicaciones<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html"><b>o </b>Uso de perfiles para testear en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/testeando-tu-aplicacion-web/index.html" class=""><a class="padding" href="/spring/testeando-tu-aplicacion-web/index.html"><b>o </b>Testeando Spring<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/2-seguridad/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/2-seguridad/index.html"><b>- </b>Seguridad<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-77762ac49f9c6fed0102de0462d125bd" class="morespace collapsible-menu">
+          <li data-nav-id="/springboot/seguridad-con-keycloack/index.html" class=""><a class="padding" href="/springboot/seguridad-con-keycloack/index.html"><b>o </b>Securizando aplicación de SpringBoot con KeyCloack<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html" class=""><a class="padding" href="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html"><b>o </b>Securizando servicios REST con Oauth2 en SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/17/seguridad-web-en-spring-boot/index.html" class=""><a class="padding" href="/2018/10/17/seguridad-web-en-spring-boot/index.html"><b>o </b>Seguridad WEB en Spring Boot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/3-mvc/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/3-mvc/index.html"><b>- </b>MVC<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-647dd4aaeff1a9b473a05667d14a0d02" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html" class=""><a class="padding" href="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html"><b>o </b>Ejemplo aplicación MVC con Spring Boot  usando NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/4-database/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/4-database/index.html"><b>- </b>Database<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d9a0b1bdf63fbc66b09dcab2aa2df50d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Lambdas en JDBC Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/data/qbe/index.html" class=""><a class="padding" href="/spring/data/qbe/index.html"><b>o </b>Usar QBE en Spring Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/05/optimizando-consultas-con-hibernate/index.html" class=""><a class="padding" href="/2019/04/05/optimizando-consultas-con-hibernate/index.html"><b>o </b>Optimizando relaciones entre entidades en Hibernate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html" class=""><a class="padding" href="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html"><b>o </b>Accediendo facilmente a los datos con Spring Rest Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html" class=""><a class="padding" href="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html"><b>o </b>Querys avanzadas con JPA en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/25/jpa-hibernate-en-spring/index.html" class=""><a class="padding" href="/2018/08/25/jpa-hibernate-en-spring/index.html"><b>o </b>JPA &#43; Hibernate en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/24/jpa-con-lombok/index.html" class=""><a class="padding" href="/2018/08/24/jpa-con-lombok/index.html"><b>o </b>JPA con Lombok, simplificando.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Acceso a Base de Datos con  Spring Data JDBC<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/5-cloud/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/5-cloud/index.html"><b>- </b>Cloud<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a9b4fe9e0470dbc7c3b85b748fddca1d" class="morespace collapsible-menu">
+          <li data-nav-id="/spring/gateway/index.html" class=""><a class="padding" href="/spring/gateway/index.html"><b>o </b>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/01/03/microservicios-distribuidos-con-eureka/index.html" class=""><a class="padding" href="/2019/01/03/microservicios-distribuidos-con-eureka/index.html"><b>o </b>Microservicios distribuidos con Eureka<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html" class=""><a class="padding" href="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html"><b>o </b>Servidor configuraciones usando Spring Cloud<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/6-webflow/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/6-webflow/index.html"><b>- </b>Webflow<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-18c90b54004edf3c1545f7262f04372d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html" class=""><a class="padding" href="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html"><b>o </b>Spring WebFlow con JSP – Configuración<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/30/spring-webflow-con-jsp/index.html" class=""><a class="padding" href="/2018/10/30/spring-webflow-con-jsp/index.html"><b>o </b>Spring WebFlow con JSP<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/7-base/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/7-base/index.html"><b>- </b>Base<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7c6388919f62e38e35736c79f5c1ea98" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/index.html" class=""><a class="padding" href="/2019/02/28/perfiles-en-spring-boot/index.html"><b>o </b>Perfiles en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/aot/index.html" class=""><a class="padding" href="/springboot/aot/index.html"><b>o </b>AOT en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/logging-en-spring-boot/index.html" class=""><a class="padding" href="/springboot/logging-en-spring-boot/index.html"><b>o </b>Logging en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/index.html" class=""><a class="padding" href="/2019/05/12/cacheando-datos-en-spring-boot/index.html"><b>o </b>Cacheando resultados con Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/index.html" class=""><a class="padding" href="/2019/04/18/beans-avanzados-en-spring/index.html"><b>o </b>Beans avanzados<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/8-restful/index.html" class="parent alwaysopen"><a class="padding" href="/es/2-spring/8-restful/index.html"><b>- </b>Restful<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bb093340a872d822a64ba8d28129dc3c" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html" class=""><a class="padding" href="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html"><b>o </b>La clase RestTemplate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-2/index.html" class=""><a class="padding" href="/clase-resttemplate-2/index.html"><b>o </b>La Clase RestTemplate - 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-3/index.html" class=""><a class="padding" href="/clase-resttemplate-3/index.html"><b>o </b>La Clase RestTemplate - 3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/webclient/index.html" class=""><a class="padding" href="/webclient/index.html"><b>o </b>La clase WebClient<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/index.html" class=""><a class="padding" href="/2019/06/13/estableciendo-filtros-en-spring/index.html"><b>o </b>Estableciendo filtros en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html"><b>o </b>Usando Zuul para redirigir peticiones REST<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html" class=""><a class="padding" href="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html"><b>o </b>Personalizar salidas de códigos HTTP en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/2-spring/8-restful/webclient_en/index.html" class="active"><a class="padding" href="/es/2-spring/8-restful/webclient_en/index.html"><i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html" class=""><a class="padding" href="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html"><b>o </b>Mensajería con Kafka y Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html" class=""><a class="padding" href="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html"><b>o </b>Instalar plugin Spring Boot en NetBeans<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/3-hugo/index.html" class=""><a class="padding" href="/es/3-hugo/index.html"><b>3. </b>Hugo<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a79509bad188129b4e581cd3a8864880" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html" class=""><a class="padding" href="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html"><b>o </b> Generar paginas Web estáticas dinámicamente<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html" class=""><a class="padding" href="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html"><b>o </b> Crear pagina web gratuita en GitHub<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/index.html" class=""><a class="padding" href="/es/4-angular/index.html"><b>4. </b>Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-19c0fe74f91949f0fac265e09735f574" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/curso/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/curso/index.html"><b>- </b>Curso de Angular 6<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-4931649d99e9cd697f2576f174785208" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/19/curso-angular-6-reactivo/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-reactivo/index.html"><b>o </b>Curso Angular 6 – Reactivo!<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/19/curso-angular-6-formularios-1/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-formularios-1/index.html"><b>o </b>Curso Angular 6 – Formularios (1)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/index.html"><b>- </b>Aplicación usando Java y Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-9d940d61f30c47a412b70be82cda61f6" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/aplicacion/backend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/backend/index.html"><b>> </b>Backend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-104df51ea6f656109cf91385ade9a610" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/31/aplicacion-en-spring-y-angular/index.html" class=""><a class="padding" href="/2018/08/31/aplicacion-en-spring-y-angular/index.html"><b>o </b>Backend I<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html" class=""><a class="padding" href="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html"><b>o </b>Backend (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html" class=""><a class="padding" href="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html"><b>o </b>Backend  (III)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html" class=""><a class="padding" href="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html"><b>o </b>Backend (IV)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html" class=""><a class="padding" href="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html"><b>o </b>Backend (V)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/frontend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/frontend/index.html"><b>> </b>Frontend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-515fbe72201a274d0326d69273f375a9" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html" class=""><a class="padding" href="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html"><b>o </b>Frontend en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/14/aplicacion-en-angular-inicializando/index.html" class=""><a class="padding" href="/2018/09/14/aplicacion-en-angular-inicializando/index.html"><b>o </b>Angular - Inicializando<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/16/aplicacion-en-angular-rutas/index.html" class=""><a class="padding" href="/2018/09/16/aplicacion-en-angular-rutas/index.html"><b>o </b>Angular – Rutas<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/2018/10/08/aplicacion-crud-en-angular/index.html" class=""><a class="padding" href="/2018/10/08/aplicacion-crud-en-angular/index.html"><b>o </b>Aplicación CRUD en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/24/hablando-espanol/index.html" class=""><a class="padding" href="/2018/09/24/hablando-espanol/index.html"><b>o </b>Angular – Hablando español<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html" class=""><a class="padding" href="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html"><b>o </b>Angular 6 – Añadir Bootstrap 4 con JQuery<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/5-dba/index.html" class=""><a class="padding" href="/es/5-dba/index.html"><b>5. </b>DBA<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d5f30e219912971f2f315464da41bc1c" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html" class=""><a class="padding" href="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html"><b>o </b>Conectando a una base de datos usando JNDI y Spring en Tomcat<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/6-javaee/index.html" class=""><a class="padding" href="/es/6-javaee/index.html"><b>6. </b>J2EE<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7a8c7cc82ca90e360d6e192c335062d5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/index.html" class=""><a class="padding" href="/2018/10/06/aplicacion-rest-en-javaee/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html" class=""><a class="padding" href="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE  (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html" class=""><a class="padding" href="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html"><b>o </b>Desarrollando aplicaciones Java EE en NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/7-django/index.html" class=""><a class="padding" href="/es/7-django/index.html"><b>7. </b>DJango<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-2e81288d5a72e57f8ecae81ad8f60145" class="morespace collapsible-menu">
+          <li data-nav-id="/es/7-django/djangoeneclipse/index.html" class=""><a class="padding" href="/es/7-django/djangoeneclipse/index.html"><b>o </b>Creando una aplicacion DJango con Python3 en Eclipse<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/7-django/aplicacioncrudendjango/index.html" class=""><a class="padding" href="/es/7-django/aplicacioncrudendjango/index.html"><b>o </b>Aplicación CRUD con DJango-REST.<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/contacto/index.html" class=""><a class="padding" href="/es/contacto/index.html"><b> > </b>Contacto<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-23eac2fb87301460c7941519d797fc08" class="morespace collapsible-menu">
+          <li data-nav-id="/es/contacto/experiencia_laboral/index.html" class=""><a class="padding" href="/es/contacto/experiencia_laboral/index.html">Experiencia Laboral<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_basesdatos/index.html" class=""><a class="padding" href="/es/contacto/experiencia_basesdatos/index.html">Bases de Datos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_lenguajesprogramacion/index.html" class=""><a class="padding" href="/es/contacto/experiencia_lenguajesprogramacion/index.html">Lenguajes  de programación<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_sistemas/index.html" class=""><a class="padding" href="/es/contacto/experiencia_sistemas/index.html">Sistemas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/acerca/index.html" class=""><a class="padding" href="/es/acerca/index.html">Acerca de<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/anjelica/index.html" class=""><a class="padding" href="/es/anjelica/index.html">ERP Anjelica<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/last/index.html" class=""><a class="padding" href="/es/last/index.html">Ultimas entradas<i class="fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div id="R-shortcuts">
+          <div class="nav-title padding">Más</div>
+          <ul class="space">
+            <li><a class="padding" href="/es/last/index.html"><i class='fas fa-fw fa-bullhorn'></i>Últimas entradas</a></li>
+            <li><a class="padding" href="/es/acerca/index.html"><i class='fas fa-fw fa-camera'></i>Acerca de</a></li>
+            <li><a class="padding" href="/es/anjelica/index.html"><i class='fas fa-fw fa-bolt'></i> Anjelica</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Idioma</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Tema</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Borrar Historial</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1728574461" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1728574461" defer></script>
+    <script src="/js/theme.js?1728574461" defer></script>
+  </body>
+</html>

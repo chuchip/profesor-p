@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backend on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/4-angular/aplicacion/backend/index.html</link>
+    <description>Recent content in Backend on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 05 Sep 2018 14:11:35 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/4-angular/aplicacion/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backend I</title>
+      <link>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/index.html</link>
+      <pubDate>Fri, 31 Aug 2018 05:53:48 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/08/31/aplicacion-en-spring-y-angular/index.html</guid>
+      <description>En Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias.
+La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular.
+Para ello se realizaran los siguientes pasos:
+Crear tablas y cargar datos de prueba en la base de datos. Usare H2 embebido, en vez de postgresql, que es la base de datos que usa Anjelica.</description>
+    </item>
+    <item>
+      <title>Backend (II)</title>
+      <link>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html</link>
+      <pubDate>Mon, 03 Sep 2018 16:22:55 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html</guid>
+      <description>En esta segunda parte voy a empezar a explicar como hacer la parte del servidor, usando, como dije en la primera parte de este articulo utilizare JAVA 8, apoyándome en el framework Spring, versión 5.
+Esta aplicación la he realizado con NetBeans 9, usando Tomcat 9 como servidor de aplicaciones. La podía haber realizado usando Spring Boot, lo que habría realizado más fácilmente y con menos configuración pero he querido hacerlo con Tomcat como ejercicio.</description>
+    </item>
+    <item>
+      <title>Backend  (III)</title>
+      <link>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html</link>
+      <pubDate>Tue, 04 Sep 2018 05:44:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html</guid>
+      <description>En esta entrada, continuare con la parte servidor, que ya comencé en el articulo anterior.
+Voy a desarrollar la parte donde se responden a las peticiones REST. Para el que no sepa que es eso de REST, podéis empezar leyendo este articulo de la wikipedia, pero os podeis quedar con la idea de que es como una petición web normal, solo que en vez de trabajar con paginas HTML enteras, se trabaja con intercambio de datos más o menos en crudo.</description>
+    </item>
+    <item>
+      <title>Backend (IV)</title>
+      <link>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html</link>
+      <pubDate>Wed, 05 Sep 2018 10:16:08 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html</guid>
+      <description>Continuo con la serie de artículos explicando una aplicación donde la parte de servidor esta creada con Java, apoyándose en el framework Spring y la parte del cliente usara Angular. Para la comunicación entre la aplicación usare peticiones REST, por supuesto utilizando el protocolo JSON.
+En la anterior entrada empece a explicar como se desplegaría la aplicación y en que URLs se procesarían las diferentes peticiones. Ahora explicare como funcionan las diferentes peticiones.</description>
+    </item>
+    <item>
+      <title>Backend (V)</title>
+      <link>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html</link>
+      <pubDate>Thu, 06 Sep 2018 06:08:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html</guid>
+      <description>En esta ultima parte de la parte servidor hablare de como se crean los objetos que en el anterior articulo se devolvían.
+Estos objetos eran del tipo _VentasAnoBean _y un ArrayList de _VentasSemanaBean. _Para conseguirlos se llamaban a sendas funciones en la clase **YagesBussines, **que eran las que construían esos objetos.
+Empezare describiendo la clase
+Lo primero, marcamos nuestra clase como @Component para que Spring la cree y este disponible para inyectarla en otras clases.</description>
+    </item>
+  </channel>
+</rss>

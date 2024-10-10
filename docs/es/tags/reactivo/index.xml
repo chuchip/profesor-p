@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reactivo on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/tags/reactivo/index.html</link>
+    <description>Recent content in reactivo on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 19 Sep 2018 10:43:09 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/tags/reactivo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curso Angular 6 – Reactivo!</title>
+      <link>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/index.html</link>
+      <pubDate>Wed, 19 Sep 2018 10:43:09 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/19/curso-angular-6-reactivo/index.html</guid>
+      <description>Antes de continuar con el curso quiero dejar claro que Angular es reactivo.
+¿ Que significa eso ?.
+Pues básicamente que cualquier cambio que se haga en el modelo sera transmitido a la vista y viceversa. El modelo, entiéndase que son nuestros _Componentes. _Es decir, nuestras clases definidas en los ficheros TypeScript. La vista es el código HTML que se visualizara en nuestro navegador.
+Así, si cambiamos el valor de un campo **INPUT **del HTML, que este unido con la directiva **[(ngModel)] **a una variable.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/2-spring/7-base/index.html</link>
+    <description>Recent content in Base on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Sat, 09 Dec 2023 07:57:07 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/2-spring/7-base/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Perfiles en Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/index.html</link>
+      <pubDate>Thu, 28 Feb 2019 11:52:51 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/index.html</guid>
+      <description>&lt;p&gt;Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AOT en Spring</title>
+      <link>http://www.profesor-p.com/springboot/aot/index.html</link>
+      <pubDate>Sat, 09 Dec 2023 07:57:07 +0000</pubDate>
+      <guid>http://www.profesor-p.com/springboot/aot/index.html</guid>
+      <description>Creo que Aspect Oriented Programing (AOP) no es muy conocido. Spring lo usa mucho y, a menudo, cuando pones etiquetas en tu código, Spring usará AOT.
+No quiero explicar que es AOP porque hay mucha documentación al respecto. En este artículo, quiero darte algunos ejemplos y casos en los que el uso de AOP podría mejorar tu código. Quiero mostrarte una nueva herramienta para programar. Veamos si puedo hacerlo.
+En primer lugar, te estarás preguntando, ¿por qué debería usar AOP?</description>
+    </item>
+    <item>
+      <title>Logging en Spring Boot</title>
+      <link>http://www.profesor-p.com/springboot/logging-en-spring-boot/index.html</link>
+      <pubDate>Sun, 18 Oct 2020 07:57:07 +0000</pubDate>
+      <guid>http://www.profesor-p.com/springboot/logging-en-spring-boot/index.html</guid>
+      <description>&lt;p&gt;Una vez que tenemos nuestra fantástica aplicación realizada con Spring lo normal es que queramos ver como se va comportando. Para ello, la manera más fácil es escribir mensajes dentro de la aplicación, explicando por que funciones entra, como se toman las decisiones y, en general,  como se va comportando.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cacheando resultados con Spring Boot</title>
+      <link>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/index.html</link>
+      <pubDate>Sun, 12 May 2019 07:57:07 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/05/12/cacheando-datos-en-spring-boot/index.html</guid>
+      <description>Vamos a imaginar una aplicación web, donde por cada petición recibida, debe leer ciertos datos de configuración desde una base de datos. Esos datos no cambiaran normalmente pero nuestra aplicación, en cada petición, debe conectarse, ejecutar las sentencias adecuadas para leer los datos, traerlos por la red, etc. Imaginemos, además, que la base de datos a la que nos conectamos esta saturada o la conexión de red que nos une a la base de datos es inestable.</description>
+    </item>
+    <item>
+      <title>Beans avanzados</title>
+      <link>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/index.html</link>
+      <pubDate>Thu, 18 Apr 2019 21:26:57 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/index.html</guid>
+      <description>En esta ocasión he cogido un proyecto de SimpleProgramming el cual tiene un video en Youtube donde explica como cargar Beans dinámicamente usando Spring (en Ingles).
+Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otra, donde está definida la lógica a seguir. Por supuesto podemos anidar condiciones e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una lógica nueva, deberemos incluir una condición más para cargar la nueva clase, y podríamos introducir errores en el código.</description>
+    </item>
+  </channel>
+</rss>

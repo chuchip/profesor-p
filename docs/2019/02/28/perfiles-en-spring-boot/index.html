@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.0">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Articulos sobre informática ">
+    <meta name="author" content="Jesus J. Puente">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Perfiles en Spring Boot :: Documentacion en español">
+    <meta name="twitter:description" content="Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.">
+    <meta property="og:title" content="Perfiles en Spring Boot :: Documentacion en español">
+    <meta property="og:description" content="Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="http://www.profesor-p.com/2019/02/28/perfiles-en-spring-boot/index.html">
+    <meta property="article:section" content="Base :: Documentacion en español">
+    <meta property="article:published_time" content="2019-02-28T11:52:51+00:00">
+    <meta property="article:modified_time" content="2019-02-28T11:52:51+00:00">
+    <meta property="og:site_name" content="Documentacion en español">
+    <title>Perfiles en Spring Boot :: Documentacion en español</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1728574459" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1728574459" rel="stylesheet">
+    <link href="/css/fonts.css?1728574459" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1728574459" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1728574459" rel="stylesheet">
+    <link href="/css/theme-auto.css?1728574459" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-auto.css?1728574459" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1728574459" rel="stylesheet">
+    <link href="/css/print.css?1728574459" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1728574459" rel="stylesheet">
+    <script src="/js/url.js?1728574459"></script>
+    <script src="/js/variant.js?1728574459"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72""
+      window.index_json_url="/es/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='http:\/\/www.profesor-p.com/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'auto' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copiar en el portapapeles`;
+      window.T_Copied_to_clipboard = `¡Copiado al portapapeles!`;
+      window.T_Copy_link_to_clipboard = `Copiar enlace al portapapeles`;
+      window.T_Link_copied_to_clipboard = `¡Enlace copiado al portapapeles!`;
+      window.T_Reset_view = `Restablecer vista`;
+      window.T_View_reset = `¡Ver reajuste!`;
+      window.T_No_results_found = `No se han encontrado resultados para "{0}"`;
+      window.T_N_results_found = `{1} resultados encontrados para "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/2019/02/28/perfiles-en-spring-boot/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menú (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Tabla de contenido (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#estableciendo-perfiles-en-la-aplicación">Estableciendo perfiles en la aplicación</a></li>
+        <li><a href="#creando-beans">Creando Beans</a></li>
+        <li><a href="#un-poco-de-teoría">Un poco de teoría</a></li>
+        <li><a href="#creando-componentes">Creando Componentes</a></li>
+        <li><a href="#leyendo-ficheros-de-propiedades">Leyendo ficheros de propiedades</a></li>
+        <li><a href="#probando-la-aplicación">Probando la aplicación</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/index.html"><span itemprop="name">Bienvenido a mi página</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/index.html"><span itemprop="name">Spring</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/es/2-spring/7-base/index.html"><span itemprop="name">Base</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Perfiles en Spring Boot</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show"><a class="topbar-control" href="https://github.com/chuchip/profesor-p2-spring/7-%20base/2019-02-28-perfiles-en-spring-boot.md" target="_blank" title="Editar (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/es/2-spring/7-base/index.html" title="Base (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/springboot/aot/index.html" title="AOT en Spring (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Más"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+<div class=" taxonomy-tags term-list cstyle  tags" title="Tags" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <ul>
+    <li><a class="term-link" href="/es/tags/java/index.html">java</a></li>
+    <li><a class="term-link" href="/es/tags/profiles/index.html">profiles</a></li>
+    <li><a class="term-link" href="/es/tags/spring-boot/index.html">spring boot</a></li>
+  </ul>
+</div>
+            </header>
+<h1 id="perfiles-en-spring-boot">Perfiles en Spring Boot</h1>
+
+<p>Cuando se hacen aplicaciones empresariales, lo normal es que, como mínimo, primero se desplieguen en un entorno de pruebas y después  en el entorno de producción. Cada entorno de pruebas tendrá diferentes bases de datos, diferentes URLs y toda una serie de parámetros específicos, con el fin de que una aplicación en desarrollo no acceda nunca a datos reales.</p>
+<h3 id="estableciendo-perfiles-en-la-aplicación">Estableciendo perfiles en la aplicación</h3>
+<p><strong>Spring</strong> provee una manera sencilla de gestionar esta situación haciendo uso de los <strong>perfiles</strong>.</p>
+<p>Hay varias maneras de establecer el perfil a utilizar por una aplicación:</p>
+<ol>
+<li>Pasándolo como variable de entorno en JAVA. Por ejemplo:  “<!-- raw HTML omitted --><!-- raw HTML omitted -->java -jar -Dspring.profiles.active=MI_PROFILE application.jar”<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+<li>Pasándolo como un argumento al programa. “<!-- raw HTML omitted --><!-- raw HTML omitted -->java -jar application.jar –spring.profiles.active=MI_PROFILE”<!-- raw HTML omitted --><!-- raw HTML omitted --></li>
+<li>Especificarlo con una anotación en el propio programa, en la etiqueta @SpringBootTest, pasandole el parametro “spring.profiles.active”. Muy útil para prueba unitarias.@SpringBootTest(“spring.profiles.active=test”)</li>
+<li>Con la anotación @ActiveProfiles@ActiveProfiles(“MI_PROFILE”)</li>
+</ol>
+<h3 id="creando-beans">Creando Beans</h3>
+<p>En el ejemplo que esta disponible en <!-- raw HTML omitted --><a href="https://github.com/chuchip/profilestest" target="_blank">https://github.com/chuchip/profilestest</a><!-- raw HTML omitted --> se pueden ver como una aplicación saca diferentes mensajes y accede a diferentes datos según el perfil establecido.</p>
+<p>El proyecto es una simple aplicación web, que accede a una base de datos H2, mostrando diferentes datos según el perfil. Para crear el proyecto simplemente hay que añadir las siguientes dependencias: JPA, H2 y WEB</p>
+<p><a href="#R-image-da4d46d4d4df1e87f3d51a70fd724746" class="lightbox-link"><img src="/images/2019/02/captura_starters.png" alt="Starters" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-da4d46d4d4df1e87f3d51a70fd724746"><img src="/images/2019/02/captura_starters.png" alt="Starters" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Empezando por la clase principal veremos como definir diferentes <strong>beans</strong> dependiendo del perfil.</p>
+<pre><code>@SpringBootApplication
+@Configuration
+public class ProfilesTests {
+
+	@Autowired
+	private Environment environment;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(ProfilesTests.class, args);
+	}
+
+	@Bean
+	@Profile(&quot;test&quot;)
+	IWrite getWriterTest()
+	{
+		return new WriteImpl(&quot;..test.. &quot;+getProfile());		
+	}
+	@Bean
+	@Profile(&quot;default&quot;)
+	IWrite getWriterDefault()
+	{
+		return new WriteImpl(&quot;..default.. &quot;+getProfile());		
+	}
+	@Bean
+	@Profile(&quot;other&quot;)
+	IWrite getWriterOther()
+	{
+		return new WriteImpl(&quot;..other.. &quot;+getProfile());		
+	}
+	String getProfile()
+	{
+		if (environment.getActiveProfiles()==null)
+			return &quot;default&quot;;
+		String[] profiles=environment.getActiveProfiles();
+		return profiles.length&gt;0?profiles[0]:&quot;default&quot;; 
+	}
+}
+</code></pre>
+<p>En las funciones getWriterXXX, se devuelve siempre un <strong>bean</strong> que implementa el interface <code>IWrite</code>. La definición de este interfaz es muy simple, como se puede ver en el siguiente código:</p>
+<pre><code>public interface IWrite
+{
+	public void writeLog(String log);
+	public String getProfile();
+}
+</code></pre>
+<p>Y su implementación en la clase <code>WriteImpl</code> es también muy sencilla:</p>
+<pre><code>public class &lt;strong&gt;WriteImpl&lt;/strong&gt; implements IWrite{
+	private String profile;
+	
+	public WriteImpl(String profile)
+	{
+		this.profile=profile;
+	}
+	
+	public String getProfile()
+	{
+		return profile;
+	}
+	@Override
+	public void writeLog(String log) {
+		System.out.println(&quot;Profile: &quot;+profile+&quot; -&gt; &quot;+ log);
+		
+	}
+}
+</code></pre>
+<p>Volviendo a la clase principal, se ve que la función <strong>getWriterTest()</strong> instancia un objeto <code>WriteImpl</code>, pasando al constructor el literal <code>..test..</code> y lo devuelto por la función <strong>getProfile()</strong>, la cual devuelve un <strong>String</strong> con el perfil activo.</p>
+<p>La función <strong>getWriterDefault()</strong> hace lo mismo que la anterior pero instanciando un objeto <code>WriteImpl</code> al cual en el constructor se le pasa el literal <code>..default..</code>y lo devuelto por la función <strong>getProfile()</strong>. Y lo mismo con la función <strong>getWriterOther()</strong> pero pasando el literal <code>..other..</code></p>
+<p>Lo importante de estas funciones es la anotación <strong>@Bean</strong> con la cual le decimos a <em>Spring</em> que cuando en alguna parte del código se deba inyectar el objeto devuelto en esa función que ejecute esta función para conseguirlo.</p>
+<h3 id="un-poco-de-teoría">Un poco de teoría</h3>
+<p>Cuando <strong>Spring</strong> encuentre una anotación <strong>@Autowired</strong> con un objeto tipo <strong>IWrite</strong> como ocurre en el siguiente código:</p>
+<pre><code>@Autowired
+IWrite out;	
+</code></pre>
+<p>buscara de alguna manera un objeto que implemente ese <em>interface</em> o que se llame igual que el objeto en si.</p>
+<p>Así, para conseguir el objeto, <strong>Spring</strong> tiene dos opciones:</p>
+<ul>
+<li>Buscar dentro del proyecto una <em>class</em> que se llame <strong>IWrite</strong> o una clase que implemente el interfaz <strong>IWrite</strong> que este anotada con la etiqueta <strong>@Component</strong></li>
+<li>Buscar dentro de una clase anotada con la etiqueta <strong>@Configuration</strong> una función anotada con <strong>@Bean</strong> y que devuelva un objeto de ese tipo.</li>
+</ul>
+<p>Se pueden dar varios casos en este momento:</p>
+<ol>
+<li>Encuentra un objeto y lo usa.</li>
+<li>No encuentra un objeto con lo cual da un error y la aplicación no se ejecutara.</li>
+<li>Encuentra más de un objeto y como no sabe con cual quedarse da un error y la aplicación no se ejecuta.</li>
+</ol>
+<p>Como se puede ver, en el código hay tres funciones que devuelven un objeto tipo <strong>IWrite,</strong> con lo cual <strong>Spring</strong> daría un error, para evitarlo añadimos la etiqueta <strong>@Profile</strong> . De esta manera si el perfil de la aplicación no coincide con el literal dentro de <strong>@Profile</strong> esa función será ignorada. Y como se puede ver, cada función tiene su propia anotación <strong>@Profile</strong> con lo cual <em>Spring</em> solo tratara una de ellas.</p>
+<p>Destacar que si lanzamos la aplicación sin especificar ningún perfil, <strong>Spring</strong> elige el perfil <strong>default</strong>.</p>
+<p>Por supuesto, si lanzáramos la aplicación con un perfil que no fuera <strong>default</strong>,<strong>test</strong> o <strong>other</strong> la aplicación fallaría, al no encontrar ningún objeto que implemente el interfaz <strong>IWrite</strong></p>
+<h3 id="creando-componentes">Creando Componentes</h3>
+<p>Para tener un ejemplo del caso en que <strong>Spring</strong> deba buscar una clase, en el proyecto de ejemplo se puede ver como se define el interfaz <strong>IRead</strong> el cual es implementado por la clases <strong>ReadDefImpl</strong> y <strong>ReadOtherImpl</strong>.</p>
+<p>Observar como ambas clases tienen las anotaciones <strong>@Component</strong> y <strong>@Profile</strong> antes de la definición de la clase. Lógicamente en una clase la etiqueta <strong>@Profile</strong> tiene el parámetro <strong>default</strong> y en otra el parámetro es <strong>other</strong>.</p>
+<p>Esta es la clase <strong>ReadDefImpl</strong></p>
+<pre><code>@Component
+@Profile(&quot;default&quot;)
+public class &lt;strong&gt;ReadDefImpl&lt;/strong&gt; implements IRead{
+
+	@Autowired
+	ProfileRepository customerRepository;
+
+	@Autowired
+	IWrite out;
+	
+	public String readRegistry(int id)
+	{
+		out.writeLog(&quot;entry in ReadImpl&quot; );
+		Optional&lt;ProfileEntity&gt; registroOpc=customerRepository.findById(id);
+		if (!registroOpc.isPresent())
+		{
+			System.out.println(&quot;Customer &quot;+id+&quot; NOT found&quot;);
+			return null;
+		}
+		ProfileEntity registro=registroOpc.get(); 
+		out.writeLog(&quot;Name  customer &quot;+id+&quot; is: &quot;+registro.getName());
+		return registro.getName();
+	}
+}
+</code></pre>
+<p>Y así empieza la clase <strong>ReadOtherImpl</strong></p>
+<pre><code>@Component
+@Profile(&quot;other&quot;)
+public class &lt;strong&gt;ReadOtherImpl&lt;/strong&gt; implements IRead{
+</code></pre>
+<p>El cuerpo es de la clase es exactamente igual que la de la clase <strong>ReadDefImpl</strong></p>
+<h3 id="leyendo-ficheros-de-propiedades">Leyendo ficheros de propiedades</h3>
+<p>El código de la clase <code>ProfilesController</code> es el siguiente:</p>
+<pre><code>@RestController
+public class ProfilesController {
+	@Autowired 
+	IRead read;
+	
+	@Value(&quot;${app.ID}&quot;)
+	int id;
+	
+	@Autowired
+	IWrite write;
+	
+	@GetMapping(&quot;/hello&quot;)
+	public String get(@RequestParam(value=&quot;name&quot;,required=false) String name)
+	{
+        return &quot;Hello &quot;+(name==null?&quot;SIN NOMBRE&quot;:name)+
+        &quot;&lt;br&gt;&lt;br&gt; The name of the profile number:&quot;+ id+&quot; in the database H2 is: &quot;+read.readRegistry(id)+
+        &quot;&lt;br&gt; The profile used in the application is : &quot;+write.getProfile();
+				
+	}
+}
+</code></pre>
+<p>En esta clase podemos ver, la anotación <strong>@Value(“${app.ID}”)</strong> con ella lo que le estamos diciendo a <strong>Spring</strong> es que inicialice la variable que hay a continuación ( “<code>id</code>“) con el valor que encuentre en un fichero de <em>properites</em>. Como no especificamos ninguno buscara dentro de <code>application.properties</code> y encontrara la siguiente línea:</p>
+<pre><code>app.ID=1
+</code></pre>
+<p>con lo cual la variable <code>id</code> tendrá el valor <strong>1</strong></p>
+<p>Pero si nos fijamos en nuestro proyecto además del fichero <code>application.properties</code> también tenemos un fichero llamado <code>application-other.properties</code>, esto es porque <em>Spring</em> en el caso de que el perfil sea <strong>other</strong> buscara primero el fichero <code>application-other.properties</code> para establecer las propiedades.</p>
+<p>De esta manera, cuando el perfil sea <strong>other</strong> leerá el fichero <code>application-other.properties</code> y encontrara la línea:</p>
+<pre><code>app.ID=2
+</code></pre>
+<p>con lo cual la variable <strong>id</strong> tendrá el valor <strong>2</strong></p>
+<p>Es importante recalcar que el fichero <code>application.properties</code> se leerá y procesara siempre, independientemente del perfil elegido, pero luego se buscara el del perfil activo. Si no queremos que lea ese fichero, una solución seria renombrar el fichero a <code>application-default.properties</code> con lo cual solo se usaría con el perfil <strong>default</strong>.</p>
+<h3 id="probando-la-aplicación">Probando la aplicación</h3>
+<p>Para probar la aplicación en <em>Eclipse</em> podremos crear dos configuraciones. Una para el perfil <strong>default</strong>
+<a href="#R-image-a7266fdeda82cb1fd5502f5043fa770f" class="lightbox-link"><img src="/images/2019/02/captura1.png" alt="Starters" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a7266fdeda82cb1fd5502f5043fa770f"><img src="/images/2019/02/captura1.png" alt="Starters" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>donde podemos ver que no especificamos ningún perfil con lo cual <em>Spring</em> asignara el perfil <strong>default</strong> y otra para el perfil <strong>other</strong>
+<a href="#R-image-671a2d253038851481eda7a04280aaf3" class="lightbox-link"><img src="/images/2019/02/captura2.png" alt="Starters" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-671a2d253038851481eda7a04280aaf3"><img src="/images/2019/02/captura2.png" alt="Starters" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>La del perfil <strong>default</strong> escuchara en el puerto 8080 y la de <strong>other</strong> en el 8081. Eso esta especificado con la línea <code>server.port=8080</code> en el fichero <code>application.properties</code> y con la línea <code>server.port:8081</code>en el fichero <code>application-other.properties</code></p>
+<p>Como se puede ver en las siguientes pantallas, la llamada a <!-- raw HTML omitted -->http://localhost:8080/hello?name=profesor<!-- raw HTML omitted --> devuelve la siguiente salida:
+<a href="#R-image-96ab519e49fadce4cc071ddb12528f37" class="lightbox-link"><img src="/images/2019/02/captura-navegador8080.png" alt="Starters" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-96ab519e49fadce4cc071ddb12528f37"><img src="/images/2019/02/captura-navegador8080.png" alt="Starters" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>Se puede ver como el valor de la variable <strong>id</strong> es 1 y como lee en la base de datos H2, el valor del registro correspondiente.</p>
+<p>En la salida estándar veremos el siguiente texto:</p>
+<pre><code>Profile: ..default.. default -&gt; entry in ReadImpl
+Profile: ..default.. default -&gt; Name customer 1 is: default
+</code></pre>
+<p>Si llamamos a <!-- raw HTML omitted -->http://localhost:8081/hello?name=profesor<!-- raw HTML omitted -->, veremos la siguiente salida en el navegador:</p>
+<p><a href="#R-image-a2091f2ff83e0d47ebfab1f29ccfbd17" class="lightbox-link"><img src="/images/2019/02/captura-navegador8080.png" alt="Starters" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2091f2ff83e0d47ebfab1f29ccfbd17"><img src="/images/2019/02/captura-navegador8080.png" alt="Starters" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>En la salida estándar veremos el siguiente texto:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>En el <a href="2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/">articulo siguiente</a> podéis ver el uso de los perfiles para testear la aplicación con <strong>JUnit</strong></p>
+<p>Hasta entonces, ¡¡ que la curiosidad no os abandone 😉 !!</p>
+            <footer class="footline">
+<div class=" taxonomy-categories term-list cstyle  " title="Categories" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);">
+  <i class="fa-fw fas fa-layer-group"></i>
+  <ul>
+    <li><a class="term-link" href="/es/categories/java/index.html">java</a></li>
+    <li><a class="term-link" href="/es/categories/jpa/index.html">jpa</a></li>
+    <li><a class="term-link" href="/es/categories/profiles/index.html">profiles</a></li>
+    <li><a class="term-link" href="/es/categories/rest/index.html">rest</a></li>
+    <li><a class="term-link" href="/es/categories/spring-boot/index.html">spring boot</a></li>
+  </ul>
+</div>
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<a id="logo" href="/"><B>Profesor-P</B>
+<img src="/images/logo1.jpg" alt="Logo">
+<P>Explicando la informática esa</P>
+</a>
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Buscar (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">Buscar</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Buscar...">
+          <button class="search-clear" type="button" data-search-clear="" title="Borrar búsqueda"><i class="fas fa-times" title="Borrar búsqueda"></i></button>
+        </div>
+        <script>
+          var contentLangs=['es'];
+        </script>
+        <script src="/js/auto-complete.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1728574460" defer></script>
+        <script src="/js/lunr/lunr.es.min.js?1728574460" defer></script>
+        <script src="/js/search.js?1728574460" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/es/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/index.html" class=""><a class="padding" href="/es/1-java/index.html"><b>1.</b> Java<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-3b91fe72b7afa483d06a78066e2c9e97" class="morespace collapsible-menu">
+          <li data-nav-id="/es/1-java/kotlin/index.html" class="alwaysopen"><a class="padding" href="/es/1-java/kotlin/index.html"><b>> </b> Kotlin<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-699e77bafa43beee8fa9b490ab3ce63b" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/23/kotlin-vs-java/index.html" class=""><a class="padding" href="/2018/08/23/kotlin-vs-java/index.html"><b>o </b>Kotlin vs Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-con-springboot/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html" class=""><a class="padding" href="/2018/10/11/aplicacion-crud-en-kotlin-y-springboot-2a-parte/index.html"><b>o </b>Aplicacion CRUD con REST en Kotlin y SpringBoot (2ª Parte)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/proxies-in-java/index.html" class=""><a class="padding" href="/proxies-in-java/index.html"><b>o </b>Proxies in Java<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/23/usando-lambdas/index.html" class=""><a class="padding" href="/2018/08/23/usando-lambdas/index.html"><b>o </b>Usando Lambdas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/index.html" class="parent "><a class="padding" href="/es/2-spring/index.html"><b>2. </b>Spring<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-b97beb613b9897bd944073efb81537bf" class="morespace collapsible-menu">
+          <li data-nav-id="/es/2-spring/1-testing/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/1-testing/index.html"><b>- </b>Testing<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-aaec4f6843788c490f6deac67b0a63c5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/27/testeando-las-aplicaciones/index.html" class=""><a class="padding" href="/2018/08/27/testeando-las-aplicaciones/index.html"><b>o </b>Testeando las aplicaciones<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/01/uso-de-perfiles-en-testing-en-spring-boot/index.html"><b>o </b>Uso de perfiles para testear en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/testeando-tu-aplicacion-web/index.html" class=""><a class="padding" href="/spring/testeando-tu-aplicacion-web/index.html"><b>o </b>Testeando Spring<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/2-seguridad/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/2-seguridad/index.html"><b>- </b>Seguridad<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-77762ac49f9c6fed0102de0462d125bd" class="morespace collapsible-menu">
+          <li data-nav-id="/springboot/seguridad-con-keycloack/index.html" class=""><a class="padding" href="/springboot/seguridad-con-keycloack/index.html"><b>o </b>Securizando aplicación de SpringBoot con KeyCloack<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html" class=""><a class="padding" href="/2018/10/18/securizando-servicios-rest-con-oauth2-en-springboot/index.html"><b>o </b>Securizando servicios REST con Oauth2 en SpringBoot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/17/seguridad-web-en-spring-boot/index.html" class=""><a class="padding" href="/2018/10/17/seguridad-web-en-spring-boot/index.html"><b>o </b>Seguridad WEB en Spring Boot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/3-mvc/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/3-mvc/index.html"><b>- </b>MVC<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-647dd4aaeff1a9b473a05667d14a0d02" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html" class=""><a class="padding" href="/2018/08/28/ejemplo-aplicacion-mvc-con-spring-boot-usando-netbeans-9/index.html"><b>o </b>Ejemplo aplicación MVC con Spring Boot  usando NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/4-database/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/4-database/index.html"><b>- </b>Database<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d9a0b1bdf63fbc66b09dcab2aa2df50d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Lambdas en JDBC Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/spring/data/qbe/index.html" class=""><a class="padding" href="/spring/data/qbe/index.html"><b>o </b>Usar QBE en Spring Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/05/optimizando-consultas-con-hibernate/index.html" class=""><a class="padding" href="/2019/04/05/optimizando-consultas-con-hibernate/index.html"><b>o </b>Optimizando relaciones entre entidades en Hibernate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html" class=""><a class="padding" href="/2019/03/25/accediendo-facilmente-a-los-datos-con-spring-rest-data/index.html"><b>o </b>Accediendo facilmente a los datos con Spring Rest Data<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html" class=""><a class="padding" href="/2019/02/14/querys-avanzadas-con-jpa-en-spring-boot/index.html"><b>o </b>Querys avanzadas con JPA en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/25/jpa-hibernate-en-spring/index.html" class=""><a class="padding" href="/2018/08/25/jpa-hibernate-en-spring/index.html"><b>o </b>JPA &#43; Hibernate en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/24/jpa-con-lombok/index.html" class=""><a class="padding" href="/2018/08/24/jpa-con-lombok/index.html"><b>o </b>JPA con Lombok, simplificando.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html" class=""><a class="padding" href="/2018/08/22/acceso-a-base-de-datos-con-jdbc-spring/index.html"><b>o </b>Acceso a Base de Datos con  Spring Data JDBC<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/5-cloud/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/5-cloud/index.html"><b>- </b>Cloud<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a9b4fe9e0470dbc7c3b85b748fddca1d" class="morespace collapsible-menu">
+          <li data-nav-id="/spring/gateway/index.html" class=""><a class="padding" href="/spring/gateway/index.html"><b>o </b>Spring Cloud Gateway. Redirigiendo peticiones Reactivamente.<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/01/03/microservicios-distribuidos-con-eureka/index.html" class=""><a class="padding" href="/2019/01/03/microservicios-distribuidos-con-eureka/index.html"><b>o </b>Microservicios distribuidos con Eureka<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html" class=""><a class="padding" href="/2018/12/10/servidor-configuraciones-usando-spring-cloud/index.html"><b>o </b>Servidor configuraciones usando Spring Cloud<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/6-webflow/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/6-webflow/index.html"><b>- </b>Webflow<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-18c90b54004edf3c1545f7262f04372d" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html" class=""><a class="padding" href="/2018/10/29/spring-webflow-con-jsp-configuracion/index.html"><b>o </b>Spring WebFlow con JSP – Configuración<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/30/spring-webflow-con-jsp/index.html" class=""><a class="padding" href="/2018/10/30/spring-webflow-con-jsp/index.html"><b>o </b>Spring WebFlow con JSP<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/7-base/index.html" class="parent alwaysopen"><a class="padding" href="/es/2-spring/7-base/index.html"><b>- </b>Base<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7c6388919f62e38e35736c79f5c1ea98" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/02/28/perfiles-en-spring-boot/index.html" class="active"><a class="padding" href="/2019/02/28/perfiles-en-spring-boot/index.html"><b>o </b>Perfiles en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/aot/index.html" class=""><a class="padding" href="/springboot/aot/index.html"><b>o </b>AOT en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/springboot/logging-en-spring-boot/index.html" class=""><a class="padding" href="/springboot/logging-en-spring-boot/index.html"><b>o </b>Logging en Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/05/12/cacheando-datos-en-spring-boot/index.html" class=""><a class="padding" href="/2019/05/12/cacheando-datos-en-spring-boot/index.html"><b>o </b>Cacheando resultados con Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/04/18/beans-avanzados-en-spring/index.html" class=""><a class="padding" href="/2019/04/18/beans-avanzados-en-spring/index.html"><b>o </b>Beans avanzados<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/2-spring/8-restful/index.html" class="alwaysopen"><a class="padding" href="/es/2-spring/8-restful/index.html"><b>- </b>Restful<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bb093340a872d822a64ba8d28129dc3c" class="morespace collapsible-menu">
+          <li data-nav-id="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html" class=""><a class="padding" href="/2019/08/03/trabajando-con-la-clase-resttemplate/index.html"><b>o </b>La clase RestTemplate<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-2/index.html" class=""><a class="padding" href="/clase-resttemplate-2/index.html"><b>o </b>La Clase RestTemplate - 2<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/clase-resttemplate-3/index.html" class=""><a class="padding" href="/clase-resttemplate-3/index.html"><b>o </b>La Clase RestTemplate - 3<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/webclient/index.html" class=""><a class="padding" href="/webclient/index.html"><b>o </b>La clase WebClient<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/06/13/estableciendo-filtros-en-spring/index.html" class=""><a class="padding" href="/2019/06/13/estableciendo-filtros-en-spring/index.html"><b>o </b>Estableciendo filtros en Spring<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html" class=""><a class="padding" href="/2019/03/16/zuul-para-redirigir-peticiones-rest-en-spring-boot/index.html"><b>o </b>Usando Zuul para redirigir peticiones REST<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html" class=""><a class="padding" href="/2018/11/20/personalizar-codigo-http-en-spring-boot/index.html"><b>o </b>Personalizar salidas de códigos HTTP en Spring Boot<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html" class=""><a class="padding" href="/2019/01/24/mensajeria-con-kafka-y-spring-boot/index.html"><b>o </b>Mensajería con Kafka y Spring Boot<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html" class=""><a class="padding" href="/2018/08/27/instalar-plugin-spring-boot-con-netbeans-9-en-ubuntu-18-04/index.html"><b>o </b>Instalar plugin Spring Boot en NetBeans<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/3-hugo/index.html" class=""><a class="padding" href="/es/3-hugo/index.html"><b>3. </b>Hugo<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-a79509bad188129b4e581cd3a8864880" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html" class=""><a class="padding" href="/2018/11/28/generar-paginas-web-estaticas-dinamicamente/index.html"><b>o </b> Generar paginas Web estáticas dinámicamente<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html" class=""><a class="padding" href="/2018/12/05/crear-pagina-web-gratuita-en-github/index.html"><b>o </b> Crear pagina web gratuita en GitHub<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/index.html" class=""><a class="padding" href="/es/4-angular/index.html"><b>4. </b>Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-19c0fe74f91949f0fac265e09735f574" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/curso/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/curso/index.html"><b>- </b>Curso de Angular 6<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-4931649d99e9cd697f2576f174785208" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/19/curso-angular-6-reactivo/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-reactivo/index.html"><b>o </b>Curso Angular 6 – Reactivo!<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/19/curso-angular-6-formularios-1/index.html" class=""><a class="padding" href="/2018/09/19/curso-angular-6-formularios-1/index.html"><b>o </b>Curso Angular 6 – Formularios (1)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/index.html"><b>- </b>Aplicación usando Java y Angular<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-9d940d61f30c47a412b70be82cda61f6" class="morespace collapsible-menu">
+          <li data-nav-id="/es/4-angular/aplicacion/backend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/backend/index.html"><b>> </b>Backend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-104df51ea6f656109cf91385ade9a610" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/31/aplicacion-en-spring-y-angular/index.html" class=""><a class="padding" href="/2018/08/31/aplicacion-en-spring-y-angular/index.html"><b>o </b>Backend I<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html" class=""><a class="padding" href="/2018/09/03/aplicacion-en-spring-rest-y-angular-2-parte/index.html"><b>o </b>Backend (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html" class=""><a class="padding" href="/2018/09/04/aplicacion-en-spring-rest-y-angular-3a-parte/index.html"><b>o </b>Backend  (III)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html" class=""><a class="padding" href="/2018/09/05/aplicacion-en-spring-rest-y-angular-4a-parte/index.html"><b>o </b>Backend (IV)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html" class=""><a class="padding" href="/2018/09/06/aplicacion-en-spring-rest-y-angular-5a-parte/index.html"><b>o </b>Backend (V)<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/4-angular/aplicacion/frontend/index.html" class="alwaysopen"><a class="padding" href="/es/4-angular/aplicacion/frontend/index.html"><b>> </b>Frontend<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-515fbe72201a274d0326d69273f375a9" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html" class=""><a class="padding" href="/2018/09/13/aplicacion-en-angular-instalacion-y-configuracion-basica/index.html"><b>o </b>Frontend en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/14/aplicacion-en-angular-inicializando/index.html" class=""><a class="padding" href="/2018/09/14/aplicacion-en-angular-inicializando/index.html"><b>o </b>Angular - Inicializando<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/16/aplicacion-en-angular-rutas/index.html" class=""><a class="padding" href="/2018/09/16/aplicacion-en-angular-rutas/index.html"><b>o </b>Angular – Rutas<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/2018/10/08/aplicacion-crud-en-angular/index.html" class=""><a class="padding" href="/2018/10/08/aplicacion-crud-en-angular/index.html"><b>o </b>Aplicación CRUD en Angular<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/24/hablando-espanol/index.html" class=""><a class="padding" href="/2018/09/24/hablando-espanol/index.html"><b>o </b>Angular – Hablando español<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html" class=""><a class="padding" href="/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html"><b>o </b>Angular 6 – Añadir Bootstrap 4 con JQuery<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/5-dba/index.html" class=""><a class="padding" href="/es/5-dba/index.html"><b>5. </b>DBA<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d5f30e219912971f2f315464da41bc1c" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html" class=""><a class="padding" href="/2018/08/21/conectando-con-postgresql-usando-jndi-y-spring-en-tomcat-parte-1/index.html"><b>o </b>Conectando a una base de datos usando JNDI y Spring en Tomcat<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/6-javaee/index.html" class=""><a class="padding" href="/es/6-javaee/index.html"><b>6. </b>J2EE<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-7a8c7cc82ca90e360d6e192c335062d5" class="morespace collapsible-menu">
+          <li data-nav-id="/2018/10/06/aplicacion-rest-en-javaee/index.html" class=""><a class="padding" href="/2018/10/06/aplicacion-rest-en-javaee/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html" class=""><a class="padding" href="/2018/10/07/aplicacion-rest-en-javaee-2a-parte/index.html"><b>o </b>Aplicación CRUD usando REST en JavaEE  (II)<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html" class=""><a class="padding" href="/2018/09/05/desarrollando-aplicaciones-java-ee-en-netbeans-9/index.html"><b>o </b>Desarrollando aplicaciones Java EE en NetBeans 9<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/7-django/index.html" class=""><a class="padding" href="/es/7-django/index.html"><b>7. </b>DJango<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-2e81288d5a72e57f8ecae81ad8f60145" class="morespace collapsible-menu">
+          <li data-nav-id="/es/7-django/djangoeneclipse/index.html" class=""><a class="padding" href="/es/7-django/djangoeneclipse/index.html"><b>o </b>Creando una aplicacion DJango con Python3 en Eclipse<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/7-django/aplicacioncrudendjango/index.html" class=""><a class="padding" href="/es/7-django/aplicacioncrudendjango/index.html"><b>o </b>Aplicación CRUD con DJango-REST.<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/contacto/index.html" class=""><a class="padding" href="/es/contacto/index.html"><b> > </b>Contacto<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-23eac2fb87301460c7941519d797fc08" class="morespace collapsible-menu">
+          <li data-nav-id="/es/contacto/experiencia_laboral/index.html" class=""><a class="padding" href="/es/contacto/experiencia_laboral/index.html">Experiencia Laboral<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_basesdatos/index.html" class=""><a class="padding" href="/es/contacto/experiencia_basesdatos/index.html">Bases de Datos<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_lenguajesprogramacion/index.html" class=""><a class="padding" href="/es/contacto/experiencia_lenguajesprogramacion/index.html">Lenguajes  de programación<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/contacto/experiencia_sistemas/index.html" class=""><a class="padding" href="/es/contacto/experiencia_sistemas/index.html">Sistemas<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/es/acerca/index.html" class=""><a class="padding" href="/es/acerca/index.html">Acerca de<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/anjelica/index.html" class=""><a class="padding" href="/es/anjelica/index.html">ERP Anjelica<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/es/last/index.html" class=""><a class="padding" href="/es/last/index.html">Ultimas entradas<i class="fas fa-check read-icon"></i></a></li>
+          </ul>
+        </div>
+        <div id="R-shortcuts">
+          <div class="nav-title padding">Más</div>
+          <ul class="space">
+            <li><a class="padding" href="/es/last/index.html"><i class='fas fa-fw fa-bullhorn'></i>Últimas entradas</a></li>
+            <li><a class="padding" href="/es/acerca/index.html"><i class='fas fa-fw fa-camera'></i>Acerca de</a></li>
+            <li><a class="padding" href="/es/anjelica/index.html"><i class='fas fa-fw fa-bolt'></i> Anjelica</a></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Idioma</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Tema</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-auto" value="auto" selected>Auto</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Borrar Historial</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1728574460" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1728574460" defer></script>
+    <script src="/js/theme.js?1728574460" defer></script>
+  </body>
+</html>

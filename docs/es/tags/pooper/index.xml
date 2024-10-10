@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pooper on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/tags/pooper/index.html</link>
+    <description>Recent content in pooper on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Thu, 20 Sep 2018 09:16:12 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/tags/pooper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Angular 6 – Añadir Bootstrap 4 con JQuery</title>
+      <link>http://www.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html</link>
+      <pubDate>Thu, 20 Sep 2018 09:16:12 +0000</pubDate>
+      <guid>http://www.profesor-p.com/2018/09/20/angular-6-anadir-bootstrap-4-con-jquery/index.html</guid>
+      <description>Recordar lo primero que para utilizar toda la potencia de BootStrap, necesitamos tener instaladas las librerias de JQuery y Popper Hay varias maneras de instalar estas librerías.
+Localmente usando npm Una vez estemos situados el directorio principal del proyecto, desde tu terminal preferido ejecutar las instrucciones siguientes:
+Esto nos instalara los archivos necesarios bajo el directorio **node-modules. **
+Ahora debemos incluir el fichero de estilos (css) de BootStrap y las librerías JavaScript de BootStrap, JQuery y Pooper.</description>
+    </item>
+  </channel>
+</rss>

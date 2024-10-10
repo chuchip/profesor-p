@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aplicación usando Java y Angular on Documentacion en español</title>
+    <link>http://www.profesor-p.com/es/4-angular/aplicacion/index.html</link>
+    <description>Recent content in Aplicación usando Java y Angular on Documentacion en español</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <lastBuildDate>Wed, 05 Sep 2018 14:11:35 +0000</lastBuildDate>
+    <atom:link href="http://www.profesor-p.com/es/4-angular/aplicacion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backend</title>
+      <link>http://www.profesor-p.com/es/4-angular/aplicacion/backend/index.html</link>
+      <pubDate>Wed, 05 Sep 2018 14:11:35 +0000</pubDate>
+      <guid>http://www.profesor-p.com/es/4-angular/aplicacion/backend/index.html</guid>
+      <description>Aquí encontrareis los entradas describiendo como crear la parte backend de esta aplicación.
+Backend IEn Anjelica, el ERP desarrollado por mi hace unos años, hay un programa que saca un comparativo de ventas, entre dos años, mostrando mes a mes, los kilos, importes y ganancias. La idea es realizar esta misma consulta pero usando Spring con REST en el backend y como frontend usar Angular. Para ello se realizaran los siguientes pasos: Crear tablas y cargar datos de prueba en la base de datos.</description>
+    </item>
+    <item>
+      <title>Frontend</title>
+      <link>http://www.profesor-p.com/es/4-angular/aplicacion/frontend/index.html</link>
+      <pubDate>Wed, 05 Sep 2018 14:11:35 +0000</pubDate>
+      <guid>http://www.profesor-p.com/es/4-angular/aplicacion/frontend/index.html</guid>
+      <description>Aquí encontrareis los entradas describiendo como crear la parte frontend de esta aplicación. Es decir lo creado en Angular
+Frontend en AngularEn anteriores entradas se creo la parte del servidor de nuestra aplicación . Para la parte cliente o frontend usaremos Angular 6. El código fuente del programa lo tenéis, como siempre, en mi página de GitHub. Lo primero sera instalar Angular, para ello tenemos un excelente manual de como hacerlo en la página web de Angular.</description>
+    </item>
+  </channel>
+</rss>
